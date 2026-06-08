@@ -1,0 +1,58 @@
+Group,Grade/Role,Service,Time,Location,Note,Sort
+Early Years,EY,Lunch,12:05 – 12:30 pm,EY Wing,,725
+Primary · PYP,Grade 1,Morning Pantry,8:40 – 8:55 am,"Ground Floor, Block 3",,520
+Primary · PYP,Grade 1,Lunch,12:00 – 12:20 pm,Respective Classroom,,720
+Primary · PYP,Grade 1,Lunch Pantry,12:00 – 12:20 pm,Bon Appétit,,720
+Primary · PYP,Grade 1,Exit Pantry,1:40 – 1:55 pm,Grade 1 Wing,,820
+Primary · PYP,Grade 2,Morning Pantry,8:40 – 8:55 am,"Ground Floor, Block 4",,520
+Primary · PYP,Grade 2,Lunch,12:00 – 12:20 pm,Respective Classroom,,720
+Primary · PYP,Grade 2,Lunch Pantry,12:00 – 12:20 pm,Bon Appétit,,720
+Primary · PYP,Grade 2,Exit Pantry,1:40 – 1:55 pm,Grade 2 Wing,,820
+Primary · PYP,Grade 3,Morning Pantry,8:40 – 8:55 am,"Second Floor, Block 6",,520
+Primary · PYP,Grade 3,Lunch,12:00 – 12:20 pm,Respective Classroom,,720
+Primary · PYP,Grade 3,Lunch Pantry,12:00 – 12:20 pm,"Second Floor, Block 6",,720
+Primary · PYP,Grade 3,Exit Pantry,1:40 – 1:55 pm,"Near Ramp, Block 1  /  Assembly Area",,820
+Primary · PYP,Grade 4,Morning Pantry,8:40 – 8:55 am,"Second Floor, Block 6",,520
+Primary · PYP,Grade 4,Lunch,12:00 – 12:20 pm,Respective Classroom,,720
+Primary · PYP,Grade 4,Lunch Pantry,12:00 – 12:20 pm,"Second Floor, Block 6",,720
+Primary · PYP,Grade 4,Exit Pantry,1:40 – 1:55 pm,"Near Ramp, Block 1  /  Assembly Area",,820
+Primary · PYP,Grade 5,Morning Pantry,8:40 – 8:55 am,"First Floor, Block 6",,520
+Primary · PYP,Grade 5,Lunch,12:00 – 12:20 pm,Respective Classroom,,720
+Primary · PYP,Grade 5,Lunch Pantry,12:00 – 12:20 pm,"First Floor, Block 6",,720
+Primary · PYP,Grade 5,Exit Pantry,1:40 – 1:55 pm,"Near Ramp, Block 1  /  Assembly Area",,820
+Primary · PYP,Grade 6,Morning Pantry,8:40 – 8:55 am,"First Floor, Block 6",,520
+Primary · PYP,Grade 6,Lunch,12:00 – 12:20 pm,Respective Classroom,,720
+Primary · PYP,Grade 6,Lunch Pantry,12:00 – 12:20 pm,"First Floor, Block 6",,720
+Primary · PYP,Grade 6,Exit Pantry,1:40 – 1:55 pm,"Near Ramp, Block 1  /  Assembly Area",,820
+Middle · MYP,Grade 7,Morning Pantry,9:55 – 10:15 am,"Outside Library, Block 3–4",,595
+Middle · MYP,Grade 7,Lunch,12:40 – 1:10 pm,"Outside Classroom, 1st Floor, Block 4",,760
+Middle · MYP,Grade 7,Lunch Pantry,12:40 – 1:10 pm,"Outside Library, Block 3–4",,760
+Middle · MYP,Grade 7,Exit Pantry,3:30 – 3:45 pm,"Near Ramp, Block 1",,930
+Middle · MYP,Grade 8,Morning Pantry,9:55 – 10:15 am,"Second Floor Bridge Area, Block 3–4",,595
+Middle · MYP,Grade 8,Lunch,12:40 – 1:10 pm,"Outside Classroom, 2nd Floor, Block 4",,760
+Middle · MYP,Grade 8,Lunch Pantry,12:40 – 1:10 pm,"Second Floor Bridge Area, Block 3–4",,760
+Middle · MYP,Grade 8,Exit Pantry,3:30 – 3:45 pm,"Near Ramp, Block 1",,930
+Middle · MYP,Grade 9,Morning Pantry,9:55 – 10:15 am,"Outside Library, Block 3–4",,595
+Middle · MYP,Grade 9,Lunch,12:40 – 1:10 pm,Itadakimasu,,760
+Middle · MYP,Grade 9,Lunch Pantry,12:40 – 1:10 pm,"Outside Library, Block 3–4",,760
+Middle · MYP,Grade 9,Exit Pantry,3:30 – 3:45 pm,"Near Ramp, Block 1",,930
+Middle · MYP,Grade 10,Morning Pantry,9:55 – 10:15 am,"Second Floor Bridge Area, Block 3–4",,595
+Middle · MYP,Grade 10,Lunch,12:40 – 1:10 pm,"Outside Classroom, 2nd Floor, Block 3",,760
+Middle · MYP,Grade 10,Lunch Pantry,12:40 – 1:10 pm,"Second Floor Bridge Area, Block 3–4",,760
+Middle · MYP,Grade 10,Exit Pantry,3:30 – 3:45 pm,"Near Ramp, Block 1",,930
+Diploma · DP,Grade 11,Morning Pantry,10:45 – 11:05 am,Bon Appétit,,645
+Diploma · DP,Grade 11,Lunch,1:30 – 2:00 pm,Bon Appétit,,810
+Diploma · DP,Grade 11,Lunch Pantry,1:30 – 2:00 pm,"Second Floor Bridge Area, Block 1–2",,810
+Diploma · DP,Grade 11,Exit Pantry,3:30 – 3:45 pm,Assembly Area,,930
+Diploma · DP,Grade 12,Morning Pantry,10:45 – 11:05 am,Itadakimasu,,645
+Diploma · DP,Grade 12,Lunch,1:30 – 2:00 pm,Itadakimasu,,810
+Diploma · DP,Grade 12,Lunch Pantry,1:30 – 2:00 pm,"Second Floor Bridge Area, Block 1–2",,810
+Diploma · DP,Grade 12,Exit Pantry,3:30 – 3:45 pm,Assembly Area,,930
+MLC,MLC 5 & 6,Morning Pantry,8:40 – 8:55 am,Itadakimasu,,520
+MLC,MLC 5 & 6,Lunch,12:00 – 12:20 pm,Itadakimasu,,720
+MLC,MLC 7–10,Morning Pantry,9:55 – 10:15 am,"Outside Classroom, 1st Floor, Block 1",,595
+MLC,MLC 7–10,Lunch,12:40 – 1:10 pm,"Outside Classroom, 1st Floor, Block 1",,760
+Staff,Staff,Morning Pantry,8:30 – 9:30 am,Itadakimasu,Admin & Support Staff,510
+Staff,Staff,Morning Pantry,8:30 – 9:30 am,Bon Appétit,All Staff,510
+Staff,Staff,Lunch,11:00 am – 12:00 pm,Bon Appétit,All Staff · Sitting 1,660
+Staff,Staff,Lunch,1:55 – 2:15 pm,Itadakimasu,All Staff · Sitting 2,835

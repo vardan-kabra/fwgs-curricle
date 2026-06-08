@@ -1,0 +1,4867 @@
+[
+  {
+    "id": "am740",
+    "badge": "Morning",
+    "direction": "To School",
+    "who": "Teachers + Grades 1–6",
+    "schoolEvent": "Reaches school",
+    "schoolTime": "7:40 AM",
+    "timeWord": "Pick-up",
+    "routes": [
+      {
+        "name": "A1",
+        "stops": [
+          {
+            "name": "Delhi Public School, Dumas Road, Gaviyer",
+            "code": "3703",
+            "time": "6:53 AM"
+          },
+          {
+            "name": "Opp. Airport Main gate",
+            "code": "3701",
+            "time": "6:56 AM"
+          },
+          {
+            "name": "Vastu Luxuria Gate No.1 (Nr. VR Mall Circle), Dumas Road",
+            "code": "3704",
+            "time": "7:03 AM"
+          },
+          {
+            "name": "Valentine Multiplex, Piplod-Dumas Road",
+            "code": "1107",
+            "time": "7:06 AM"
+          },
+          {
+            "name": "Galaxy Circle, Pal Main Road",
+            "code": "3608",
+            "time": "7:16 AM"
+          }
+        ]
+      },
+      {
+        "name": "A2",
+        "stops": [
+          {
+            "name": "Opp. Kankubaa Farm, VIP Main Road",
+            "code": "3813",
+            "time": "6:53 AM"
+          },
+          {
+            "name": "Sangini Nirvana, Nr. Nandini 3, Vesu",
+            "code": "3810",
+            "time": "6:55 AM"
+          },
+          {
+            "name": "Opp. Star Galaxy, Nr. Horizon Apartment, VIP Road, Vesu",
+            "code": "3816",
+            "time": "6:57 AM"
+          },
+          {
+            "name": "Shyam Palace, Nr. Nandini 2, VIP Road",
+            "code": "3815",
+            "time": "6:59 AM"
+          },
+          {
+            "name": "Fionaa Apartment, Nr. Siddhi Vinayak Mandir, Vesu",
+            "code": "3801",
+            "time": "7:03 AM"
+          },
+          {
+            "name": "Jolly Residency (Nr. SNS Square)",
+            "code": "3804",
+            "time": "7:05 AM"
+          }
+        ]
+      },
+      {
+        "name": "A3",
+        "stops": [
+          {
+            "name": "Opp. Happy Hallmark Shoppers, Vesu",
+            "code": "3817",
+            "time": "6:52 AM"
+          },
+          {
+            "name": "Opp. Blossom Apt, Vesu Main Road",
+            "code": "3814",
+            "time": "6:53 AM"
+          },
+          {
+            "name": "Florence Main Road, Vesu",
+            "code": "3812",
+            "time": "6:56 AM"
+          },
+          {
+            "name": "Shyam Luxury, Nr. SUDA Bhavan",
+            "code": "3809",
+            "time": "7:01 AM"
+          },
+          {
+            "name": "Prasiddhi Complex Circle, Nr. Modi Bakers, Piplod",
+            "code": "1102",
+            "time": "7:06 AM"
+          }
+        ]
+      },
+      {
+        "name": "A4",
+        "stops": [
+          {
+            "name": "Times Corner, Nr. SMC Garden, Vesu",
+            "code": "3811",
+            "time": "6:53 AM"
+          },
+          {
+            "name": "Ratna Jyoti Apt, Main Gate, VIP Road",
+            "code": "3805",
+            "time": "6:55 AM"
+          },
+          {
+            "name": "Highfield Ascot, VIP Main Road",
+            "code": "3808",
+            "time": "6:57 AM"
+          },
+          {
+            "name": "Opp. Agam Krupa Complex, Nr. Happiness Restaurant",
+            "code": "3807",
+            "time": "7:00 AM"
+          },
+          {
+            "name": "Opp. Someshwar Enclave, Main Gate",
+            "code": "3803",
+            "time": "7:02 AM"
+          },
+          {
+            "name": "Govindji Park, Opp. Umra Garden, Tilak Circle",
+            "code": "1202",
+            "time": "7:12 AM"
+          }
+        ]
+      },
+      {
+        "name": "A5",
+        "stops": [
+          {
+            "name": "Safal Square, UM Road",
+            "code": "3806",
+            "time": "6:53 AM"
+          },
+          {
+            "name": "Opp. SNS Splendid Main Char Rasta, Nr. Rebounce, Vesu",
+            "code": "3820",
+            "time": "6:55 AM"
+          },
+          {
+            "name": "Opp. Surya Heritage, Maharana Pratap Road",
+            "code": "3818",
+            "time": "6:57 AM"
+          },
+          {
+            "name": "Opp. Happy Excelencia, Maharana Pratap Road",
+            "code": "3819",
+            "time": "6:58 AM"
+          },
+          {
+            "name": "Florence Hospital, Piplod",
+            "code": "1106",
+            "time": "7:03 AM"
+          }
+        ]
+      },
+      {
+        "name": "A6",
+        "stops": [
+          {
+            "name": "Rajhans Cremona, VIP Road, Vesu",
+            "code": "3116",
+            "time": "6:53 AM"
+          },
+          {
+            "name": "Dream Heritage, Vesu Canal Road",
+            "code": "3117",
+            "time": "6:56 AM"
+          },
+          {
+            "name": "L. P. Savani Academy (Nr. Canal Walker, VIP Road)",
+            "code": "3109",
+            "time": "6:59 AM"
+          },
+          {
+            "name": "Rajhans Cosmic, Vesu Canal Road",
+            "code": "3118",
+            "time": "7:01 AM"
+          },
+          {
+            "name": "Surya Landmark, Nr. Money Arcade, Vesu Canal Road",
+            "code": "3105",
+            "time": "7:04 AM"
+          }
+        ]
+      },
+      {
+        "name": "A7 (Small Bus)",
+        "stops": [
+          {
+            "name": "Rajhans Zion, Vesu Canal Road, Bharthana",
+            "code": "3112",
+            "time": "6:52 AM"
+          },
+          {
+            "name": "Sangini Terreza, Vesu Canal Road, Bharthana",
+            "code": "3113",
+            "time": "6:54 AM"
+          },
+          {
+            "name": "Marvella Corridors Complex, VIP Road, Vesu",
+            "code": "3115",
+            "time": "6:56 AM"
+          },
+          {
+            "name": "Ofira, Bharthana",
+            "code": "3107",
+            "time": "6:59 AM"
+          },
+          {
+            "name": "Sangini Solitaire, Bharthana",
+            "code": "3110",
+            "time": "7:01 AM"
+          },
+          {
+            "name": "LP Savani Circle Main Road",
+            "code": "3604",
+            "time": "7:19 AM"
+          }
+        ]
+      },
+      {
+        "name": "A8",
+        "stops": [
+          {
+            "name": "Sangini Evoq Main Char Rasta, VIP Main Road",
+            "code": "3119",
+            "time": "6:53 AM"
+          },
+          {
+            "name": "Poddar Residency, Bharthana",
+            "code": "3106",
+            "time": "6:56 AM"
+          },
+          {
+            "name": "Rajhans Grandezza, Bharthana",
+            "code": "3111",
+            "time": "6:58 AM"
+          },
+          {
+            "name": "Trinity Mall, Main Road",
+            "code": "3602",
+            "time": "7:15 AM"
+          },
+          {
+            "name": "Vitoria Heights, Opp. Raj Harmony, Ugat Canal Road",
+            "code": "3612",
+            "time": "7:25 AM"
+          }
+        ]
+      },
+      {
+        "name": "A9",
+        "stops": [
+          {
+            "name": "Opp. D.B. Patel Food Court, Nr. Raj Dream, VIP 2 Road",
+            "code": "3114",
+            "time": "6:53 AM"
+          },
+          {
+            "name": "Ashirwad Enclave, Nr. Bamroli Bridge, Althan",
+            "code": "3108",
+            "time": "6:56 AM"
+          },
+          {
+            "name": "Opp. Shyam Mandir, Main Road (VIP Road)",
+            "code": "3102",
+            "time": "7:00 AM"
+          }
+        ]
+      },
+      {
+        "name": "A10",
+        "stops": [
+          {
+            "name": "Jiomax Multi-Super Speciality Hospital, Nr. Om Terrace",
+            "code": "3100",
+            "time": "6:53 AM"
+          },
+          {
+            "name": "Opp. Om Terrace Complex Gate, New Citylight Rd.",
+            "code": "3101",
+            "time": "6:55 AM"
+          },
+          {
+            "name": "China Gate I, New Citylight",
+            "code": "3103",
+            "time": "6:57 AM"
+          },
+          {
+            "name": "Breadliner Circle, U.M. Road",
+            "code": "3104",
+            "time": "7:00 AM"
+          },
+          {
+            "name": "Police Parade Ground Bus Stop, Main Road (Nr. Nagrik Suvidha Kendra)",
+            "code": "4002",
+            "time": "7:07 AM"
+          },
+          {
+            "name": "Opp. CNG Station (Behind LP Savani School)",
+            "code": "3610",
+            "time": "7:19 AM"
+          }
+        ]
+      },
+      {
+        "name": "A11",
+        "stops": [
+          {
+            "name": "Sangini Main Gate (Nr. Om Krishna Petrol Pump), Panas Gam",
+            "code": "3207",
+            "time": "6:57 AM"
+          },
+          {
+            "name": "Ashirwad Complex Gate No. 1 (Nr. Om Krishna Petrol Pump)",
+            "code": "3201",
+            "time": "7:01 AM"
+          },
+          {
+            "name": "Surya Palace Gate No. 1, Citylight Road",
+            "code": "3208",
+            "time": "7:03 AM"
+          },
+          {
+            "name": "Subh Laxmi Complex, Nr. Bank of Baroda, Citylight",
+            "code": "3202",
+            "time": "7:05 AM"
+          }
+        ]
+      },
+      {
+        "name": "A12",
+        "stops": [
+          {
+            "name": "Opera House, Nr. Agrasen Bhavan, Citylight",
+            "code": "3203",
+            "time": "6:53 AM"
+          },
+          {
+            "name": "Opp. State Bank of India, Nr. Pujan Apt., Citylight Road",
+            "code": "3204",
+            "time": "6:55 AM"
+          },
+          {
+            "name": "Opp. Green Garden, Opp. Maheshwari Bhavan, Citylight",
+            "code": "3205",
+            "time": "6:58 AM"
+          },
+          {
+            "name": "Noopur Hospital, Citylight Main Road (Circle)",
+            "code": "3206",
+            "time": "7:00 AM"
+          },
+          {
+            "name": "Sumerru Business Corner, Nr. Rajhans (Pal)",
+            "code": "3615",
+            "time": "7:12 AM"
+          }
+        ]
+      },
+      {
+        "name": "A13",
+        "stops": [
+          {
+            "name": "Regency Tower - C",
+            "code": "1103",
+            "time": "6:55 AM"
+          },
+          {
+            "name": "Pallavi Apartment, Nr. Lalbhai Contractor Stadium",
+            "code": "1108",
+            "time": "6:56 AM"
+          },
+          {
+            "name": "Goverdhan Haveli Temple, Piplod Main Road",
+            "code": "1105",
+            "time": "6:59 AM"
+          },
+          {
+            "name": "Four Season Gate 2, Gym Khana Road, Umra",
+            "code": "1104",
+            "time": "7:01 AM"
+          },
+          {
+            "name": "River Wind Residency, Gym Khana Road",
+            "code": "1100",
+            "time": "7:03 AM"
+          },
+          {
+            "name": "Opp. Chandni Chowk Circle",
+            "code": "1101",
+            "time": "7:05 AM"
+          },
+          {
+            "name": "Opp. Nilam Society Main Gate, Umra Gam",
+            "code": "1203",
+            "time": "7:07 AM"
+          },
+          {
+            "name": "Mamta Hospital, Palanpur Gam Canal Road",
+            "code": "3616",
+            "time": "7:18 AM"
+          }
+        ]
+      },
+      {
+        "name": "A14",
+        "stops": [
+          {
+            "name": "Fitt - Fitness Studio (Old Vodafone Store, Athwalines)",
+            "code": "3904",
+            "time": "7:03 AM"
+          },
+          {
+            "name": "Brijwasi Estate (Nr. Umrigar School)",
+            "code": "3903",
+            "time": "7:06 AM"
+          },
+          {
+            "name": "Opp. Ratna Anushree Apt., Opp. Rituraj Complex",
+            "code": "3902",
+            "time": "7:08 AM"
+          }
+        ]
+      },
+      {
+        "name": "A15",
+        "stops": [
+          {
+            "name": "Sargam Shopping Center",
+            "code": "3906",
+            "time": "6:55 AM"
+          },
+          {
+            "name": "Ambika Niketan, Bus Stand",
+            "code": "3905",
+            "time": "6:58 AM"
+          },
+          {
+            "name": "Opp. Rajhans Campus, Gate No. 1, Main Road",
+            "code": "3601",
+            "time": "7:03 AM"
+          },
+          {
+            "name": "Nr. EV Charging Station, Jeevan Yatra Circle, Gangeshwar Mahadev Road",
+            "code": "3406",
+            "time": "7:10 AM"
+          },
+          {
+            "name": "Rutvan Apartment, Gangeshwar Mahadev Road (Opp. Axis Bank, Nr. Tapi Hotel)",
+            "code": "3401",
+            "time": "7:13 AM"
+          },
+          {
+            "name": "Opp. Surbhi Dairy Main Road, Honey Park Road",
+            "code": "3405",
+            "time": "7:15 AM"
+          },
+          {
+            "name": "Opp. Bhumi Complex, Main Road",
+            "code": "3402",
+            "time": "7:17 AM"
+          },
+          {
+            "name": "Friend Class Main Road, Palanpur Patia Road",
+            "code": "3403",
+            "time": "7:19 AM"
+          }
+        ]
+      },
+      {
+        "name": "A16",
+        "stops": [
+          {
+            "name": "Opp. Asopalav Showroom (Nr. Old Uncle Shop)",
+            "code": "3907",
+            "time": "6:58 AM"
+          },
+          {
+            "name": "Adajan Gam Bus Stop (Opp. Samarth Park - Shikha)",
+            "code": "3506",
+            "time": "7:04 AM"
+          },
+          {
+            "name": "Opp. Chinmay Appt, Nr. Shri Ram Petrol Pump, Adajan",
+            "code": "3301",
+            "time": "7:07 AM"
+          },
+          {
+            "name": "Center Point, Opp. Sahyog Imaging Centre, Anand Mahal Rd.",
+            "code": "3302",
+            "time": "7:10 AM"
+          },
+          {
+            "name": "Prime Arcade, Adajan",
+            "code": "3303",
+            "time": "7:13 AM"
+          },
+          {
+            "name": "Opp. GAIL Tower, Main Road",
+            "code": "3304",
+            "time": "7:15 AM"
+          },
+          {
+            "name": "Opp. Krishna Row House, Dandi Road",
+            "code": "2602",
+            "time": "7:23 AM"
+          }
+        ]
+      },
+      {
+        "name": "A17",
+        "stops": [
+          {
+            "name": "City Mall",
+            "code": "1301",
+            "time": "6:53 AM"
+          },
+          {
+            "name": "Central Bank of India, Opp. Union Point, Ghod Dod Rd.",
+            "code": "1302",
+            "time": "6:54 AM"
+          },
+          {
+            "name": "Indoor Stadium, Main Road, Gate No. 4",
+            "code": "1303",
+            "time": "6:56 AM"
+          },
+          {
+            "name": "Agarwal Samaj Bhavan, Ghod Dod Rd Main Road",
+            "code": "1304",
+            "time": "6:58 AM"
+          },
+          {
+            "name": "Opp. Pinki Collection Store, Main Road",
+            "code": "1306",
+            "time": "7:02 AM"
+          },
+          {
+            "name": "Ravi Dham Complex, Nr. Children's Traffic Park",
+            "code": "1309",
+            "time": "7:04 AM"
+          },
+          {
+            "name": "Opp. Bank of India, Opp. Panjrapole, Ghod Dod Road",
+            "code": "1408",
+            "time": "7:06 AM"
+          }
+        ]
+      },
+      {
+        "name": "A18",
+        "stops": [
+          {
+            "name": "Jay Jalaram Store",
+            "code": "1308",
+            "time": "6:58 AM"
+          },
+          {
+            "name": "Opp. Madhuvan Park, Nr. Kangaroo Kids, Green Avenue Lane",
+            "code": "1307",
+            "time": "7:00 AM"
+          },
+          {
+            "name": "Sarela Shopping Center",
+            "code": "1305",
+            "time": "7:03 AM"
+          },
+          {
+            "name": "Dhiraj Sons Mega Store, Athwa Gate",
+            "code": "4001",
+            "time": "7:08 AM"
+          },
+          {
+            "name": "Vijay Dairy (Gujarat Gas Circle)",
+            "code": "3501",
+            "time": "7:12 AM"
+          }
+        ]
+      },
+      {
+        "name": "A19",
+        "stops": [
+          {
+            "name": "Nr. Megha Tower 1 (Opp. Joggers Park)",
+            "code": "1410",
+            "time": "6:54 AM"
+          },
+          {
+            "name": "Ashirwad Palace Gate No. 4 (Bhatar)",
+            "code": "1407",
+            "time": "6:57 AM"
+          },
+          {
+            "name": "Mahavir Petrol Pump",
+            "code": "3503",
+            "time": "7:14 AM"
+          },
+          {
+            "name": "Tadwadi Char Rasta Main Road",
+            "code": "3504",
+            "time": "7:18 AM"
+          }
+        ]
+      },
+      {
+        "name": "A20 (Small Bus)",
+        "stops": [
+          {
+            "name": "Nr. Rupali Naher, Bhatar Road",
+            "code": "1404",
+            "time": "6:55 AM"
+          },
+          {
+            "name": "Opp. City Park (Nr. Shree Mahalaxmi Locho)",
+            "code": "1402",
+            "time": "6:58 AM"
+          },
+          {
+            "name": "Opp. Kapadia Health Club, Main Road",
+            "code": "1403",
+            "time": "7:04 AM"
+          },
+          {
+            "name": "Gandhi Engineering College (Nr. Bus Stand)",
+            "code": "1501",
+            "time": "7:07 AM"
+          },
+          {
+            "name": "Vijay Sales, Nr. Rocket Circle Main Road",
+            "code": "3508",
+            "time": "7:16 AM"
+          },
+          {
+            "name": "Subhash Garden, Morabhagal Circle",
+            "code": "2601",
+            "time": "7:22 AM"
+          }
+        ]
+      },
+      {
+        "name": "A21 (Small Bus)",
+        "stops": [
+          {
+            "name": "Nr. DCB Bank Main Road",
+            "code": "2502",
+            "time": "6:55 AM"
+          },
+          {
+            "name": "Opp. Pushpa Agencies, Nr. Jeevan Bharti School",
+            "code": "1601",
+            "time": "7:01 AM"
+          },
+          {
+            "name": "Nr. Kailash Sweets, Main Road",
+            "code": "1602",
+            "time": "7:03 AM"
+          },
+          {
+            "name": "Boat Circle, Opp. Dotiwala Bakery (Swami Vivekanand Circle)",
+            "code": "1603",
+            "time": "7:06 AM"
+          },
+          {
+            "name": "Vijay Dairy (Dhanmora Complex)",
+            "code": "3502",
+            "time": "7:11 AM"
+          },
+          {
+            "name": "Mahavir Jewellers, Palanpur Patia Circle",
+            "code": "3507",
+            "time": "7:17 AM"
+          }
+        ]
+      },
+      {
+        "name": "A22 (Small Bus)",
+        "stops": [
+          {
+            "name": "Opp. Air India Office",
+            "code": "1901",
+            "time": "6:55 AM"
+          },
+          {
+            "name": "Opp. Zapata Store, Main Road",
+            "code": "1902",
+            "time": "6:57 AM"
+          },
+          {
+            "name": "Opp. Sheth Morabhai Hospital / Motiwala Perfume",
+            "code": "2001",
+            "time": "6:59 AM"
+          },
+          {
+            "name": "Chowk Char Rasta",
+            "code": "2002",
+            "time": "7:01 AM"
+          },
+          {
+            "name": "Shugan Society Gate No. 2, Nr. Sardar English Medium School",
+            "code": "2103",
+            "time": "7:06 AM"
+          },
+          {
+            "name": "Dissoto Turf (Old Royal Residency Stop), Causeway Rd.",
+            "code": "2101",
+            "time": "7:08 AM"
+          },
+          {
+            "name": "Sana Corner, Nr. Gulzar Avenue, Main Road",
+            "code": "2102",
+            "time": "7:11 AM"
+          },
+          {
+            "name": "Surya Darshan Complex, Main Road, Jahangirpura",
+            "code": "2609",
+            "time": "7:18 AM"
+          },
+          {
+            "name": "Satyadev Plaza, Iscon Circle, Jahangirpura",
+            "code": "2603",
+            "time": "7:19 AM"
+          }
+        ]
+      },
+      {
+        "name": "A23",
+        "stops": [
+          {
+            "name": "Poddar Arcade Main Road",
+            "code": "2201",
+            "time": "7:00 AM"
+          },
+          {
+            "name": "Opp. Petrol Pump (Nr. JB Diamond)",
+            "code": "2202",
+            "time": "7:02 AM"
+          }
+        ]
+      },
+      {
+        "name": "A24 (Small Bus)",
+        "stops": [
+          {
+            "name": "Raja Dairy",
+            "code": "1701",
+            "time": "6:52 AM"
+          },
+          {
+            "name": "Zenith Hotel (Old Amisha Hotel)",
+            "code": "1702",
+            "time": "6:55 AM"
+          },
+          {
+            "name": "Opp. Railway Parcel Office",
+            "code": "2303",
+            "time": "6:58 AM"
+          },
+          {
+            "name": "Shree Nutan Nivas Complex, Nr. I.C. Gandhi School, Sumul Dairy Road",
+            "code": "2301",
+            "time": "7:00 AM"
+          },
+          {
+            "name": "Opp. Barfiwala College, Main Road",
+            "code": "2302",
+            "time": "7:02 AM"
+          },
+          {
+            "name": "Smt. Maniben Kantibhai Circle",
+            "code": "2402",
+            "time": "7:04 AM"
+          },
+          {
+            "name": "Bal Anath Ashram",
+            "code": "2401",
+            "time": "7:07 AM"
+          },
+          {
+            "name": "Opp. Paras Police Chowki, Nr. Dholakia Garden, Katargam",
+            "code": "2403",
+            "time": "7:09 AM"
+          },
+          {
+            "name": "Dhanmora Char Rasta, Katargam (Opp. Phone Book Mobile Shop)",
+            "code": "2410",
+            "time": "7:11 AM"
+          },
+          {
+            "name": "Siganpur Circle",
+            "code": "2405",
+            "time": "7:14 AM"
+          },
+          {
+            "name": "Dabholi Gam Char Rasta (Nr. Dabholi Bridge)",
+            "code": "2404",
+            "time": "7:20 AM"
+          }
+        ]
+      },
+      {
+        "name": "A25",
+        "stops": [
+          {
+            "name": "Roscoe Apt., Dabholi, Ved Road",
+            "code": "2411",
+            "time": "6:53 AM"
+          },
+          {
+            "name": "Opp. Shree Swaminarayan Gurukul Gate, Nani Ved",
+            "code": "2409",
+            "time": "6:57 AM"
+          },
+          {
+            "name": "SRK Farm (Nr. Jalaram Chowk, Karada Gam, Ved)",
+            "code": "2413",
+            "time": "7:00 AM"
+          },
+          {
+            "name": "Status Circle (Nr. Karada Gam, Ved)",
+            "code": "2414",
+            "time": "7:02 AM"
+          },
+          {
+            "name": "The Palladium, Nr. Torrent Power Police Station",
+            "code": "2415",
+            "time": "7:04 AM"
+          },
+          {
+            "name": "Vadla Circle, Nr. Laxmikant ni Vadi, Gajera Road",
+            "code": "2416",
+            "time": "7:08 AM"
+          },
+          {
+            "name": "Opp. Sunday Hub, Nr. Ankur Vidhyalay, Katargam",
+            "code": "2412",
+            "time": "7:10 AM"
+          },
+          {
+            "name": "Subh Laxmi Apartment, Main Road (Ved Road)",
+            "code": "2407",
+            "time": "7:13 AM"
+          },
+          {
+            "name": "Opp. Aksharwadi Circle (Katargam)",
+            "code": "2408",
+            "time": "7:14 AM"
+          }
+        ]
+      },
+      {
+        "name": "A26 (Small Bus)",
+        "stops": [
+          {
+            "name": "Opp. Silver Crest Apt., Nr. Western Shikharji Complex",
+            "code": "3607",
+            "time": "6:54 AM"
+          },
+          {
+            "name": "Opp. Praveg Apt., Nr. Plant Nursery, Opp. McDonald's, L.P. Savani Road",
+            "code": "3603",
+            "time": "6:57 AM"
+          },
+          {
+            "name": "Opp. Parshuram Garden, Nr. Amul Parlour",
+            "code": "3404",
+            "time": "7:01 AM"
+          },
+          {
+            "name": "Opp. V3 Corner, Nr. Sarita Dairy, Honey Park Road",
+            "code": "3606",
+            "time": "7:02 AM"
+          },
+          {
+            "name": "Gam Khadi (Inside Morabhagal)",
+            "code": "2605",
+            "time": "7:10 AM"
+          },
+          {
+            "name": "5 Square Point, MV Circle (Sutrali)",
+            "code": "2606",
+            "time": "7:14 AM"
+          },
+          {
+            "name": "Opp. Green Aristo, Vaishnodevi Canal Road",
+            "code": "2611",
+            "time": "7:18 AM"
+          },
+          {
+            "name": "Opp. Vaishnodevi Blue Complex, Jahangirabad",
+            "code": "2608",
+            "time": "7:21 AM"
+          },
+          {
+            "name": "Opp. Vaishnodevi Sky Complex, Jahangirabad",
+            "code": "2610",
+            "time": "7:23 AM"
+          }
+        ]
+      },
+      {
+        "name": "A27",
+        "stops": [
+          {
+            "name": "Nr. Nexa-Amar Cars (Opp. Old JK Motors), Pal Road",
+            "code": "3609",
+            "time": "7:03 AM"
+          },
+          {
+            "name": "Nishal Arcade Main Road, Pal",
+            "code": "3614",
+            "time": "7:05 AM"
+          },
+          {
+            "name": "Opp. Orchid Green, Nr. Raj World, Palanpore Gam",
+            "code": "3611",
+            "time": "7:15 AM"
+          },
+          {
+            "name": "Cinezza Multiplex, Nr. D'Mart, Dandi Road",
+            "code": "2607",
+            "time": "7:23 AM"
+          }
+        ]
+      },
+      {
+        "name": "A28",
+        "stops": [
+          {
+            "name": "Shreepad Park, Arena Road, Pal",
+            "code": "3618",
+            "time": "7:03 AM"
+          },
+          {
+            "name": "Green City Main Road (Bhatha)",
+            "code": "3605",
+            "time": "7:08 AM"
+          },
+          {
+            "name": "Bellissimo Hub, Opp. Gothic Apt., Gauravpath Road, Pal",
+            "code": "3613",
+            "time": "7:13 AM"
+          },
+          {
+            "name": "Shavion Circle (Nr. Sai Milaap Shoppers), Gauravpath Road, Pal",
+            "code": "3617",
+            "time": "7:16 AM"
+          }
+        ]
+      },
+      {
+        "name": "A29 (Ecco 7 Seater)",
+        "stops": [
+          {
+            "name": "Magob Circle",
+            "code": "5005",
+            "time": "6:55 AM"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "am905",
+    "badge": "Morning",
+    "direction": "To School",
+    "who": "EY + Grades 7–12",
+    "schoolEvent": "Reaches school",
+    "schoolTime": "9:05 AM",
+    "timeWord": "Pick-up",
+    "routes": [
+      {
+        "name": "B1",
+        "stops": [
+          {
+            "name": "Delhi Public School, Dumas Road, Gaviyer",
+            "code": "3703",
+            "time": "8:15 AM"
+          },
+          {
+            "name": "ONGC Phase I Main Gate, Dumas Road",
+            "code": "3702",
+            "time": "8:21 AM"
+          },
+          {
+            "name": "Vastu Luxuria Gate No.1 (Nr. VR Mall Circle), Dumas Road",
+            "code": "3704",
+            "time": "8:25 AM"
+          },
+          {
+            "name": "Valentine Multiplex, Piplod-Dumas Road",
+            "code": "1107",
+            "time": "8:28 AM"
+          },
+          {
+            "name": "Govindji Park, Opp. Umra Garden, Tilak Circle",
+            "code": "1202",
+            "time": "8:36 AM"
+          }
+        ]
+      },
+      {
+        "name": "B2",
+        "stops": [
+          {
+            "name": "Opp. Kankubaa Farm, VIP Main Road",
+            "code": "3813",
+            "time": "8:17 AM"
+          },
+          {
+            "name": "Sangini Nirvana, Nr. Nandini 3, Vesu",
+            "code": "3810",
+            "time": "8:19 AM"
+          },
+          {
+            "name": "Opp. Star Galaxy, Nr. Horizon Apartment, VIP Road, Vesu",
+            "code": "3816",
+            "time": "8:21 AM"
+          },
+          {
+            "name": "Shyam Palace, Nr. Nandini 2, VIP Road",
+            "code": "3815",
+            "time": "8:22 AM"
+          },
+          {
+            "name": "S.D. Jain School-Plantes (First Gate), U.M. Road",
+            "code": "3802",
+            "time": "8:28 AM"
+          }
+        ]
+      },
+      {
+        "name": "B3",
+        "stops": [
+          {
+            "name": "Opp. Happy Hallmark Shoppers, Vesu",
+            "code": "3817",
+            "time": "8:18 AM"
+          },
+          {
+            "name": "Opp. Blossom Apt, Vesu Main Road",
+            "code": "3814",
+            "time": "8:20 AM"
+          },
+          {
+            "name": "Fionaa Apartment, Nr. Siddhi Vinayak Mandir, Vesu",
+            "code": "3801",
+            "time": "8:26 AM"
+          },
+          {
+            "name": "Jolly Residency (Nr. SNS Square)",
+            "code": "3804",
+            "time": "8:28 AM"
+          }
+        ]
+      },
+      {
+        "name": "B4",
+        "stops": [
+          {
+            "name": "Florence Main Road, Vesu",
+            "code": "3812",
+            "time": "8:18 AM"
+          },
+          {
+            "name": "Shyam Luxury, Nr. SUDA Bhavan",
+            "code": "3809",
+            "time": "8:24 AM"
+          },
+          {
+            "name": "Florence Hospital, Piplod",
+            "code": "1106",
+            "time": "8:29 AM"
+          }
+        ]
+      },
+      {
+        "name": "B5",
+        "stops": [
+          {
+            "name": "Times Corner, Nr. SMC Garden, Vesu",
+            "code": "3811",
+            "time": "8:18 AM"
+          },
+          {
+            "name": "Ratna Jyoti Apt, Main Gate, VIP Road",
+            "code": "3805",
+            "time": "8:20 AM"
+          },
+          {
+            "name": "Highfield Ascot, VIP Main Road",
+            "code": "3808",
+            "time": "8:22 AM"
+          },
+          {
+            "name": "Opp. Agam Krupa Complex, Nr. Happiness Restaurant",
+            "code": "3807",
+            "time": "8:25 AM"
+          },
+          {
+            "name": "Opp. Someshwar Enclave, Main Gate",
+            "code": "3803",
+            "time": "8:27 AM"
+          },
+          {
+            "name": "Mamta Hospital, Palanpur Gam Canal Road",
+            "code": "3616",
+            "time": "8:43 AM"
+          }
+        ]
+      },
+      {
+        "name": "B6",
+        "stops": [
+          {
+            "name": "Safal Square, UM Road",
+            "code": "3806",
+            "time": "8:18 AM"
+          },
+          {
+            "name": "Opp. SNS Splendid Main Char Rasta, Nr. Rebounce, Vesu",
+            "code": "3820",
+            "time": "8:20 AM"
+          },
+          {
+            "name": "Opp. Surya Heritage, Maharana Pratap Road",
+            "code": "3818",
+            "time": "8:22 AM"
+          },
+          {
+            "name": "Opp. Happy Excelencia, Maharana Pratap Road",
+            "code": "3819",
+            "time": "8:24 AM"
+          },
+          {
+            "name": "Prasiddhi Complex Circle, Nr. Modi Bakers, Piplod",
+            "code": "1102",
+            "time": "8:31 AM"
+          },
+          {
+            "name": "Galaxy Circle, Pal Main Road",
+            "code": "3608",
+            "time": "8:43 AM"
+          }
+        ]
+      },
+      {
+        "name": "B7",
+        "stops": [
+          {
+            "name": "Rajhans Cremona, VIP Road, Vesu",
+            "code": "3116",
+            "time": "8:18 AM"
+          },
+          {
+            "name": "Dream Heritage, Vesu Canal Road",
+            "code": "3117",
+            "time": "8:20 AM"
+          },
+          {
+            "name": "L. P. Savani Academy (Nr. Canal Walker, VIP Road)",
+            "code": "3109",
+            "time": "8:22 AM"
+          },
+          {
+            "name": "Rajhans Cosmic, Vesu Canal Road",
+            "code": "3118",
+            "time": "8:24 AM"
+          },
+          {
+            "name": "Surya Landmark, Nr. Money Arcade, Vesu Canal Road",
+            "code": "3105",
+            "time": "8:27 AM"
+          }
+        ]
+      },
+      {
+        "name": "B8",
+        "stops": [
+          {
+            "name": "Rajhans Zion, Vesu Canal Road, Bharthana",
+            "code": "3112",
+            "time": "8:17 AM"
+          },
+          {
+            "name": "Sangini Terreza, Vesu Canal Road, Bharthana",
+            "code": "3113",
+            "time": "8:19 AM"
+          },
+          {
+            "name": "Marvella Corridors Complex, VIP Road, Vesu",
+            "code": "3115",
+            "time": "8:21 AM"
+          },
+          {
+            "name": "Opp. Sangini Evoq Main Char Rasta, VIP Main Road",
+            "code": "3119",
+            "time": "8:23 AM"
+          },
+          {
+            "name": "Ofira, Bharthana",
+            "code": "3107",
+            "time": "8:26 AM"
+          }
+        ]
+      },
+      {
+        "name": "B9",
+        "stops": [
+          {
+            "name": "Opp. Sangini Solitaire, Bharthana",
+            "code": "3110",
+            "time": "8:18 AM"
+          },
+          {
+            "name": "Poddar Residency, Bharthana",
+            "code": "3106",
+            "time": "8:23 AM"
+          },
+          {
+            "name": "Rajhans Grandezza, Bharthana",
+            "code": "3111",
+            "time": "8:25 AM"
+          }
+        ]
+      },
+      {
+        "name": "B10",
+        "stops": [
+          {
+            "name": "Opp. D.B. Patel Food Court, Nr. Raj Dream, VIP 2 Road",
+            "code": "3114",
+            "time": "8:15 AM"
+          },
+          {
+            "name": "Ashirwad Enclave, Nr. Bamroli Bridge, Althan",
+            "code": "3108",
+            "time": "8:19 AM"
+          },
+          {
+            "name": "Opp. Shyam Mandir, Main Road (VIP Road)",
+            "code": "3102",
+            "time": "8:23 AM"
+          },
+          {
+            "name": "Opp. Green Garden, Opp. Maheshwari Bhavan, Citylight",
+            "code": "3205",
+            "time": "8:30 AM"
+          },
+          {
+            "name": "Noopur Hospital, Citylight Main Road (Circle)",
+            "code": "3206",
+            "time": "8:32 AM"
+          }
+        ]
+      },
+      {
+        "name": "B11",
+        "stops": [
+          {
+            "name": "Jiomax Multi-Super Speciality Hospital, Nr. Om Terrace",
+            "code": "3100",
+            "time": "8:15 AM"
+          },
+          {
+            "name": "Opp. Om Terrace Complex Gate, New Citylight Rd.",
+            "code": "3101",
+            "time": "8:17 AM"
+          },
+          {
+            "name": "China Gate I, New Citylight",
+            "code": "3103",
+            "time": "8:19 AM"
+          },
+          {
+            "name": "Breadliner Circle, U.M. Road",
+            "code": "3104",
+            "time": "8:23 AM"
+          },
+          {
+            "name": "Police Parade Ground Bus Stop, Main Road (Nr. Nagrik Suvidha Kendra)",
+            "code": "4002",
+            "time": "8:33 AM"
+          }
+        ]
+      },
+      {
+        "name": "B12",
+        "stops": [
+          {
+            "name": "Ashirwad Complex Gate No. 1 (Nr. Om Krishna Petrol Pump)",
+            "code": "3201",
+            "time": "8:20 AM"
+          },
+          {
+            "name": "Surya Palace Gate No. 1, Citylight Road",
+            "code": "3208",
+            "time": "8:22 AM"
+          },
+          {
+            "name": "Subh Laxmi Complex, Nr. Bank of Baroda, Citylight",
+            "code": "3202",
+            "time": "8:24 AM"
+          },
+          {
+            "name": "Opp. Asopalav Showroom (Nr. Old Uncle Shop)",
+            "code": "3907",
+            "time": "8:32 AM"
+          }
+        ]
+      },
+      {
+        "name": "B13",
+        "stops": [
+          {
+            "name": "Sangini Main Gate (Nr. Om Krishna Petrol Pump), Panas Gam",
+            "code": "3207",
+            "time": "8:18 AM"
+          },
+          {
+            "name": "Opp. Opera House, Nr. Agrasen Bhavan, Citylight",
+            "code": "3203",
+            "time": "8:23 AM"
+          },
+          {
+            "name": "State Bank of India, Nr. Pujan Apt., Citylight Road",
+            "code": "3204",
+            "time": "8:24 AM"
+          },
+          {
+            "name": "Opp. Rajhans Campus, Gate No. 1, Main Road",
+            "code": "3601",
+            "time": "8:36 AM"
+          },
+          {
+            "name": "Sumerru Business Corner, Nr. Rajhans (Pal)",
+            "code": "3615",
+            "time": "8:38 AM"
+          }
+        ]
+      },
+      {
+        "name": "B14",
+        "stops": [
+          {
+            "name": "Regency Tower - C",
+            "code": "1103",
+            "time": "8:18 AM"
+          },
+          {
+            "name": "Pallavi Apartment, Nr. Lalbhai Contractor Stadium",
+            "code": "1108",
+            "time": "8:20 AM"
+          },
+          {
+            "name": "Icchanath Mahadev Temple, SVNIT Circle, Nr. Indian Oil Petrol Pump",
+            "code": "3908",
+            "time": "8:26 AM"
+          },
+          {
+            "name": "Sargam Shopping Center",
+            "code": "3906",
+            "time": "8:27 AM"
+          },
+          {
+            "name": "Adajan Gam Bus Stop (Opp. Samarth Park - Shikha)",
+            "code": "3506",
+            "time": "8:36 AM"
+          },
+          {
+            "name": "Opp. Chinmay Appt, Nr. Shri Ram Petrol Pump, Adajan",
+            "code": "3301",
+            "time": "8:38 AM"
+          },
+          {
+            "name": "Center Point, Opp. Sahyog Imaging Centre, Anand Mahal Rd.",
+            "code": "3302",
+            "time": "8:40 AM"
+          },
+          {
+            "name": "Prime Arcade, Adajan",
+            "code": "3303",
+            "time": "8:42 AM"
+          },
+          {
+            "name": "Opp. GAIL Tower, Main Road",
+            "code": "3304",
+            "time": "8:44 AM"
+          }
+        ]
+      },
+      {
+        "name": "B15",
+        "stops": [
+          {
+            "name": "Goverdhan Haveli Temple, Piplod Main Road",
+            "code": "1105",
+            "time": "8:18 AM"
+          },
+          {
+            "name": "Four Season Gate 2, Gym Khana Road, Umra",
+            "code": "1104",
+            "time": "8:20 AM"
+          },
+          {
+            "name": "River Wind Residency, Gym Khana Road",
+            "code": "1100",
+            "time": "8:23 AM"
+          },
+          {
+            "name": "Opp. Chandni Chowk Circle",
+            "code": "1101",
+            "time": "8:26 AM"
+          },
+          {
+            "name": "Opp. Nilam Society Main Gate, Umra Gam",
+            "code": "1203",
+            "time": "8:28 AM"
+          },
+          {
+            "name": "Opp. Silver Crest Apt., Nr. Western Shikharji Complex",
+            "code": "3607",
+            "time": "8:38 AM"
+          },
+          {
+            "name": "L.P. Savani School (Circle) Main Road",
+            "code": "3604",
+            "time": "8:43 AM"
+          },
+          {
+            "name": "Opp. CNG Station (Behind LP Savani School)",
+            "code": "3610",
+            "time": "8:44 AM"
+          },
+          {
+            "name": "Vitoria Heights, Opp. Raj Harmony, Ugat Canal Road",
+            "code": "3612",
+            "time": "8:50 AM"
+          }
+        ]
+      },
+      {
+        "name": "B16",
+        "stops": [
+          {
+            "name": "Opp. Ratna Anushree Apt., Opp. Rituraj Complex",
+            "code": "3902",
+            "time": "8:25 AM"
+          },
+          {
+            "name": "Fitt - Fitness Studio (Old Vodafone Store, Athwalines)",
+            "code": "3904",
+            "time": "8:29 AM"
+          },
+          {
+            "name": "City Mall",
+            "code": "1301",
+            "time": "8:33 AM"
+          },
+          {
+            "name": "Central Bank of India, Opp. Union Point, Ghod Dod Rd.",
+            "code": "1302",
+            "time": "8:34 AM"
+          },
+          {
+            "name": "Indoor Stadium, Main Road, Gate No. 4",
+            "code": "1303",
+            "time": "8:37 AM"
+          }
+        ]
+      },
+      {
+        "name": "B17",
+        "stops": [
+          {
+            "name": "Opp. Brijwasi Estate (Nr. Umrigar School)",
+            "code": "3903",
+            "time": "8:25 AM"
+          },
+          {
+            "name": "Metro Shoes (Nr. Shoe Mark)",
+            "code": "3901",
+            "time": "8:29 AM"
+          },
+          {
+            "name": "Ambika Niketan, Bus Stand",
+            "code": "3905",
+            "time": "8:30 AM"
+          },
+          {
+            "name": "Dhiraj Sons Mega Store, Athwa Gate",
+            "code": "4001",
+            "time": "8:34 AM"
+          },
+          {
+            "name": "Vijay Dairy (Gujarat Gas Circle)",
+            "code": "3501",
+            "time": "8:37 AM"
+          }
+        ]
+      },
+      {
+        "name": "B18",
+        "stops": [
+          {
+            "name": "Agarwal Samaj Bhavan, Ghod Dod Rd Main Road",
+            "code": "1304",
+            "time": "8:18 AM"
+          },
+          {
+            "name": "Opp. Pinki Collection Store, Main Road",
+            "code": "1306",
+            "time": "8:22 AM"
+          },
+          {
+            "name": "Ravi Dham Complex, Nr. Children's Traffic Park",
+            "code": "1309",
+            "time": "8:24 AM"
+          },
+          {
+            "name": "Opp. Bank of India, Panjrapole, Ghod Dod Road",
+            "code": "1408",
+            "time": "8:26 AM"
+          },
+          {
+            "name": "Opp. Pushpa Agencies, Nr. Jeevan Bharti School",
+            "code": "1601",
+            "time": "8:31 AM"
+          },
+          {
+            "name": "Nr. Kailash Sweets, Main Road",
+            "code": "1602",
+            "time": "8:33 AM"
+          },
+          {
+            "name": "Mahavir Jewellers, Palanpur Patia Circle",
+            "code": "3507",
+            "time": "8:42 AM"
+          },
+          {
+            "name": "Gam Khadi (Inside Morabhagal)",
+            "code": "2605",
+            "time": "8:47 AM"
+          }
+        ]
+      },
+      {
+        "name": "B19",
+        "stops": [
+          {
+            "name": "Jay Jalaram Store",
+            "code": "1308",
+            "time": "8:20 AM"
+          },
+          {
+            "name": "Opp. Madhuvan Park, Nr. Kangaroo Kids, Green Avenue Lane",
+            "code": "1307",
+            "time": "8:22 AM"
+          },
+          {
+            "name": "Sarela Shopping Center",
+            "code": "1305",
+            "time": "8:25 AM"
+          },
+          {
+            "name": "Mahavir Petrol Pump",
+            "code": "3503",
+            "time": "8:36 AM"
+          },
+          {
+            "name": "Vijay Sales, Nr. Rocket Circle Main Road",
+            "code": "3508",
+            "time": "8:38 AM"
+          },
+          {
+            "name": "Tadwadi Char Rasta Main Road",
+            "code": "3504",
+            "time": "8:40 AM"
+          }
+        ]
+      },
+      {
+        "name": "B20",
+        "stops": [
+          {
+            "name": "Nr. Megha Tower 1 (Opp. Joggers Park)",
+            "code": "1410",
+            "time": "8:20 AM"
+          },
+          {
+            "name": "Ashirwad Palace Gate No. 4 (Bhatar)",
+            "code": "1407",
+            "time": "8:23 AM"
+          },
+          {
+            "name": "Bajaj Show Room",
+            "code": "3505",
+            "time": "8:38 AM"
+          }
+        ]
+      },
+      {
+        "name": "B21 (Small Bus)",
+        "stops": [
+          {
+            "name": "Nr. DCB Bank Main Road",
+            "code": "2502",
+            "time": "8:15 AM"
+          },
+          {
+            "name": "Nr. Rupali Naher, Bhatar Road",
+            "code": "1404",
+            "time": "8:22 AM"
+          },
+          {
+            "name": "Opp. City Park (Nr. Shree Mahalaxmi Locho)",
+            "code": "1402",
+            "time": "8:25 AM"
+          },
+          {
+            "name": "Surya Plaza Complex, Main Road",
+            "code": "1406",
+            "time": "8:28 AM"
+          },
+          {
+            "name": "Opp. Kapadia Health Club, Main Road",
+            "code": "1403",
+            "time": "8:31 AM"
+          },
+          {
+            "name": "Gandhi Engineering College (Nr. Bus Stand)",
+            "code": "1501",
+            "time": "8:34 AM"
+          },
+          {
+            "name": "Subhash Garden, Morabhagal Circle",
+            "code": "2601",
+            "time": "8:48 AM"
+          }
+        ]
+      },
+      {
+        "name": "B22 (Small Bus)",
+        "stops": [
+          {
+            "name": "Boat Circle, Opp. Dotiwala Bakery (Swami Vivekanand Circle)",
+            "code": "1603",
+            "time": "8:22 AM"
+          },
+          {
+            "name": "Vijay Dairy (Dhanmora Complex)",
+            "code": "3502",
+            "time": "8:27 AM"
+          },
+          {
+            "name": "Shugan Society Gate No. 2, Nr. Sardar English Medium School",
+            "code": "2103",
+            "time": "8:30 AM"
+          },
+          {
+            "name": "Dissoto Turf (Old Royal Residency Stop), Causeway Rd.",
+            "code": "2101",
+            "time": "8:33 AM"
+          },
+          {
+            "name": "Sana Corner, Nr. Gulzar Avenue, Main Road",
+            "code": "2102",
+            "time": "8:36 AM"
+          },
+          {
+            "name": "5 Square Point, MV Circle (Sutrali)",
+            "code": "2606",
+            "time": "8:45 AM"
+          },
+          {
+            "name": "Opp. Vaishnodevi Blue Complex, Jahangirabad",
+            "code": "2608",
+            "time": "8:50 AM"
+          }
+        ]
+      },
+      {
+        "name": "B23 (Small Bus)",
+        "stops": [
+          {
+            "name": "Zenith Hotel (Old Amisha Hotel)",
+            "code": "1702",
+            "time": "8:18 AM"
+          },
+          {
+            "name": "Poddar Arcade Main Road",
+            "code": "2201",
+            "time": "8:23 AM"
+          },
+          {
+            "name": "Opp. Petrol Pump (Nr. JB Diamond)",
+            "code": "2202",
+            "time": "8:25 AM"
+          }
+        ]
+      },
+      {
+        "name": "B24 (Small Bus)",
+        "stops": [
+          {
+            "name": "Opp. Railway Parcel Office",
+            "code": "2303",
+            "time": "8:20 AM"
+          },
+          {
+            "name": "Shree Nutan Nivas Complex, Nr. I.C. Gandhi School, Sumul Dairy Road",
+            "code": "2301",
+            "time": "8:22 AM"
+          },
+          {
+            "name": "Opp. Barfiwala College, Main Road",
+            "code": "2302",
+            "time": "8:24 AM"
+          },
+          {
+            "name": "Smt. Maniben Kantibhai Circle",
+            "code": "2402",
+            "time": "8:26 AM"
+          },
+          {
+            "name": "Bal Anath Ashram",
+            "code": "2401",
+            "time": "8:29 AM"
+          },
+          {
+            "name": "Opp. Paras Police Chowki, Nr. Dholakia Garden, Katargam",
+            "code": "2403",
+            "time": "8:31 AM"
+          },
+          {
+            "name": "Dhanmora Char Rasta, Katargam (Opp. Phone Book Mobile Shop)",
+            "code": "2410",
+            "time": "8:34 AM"
+          },
+          {
+            "name": "Siganpur Circle",
+            "code": "2405",
+            "time": "8:37 AM"
+          },
+          {
+            "name": "Dabholi Gam Char Rasta (Nr. Dabholi Bridge)",
+            "code": "2404",
+            "time": "8:44 AM"
+          }
+        ]
+      },
+      {
+        "name": "B25 (Small Bus)",
+        "stops": [
+          {
+            "name": "Roscoe Apt., Dabholi, Ved Road",
+            "code": "2411",
+            "time": "8:15 AM"
+          },
+          {
+            "name": "Opp. Shree Swaminarayan Gurukul Gate, Nani Ved (Old Ambaji Temple Stop)",
+            "code": "2409",
+            "time": "8:17 AM"
+          },
+          {
+            "name": "SRK Farm (Nr. Jalaram Chowk, Karada Gam, Ved)",
+            "code": "2413",
+            "time": "8:19 AM"
+          },
+          {
+            "name": "Status Circle (Nr. Karada Gam, Ved)",
+            "code": "2414",
+            "time": "8:21 AM"
+          },
+          {
+            "name": "The Palladium, Nr. Torrent Power Police Station",
+            "code": "2415",
+            "time": "8:23 AM"
+          },
+          {
+            "name": "Vadla Circle, Nr. Laxmikant ni Vadi, Gajera Road",
+            "code": "2416",
+            "time": "8:27 AM"
+          },
+          {
+            "name": "Opp. Sunday Hub, Nr. Ankur Vidhyalay, Katargam",
+            "code": "2412",
+            "time": "8:30 AM"
+          },
+          {
+            "name": "Subh Laxmi Apartment, Main Road (Ved Road)",
+            "code": "2407",
+            "time": "8:33 AM"
+          },
+          {
+            "name": "Opp. Aksharwadi Circle (Katargam)",
+            "code": "2408",
+            "time": "8:34 AM"
+          },
+          {
+            "name": "Satyadev Plaza, Iscon Circle, Jahangirpura",
+            "code": "2603",
+            "time": "8:45 AM"
+          }
+        ]
+      },
+      {
+        "name": "B26 (Small Bus)",
+        "stops": [
+          {
+            "name": "Opp. EV Charging Station, Jeevan Yatra Circle, Gangeshwar Mahadev Road",
+            "code": "3406",
+            "time": "8:20 AM"
+          },
+          {
+            "name": "Trinity Mall, Main Road",
+            "code": "3602",
+            "time": "8:25 AM"
+          },
+          {
+            "name": "Opp. Praveg Apt., Nr. Plant Nursery, Opp. McDonald's, L.P. Savani Road",
+            "code": "3603",
+            "time": "8:28 AM"
+          },
+          {
+            "name": "V3 Corner, Nr. Sarita Dairy, Honey Park Road",
+            "code": "3606",
+            "time": "8:32 AM"
+          },
+          {
+            "name": "Opp. Parshuram Garden, Nr. Amul Parlour",
+            "code": "3404",
+            "time": "8:34 AM"
+          },
+          {
+            "name": "Rutvan Apartment, Gangeshwar Mahadev Road (Opp. Axis Bank, Nr. Tapi Hotel)",
+            "code": "3401",
+            "time": "8:38 AM"
+          },
+          {
+            "name": "Opp. Surbhi Dairy Main Road, Honey Park Road",
+            "code": "3405",
+            "time": "8:40 AM"
+          },
+          {
+            "name": "Friend Class Main Road, Palanpur Patia Road",
+            "code": "3403",
+            "time": "8:44 AM"
+          },
+          {
+            "name": "Opp. Krishna Row House, Dandi Road",
+            "code": "2602",
+            "time": "8:49 AM"
+          }
+        ]
+      },
+      {
+        "name": "B27",
+        "stops": [
+          {
+            "name": "Shavion Circle (Nr. Sai Milaap Shoppers), Gauravpath Road, Pal",
+            "code": "3617",
+            "time": "8:18 AM"
+          },
+          {
+            "name": "Opp. Bellissimo Hub, Opp. Gothic Apt., Gauravpath Road, Pal",
+            "code": "3613",
+            "time": "8:21 AM"
+          },
+          {
+            "name": "Green City Main Road (Bhatha)",
+            "code": "3605",
+            "time": "8:27 AM"
+          },
+          {
+            "name": "Opp. Shreepad Park, Arena Road, Pal",
+            "code": "3618",
+            "time": "8:32 AM"
+          },
+          {
+            "name": "Nr. Nexa-Amar Cars (Opp. Old JK Motors), Pal Road",
+            "code": "3609",
+            "time": "8:35 AM"
+          },
+          {
+            "name": "Nishal Arcade Main Road, Pal",
+            "code": "3614",
+            "time": "8:37 AM"
+          },
+          {
+            "name": "Opp. Orchid Green, Nr. Raj World, Palanpore Gam",
+            "code": "3611",
+            "time": "8:46 AM"
+          }
+        ]
+      },
+      {
+        "name": "B28 (Eeco 7 Seater)",
+        "stops": [
+          {
+            "name": "Magob Circle",
+            "code": "5005",
+            "time": "8:18 AM"
+          },
+          {
+            "name": "Opp. Raja Dairy",
+            "code": "1701",
+            "time": "8:30 AM"
+          },
+          {
+            "name": "Chowk Char Rasta",
+            "code": "2002",
+            "time": "8:40 AM"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "pm1210",
+    "badge": "Afternoon",
+    "direction": "Going Home",
+    "who": "Jr. Kg + Sr. Kg + Grade 1",
+    "schoolEvent": "Leaves school",
+    "schoolTime": "12:10 PM",
+    "timeWord": "Drop-off",
+    "routes": [
+      {
+        "name": "C1",
+        "stops": [
+          {
+            "name": "Opp. Nishal Arcade Main Road, Pal",
+            "code": "3614",
+            "time": "12:32 PM"
+          },
+          {
+            "name": "Opp. Nexa-Amar Cars (Opp. Old JK Motors), Pal Road",
+            "code": "3609",
+            "time": "12:34 PM"
+          },
+          {
+            "name": "Opp. Govindji Park, Umra Garden, Tilak Circle",
+            "code": "1202",
+            "time": "12:38 PM"
+          },
+          {
+            "name": "Pallavi Apartment, Nr. Lalbhai Contractor Stadium",
+            "code": "1108",
+            "time": "12:47 PM"
+          },
+          {
+            "name": "Opp. Airport Main gate",
+            "code": "3701",
+            "time": "12:58 PM"
+          },
+          {
+            "name": "Delhi Public School, Dumas Road, Gaviyer",
+            "code": "3703",
+            "time": "1:00 PM"
+          }
+        ]
+      },
+      {
+        "name": "C2",
+        "stops": [
+          {
+            "name": "Opp. Shyam Luxuria, Nr. SUDA Bhavan",
+            "code": "3809",
+            "time": "12:41 PM"
+          },
+          {
+            "name": "Opp. Fionaa Apartment, Nr. Siddhi Vinayak Mandir, Vesu",
+            "code": "3801",
+            "time": "12:44 PM"
+          },
+          {
+            "name": "Opp. Shyam Palace, Nr. Nandini 2, VIP Road",
+            "code": "3815",
+            "time": "12:49 PM"
+          },
+          {
+            "name": "Star Galaxy, Nr. Horizon Apartment, VIP Road, Vesu",
+            "code": "3816",
+            "time": "12:51 PM"
+          },
+          {
+            "name": "Opp. Sangini Nirvana, Nr. Nandini 3, Vesu",
+            "code": "3810",
+            "time": "12:53 PM"
+          },
+          {
+            "name": "Kankubaa Farm, VIP Main Road",
+            "code": "3813",
+            "time": "12:55 PM"
+          }
+        ]
+      },
+      {
+        "name": "C3",
+        "stops": [
+          {
+            "name": "Opp. Florence Hospital, Piplod",
+            "code": "1106",
+            "time": "12:45 PM"
+          },
+          {
+            "name": "Opp. Jolly Residency (Nr. SNS Square)",
+            "code": "3804",
+            "time": "12:49 PM"
+          },
+          {
+            "name": "Blossom Apt, Vesu",
+            "code": "3814",
+            "time": "12:55 PM"
+          },
+          {
+            "name": "Happy Hallmark Shoppers, Vesu",
+            "code": "3817",
+            "time": "12:57 PM"
+          }
+        ]
+      },
+      {
+        "name": "C4",
+        "stops": [
+          {
+            "name": "Opp. Someshwar Enclave, Main Gate",
+            "code": "3803",
+            "time": "12:45 PM"
+          },
+          {
+            "name": "Agam Krupa Complex, Nr. Happiness Restaurant",
+            "code": "3807",
+            "time": "12:47 PM"
+          },
+          {
+            "name": "Opp. Highfield Ascot, VIP Main Road",
+            "code": "3808",
+            "time": "12:50 PM"
+          },
+          {
+            "name": "Opp. Ratna Jyoti Apt, Main Gate, VIP Road",
+            "code": "3805",
+            "time": "12:52 PM"
+          },
+          {
+            "name": "Florence Main Road, Vesu",
+            "code": "3812",
+            "time": "12:55 PM"
+          },
+          {
+            "name": "Opp. Times Corner, Nr. SMC Garden, Vesu",
+            "code": "3811",
+            "time": "12:58 PM"
+          }
+        ]
+      },
+      {
+        "name": "C5",
+        "stops": [
+          {
+            "name": "Opp. Prasiddhi Complex Circle, Nr. Modi Bakers, Piplod",
+            "code": "1102",
+            "time": "12:43 PM"
+          },
+          {
+            "name": "Opp. S.D. Jain School-Plantes (First Gate), U.M. Road",
+            "code": "3802",
+            "time": "12:47 PM"
+          },
+          {
+            "name": "Happy Excelencia, Maharana Pratap Road",
+            "code": "3819",
+            "time": "12:50 PM"
+          },
+          {
+            "name": "Surya Heritage, Maharana Pratap Road",
+            "code": "3818",
+            "time": "12:52 PM"
+          },
+          {
+            "name": "SNS Splendid Main Char Rasta, Nr. Rebounce, Vesu",
+            "code": "3820",
+            "time": "12:54 PM"
+          },
+          {
+            "name": "Opp. Safal Square, UM Road",
+            "code": "3806",
+            "time": "12:56 PM"
+          }
+        ]
+      },
+      {
+        "name": "C6",
+        "stops": [
+          {
+            "name": "Opp. Subh Laxmi Complex, Nr. Bank of Baroda, Citylight",
+            "code": "3202",
+            "time": "12:45 PM"
+          },
+          {
+            "name": "Sangini Terreza, Vesu Canal Road, Bharthana",
+            "code": "3113",
+            "time": "12:51 PM"
+          },
+          {
+            "name": "Marvella Corridors Complex, VIP Road, Vesu",
+            "code": "3115",
+            "time": "12:54 PM"
+          },
+          {
+            "name": "Sangini Evoq Main Char Rasta, VIP Main Road",
+            "code": "3119",
+            "time": "12:56 PM"
+          },
+          {
+            "name": "Rajhans Cremona, VIP Road, Vesu",
+            "code": "3116",
+            "time": "1:00 PM"
+          },
+          {
+            "name": "Dream Heritage, Vesu Canal Road",
+            "code": "3117",
+            "time": "1:03 PM"
+          }
+        ]
+      },
+      {
+        "name": "C7",
+        "stops": [
+          {
+            "name": "CNG Station (Behind L.P. Savani School)",
+            "code": "3610",
+            "time": "12:28 PM"
+          },
+          {
+            "name": "Opp. Trinity Mall, Main Road",
+            "code": "3602",
+            "time": "12:32 PM"
+          },
+          {
+            "name": "L. P. Savani Academy (Nr. Canal Walker, VIP Road)",
+            "code": "3109",
+            "time": "12:50 PM"
+          },
+          {
+            "name": "Rajhans Cosmic, Vesu Canal Road",
+            "code": "3118",
+            "time": "12:52 PM"
+          },
+          {
+            "name": "Surya Landmark, Nr. Money Arcade, Vesu Canal Road",
+            "code": "3105",
+            "time": "12:56 PM"
+          }
+        ]
+      },
+      {
+        "name": "C8",
+        "stops": [
+          {
+            "name": "Rajhans Zion, Vesu Canal Road, Bharthana",
+            "code": "3112",
+            "time": "12:49 PM"
+          },
+          {
+            "name": "Opp. Sangini Solitaire, Bharthana",
+            "code": "3110",
+            "time": "12:52 PM"
+          }
+        ]
+      },
+      {
+        "name": "C9",
+        "stops": [
+          {
+            "name": "Opp. L.P. Savani School (Circle) Main Road",
+            "code": "3604",
+            "time": "12:29 PM"
+          },
+          {
+            "name": "Praveg Apt., Opp. Plant Nursery, McDonald's, L.P. Savani Road",
+            "code": "3603",
+            "time": "12:31 PM"
+          },
+          {
+            "name": "Opp. Ofira, Bharthana",
+            "code": "3107",
+            "time": "12:53 PM"
+          },
+          {
+            "name": "Poddar Residency, Bharthana",
+            "code": "3106",
+            "time": "12:56 PM"
+          },
+          {
+            "name": "Rajhans Grandezza, Bharthana",
+            "code": "3111",
+            "time": "12:58 PM"
+          }
+        ]
+      },
+      {
+        "name": "C10 (Small Bus)",
+        "stops": [
+          {
+            "name": "Opp. Western Shikharji Complex",
+            "code": "3607",
+            "time": "12:34 PM"
+          },
+          {
+            "name": "Opp. Shyam Mandir, Main Road (VIP Road)",
+            "code": "3102",
+            "time": "12:50 PM"
+          },
+          {
+            "name": "Ashirwad Enclave, Nr. Bamroli Bridge, Althan",
+            "code": "3108",
+            "time": "12:54 PM"
+          },
+          {
+            "name": "D.B. Patel Food Court, Nr. Raj Dream, VIP 2 Road",
+            "code": "3114",
+            "time": "12:58 PM"
+          }
+        ]
+      },
+      {
+        "name": "C11",
+        "stops": [
+          {
+            "name": "Green Garden, Opp. Maheshwari Bhavan, Citylight",
+            "code": "3205",
+            "time": "12:38 PM"
+          },
+          {
+            "name": "Jiomax Multi-Super Speciality Hospital, Nr. Om Terrace",
+            "code": "3100",
+            "time": "12:43 PM"
+          },
+          {
+            "name": "Opp. Om Terrace Complex Gate, New Citylight Rd.",
+            "code": "3101",
+            "time": "12:45 PM"
+          },
+          {
+            "name": "China Gate I, New Citylight",
+            "code": "3103",
+            "time": "12:47 PM"
+          },
+          {
+            "name": "Breadliner Circle, U.M. Road",
+            "code": "3104",
+            "time": "12:51 PM"
+          }
+        ]
+      },
+      {
+        "name": "C12",
+        "stops": [
+          {
+            "name": "Rajhans Campus, Main Road",
+            "code": "3601",
+            "time": "12:36 PM"
+          },
+          {
+            "name": "Sangini Main Gate (Nr. Om Krishna Petrol Pump), Panas Gam",
+            "code": "3207",
+            "time": "12:52 PM"
+          },
+          {
+            "name": "Ashirwad Complex Gate No. 1 (Nr. Om Krishna Petrol Pump)",
+            "code": "3201",
+            "time": "12:56 PM"
+          },
+          {
+            "name": "Surya Palace Gate No. 1, Citylight Road",
+            "code": "3208",
+            "time": "12:58 PM"
+          }
+        ]
+      },
+      {
+        "name": "C13",
+        "stops": [
+          {
+            "name": "Opp. EV Charging Station, Jeevan Yatra Circle, Gangeshwar Mahadev Road",
+            "code": "3406",
+            "time": "12:30 PM"
+          },
+          {
+            "name": "Opp. Sumerru Business Corner, Nr. Rajhans (Pal)",
+            "code": "3615",
+            "time": "12:36 PM"
+          },
+          {
+            "name": "Opp. Noopur Hospital, Citylight Main Road (Circle)",
+            "code": "3206",
+            "time": "12:46 PM"
+          },
+          {
+            "name": "Opp. State Bank of India, Nr. Pujan Apt., Citylight Road",
+            "code": "3204",
+            "time": "12:50 PM"
+          },
+          {
+            "name": "Opera House, Nr. Agrasen Bhavan, Citylight",
+            "code": "3203",
+            "time": "12:52 PM"
+          }
+        ]
+      },
+      {
+        "name": "C14",
+        "stops": [
+          {
+            "name": "Regency Tower - C",
+            "code": "1103",
+            "time": "12:45 PM"
+          },
+          {
+            "name": "Vastu Luxuria Gate No.1 (Nr. VR Mall Circle), Dumas Road",
+            "code": "3704",
+            "time": "12:53 PM"
+          },
+          {
+            "name": "Valentine Multiplex, Piplod-Dumas Road",
+            "code": "1107",
+            "time": "12:55 PM"
+          }
+        ]
+      },
+      {
+        "name": "C15 (Small Bus)",
+        "stops": [
+          {
+            "name": "Opp. Mamta Hospital, Palanpur Gam Canal Road",
+            "code": "3616",
+            "time": "12:30 PM"
+          },
+          {
+            "name": "Galaxy Circle, Pal Main Road",
+            "code": "3608",
+            "time": "12:36 PM"
+          },
+          {
+            "name": "Nilam Society Main Gate, Umra Gam",
+            "code": "1203",
+            "time": "12:47 PM"
+          },
+          {
+            "name": "Chandni Chowk Circle",
+            "code": "1101",
+            "time": "12:49 PM"
+          },
+          {
+            "name": "Opp. River Wind Residency",
+            "code": "1100",
+            "time": "12:51 PM"
+          },
+          {
+            "name": "Opp. Four Season Gate 2, Gym Khana Road, Umra",
+            "code": "1104",
+            "time": "12:53 PM"
+          },
+          {
+            "name": "Goverdhan Haveli Temple, Piplod Main Road",
+            "code": "1105",
+            "time": "12:54 PM"
+          }
+        ]
+      },
+      {
+        "name": "C16",
+        "stops": [
+          {
+            "name": "Opp. Vitoria Heights, Opp. Raj Harmony, Ugat Canal Road",
+            "code": "3612",
+            "time": "12:22 PM"
+          },
+          {
+            "name": "Shavion Circle (Nr. Sai Milaap Shoppers), Gauravpath Road, Pal",
+            "code": "3617",
+            "time": "12:29 PM"
+          },
+          {
+            "name": "Bellissimo Hub, Opp. Gothic Apt., Gauravpath Road, Pal",
+            "code": "3613",
+            "time": "12:32 PM"
+          },
+          {
+            "name": "Opp. Shreepad Park, Arena Road, Pal",
+            "code": "3618",
+            "time": "12:40 PM"
+          },
+          {
+            "name": "Opp. Brijwasi Estate (Nr. Umrigar School)",
+            "code": "3903",
+            "time": "12:48 PM"
+          }
+        ]
+      },
+      {
+        "name": "C17",
+        "stops": [
+          {
+            "name": "Vaishnodevi Sky Complex, Jahangirabad",
+            "code": "2610",
+            "time": "12:21 PM"
+          },
+          {
+            "name": "Vaishnodevi Blue Bells Complex, Jahangirabad",
+            "code": "2608",
+            "time": "12:23 PM"
+          },
+          {
+            "name": "Green Aristo, Vaishnodevi Canal Road",
+            "code": "2611",
+            "time": "12:26 PM"
+          },
+          {
+            "name": "Ratna Anushree Apt., Opp. Rituraj Complex",
+            "code": "3902",
+            "time": "12:47 PM"
+          },
+          {
+            "name": "Opp. Fitt - Fitness Studio (Old Vodafone Store, Athwalines)",
+            "code": "3904",
+            "time": "12:49 PM"
+          }
+        ]
+      },
+      {
+        "name": "C18",
+        "stops": [
+          {
+            "name": "Orchid Green, Nr. Raj World, Palanpore Gam",
+            "code": "3611",
+            "time": "12:29 PM"
+          },
+          {
+            "name": "Opp. Indoor Stadium, Main Road",
+            "code": "1303",
+            "time": "12:45 PM"
+          },
+          {
+            "name": "Opp. Central Bank of India, Opp. Union Point, Ghod Dod Rd.",
+            "code": "1302",
+            "time": "12:48 PM"
+          },
+          {
+            "name": "Opp. City Mall",
+            "code": "1301",
+            "time": "12:50 PM"
+          },
+          {
+            "name": "Opp. Sargam Shopping Center",
+            "code": "3906",
+            "time": "12:53 PM"
+          },
+          {
+            "name": "Metro Shoes (Nr. Shoe Mark)",
+            "code": "3901",
+            "time": "12:55 PM"
+          },
+          {
+            "name": "Ambika Niketan, Bus Stand",
+            "code": "3905",
+            "time": "12:57 PM"
+          },
+          {
+            "name": "Opp. Asopalav Showroom (Nr. Old Uncle Shop)",
+            "code": "3907",
+            "time": "12:59 PM"
+          }
+        ]
+      },
+      {
+        "name": "C19",
+        "stops": [
+          {
+            "name": "Suryadarshan Row House, Jahangirpura",
+            "code": "2609",
+            "time": "12:26 PM"
+          },
+          {
+            "name": "Satyadev Plaza, Iscon Circle, Jahangirpura",
+            "code": "2603",
+            "time": "12:28 PM"
+          },
+          {
+            "name": "Opp. Sana Corner, Nr. Gulzar Avenue, Main Road",
+            "code": "2102",
+            "time": "12:38 PM"
+          },
+          {
+            "name": "Opp. Dissoto Turf (Old Royal Residency Stop), Causeway Rd.",
+            "code": "2101",
+            "time": "12:40 PM"
+          },
+          {
+            "name": "Opp. Shugan Society Gate No. 2, Nr. Sardar English Medium School",
+            "code": "2103",
+            "time": "12:42 PM"
+          },
+          {
+            "name": "Opp. Dhiraj Sons Mega Store, Athwa Gate",
+            "code": "4001",
+            "time": "12:52 PM"
+          },
+          {
+            "name": "Police Parade Ground Bus Stop, Main Road (Nr. Nagrik Suvidha Kendra)",
+            "code": "4002",
+            "time": "12:55 PM"
+          }
+        ]
+      },
+      {
+        "name": "C20",
+        "stops": [
+          {
+            "name": "Agarwal Samaj Bhavan, Ghod Dod Rd Main Road",
+            "code": "1304",
+            "time": "12:40 PM"
+          },
+          {
+            "name": "Opp. Sarela Shopping Center",
+            "code": "1305",
+            "time": "12:43 PM"
+          },
+          {
+            "name": "Opp. Pinki Collection Store, Main Road",
+            "code": "1306",
+            "time": "12:45 PM"
+          },
+          {
+            "name": "Ravi Dham Complex, Nr. Children's Traffic Park",
+            "code": "1309",
+            "time": "12:47 PM"
+          },
+          {
+            "name": "Opp. Bank of India, Opp. Panjrapole, Ghod Dod Road",
+            "code": "1408",
+            "time": "12:50 PM"
+          }
+        ]
+      },
+      {
+        "name": "C21",
+        "stops": [
+          {
+            "name": "Krishna Row House, Dandi Road",
+            "code": "2602",
+            "time": "12:21 PM"
+          },
+          {
+            "name": "Subhash Garden, Morabhagal Circle",
+            "code": "2601",
+            "time": "12:24 PM"
+          },
+          {
+            "name": "GAIL Tower, Main Road",
+            "code": "3304",
+            "time": "12:29 PM"
+          },
+          {
+            "name": "Opp. Prime Arcade, Adajan",
+            "code": "3303",
+            "time": "12:31 PM"
+          },
+          {
+            "name": "Opp. Center Point, Sahyog Imaging Centre, Anand Mahal Rd.",
+            "code": "3302",
+            "time": "12:33 PM"
+          },
+          {
+            "name": "Chinmay Appt, Opp. Shri Ram Petrol Pump, Adajan",
+            "code": "3301",
+            "time": "12:35 PM"
+          },
+          {
+            "name": "Adajan Gam Bus Stop (Opp. Samarth Park - Shikha)",
+            "code": "3506",
+            "time": "12:38 PM"
+          },
+          {
+            "name": "Madhuvan Park, Nr. Kangaroo Kids, Green Avenue Lane",
+            "code": "1307",
+            "time": "12:50 PM"
+          },
+          {
+            "name": "Opp. Jay Jalaram Store",
+            "code": "1308",
+            "time": "12:52 PM"
+          }
+        ]
+      },
+      {
+        "name": "C22",
+        "stops": [
+          {
+            "name": "Nr. Megha Tower 1 (Opp. Joggers Park)",
+            "code": "1410",
+            "time": "12:48 PM"
+          },
+          {
+            "name": "Ashirwad Palace Gate No. 4 (Bhatar)",
+            "code": "1407",
+            "time": "12:50 PM"
+          }
+        ]
+      },
+      {
+        "name": "C23 (Small Bus)",
+        "stops": [
+          {
+            "name": "Opp. Vijay Dairy (Gujarat Gas Circle)",
+            "code": "3501",
+            "time": "12:34 PM"
+          },
+          {
+            "name": "Nr. Rupali Naher, Bhatar Road",
+            "code": "1404",
+            "time": "12:44 PM"
+          },
+          {
+            "name": "Opp. City Park (Nr. Shree Mahalaxmi Locho)",
+            "code": "1402",
+            "time": "12:47 PM"
+          },
+          {
+            "name": "Surya Plaza Complex Main Road",
+            "code": "1406",
+            "time": "12:51 PM"
+          },
+          {
+            "name": "Opp. Kapadia Health Club, Main Road",
+            "code": "1403",
+            "time": "12:54 PM"
+          }
+        ]
+      },
+      {
+        "name": "C24 (Small Bus)",
+        "stops": [
+          {
+            "name": "Opp. Mahavir Jewellers, Palanpur Patia Circle",
+            "code": "3507",
+            "time": "12:29 PM"
+          },
+          {
+            "name": "Opp. Mahavir Petrol Pump",
+            "code": "3503",
+            "time": "12:34 PM"
+          },
+          {
+            "name": "Opp. Vijay Dairy (Dhanmora Complex)",
+            "code": "3502",
+            "time": "12:38 PM"
+          },
+          {
+            "name": "Boat Circle, Opp. Dotiwala Bakery (Swami Vivekanand Circle)",
+            "code": "1603",
+            "time": "12:42 PM"
+          },
+          {
+            "name": "Pushpa Agencies, Nr. Jeevan Bharti School",
+            "code": "1601",
+            "time": "12:46 PM"
+          },
+          {
+            "name": "Opp. Gandhi Engineering College",
+            "code": "1501",
+            "time": "12:48 PM"
+          },
+          {
+            "name": "Nr. DCB Bank Main Road",
+            "code": "2502",
+            "time": "12:55 PM"
+          }
+        ]
+      },
+      {
+        "name": "C25 (Small Bus)",
+        "stops": [
+          {
+            "name": "Gam Khadi (Inside Morabhagal)",
+            "code": "2605",
+            "time": "12:23 PM"
+          },
+          {
+            "name": "Tadwadi Char Rasta Main Road",
+            "code": "3504",
+            "time": "12:29 PM"
+          },
+          {
+            "name": "Rocket Circle Main Road, Vijay Sales",
+            "code": "3508",
+            "time": "12:31 PM"
+          },
+          {
+            "name": "Chowk Char Rasta",
+            "code": "2002",
+            "time": "12:38 PM"
+          },
+          {
+            "name": "Sheth Morabhai Hospital / Motiwala Perfume",
+            "code": "2001",
+            "time": "12:41 PM"
+          },
+          {
+            "name": "Air India Office",
+            "code": "1901",
+            "time": "12:48 PM"
+          },
+          {
+            "name": "Raja Dairy",
+            "code": "1701",
+            "time": "12:52 PM"
+          },
+          {
+            "name": "Zenith Hotel (Old Amisha Hotel)",
+            "code": "1702",
+            "time": "12:55 PM"
+          }
+        ]
+      },
+      {
+        "name": "C26",
+        "stops": [
+          {
+            "name": "Opp. Poddar Arcade Main Road",
+            "code": "2201",
+            "time": "12:48 PM"
+          },
+          {
+            "name": "Opp. Petrol Pump (Nr. JB Diamond)",
+            "code": "2202",
+            "time": "12:50 PM"
+          }
+        ]
+      },
+      {
+        "name": "C27 (Small Bus)",
+        "stops": [
+          {
+            "name": "Dabholi Gam Char Rasta (Nr. Dabholi Bridge)",
+            "code": "2404",
+            "time": "12:26 PM"
+          },
+          {
+            "name": "Aksharwadi Circle (Katargam)",
+            "code": "2408",
+            "time": "12:30 PM"
+          },
+          {
+            "name": "Opp. Subh Laxmi Apartment, Main Road (Ved Road)",
+            "code": "2407",
+            "time": "12:32 PM"
+          },
+          {
+            "name": "Siganpur Circle",
+            "code": "2405",
+            "time": "12:37 PM"
+          },
+          {
+            "name": "Dhanmora Char Rasta, Katargam (Phone Book Mobile Shop)",
+            "code": "2410",
+            "time": "12:41 PM"
+          },
+          {
+            "name": "Paras Police Chowki, Nr. Dholakia Garden, Katargam",
+            "code": "2403",
+            "time": "12:44 PM"
+          },
+          {
+            "name": "Opp. Anath Bal Ashram",
+            "code": "2401",
+            "time": "12:46 PM"
+          },
+          {
+            "name": "Smt. Maniben Kantibhai Circle",
+            "code": "2402",
+            "time": "12:49 PM"
+          },
+          {
+            "name": "Barfiwala College, Main Road",
+            "code": "2302",
+            "time": "12:51 PM"
+          },
+          {
+            "name": "Opp. Shree Nutan Nivas Complex, Nr. I.C. Gandhi School, Sumul Dairy Road",
+            "code": "2301",
+            "time": "12:53 PM"
+          },
+          {
+            "name": "Opp. Railway Parcel Office",
+            "code": "2303",
+            "time": "12:55 PM"
+          }
+        ]
+      },
+      {
+        "name": "C28",
+        "stops": [
+          {
+            "name": "Roscoe Apt., Dabholi, Ved Road",
+            "code": "2411",
+            "time": "12:35 PM"
+          },
+          {
+            "name": "Opp. Shree Swaminarayan Gurukul Gate, Nani Ved (Old Ambaji Temple Stop)",
+            "code": "2409",
+            "time": "12:38 PM"
+          },
+          {
+            "name": "SRK Farm, Jalaram Chowk, Karada Gam, Ved",
+            "code": "2413",
+            "time": "12:41 PM"
+          },
+          {
+            "name": "Status Circle (Nr. Karada Gam, Ved)",
+            "code": "2414",
+            "time": "12:43 PM"
+          },
+          {
+            "name": "The Palladium, Nr. Torrent Power Police Station",
+            "code": "2415",
+            "time": "12:45 PM"
+          },
+          {
+            "name": "Vadla Circle, Nr. Laxmikant ni Vadi, Gajera Road",
+            "code": "2416",
+            "time": "12:50 PM"
+          },
+          {
+            "name": "Opp. Sunday Hub, Nr. Ankur Vidhyalay, Katargam",
+            "code": "2412",
+            "time": "12:54 PM"
+          }
+        ]
+      },
+      {
+        "name": "C29",
+        "stops": [
+          {
+            "name": "Opp. 5 Square Point, MV Circle (Sutrali)",
+            "code": "2606",
+            "time": "12:28 PM"
+          },
+          {
+            "name": "Opp. Friend Class Main Road, Palanpur Patia Road",
+            "code": "3403",
+            "time": "12:37 PM"
+          },
+          {
+            "name": "Surbhi Dairy Main Road, Honey Park Road",
+            "code": "3405",
+            "time": "12:41 PM"
+          },
+          {
+            "name": "Opp. Rutvan Apartment, Gangeshwar Mahadev Road (Opp. Axis Bank, Nr. Tapi Hotel)",
+            "code": "3401",
+            "time": "12:43 PM"
+          },
+          {
+            "name": "Parshuram Garden, Nr. Amul Parlour",
+            "code": "3404",
+            "time": "12:45 PM"
+          },
+          {
+            "name": "V3 Corner, Nr. Sarita Dairy, Honey Park Road",
+            "code": "3606",
+            "time": "12:47 PM"
+          },
+          {
+            "name": "Green City Main Road (Bhatha)",
+            "code": "3605",
+            "time": "12:57 PM"
+          }
+        ]
+      },
+      {
+        "name": "C30 (Eeco)",
+        "stops": [
+          {
+            "name": "Magob Circle",
+            "code": "5005",
+            "time": "12:55 PM"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "pm210",
+    "badge": "Afternoon",
+    "direction": "Going Home",
+    "who": "EY + Grades 1–6",
+    "schoolEvent": "Leaves school",
+    "schoolTime": "2:10 PM",
+    "timeWord": "Drop-off",
+    "routes": [
+      {
+        "name": "C1",
+        "stops": [
+          {
+            "name": "Opp. Nishal Arcade Main Road, Pal",
+            "code": "3614",
+            "time": "2:32 PM"
+          },
+          {
+            "name": "Opp. Nexa-Amar Cars (Opp. Old JK Motors), Pal Road",
+            "code": "3609",
+            "time": "2:34 PM"
+          },
+          {
+            "name": "Opp. Govindji Park, Umra Garden, Tilak Circle",
+            "code": "1202",
+            "time": "2:38 PM"
+          },
+          {
+            "name": "Pallavi Apartment, Nr. Lalbhai Contractor Stadium",
+            "code": "1108",
+            "time": "2:47 PM"
+          },
+          {
+            "name": "Opp. Airport Main gate",
+            "code": "3701",
+            "time": "2:58 PM"
+          },
+          {
+            "name": "Delhi Public School, Dumas Road, Gaviyer",
+            "code": "3703",
+            "time": "3:00 PM"
+          }
+        ]
+      },
+      {
+        "name": "C2",
+        "stops": [
+          {
+            "name": "Opp. Shyam Luxuria, Nr. SUDA Bhavan",
+            "code": "3809",
+            "time": "2:41 PM"
+          },
+          {
+            "name": "Opp. Fionaa Apartment, Nr. Siddhi Vinayak Mandir, Vesu",
+            "code": "3801",
+            "time": "2:44 PM"
+          },
+          {
+            "name": "Opp. Shyam Palace, Nr. Nandini 2, VIP Road",
+            "code": "3815",
+            "time": "2:49 PM"
+          },
+          {
+            "name": "Star Galaxy, Nr. Horizon Apartment, VIP Road, Vesu",
+            "code": "3816",
+            "time": "2:51 PM"
+          },
+          {
+            "name": "Opp. Sangini Nirvana, Nr. Nandini 3, Vesu",
+            "code": "3810",
+            "time": "2:53 PM"
+          },
+          {
+            "name": "Kankubaa Farm, VIP Main Road",
+            "code": "3813",
+            "time": "2:55 PM"
+          }
+        ]
+      },
+      {
+        "name": "C3",
+        "stops": [
+          {
+            "name": "Opp. Florence Hospital, Piplod",
+            "code": "1106",
+            "time": "2:45 PM"
+          },
+          {
+            "name": "Opp. Jolly Residency (Nr. SNS Square)",
+            "code": "3804",
+            "time": "2:49 PM"
+          },
+          {
+            "name": "Blossom Apt, Vesu",
+            "code": "3814",
+            "time": "2:55 PM"
+          },
+          {
+            "name": "Happy Hallmark Shoppers, Vesu",
+            "code": "3817",
+            "time": "2:57 PM"
+          }
+        ]
+      },
+      {
+        "name": "C4",
+        "stops": [
+          {
+            "name": "Opp. Someshwar Enclave, Main Gate",
+            "code": "3803",
+            "time": "2:45 PM"
+          },
+          {
+            "name": "Agam Krupa Complex, Nr. Happiness Restaurant",
+            "code": "3807",
+            "time": "2:47 PM"
+          },
+          {
+            "name": "Opp. Highfield Ascot, VIP Main Road",
+            "code": "3808",
+            "time": "2:50 PM"
+          },
+          {
+            "name": "Opp. Ratna Jyoti Apt, Main Gate, VIP Road",
+            "code": "3805",
+            "time": "2:52 PM"
+          },
+          {
+            "name": "Florence Main Road, Vesu",
+            "code": "3812",
+            "time": "2:55 PM"
+          },
+          {
+            "name": "Opp. Times Corner, Nr. SMC Garden, Vesu",
+            "code": "3811",
+            "time": "2:58 PM"
+          }
+        ]
+      },
+      {
+        "name": "C5",
+        "stops": [
+          {
+            "name": "Opp. Prasiddhi Complex Circle, Nr. Modi Bakers, Piplod",
+            "code": "1102",
+            "time": "2:43 PM"
+          },
+          {
+            "name": "Opp. S.D. Jain School-Plantes (First Gate), U.M. Road",
+            "code": "3802",
+            "time": "2:47 PM"
+          },
+          {
+            "name": "Happy Excelencia, Maharana Pratap Road",
+            "code": "3819",
+            "time": "2:50 PM"
+          },
+          {
+            "name": "Surya Heritage, Maharana Pratap Road",
+            "code": "3818",
+            "time": "2:52 PM"
+          },
+          {
+            "name": "SNS Splendid Main Char Rasta, Nr. Rebounce, Vesu",
+            "code": "3820",
+            "time": "2:54 PM"
+          },
+          {
+            "name": "Opp. Safal Square, UM Road",
+            "code": "3806",
+            "time": "2:56 PM"
+          }
+        ]
+      },
+      {
+        "name": "C6",
+        "stops": [
+          {
+            "name": "Opp. Subh Laxmi Complex, Nr. Bank of Baroda, Citylight",
+            "code": "3202",
+            "time": "2:45 PM"
+          },
+          {
+            "name": "Sangini Terreza, Vesu Canal Road, Bharthana",
+            "code": "3113",
+            "time": "2:51 PM"
+          },
+          {
+            "name": "Marvella Corridors Complex, VIP Road, Vesu",
+            "code": "3115",
+            "time": "2:54 PM"
+          },
+          {
+            "name": "Sangini Evoq Main Char Rasta, VIP Main Road",
+            "code": "3119",
+            "time": "2:56 PM"
+          },
+          {
+            "name": "Rajhans Cremona, VIP Road, Vesu",
+            "code": "3116",
+            "time": "3:00 PM"
+          },
+          {
+            "name": "Dream Heritage, Vesu Canal Road",
+            "code": "3117",
+            "time": "3:03 PM"
+          }
+        ]
+      },
+      {
+        "name": "C7",
+        "stops": [
+          {
+            "name": "CNG Station (Behind L.P. Savani School)",
+            "code": "3610",
+            "time": "2:28 PM"
+          },
+          {
+            "name": "Opp. Trinity Mall, Main Road",
+            "code": "3602",
+            "time": "2:32 PM"
+          },
+          {
+            "name": "L. P. Savani Academy (Nr. Canal Walker, VIP Road)",
+            "code": "3109",
+            "time": "2:50 PM"
+          },
+          {
+            "name": "Rajhans Cosmic, Vesu Canal Road",
+            "code": "3118",
+            "time": "2:52 PM"
+          },
+          {
+            "name": "Surya Landmark, Nr. Money Arcade, Vesu Canal Road",
+            "code": "3105",
+            "time": "2:56 PM"
+          }
+        ]
+      },
+      {
+        "name": "C8",
+        "stops": [
+          {
+            "name": "Rajhans Zion, Vesu Canal Road, Bharthana",
+            "code": "3112",
+            "time": "2:49 PM"
+          },
+          {
+            "name": "Opp. Sangini Solitaire, Bharthana",
+            "code": "3110",
+            "time": "2:52 PM"
+          }
+        ]
+      },
+      {
+        "name": "C9",
+        "stops": [
+          {
+            "name": "Opp. L.P. Savani School (Circle) Main Road",
+            "code": "3604",
+            "time": "2:29 PM"
+          },
+          {
+            "name": "Praveg Apt., Opp. Plant Nursery, McDonald's, L.P. Savani Road",
+            "code": "3603",
+            "time": "2:31 PM"
+          },
+          {
+            "name": "Opp. Ofira, Bharthana",
+            "code": "3107",
+            "time": "2:53 PM"
+          },
+          {
+            "name": "Poddar Residency, Bharthana",
+            "code": "3106",
+            "time": "2:56 PM"
+          },
+          {
+            "name": "Rajhans Grandezza, Bharthana",
+            "code": "3111",
+            "time": "2:58 PM"
+          }
+        ]
+      },
+      {
+        "name": "C10 (Small Bus)",
+        "stops": [
+          {
+            "name": "Opp. Western Shikharji Complex",
+            "code": "3607",
+            "time": "2:34 PM"
+          },
+          {
+            "name": "Opp. Shyam Mandir, Main Road (VIP Road)",
+            "code": "3102",
+            "time": "2:50 PM"
+          },
+          {
+            "name": "Ashirwad Enclave, Nr. Bamroli Bridge, Althan",
+            "code": "3108",
+            "time": "2:54 PM"
+          },
+          {
+            "name": "D.B. Patel Food Court, Nr. Raj Dream, VIP 2 Road",
+            "code": "3114",
+            "time": "2:58 PM"
+          }
+        ]
+      },
+      {
+        "name": "C11",
+        "stops": [
+          {
+            "name": "Green Garden, Opp. Maheshwari Bhavan, Citylight",
+            "code": "3205",
+            "time": "2:38 PM"
+          },
+          {
+            "name": "Jiomax Multi-Super Speciality Hospital, Nr. Om Terrace",
+            "code": "3100",
+            "time": "2:43 PM"
+          },
+          {
+            "name": "Opp. Om Terrace Complex Gate, New Citylight Rd.",
+            "code": "3101",
+            "time": "2:45 PM"
+          },
+          {
+            "name": "China Gate I, New Citylight",
+            "code": "3103",
+            "time": "2:47 PM"
+          },
+          {
+            "name": "Breadliner Circle, U.M. Road",
+            "code": "3104",
+            "time": "2:51 PM"
+          }
+        ]
+      },
+      {
+        "name": "C12",
+        "stops": [
+          {
+            "name": "Rajhans Campus, Main Road",
+            "code": "3601",
+            "time": "2:36 PM"
+          },
+          {
+            "name": "Sangini Main Gate (Nr. Om Krishna Petrol Pump), Panas Gam",
+            "code": "3207",
+            "time": "2:52 PM"
+          },
+          {
+            "name": "Ashirwad Complex Gate No. 1 (Nr. Om Krishna Petrol Pump)",
+            "code": "3201",
+            "time": "2:56 PM"
+          },
+          {
+            "name": "Surya Palace Gate No. 1, Citylight Road",
+            "code": "3208",
+            "time": "2:58 PM"
+          }
+        ]
+      },
+      {
+        "name": "C13",
+        "stops": [
+          {
+            "name": "Opp. EV Charging Station, Jeevan Yatra Circle, Gangeshwar Mahadev Road",
+            "code": "3406",
+            "time": "2:30 PM"
+          },
+          {
+            "name": "Opp. Sumerru Business Corner, Nr. Rajhans (Pal)",
+            "code": "3615",
+            "time": "2:36 PM"
+          },
+          {
+            "name": "Opp. Noopur Hospital, Citylight Main Road (Circle)",
+            "code": "3206",
+            "time": "2:46 PM"
+          },
+          {
+            "name": "Opp. State Bank of India, Nr. Pujan Apt., Citylight Road",
+            "code": "3204",
+            "time": "2:50 PM"
+          },
+          {
+            "name": "Opera House, Nr. Agrasen Bhavan, Citylight",
+            "code": "3203",
+            "time": "2:52 PM"
+          }
+        ]
+      },
+      {
+        "name": "C14",
+        "stops": [
+          {
+            "name": "Regency Tower - C",
+            "code": "1103",
+            "time": "2:45 PM"
+          },
+          {
+            "name": "Vastu Luxuria Gate No.1 (Nr. VR Mall Circle), Dumas Road",
+            "code": "3704",
+            "time": "2:53 PM"
+          },
+          {
+            "name": "Valentine Multiplex, Piplod-Dumas Road",
+            "code": "1107",
+            "time": "2:55 PM"
+          }
+        ]
+      },
+      {
+        "name": "C15 (Small Bus)",
+        "stops": [
+          {
+            "name": "Opp. Mamta Hospital, Palanpur Gam Canal Road",
+            "code": "3616",
+            "time": "2:30 PM"
+          },
+          {
+            "name": "Galaxy Circle, Pal Main Road",
+            "code": "3608",
+            "time": "2:36 PM"
+          },
+          {
+            "name": "Nilam Society Main Gate, Umra Gam",
+            "code": "1203",
+            "time": "2:47 PM"
+          },
+          {
+            "name": "Chandni Chowk Circle",
+            "code": "1101",
+            "time": "2:49 PM"
+          },
+          {
+            "name": "Opp. River Wind Residency",
+            "code": "1100",
+            "time": "2:51 PM"
+          },
+          {
+            "name": "Opp. Four Season Gate 2, Gym Khana Road, Umra",
+            "code": "1104",
+            "time": "2:53 PM"
+          },
+          {
+            "name": "Goverdhan Haveli Temple, Piplod Main Road",
+            "code": "1105",
+            "time": "2:54 PM"
+          }
+        ]
+      },
+      {
+        "name": "C16",
+        "stops": [
+          {
+            "name": "Opp. Vitoria Heights, Opp. Raj Harmony, Ugat Canal Road",
+            "code": "3612",
+            "time": "2:22 PM"
+          },
+          {
+            "name": "Shavion Circle (Nr. Sai Milaap Shoppers), Gauravpath Road, Pal",
+            "code": "3617",
+            "time": "2:29 PM"
+          },
+          {
+            "name": "Bellissimo Hub, Opp. Gothic Apt., Gauravpath Road, Pal",
+            "code": "3613",
+            "time": "2:32 PM"
+          },
+          {
+            "name": "Opp. Shreepad Park, Arena Road, Pal",
+            "code": "3618",
+            "time": "2:40 PM"
+          },
+          {
+            "name": "Opp. Brijwasi Estate (Nr. Umrigar School)",
+            "code": "3903",
+            "time": "2:48 PM"
+          }
+        ]
+      },
+      {
+        "name": "C17",
+        "stops": [
+          {
+            "name": "Vaishnodevi Sky Complex, Jahangirabad",
+            "code": "2610",
+            "time": "2:21 PM"
+          },
+          {
+            "name": "Vaishnodevi Blue Bells Complex, Jahangirabad",
+            "code": "2608",
+            "time": "2:23 PM"
+          },
+          {
+            "name": "Green Aristo, Vaishnodevi Canal Road",
+            "code": "2611",
+            "time": "2:26 PM"
+          },
+          {
+            "name": "Ratna Anushree Apt., Opp. Rituraj Complex",
+            "code": "3902",
+            "time": "2:47 PM"
+          },
+          {
+            "name": "Opp. Fitt - Fitness Studio (Old Vodafone Store, Athwalines)",
+            "code": "3904",
+            "time": "2:49 PM"
+          }
+        ]
+      },
+      {
+        "name": "C18",
+        "stops": [
+          {
+            "name": "Orchid Green, Nr. Raj World, Palanpore Gam",
+            "code": "3611",
+            "time": "2:29 PM"
+          },
+          {
+            "name": "Opp. Indoor Stadium, Main Road",
+            "code": "1303",
+            "time": "2:45 PM"
+          },
+          {
+            "name": "Opp. Central Bank of India, Opp. Union Point, Ghod Dod Rd.",
+            "code": "1302",
+            "time": "2:48 PM"
+          },
+          {
+            "name": "Opp. City Mall",
+            "code": "1301",
+            "time": "2:50 PM"
+          },
+          {
+            "name": "Opp. Sargam Shopping Center",
+            "code": "3906",
+            "time": "2:53 PM"
+          },
+          {
+            "name": "Metro Shoes (Nr. Shoe Mark)",
+            "code": "3901",
+            "time": "2:55 PM"
+          },
+          {
+            "name": "Ambika Niketan, Bus Stand",
+            "code": "3905",
+            "time": "2:57 PM"
+          },
+          {
+            "name": "Opp. Asopalav Showroom (Nr. Old Uncle Shop)",
+            "code": "3907",
+            "time": "2:59 PM"
+          }
+        ]
+      },
+      {
+        "name": "C19",
+        "stops": [
+          {
+            "name": "Suryadarshan Row House, Jahangirpura",
+            "code": "2609",
+            "time": "2:26 PM"
+          },
+          {
+            "name": "Satyadev Plaza, Iscon Circle, Jahangirpura",
+            "code": "2603",
+            "time": "2:28 PM"
+          },
+          {
+            "name": "Opp. Sana Corner, Nr. Gulzar Avenue, Main Road",
+            "code": "2102",
+            "time": "2:38 PM"
+          },
+          {
+            "name": "Opp. Dissoto Turf (Old Royal Residency Stop), Causeway Rd.",
+            "code": "2101",
+            "time": "2:40 PM"
+          },
+          {
+            "name": "Opp. Shugan Society Gate No. 2, Nr. Sardar English Medium School",
+            "code": "2103",
+            "time": "2:42 PM"
+          },
+          {
+            "name": "Opp. Dhiraj Sons Mega Store, Athwa Gate",
+            "code": "4001",
+            "time": "2:52 PM"
+          },
+          {
+            "name": "Police Parade Ground Bus Stop, Main Road (Nr. Nagrik Suvidha Kendra)",
+            "code": "4002",
+            "time": "2:55 PM"
+          }
+        ]
+      },
+      {
+        "name": "C20",
+        "stops": [
+          {
+            "name": "Agarwal Samaj Bhavan, Ghod Dod Rd Main Road",
+            "code": "1304",
+            "time": "2:40 PM"
+          },
+          {
+            "name": "Opp. Sarela Shopping Center",
+            "code": "1305",
+            "time": "2:43 PM"
+          },
+          {
+            "name": "Opp. Pinki Collection Store, Main Road",
+            "code": "1306",
+            "time": "2:45 PM"
+          },
+          {
+            "name": "Ravi Dham Complex, Nr. Children's Traffic Park",
+            "code": "1309",
+            "time": "2:47 PM"
+          },
+          {
+            "name": "Opp. Bank of India, Opp. Panjrapole, Ghod Dod Road",
+            "code": "1408",
+            "time": "2:50 PM"
+          }
+        ]
+      },
+      {
+        "name": "C21",
+        "stops": [
+          {
+            "name": "Krishna Row House, Dandi Road",
+            "code": "2602",
+            "time": "2:21 PM"
+          },
+          {
+            "name": "Subhash Garden, Morabhagal Circle",
+            "code": "2601",
+            "time": "2:24 PM"
+          },
+          {
+            "name": "GAIL Tower, Main Road",
+            "code": "3304",
+            "time": "2:29 PM"
+          },
+          {
+            "name": "Opp. Prime Arcade, Adajan",
+            "code": "3303",
+            "time": "2:31 PM"
+          },
+          {
+            "name": "Opp. Center Point, Sahyog Imaging Centre, Anand Mahal Rd.",
+            "code": "3302",
+            "time": "2:33 PM"
+          },
+          {
+            "name": "Chinmay Appt, Opp. Shri Ram Petrol Pump, Adajan",
+            "code": "3301",
+            "time": "2:35 PM"
+          },
+          {
+            "name": "Adajan Gam Bus Stop (Opp. Samarth Park - Shikha)",
+            "code": "3506",
+            "time": "2:38 PM"
+          },
+          {
+            "name": "Madhuvan Park, Nr. Kangaroo Kids, Green Avenue Lane",
+            "code": "1307",
+            "time": "2:50 PM"
+          },
+          {
+            "name": "Opp. Jay Jalaram Store",
+            "code": "1308",
+            "time": "2:52 PM"
+          }
+        ]
+      },
+      {
+        "name": "C22",
+        "stops": [
+          {
+            "name": "Nr. Megha Tower 1 (Opp. Joggers Park)",
+            "code": "1410",
+            "time": "2:48 PM"
+          },
+          {
+            "name": "Ashirwad Palace Gate No. 4 (Bhatar)",
+            "code": "1407",
+            "time": "2:50 PM"
+          }
+        ]
+      },
+      {
+        "name": "C23 (Small Bus)",
+        "stops": [
+          {
+            "name": "Opp. Vijay Dairy (Gujarat Gas Circle)",
+            "code": "3501",
+            "time": "2:34 PM"
+          },
+          {
+            "name": "Nr. Rupali Naher, Bhatar Road",
+            "code": "1404",
+            "time": "2:44 PM"
+          },
+          {
+            "name": "Opp. City Park (Nr. Shree Mahalaxmi Locho)",
+            "code": "1402",
+            "time": "2:47 PM"
+          },
+          {
+            "name": "Surya Plaza Complex Main Road",
+            "code": "1406",
+            "time": "2:51 PM"
+          },
+          {
+            "name": "Opp. Kapadia Health Club, Main Road",
+            "code": "1403",
+            "time": "2:54 PM"
+          }
+        ]
+      },
+      {
+        "name": "C24 (Small Bus)",
+        "stops": [
+          {
+            "name": "Opp. Mahavir Jewellers, Palanpur Patia Circle",
+            "code": "3507",
+            "time": "2:29 PM"
+          },
+          {
+            "name": "Opp. Mahavir Petrol Pump",
+            "code": "3503",
+            "time": "2:34 PM"
+          },
+          {
+            "name": "Opp. Vijay Dairy (Dhanmora Complex)",
+            "code": "3502",
+            "time": "2:38 PM"
+          },
+          {
+            "name": "Boat Circle, Opp. Dotiwala Bakery (Swami Vivekanand Circle)",
+            "code": "1603",
+            "time": "2:42 PM"
+          },
+          {
+            "name": "Pushpa Agencies, Nr. Jeevan Bharti School",
+            "code": "1601",
+            "time": "2:46 PM"
+          },
+          {
+            "name": "Opp. Gandhi Engineering College",
+            "code": "1501",
+            "time": "2:48 PM"
+          },
+          {
+            "name": "Nr. DCB Bank Main Road",
+            "code": "2502",
+            "time": "2:55 PM"
+          }
+        ]
+      },
+      {
+        "name": "C25 (Small Bus)",
+        "stops": [
+          {
+            "name": "Gam Khadi (Inside Morabhagal)",
+            "code": "2605",
+            "time": "2:23 PM"
+          },
+          {
+            "name": "Tadwadi Char Rasta Main Road",
+            "code": "3504",
+            "time": "2:29 PM"
+          },
+          {
+            "name": "Rocket Circle Main Road, Vijay Sales",
+            "code": "3508",
+            "time": "2:31 PM"
+          },
+          {
+            "name": "Chowk Char Rasta",
+            "code": "2002",
+            "time": "2:38 PM"
+          },
+          {
+            "name": "Sheth Morabhai Hospital / Motiwala Perfume",
+            "code": "2001",
+            "time": "2:41 PM"
+          },
+          {
+            "name": "Air India Office",
+            "code": "1901",
+            "time": "2:48 PM"
+          },
+          {
+            "name": "Raja Dairy",
+            "code": "1701",
+            "time": "2:52 PM"
+          },
+          {
+            "name": "Zenith Hotel (Old Amisha Hotel)",
+            "code": "1702",
+            "time": "2:55 PM"
+          }
+        ]
+      },
+      {
+        "name": "C26",
+        "stops": [
+          {
+            "name": "Opp. Poddar Arcade Main Road",
+            "code": "2201",
+            "time": "2:48 PM"
+          },
+          {
+            "name": "Opp. Petrol Pump (Nr. JB Diamond)",
+            "code": "2202",
+            "time": "2:50 PM"
+          }
+        ]
+      },
+      {
+        "name": "C27 (Small Bus)",
+        "stops": [
+          {
+            "name": "Dabholi Gam Char Rasta (Nr. Dabholi Bridge)",
+            "code": "2404",
+            "time": "2:26 PM"
+          },
+          {
+            "name": "Aksharwadi Circle (Katargam)",
+            "code": "2408",
+            "time": "2:30 PM"
+          },
+          {
+            "name": "Opp. Subh Laxmi Apartment, Main Road (Ved Road)",
+            "code": "2407",
+            "time": "2:32 PM"
+          },
+          {
+            "name": "Siganpur Circle",
+            "code": "2405",
+            "time": "2:37 PM"
+          },
+          {
+            "name": "Dhanmora Char Rasta, Katargam (Phone Book Mobile Shop)",
+            "code": "2410",
+            "time": "2:41 PM"
+          },
+          {
+            "name": "Paras Police Chowki, Nr. Dholakia Garden, Katargam",
+            "code": "2403",
+            "time": "2:44 PM"
+          },
+          {
+            "name": "Opp. Anath Bal Ashram",
+            "code": "2401",
+            "time": "2:46 PM"
+          },
+          {
+            "name": "Smt. Maniben Kantibhai Circle",
+            "code": "2402",
+            "time": "2:49 PM"
+          },
+          {
+            "name": "Barfiwala College, Main Road",
+            "code": "2302",
+            "time": "2:51 PM"
+          },
+          {
+            "name": "Opp. Shree Nutan Nivas Complex, Nr. I.C. Gandhi School, Sumul Dairy Road",
+            "code": "2301",
+            "time": "2:53 PM"
+          },
+          {
+            "name": "Opp. Railway Parcel Office",
+            "code": "2303",
+            "time": "2:55 PM"
+          }
+        ]
+      },
+      {
+        "name": "C28",
+        "stops": [
+          {
+            "name": "Roscoe Apt., Dabholi, Ved Road",
+            "code": "2411",
+            "time": "2:35 PM"
+          },
+          {
+            "name": "Opp. Shree Swaminarayan Gurukul Gate, Nani Ved (Old Ambaji Temple Stop)",
+            "code": "2409",
+            "time": "2:38 PM"
+          },
+          {
+            "name": "SRK Farm, Jalaram Chowk, Karada Gam, Ved",
+            "code": "2413",
+            "time": "2:41 PM"
+          },
+          {
+            "name": "Status Circle (Nr. Karada Gam, Ved)",
+            "code": "2414",
+            "time": "2:43 PM"
+          },
+          {
+            "name": "The Palladium, Nr. Torrent Power Police Station",
+            "code": "2415",
+            "time": "2:45 PM"
+          },
+          {
+            "name": "Vadla Circle, Nr. Laxmikant ni Vadi, Gajera Road",
+            "code": "2416",
+            "time": "2:50 PM"
+          },
+          {
+            "name": "Opp. Sunday Hub, Nr. Ankur Vidhyalay, Katargam",
+            "code": "2412",
+            "time": "2:54 PM"
+          }
+        ]
+      },
+      {
+        "name": "C29",
+        "stops": [
+          {
+            "name": "Opp. 5 Square Point, MV Circle (Sutrali)",
+            "code": "2606",
+            "time": "2:28 PM"
+          },
+          {
+            "name": "Opp. Friend Class Main Road, Palanpur Patia Road",
+            "code": "3403",
+            "time": "2:37 PM"
+          },
+          {
+            "name": "Surbhi Dairy Main Road, Honey Park Road",
+            "code": "3405",
+            "time": "2:41 PM"
+          },
+          {
+            "name": "Opp. Rutvan Apartment, Gangeshwar Mahadev Road (Opp. Axis Bank, Nr. Tapi Hotel)",
+            "code": "3401",
+            "time": "2:43 PM"
+          },
+          {
+            "name": "Parshuram Garden, Nr. Amul Parlour",
+            "code": "3404",
+            "time": "2:45 PM"
+          },
+          {
+            "name": "V3 Corner, Nr. Sarita Dairy, Honey Park Road",
+            "code": "3606",
+            "time": "2:47 PM"
+          },
+          {
+            "name": "Green City Main Road (Bhatha)",
+            "code": "3605",
+            "time": "2:57 PM"
+          }
+        ]
+      },
+      {
+        "name": "C30 (Eeco)",
+        "stops": [
+          {
+            "name": "Magob Circle",
+            "code": "5005",
+            "time": "2:55 PM"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "pm345",
+    "badge": "Afternoon",
+    "direction": "Going Home",
+    "who": "Teachers + Grades 7–12",
+    "schoolEvent": "Leaves school",
+    "schoolTime": "3:45 PM",
+    "timeWord": "Drop-off",
+    "routes": [
+      {
+        "name": "D1",
+        "stops": [
+          {
+            "name": "Galaxy Circle, Pal Main Road",
+            "code": "3608",
+            "time": "4:08 PM"
+          },
+          {
+            "name": "Opp. Nishal Arcade Main Road, Pal",
+            "code": "3614",
+            "time": "4:10 PM"
+          },
+          {
+            "name": "Opp. Nexa-Amar Cars (Opp. Old JK Motors), Pal Road",
+            "code": "3609",
+            "time": "4:12 PM"
+          },
+          {
+            "name": "Opp. Shreepad Park, Arena Road, Pal",
+            "code": "3618",
+            "time": "4:14 PM"
+          },
+          {
+            "name": "Opp. Govindji Park, Umra Garden, Tilak Circle",
+            "code": "1202",
+            "time": "4:19 PM"
+          },
+          {
+            "name": "ONGC Phase I Main Gate",
+            "code": "3702",
+            "time": "4:30 PM"
+          },
+          {
+            "name": "Opp. Airport Main gate",
+            "code": "3701",
+            "time": "4:34 PM"
+          },
+          {
+            "name": "Delhi Public School, Dumas Road, Gaviyer",
+            "code": "3703",
+            "time": "4:37 PM"
+          }
+        ]
+      },
+      {
+        "name": "D2",
+        "stops": [
+          {
+            "name": "Opp. Jolly Residency (Nr. SNS Square)",
+            "code": "3804",
+            "time": "4:18 PM"
+          },
+          {
+            "name": "Opp. Times Corner, Nr. SMC Garden, Vesu",
+            "code": "3811",
+            "time": "4:22 PM"
+          },
+          {
+            "name": "Opp. Shyam Palace, Nr. Nandini 2, VIP Road",
+            "code": "3815",
+            "time": "4:24 PM"
+          },
+          {
+            "name": "Opp. Star Galaxy, Nr. Horizon Apartment, VIP Road, Vesu",
+            "code": "3816",
+            "time": "4:26 PM"
+          },
+          {
+            "name": "Opp. Sangini Nirvana, Nr. Nandini 3, Vesu",
+            "code": "3810",
+            "time": "4:28 PM"
+          },
+          {
+            "name": "Kankubaa Farm, VIP Main Road",
+            "code": "3813",
+            "time": "4:30 PM"
+          }
+        ]
+      },
+      {
+        "name": "D3",
+        "stops": [
+          {
+            "name": "Opp. Shyam Luxury, Nr. SUDA Bhavan",
+            "code": "3809",
+            "time": "4:20 PM"
+          },
+          {
+            "name": "Opp. Fionaa Apartment, Nr. Siddhi Vinayak Mandir, Vesu",
+            "code": "3801",
+            "time": "4:23 PM"
+          },
+          {
+            "name": "Blossom Apt, Vesu",
+            "code": "3814",
+            "time": "4:28 PM"
+          },
+          {
+            "name": "Happy Hallmark Shoppers, Vesu",
+            "code": "3817",
+            "time": "4:30 PM"
+          }
+        ]
+      },
+      {
+        "name": "D4",
+        "stops": [
+          {
+            "name": "Opp. Someshwar Enclave, Main Gate",
+            "code": "3803",
+            "time": "4:20 PM"
+          },
+          {
+            "name": "Agam Krupa Complex, Nr. Happiness Restaurant",
+            "code": "3807",
+            "time": "4:22 PM"
+          },
+          {
+            "name": "Opp. Highfield Ascot, VIP Main Road",
+            "code": "3808",
+            "time": "4:25 PM"
+          },
+          {
+            "name": "Opp. Ratna Jyoti Apt, Main Gate, VIP Road",
+            "code": "3805",
+            "time": "4:27 PM"
+          },
+          {
+            "name": "Florence Main Road, Vesu",
+            "code": "3812",
+            "time": "4:31 PM"
+          }
+        ]
+      },
+      {
+        "name": "D5",
+        "stops": [
+          {
+            "name": "Opp. Prasiddhi Complex Circle, Nr. Modi Bakers, Piplod",
+            "code": "1102",
+            "time": "4:18 PM"
+          },
+          {
+            "name": "Opp. Florence Hospital, Piplod",
+            "code": "1106",
+            "time": "4:20 PM"
+          },
+          {
+            "name": "Happy Excelencia, Maharana Pratap Road",
+            "code": "3819",
+            "time": "4:24 PM"
+          },
+          {
+            "name": "Surya Heritage, Maharana Pratap Road",
+            "code": "3818",
+            "time": "4:26 PM"
+          },
+          {
+            "name": "SNS Splendid Main Char Rasta, Nr. Rebounce, Vesu",
+            "code": "3820",
+            "time": "4:28 PM"
+          },
+          {
+            "name": "Opp. Safal Square, UM Road",
+            "code": "3806",
+            "time": "4:30 PM"
+          }
+        ]
+      },
+      {
+        "name": "D6",
+        "stops": [
+          {
+            "name": "Opp. State Bank of India, Nr. Pujan Apt., Citylight Road",
+            "code": "3204",
+            "time": "4:15 PM"
+          },
+          {
+            "name": "Opera House, Nr. Agrasen Bhavan, Citylight",
+            "code": "3203",
+            "time": "4:17 PM"
+          },
+          {
+            "name": "Marvella Corridors Complex, VIP Road, Vesu",
+            "code": "3115",
+            "time": "4:25 PM"
+          },
+          {
+            "name": "Sangini Evoq Main Char Rasta, VIP Main Road",
+            "code": "3119",
+            "time": "4:27 PM"
+          },
+          {
+            "name": "Rajhans Cremona, VIP Road, Vesu",
+            "code": "3116",
+            "time": "4:31 PM"
+          },
+          {
+            "name": "Dream Heritage, Vesu Canal Road",
+            "code": "3117",
+            "time": "4:33 PM"
+          }
+        ]
+      },
+      {
+        "name": "D7",
+        "stops": [
+          {
+            "name": "Opp. Mamta Hospital, Palanpur Gam Canal Road",
+            "code": "3616",
+            "time": "4:02 PM"
+          },
+          {
+            "name": "Rajhans Zion, Vesu Canal Road, Bharthana",
+            "code": "3112",
+            "time": "4:22 PM"
+          },
+          {
+            "name": "Sangini Terreza, Vesu Canal Road, Bharthana",
+            "code": "3113",
+            "time": "4:24 PM"
+          },
+          {
+            "name": "L. P. Savani Academy (Nr. Canal Walker, VIP Road)",
+            "code": "3109",
+            "time": "4:26 PM"
+          },
+          {
+            "name": "Rajhans Cosmic, Vesu Canal Road",
+            "code": "3118",
+            "time": "4:28 PM"
+          },
+          {
+            "name": "Surya Landmark, Nr. Money Arcade, Vesu Canal Road",
+            "code": "3105",
+            "time": "4:30 PM"
+          }
+        ]
+      },
+      {
+        "name": "D8",
+        "stops": [
+          {
+            "name": "Opp. Sangini Solitaire, Bharthana",
+            "code": "3110",
+            "time": "4:22 PM"
+          },
+          {
+            "name": "Opp. Ofira, Bharthana",
+            "code": "3107",
+            "time": "4:24 PM"
+          },
+          {
+            "name": "Poddar Residency, Bharthana",
+            "code": "3106",
+            "time": "4:26 PM"
+          },
+          {
+            "name": "Rajhans Grandezza, Bharthana",
+            "code": "3111",
+            "time": "4:28 PM"
+          }
+        ]
+      },
+      {
+        "name": "D9",
+        "stops": [
+          {
+            "name": "L.P. Savani Circle Main Road",
+            "code": "3604",
+            "time": "4:04 PM"
+          },
+          {
+            "name": "Green Garden, Opp. Maheshwari Bhavan, Citylight",
+            "code": "3205",
+            "time": "4:16 PM"
+          },
+          {
+            "name": "Opp. Shyam Mandir, Main Road (VIP Road)",
+            "code": "3102",
+            "time": "4:23 PM"
+          },
+          {
+            "name": "Ashirwad Enclave, Nr. Bamroli Bridge, Althan",
+            "code": "3108",
+            "time": "4:27 PM"
+          },
+          {
+            "name": "D.B. Patel Food Court, Nr. Raj Dream, VIP 2 Road",
+            "code": "3114",
+            "time": "4:30 PM"
+          }
+        ]
+      },
+      {
+        "name": "D10",
+        "stops": [
+          {
+            "name": "Opp. Trinity Mall, Main Road",
+            "code": "3602",
+            "time": "4:06 PM"
+          },
+          {
+            "name": "Jiomax Multi-Super Speciality Hospital, Nr. Om Terrace",
+            "code": "3100",
+            "time": "4:21 PM"
+          },
+          {
+            "name": "Opp. Om Terrace Complex Gate, New Citylight Rd.",
+            "code": "3101",
+            "time": "4:23 PM"
+          },
+          {
+            "name": "China Gate I, New Citylight",
+            "code": "3103",
+            "time": "4:25 PM"
+          },
+          {
+            "name": "Breadliner Circle, U.M. Road",
+            "code": "3104",
+            "time": "4:28 PM"
+          }
+        ]
+      },
+      {
+        "name": "D11",
+        "stops": [
+          {
+            "name": "Opp. Vitoria Heights, Opp. Raj Harmony, Ugat Canal Road",
+            "code": "3612",
+            "time": "3:57 PM"
+          },
+          {
+            "name": "Opp. Noopur Hospital, Citylight Main Road (Circle)",
+            "code": "3206",
+            "time": "4:15 PM"
+          },
+          {
+            "name": "Opp. Subh Laxmi Complex, Nr. Bank of Baroda, Citylight",
+            "code": "3202",
+            "time": "4:18 PM"
+          },
+          {
+            "name": "Sangini Main Gate (Nr. Om Krishna Petrol Pump), Panas Gam",
+            "code": "3207",
+            "time": "4:23 PM"
+          },
+          {
+            "name": "Ashirwad Complex Gate No. 1 (Nr. Om Krishna Petrol Pump)",
+            "code": "3201",
+            "time": "4:27 PM"
+          },
+          {
+            "name": "Surya Palace Gate No. 1, Citylight Road",
+            "code": "3208",
+            "time": "4:28 PM"
+          }
+        ]
+      },
+      {
+        "name": "D12",
+        "stops": [
+          {
+            "name": "Regency Tower - C",
+            "code": "1103",
+            "time": "4:15 PM"
+          },
+          {
+            "name": "Pallavi Apartment, Nr. Lalbhai Contractor Stadium",
+            "code": "1108",
+            "time": "4:17 PM"
+          },
+          {
+            "name": "Vastu Luxuria Gate No.1 (Nr. VR Mall Circle), Dumas Road",
+            "code": "3704",
+            "time": "4:25 PM"
+          },
+          {
+            "name": "Valentine Multiplex, Piplod-Dumas Road",
+            "code": "1107",
+            "time": "4:28 PM"
+          }
+        ]
+      },
+      {
+        "name": "D13 (Small Bus)",
+        "stops": [
+          {
+            "name": "CNG Station (Behind L.P. Savani School)",
+            "code": "3610",
+            "time": "4:04 PM"
+          },
+          {
+            "name": "Nilam Society Main Gate, Umra Gam",
+            "code": "1203",
+            "time": "4:15 PM"
+          },
+          {
+            "name": "Chandni Chowk Circle",
+            "code": "1101",
+            "time": "4:18 PM"
+          },
+          {
+            "name": "Opp. River Wind Residency",
+            "code": "1100",
+            "time": "4:21 PM"
+          },
+          {
+            "name": "Opp. Four Season Gate 2, Gym Khana Road, Umra",
+            "code": "1104",
+            "time": "4:23 PM"
+          },
+          {
+            "name": "Goverdhan Haveli Temple, Piplod Main Road",
+            "code": "1105",
+            "time": "4:25 PM"
+          }
+        ]
+      },
+      {
+        "name": "D14",
+        "stops": [
+          {
+            "name": "Opp. Cinezza Multiplex, Nr. D'Mart, Dandi Road",
+            "code": "2607",
+            "time": "3:57 PM"
+          },
+          {
+            "name": "V3 Corner, Nr. Sarita Dairy, Honey Park Road",
+            "code": "3606",
+            "time": "4:09 PM"
+          },
+          {
+            "name": "Parshuram Garden, Nr. Amul Parlour",
+            "code": "3404",
+            "time": "4:11 PM"
+          },
+          {
+            "name": "Ratna Anushree Apt., Opp. Rituraj Complex",
+            "code": "3902",
+            "time": "4:23 PM"
+          },
+          {
+            "name": "Opp. Brijwasi Estate (Nr. Umrigar School)",
+            "code": "3903",
+            "time": "4:25 PM"
+          }
+        ]
+      },
+      {
+        "name": "D15",
+        "stops": [
+          {
+            "name": "Opp. Silver Crest Apt., Nr. Western Shikharji Complex",
+            "code": "3607",
+            "time": "4:08 PM"
+          },
+          {
+            "name": "Opp. Sumerru Business Corner, Nr. Rajhans (Pal)",
+            "code": "3615",
+            "time": "4:11 PM"
+          },
+          {
+            "name": "Rajhans Campus, Main Road",
+            "code": "3601",
+            "time": "4:13 PM"
+          },
+          {
+            "name": "Icchanath Mahadev Temple, SVNIT Circle, Nr. Indian Oil Petrol Pump",
+            "code": "3908",
+            "time": "4:20 PM"
+          },
+          {
+            "name": "Opp. Sargam Shopping Center",
+            "code": "3906",
+            "time": "4:22 PM"
+          },
+          {
+            "name": "Fitt - Fitness Studio (Old Vodafone Store, Athwalines)",
+            "code": "3904",
+            "time": "4:26 PM"
+          }
+        ]
+      },
+      {
+        "name": "D16",
+        "stops": [
+          {
+            "name": "Praveg Apt., Opp. Plant Nursery, McDonald's, L.P. Savani Road",
+            "code": "3603",
+            "time": "4:05 PM"
+          },
+          {
+            "name": "Police Parade Ground Bus Stop, Main Road (Nr. Nagrik Suvidha Kendra)",
+            "code": "4002",
+            "time": "4:13 PM"
+          },
+          {
+            "name": "Opp. Indoor Stadium, Main Road",
+            "code": "1303",
+            "time": "4:16 PM"
+          },
+          {
+            "name": "Opp. Central Bank of India, Opp. Union Point, Ghod Dod Rd.",
+            "code": "1302",
+            "time": "4:19 PM"
+          },
+          {
+            "name": "Opp. City Mall",
+            "code": "1301",
+            "time": "4:20 PM"
+          },
+          {
+            "name": "Metro Shoes (Nr. Shoe Mark)",
+            "code": "3901",
+            "time": "4:22 PM"
+          },
+          {
+            "name": "Ambika Niketan, Bus Stand",
+            "code": "3905",
+            "time": "4:24 PM"
+          },
+          {
+            "name": "Opp. Asopalav Showroom (Nr. Old Uncle Shop)",
+            "code": "3907",
+            "time": "4:26 PM"
+          }
+        ]
+      },
+      {
+        "name": "D17",
+        "stops": [
+          {
+            "name": "Bhumi Complex, Main Road",
+            "code": "3402",
+            "time": "4:03 PM"
+          },
+          {
+            "name": "Surbhi Dairy Main Road, Honey Park Road",
+            "code": "3405",
+            "time": "4:05 PM"
+          },
+          {
+            "name": "Opp. Rutvan Apartment, Gangeshwar Mahadev Road (Opp. Axis Bank, Nr. Tapi Hotel)",
+            "code": "3401",
+            "time": "4:06 PM"
+          },
+          {
+            "name": "Opp. EV Charging Station, Jeevan Yatra Circle, Gangeshwar Mahadev Road",
+            "code": "3406",
+            "time": "4:09 PM"
+          },
+          {
+            "name": "Agarwal Samaj Bhavan, Ghod Dod Rd Main Road",
+            "code": "1304",
+            "time": "4:21 PM"
+          },
+          {
+            "name": "Opp. Sarela Shopping Center",
+            "code": "1305",
+            "time": "4:24 PM"
+          },
+          {
+            "name": "Opp. Pinki Collection Store, Main Road",
+            "code": "1306",
+            "time": "4:26 PM"
+          },
+          {
+            "name": "Ravi Dham Complex, Nr. Children's Traffic Park",
+            "code": "1309",
+            "time": "4:28 PM"
+          }
+        ]
+      },
+      {
+        "name": "D18",
+        "stops": [
+          {
+            "name": "Opp. Friend Class Main Road, Palanpur Patia Road",
+            "code": "3403",
+            "time": "4:01 PM"
+          },
+          {
+            "name": "GAIL Tower, Main Road",
+            "code": "3304",
+            "time": "4:05 PM"
+          },
+          {
+            "name": "Opp. Prime Arcade, Adajan",
+            "code": "3303",
+            "time": "4:08 PM"
+          },
+          {
+            "name": "Center Point, Opp. Sahyog Imaging Centre, Anand Mahal Rd.",
+            "code": "3302",
+            "time": "4:10 PM"
+          },
+          {
+            "name": "Chinmay Appt, Nr. Shri Ram Petrol Pump, Adajan",
+            "code": "3301",
+            "time": "4:12 PM"
+          },
+          {
+            "name": "Adajan Gam Bus Stop (Opp. Samarth Park - Shikha)",
+            "code": "3506",
+            "time": "4:16 PM"
+          },
+          {
+            "name": "Madhuvan Park, Nr. Kangaroo Kids, Green Avenue Lane",
+            "code": "1307",
+            "time": "4:25 PM"
+          },
+          {
+            "name": "Opp. Jay Jalaram Store",
+            "code": "1308",
+            "time": "4:27 PM"
+          },
+          {
+            "name": "Opp. Bank of India, Panjrapole, Ghod Dod Road",
+            "code": "1408",
+            "time": "4:30 PM"
+          }
+        ]
+      },
+      {
+        "name": "D19",
+        "stops": [
+          {
+            "name": "Opp. Vijay Dairy (Dhanmora Complex)",
+            "code": "3502",
+            "time": "4:08 PM"
+          },
+          {
+            "name": "Opp. Bajaj Show Room",
+            "code": "3505",
+            "time": "4:10 PM"
+          },
+          {
+            "name": "Nr. Megha Tower 1 (Opp. Joggers Park)",
+            "code": "1410",
+            "time": "4:25 PM"
+          },
+          {
+            "name": "Ashirwad Palace Gate No. 4 (Bhatar)",
+            "code": "1407",
+            "time": "4:28 PM"
+          }
+        ]
+      },
+      {
+        "name": "D20 (Small Bus)",
+        "stops": [
+          {
+            "name": "Opp. Vijay Dairy (Gujarat Gas Circle)",
+            "code": "3501",
+            "time": "4:06 PM"
+          },
+          {
+            "name": "Nr. Rupali Naher, Bhatar Road",
+            "code": "1404",
+            "time": "4:16 PM"
+          },
+          {
+            "name": "Opp. City Park (Nr. Shree Mahalaxmi Locho)",
+            "code": "1402",
+            "time": "4:20 PM"
+          },
+          {
+            "name": "Surya Plaza Complex, Main Road",
+            "code": "1406",
+            "time": "4:23 PM"
+          },
+          {
+            "name": "Opp. Kapadia Health Club, Main Road",
+            "code": "1403",
+            "time": "4:27 PM"
+          }
+        ]
+      },
+      {
+        "name": "D21 (Small Bus)",
+        "stops": [
+          {
+            "name": "Opp. Mahavir Jewellers, Palanpur Patia Circle",
+            "code": "3507",
+            "time": "4:01 PM"
+          },
+          {
+            "name": "Tadwadi Char Rasta Main Road",
+            "code": "3504",
+            "time": "4:03 PM"
+          },
+          {
+            "name": "Opp. Vijay Sales, Nr. Rocket Circle Main Road",
+            "code": "3508",
+            "time": "4:05 PM"
+          },
+          {
+            "name": "Opp. Mahavir Petrol Pump",
+            "code": "3503",
+            "time": "4:07 PM"
+          },
+          {
+            "name": "Boat Circle, Opp. Dotiwala Bakery (Swami Vivekanand Circle)",
+            "code": "1603",
+            "time": "4:14 PM"
+          },
+          {
+            "name": "Nr. Kailash Sweets, Main Road",
+            "code": "1602",
+            "time": "4:18 PM"
+          },
+          {
+            "name": "Pushpa Agencies, Nr. Jeevan Bharti School",
+            "code": "1601",
+            "time": "4:20 PM"
+          },
+          {
+            "name": "Opp. Gandhi Engineering College",
+            "code": "1501",
+            "time": "4:24 PM"
+          },
+          {
+            "name": "Alka Electronics Store",
+            "code": "2501",
+            "time": "4:29 PM"
+          },
+          {
+            "name": "Nr. DCB Bank Main Road",
+            "code": "2502",
+            "time": "4:31 PM"
+          }
+        ]
+      },
+      {
+        "name": "D22 (Small Bus)",
+        "stops": [
+          {
+            "name": "Opp. Krishna Row House, Dandi Road",
+            "code": "2602",
+            "time": "3:56 PM"
+          },
+          {
+            "name": "Subhash Garden, Morabhagal Circle",
+            "code": "2601",
+            "time": "3:59 PM"
+          },
+          {
+            "name": "Opp. Sana Corner, Nr. Gulzar Avenue, Main Road",
+            "code": "2102",
+            "time": "4:06 PM"
+          },
+          {
+            "name": "Opp. Dissoto Turf (Old Royal Residency Stop), Causeway Rd.",
+            "code": "2101",
+            "time": "4:09 PM"
+          },
+          {
+            "name": "Opp. Shugan Society Gate No. 2, Nr. Sardar English Medium School",
+            "code": "2103",
+            "time": "4:11 PM"
+          },
+          {
+            "name": "Chowk Char Rasta",
+            "code": "2002",
+            "time": "4:18 PM"
+          },
+          {
+            "name": "Zapata Store, Main Road",
+            "code": "1902",
+            "time": "4:22 PM"
+          },
+          {
+            "name": "Air India Office",
+            "code": "1901",
+            "time": "4:26 PM"
+          }
+        ]
+      },
+      {
+        "name": "D23 (Small Bus)",
+        "stops": [
+          {
+            "name": "Gam Khadi (Inside Morabhagal)",
+            "code": "2605",
+            "time": "3:58 PM"
+          },
+          {
+            "name": "Opp. Zenith Hotel (Old Amisha Hotel)",
+            "code": "1702",
+            "time": "4:16 PM"
+          },
+          {
+            "name": "Opp. Poddar Arcade Main Road",
+            "code": "2201",
+            "time": "4:21 PM"
+          },
+          {
+            "name": "Opp. Petrol Pump (Nr. JB Diamond)",
+            "code": "2202",
+            "time": "4:23 PM"
+          }
+        ]
+      },
+      {
+        "name": "D24 (Small Bus)",
+        "stops": [
+          {
+            "name": "Dabholi Gam Char Rasta (Nr. Dabholi Bridge)",
+            "code": "2404",
+            "time": "4:01 PM"
+          },
+          {
+            "name": "Siganpur Circle",
+            "code": "2405",
+            "time": "4:09 PM"
+          },
+          {
+            "name": "Dhanmora Char Rasta, Katargam (Phone Book Mobile Shop)",
+            "code": "2410",
+            "time": "4:12 PM"
+          },
+          {
+            "name": "Paras Police Chowki, Nr. Dholakia Garden, Katargam",
+            "code": "2403",
+            "time": "4:15 PM"
+          },
+          {
+            "name": "Opp. Bal Anath Ashram",
+            "code": "2401",
+            "time": "4:17 PM"
+          },
+          {
+            "name": "Smt. Maniben Kantibhai Circle",
+            "code": "2402",
+            "time": "4:20 PM"
+          },
+          {
+            "name": "Barfiwala College, Main Road",
+            "code": "2302",
+            "time": "4:22 PM"
+          },
+          {
+            "name": "Opp. Shree Nutan Nivas Complex, Nr. I.C. Gandhi School, Sumul Dairy Road",
+            "code": "2301",
+            "time": "4:24 PM"
+          },
+          {
+            "name": "Opp. Railway Parcel Office",
+            "code": "2303",
+            "time": "4:27 PM"
+          }
+        ]
+      },
+      {
+        "name": "D25",
+        "stops": [
+          {
+            "name": "Opp. Vaishnodevi Sky Complex, Jahangirabad",
+            "code": "2610",
+            "time": "3:55 PM"
+          },
+          {
+            "name": "Opp. Vaishnodevi Township, Jahangirabad",
+            "code": "2608",
+            "time": "3:56 PM"
+          },
+          {
+            "name": "Green Aristo, Vaishnodevi Canal Road",
+            "code": "2611",
+            "time": "3:59 PM"
+          },
+          {
+            "name": "Opp. 5 Square Point, MV Circle (Sutrali)",
+            "code": "2606",
+            "time": "4:02 PM"
+          },
+          {
+            "name": "Surya Darshan Complex, Main Road, Jahangirpura",
+            "code": "2609",
+            "time": "4:04 PM"
+          },
+          {
+            "name": "Satyadev Plaza, Iscon Circle, Jahangirpura",
+            "code": "2603",
+            "time": "4:05 PM"
+          },
+          {
+            "name": "Roscoe Apt., Dabholi, Ved Road",
+            "code": "2411",
+            "time": "4:12 PM"
+          },
+          {
+            "name": "Opp. Shree Swaminarayan Gurukul Gate, Nani Ved (Old Ambaji Temple Stop)",
+            "code": "2409",
+            "time": "4:14 PM"
+          },
+          {
+            "name": "SRK Farm, Jalaram Chowk, Karada Gam, Ved",
+            "code": "2413",
+            "time": "4:16 PM"
+          },
+          {
+            "name": "Status Circle (Nr. Karada Gam, Ved)",
+            "code": "2414",
+            "time": "4:18 PM"
+          },
+          {
+            "name": "The Palladium, Nr. Torrent Power Police Station",
+            "code": "2415",
+            "time": "4:20 PM"
+          },
+          {
+            "name": "Vadla Circle, Nr. Laxmikant ni Vadi, Gajera Road",
+            "code": "2416",
+            "time": "4:24 PM"
+          },
+          {
+            "name": "Opp. Sunday Hub, Nr. Ankur Vidhyalay, Katargam",
+            "code": "2412",
+            "time": "4:27 PM"
+          },
+          {
+            "name": "Subh Laxmi Apartment, Main Road (Ved Road)",
+            "code": "2407",
+            "time": "4:29 PM"
+          }
+        ]
+      },
+      {
+        "name": "D26",
+        "stops": [
+          {
+            "name": "Orchid Green, Nr. Raj World, Palanpore Gam",
+            "code": "3611",
+            "time": "4:01 PM"
+          },
+          {
+            "name": "Shavion Circle (Nr. Sai Milaap Shoppers), Gauravpath Road, Pal",
+            "code": "3617",
+            "time": "4:05 PM"
+          },
+          {
+            "name": "Opp. Bellissimo Hub, Opp. Gothic Apt., Gauravpath Road, Pal",
+            "code": "3613",
+            "time": "4:08 PM"
+          },
+          {
+            "name": "Green City Main Road (Bhatha)",
+            "code": "3605",
+            "time": "4:15 PM"
+          }
+        ]
+      },
+      {
+        "name": "D27 (Eeco 7 Seater)",
+        "stops": [
+          {
+            "name": "Raja Dairy",
+            "code": "1701",
+            "time": "4:15 PM"
+          },
+          {
+            "name": "Magob Circle",
+            "code": "5005",
+            "time": "4:30 PM"
+          }
+        ]
+      }
+    ]
+  }
+]

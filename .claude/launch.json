@@ -1,0 +1,17 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "fwgs",
+      "runtimeExecutable": "node",
+      "runtimeArgs": ["school-dashboards/tools/serve.mjs"],
+      "port": 4321
+    },
+    {
+      "name": "parent-hub",
+      "runtimeExecutable": "node",
+      "runtimeArgs": ["parent-hub/tools/serve.mjs"],
+      "port": 4322
+    }
+  ]
+}

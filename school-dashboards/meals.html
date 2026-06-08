@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Fountainhead School — Meal Break Finder</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Fraunces:opsz,wght@9..144,500;9..144,600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#eef2f6; --panel:#ffffff; --ink:#16202b; --muted:#5a6b7b; --line:#dde5ec;
+  --brand:#1d6f5c; --brand-soft:#e4f1ec; --brand-ink:#0f4a3d;
+  --lunch:#b07d1f; --lunch-soft:#f8edcf; --lunch-ink:#7c5612;
+  --pantry:#3d6f86; --pantry-soft:#e3eef3; --pantry-ink:#26505f;
+  --exit:#c2613a; --exit-soft:#fbeae1; --exit-ink:#8f4324;
+  --gold:#d8a531;
+  --radius:18px;
+  --shadow:0 1px 2px rgba(20,40,60,.05), 0 10px 30px rgba(20,40,60,.07);
+  --sans:"Plus Jakarta Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --serif:"Fraunces", Georgia, serif;
+}
+*{box-sizing:border-box}
+html,body{margin:0}
+body{
+  background:
+    radial-gradient(1200px 500px at 80% -10%, #f7faf8 0%, transparent 60%),
+    radial-gradient(900px 500px at -10% 0%, #f3f7fb 0%, transparent 55%),
+    var(--bg);
+  color:var(--ink); font-family:var(--sans); font-size:18px; line-height:1.5;
+  -webkit-font-smoothing:antialiased; padding:0 0 64px;
+}
+.wrap{max-width:760px;margin:0 auto;padding:0 18px}
+
+header.app{padding:30px 0 14px}
+.kicker{
+  display:inline-flex;align-items:center;gap:8px;font-weight:700;letter-spacing:.14em;
+  text-transform:uppercase;font-size:13px;color:var(--brand-ink);
+  background:var(--brand-soft);border:1px solid #cfe6dd;padding:7px 13px;border-radius:999px;
+}
+h1{font-family:var(--serif);font-weight:600;font-size:clamp(34px,7vw,52px);line-height:1.05;margin:16px 0 6px;letter-spacing:-.01em}
+.sub{font-size:19px;color:var(--muted);margin:0;max-width:40ch}
+.year{font-weight:700;color:var(--brand-ink)}
+
+.step{display:flex;align-items:center;gap:10px;margin:30px 0 14px;font-weight:700;font-size:15px;letter-spacing:.06em;text-transform:uppercase;color:var(--muted)}
+.step .n{display:grid;place-items:center;width:26px;height:26px;border-radius:50%;background:var(--brand);color:#fff;font-size:14px;font-weight:800}
+
+/* group + tiles */
+.group{margin-bottom:18px}
+.group h2{font-size:14px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);font-weight:800;margin:0 0 10px 2px}
+.tiles{display:flex;flex-wrap:wrap;gap:10px}
+.tile{
+  font-family:inherit;cursor:pointer;background:var(--panel);border:2px solid var(--line);
+  border-radius:14px;box-shadow:var(--shadow);color:var(--ink);font-weight:700;
+  transition:transform .12s ease,border-color .12s ease,box-shadow .12s ease;
+}
+.tile.num{width:62px;height:62px;font-family:var(--serif);font-size:28px;font-weight:600;display:grid;place-items:center}
+.tile.wide{padding:14px 20px;font-size:18px}
+.tile:hover{transform:translateY(-2px)}
+.tile[aria-pressed="true"]{border-color:var(--brand);box-shadow:0 0 0 4px var(--brand-soft),var(--shadow);color:var(--brand-ink)}
+
+/* legend */
+.legend{display:flex;flex-wrap:wrap;gap:8px 16px;margin:0 2px 6px;font-size:14px;color:var(--muted)}
+.legend span{display:inline-flex;align-items:center;gap:7px;font-weight:600}
+.legend i{width:13px;height:13px;border-radius:50%;display:inline-block}
+.i-morning{background:var(--brand)} .i-lunch{background:var(--lunch)} .i-pantry{background:var(--pantry)} .i-exit{background:var(--exit)}
+
+/* result panel */
+#panel{margin-top:6px}
+.who-head{display:flex;align-items:baseline;gap:12px;flex-wrap:wrap;margin:0 2px 16px}
+.who-head .name{font-family:var(--serif);font-size:32px;font-weight:600;line-height:1}
+.who-head .grp{font-size:16px;color:var(--muted);font-weight:600}
+
+.tl{list-style:none;margin:0;padding:0;position:relative}
+.tl:before{content:"";position:absolute;left:11px;top:10px;bottom:18px;width:2px;background:var(--line)}
+.tl li{position:relative;padding:0 0 16px 40px}
+.tl li:last-child{padding-bottom:0}
+.tl .dot{position:absolute;left:3px;top:8px;width:18px;height:18px;border-radius:50%;background:#fff;border:4px solid var(--brand)}
+.dot.d-morning{border-color:var(--brand)} .dot.d-lunch{border-color:var(--lunch)} .dot.d-pantry{border-color:var(--pantry)} .dot.d-exit{border-color:var(--exit)}
+
+.mcard{background:var(--panel);border:1px solid var(--line);border-radius:var(--radius);box-shadow:var(--shadow);padding:16px 18px}
+.mcard .top{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:10px}
+.badge{font-weight:800;font-size:13px;letter-spacing:.05em;text-transform:uppercase;padding:5px 12px;border-radius:999px;white-space:nowrap}
+.b-morning{background:var(--brand-soft);color:var(--brand-ink)}
+.b-lunch{background:var(--lunch-soft);color:var(--lunch-ink)}
+.b-pantry{background:var(--pantry-soft);color:var(--pantry-ink)}
+.b-exit{background:var(--exit-soft);color:var(--exit-ink)}
+.mtime{font-family:var(--serif);font-size:23px;font-weight:600;line-height:1;text-align:right;white-space:nowrap}
+.t-morning{color:var(--brand-ink)} .t-lunch{color:var(--lunch-ink)} .t-pantry{color:var(--pantry-ink)} .t-exit{color:var(--exit-ink)}
+.loc{display:flex;align-items:flex-start;gap:9px;font-size:19px;font-weight:600}
+.loc svg{flex-shrink:0;margin-top:3px;opacity:.55}
+.sub{font-size:14.5px;color:var(--muted);font-weight:600;margin:6px 0 0}
+
+.placeholder{text-align:center;color:var(--muted);padding:48px 20px;font-size:18px;border:2px dashed var(--line);border-radius:var(--radius);background:rgba(255,255,255,.5)}
+.placeholder .big{font-size:46px;margin-bottom:10px}
+
+.notice{margin-top:26px;background:#fffaf0;border:1px solid #f0e2bf;border-radius:16px;padding:18px 20px;font-size:15.5px;color:#6b5a2a;line-height:1.55}
+.notice b{color:#5a4a1f}
+footer{margin-top:28px;text-align:center;color:var(--muted);font-size:14px;line-height:1.6}
+.hidden{display:none!important}
+</style>
+<script src="assets/config.js"></script>
+<script src="assets/live-data.js"></script>
+</head>
+<body>
+<div class="wrap">
+  <header class="app">
+    <span class="kicker">Fountainhead School</span>
+    <h1>Meal Break Finder</h1>
+    <p class="sub">Pick a grade to see its meal breaks for the day — <span class="year">2026–27</span>.</p>
+  </header>
+  <div id="liveStatus"></div>
+
+  <div class="step"><span class="n">1</span> Choose your grade or role</div>
+  <div id="groups"></div>
+
+  <div id="step2" class="hidden">
+    <div class="step"><span class="n">2</span> Your meal day</div>
+    <div class="legend">
+      <span><i class="i-morning"></i> Morning Pantry</span>
+      <span><i class="i-lunch"></i> Lunch</span>
+      <span><i class="i-pantry"></i> Lunch Pantry</span>
+      <span><i class="i-exit"></i> Exit Pantry</span>
+    </div>
+    <div id="panel"></div>
+    <div class="notice">
+      <b>How to read this:</b> breaks are shown in time order. Some grades have both a <b>Lunch</b> and a <b>Lunch Pantry</b> entry at the same time but in different areas — both are shown exactly as listed in the school schedule, so please confirm the routine with the class teacher. Timings are for the 2026–27 year and may be revised.
+    </div>
+  </div>
+
+  <div id="prompt" class="placeholder" style="margin-top:8px">
+    <div class="big">🍽️</div>
+    Tap a grade above to see when and where its meals are.
+  </div>
+
+  <footer>Fountainhead School · Surat</footer>
+</div>
+
+<script>
+let DATA = [];
+let GROUPS = [];
+let byId = {};
+
+const SVC = {
+  morning:{label:"Morning Pantry", c:"morning"},
+  lunch:{label:"Lunch", c:"lunch"},
+  pantry:{label:"Lunch Pantry", c:"pantry"},
+  exit:{label:"Exit Pantry", c:"exit"},
+};
+const PIN = '<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>';
+
+function esc(s){return s.replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));}
+
+const groupsEl = document.getElementById('groups');
+const step2 = document.getElementById('step2');
+const panel = document.getElementById('panel');
+const prompt = document.getElementById('prompt');
+let current = null;
+
+function build(){
+  GROUPS.forEach(g=>{
+    const items = DATA.filter(e=>e.group===g);
+    if(!items.length) return;
+    const wrap=document.createElement('div'); wrap.className='group';
+    const h=document.createElement('h2'); h.textContent=g; wrap.appendChild(h);
+    const tiles=document.createElement('div'); tiles.className='tiles';
+    items.forEach(e=>{
+      const num = /^Grade /.test(e.label);
+      const b=document.createElement('button');
+      b.className='tile '+(num?'num':'wide');
+      b.textContent = num ? e.label.replace('Grade ','') : e.label;
+      b.setAttribute('aria-pressed','false');
+      b.dataset.id=e.id;
+      b.onclick=()=>select(e.id);
+      tiles.appendChild(b);
+    });
+    wrap.appendChild(tiles);
+    groupsEl.appendChild(wrap);
+  });
+}
+
+function select(id, skipScroll){
+  current=id;
+  document.querySelectorAll('.tile').forEach(t=>t.setAttribute('aria-pressed', t.dataset.id===id?'true':'false'));
+  prompt.classList.add('hidden');
+  step2.classList.remove('hidden');
+  render(byId[id]);
+  if(!skipScroll) step2.scrollIntoView({behavior:'smooth', block:'start'});
+}
+
+function render(e){
+  const head = `<div class="who-head"><span class="name">${esc(e.label)}</span><span class="grp">${esc(e.group)}</span></div>`;
+  const items = e.events.map(ev=>{
+    const s=SVC[ev.service];
+    const sub = ev.sub ? `<p class="sub">${esc(ev.sub)}</p>` : '';
+    return `<li>
+      <span class="dot d-${s.c}"></span>
+      <div class="mcard">
+        <div class="top">
+          <span class="badge b-${s.c}">${s.label}</span>
+          <span class="mtime t-${s.c}">${esc(ev.time)}</span>
+        </div>
+        <div class="loc t-${s.c}" style="color:var(--ink)">${PIN}<span>${esc(ev.location)}</span></div>
+        ${sub}
+      </div>
+    </li>`;
+  }).join('');
+  panel.innerHTML = head + `<ul class="tl">${items}</ul>`;
+}
+
+// ----- Live data wiring (hosted version) -----
+function applyMealData(payload){
+  DATA = (payload && payload.data) || [];
+  GROUPS = (payload && payload.groups) || [];
+  byId = Object.fromEntries(DATA.map(e=>[e.id,e]));
+  groupsEl.innerHTML = '';
+  build();
+  if(current && byId[current]) select(current, true);
+}
+FWGSLiveData.init({ sheet:'meals', statusMount:document.getElementById('liveStatus'), onData:applyMealData });
+</script>
+</body>
+</html>

@@ -1,0 +1,470 @@
+{
+  "groups": [
+    "Early Years",
+    "Primary · PYP",
+    "Middle · MYP",
+    "Diploma · DP",
+    "MLC",
+    "Staff"
+  ],
+  "data": [
+    {
+      "id": "ey",
+      "label": "EY",
+      "group": "Early Years",
+      "events": [
+        {
+          "service": "lunch",
+          "time": "12:05 – 12:30 pm",
+          "sort": 725,
+          "location": "EY Wing"
+        }
+      ]
+    },
+    {
+      "id": "g1",
+      "label": "Grade 1",
+      "group": "Primary · PYP",
+      "events": [
+        {
+          "service": "morning",
+          "time": "8:40 – 8:55 am",
+          "sort": 520,
+          "location": "Ground Floor, Block 3"
+        },
+        {
+          "service": "lunch",
+          "time": "12:00 – 12:20 pm",
+          "sort": 720,
+          "location": "Respective Classroom"
+        },
+        {
+          "service": "pantry",
+          "time": "12:00 – 12:20 pm",
+          "sort": 720,
+          "location": "Bon Appétit"
+        },
+        {
+          "service": "exit",
+          "time": "1:40 – 1:55 pm",
+          "sort": 820,
+          "location": "Grade 1 Wing"
+        }
+      ]
+    },
+    {
+      "id": "g2",
+      "label": "Grade 2",
+      "group": "Primary · PYP",
+      "events": [
+        {
+          "service": "morning",
+          "time": "8:40 – 8:55 am",
+          "sort": 520,
+          "location": "Ground Floor, Block 4"
+        },
+        {
+          "service": "lunch",
+          "time": "12:00 – 12:20 pm",
+          "sort": 720,
+          "location": "Respective Classroom"
+        },
+        {
+          "service": "pantry",
+          "time": "12:00 – 12:20 pm",
+          "sort": 720,
+          "location": "Bon Appétit"
+        },
+        {
+          "service": "exit",
+          "time": "1:40 – 1:55 pm",
+          "sort": 820,
+          "location": "Grade 2 Wing"
+        }
+      ]
+    },
+    {
+      "id": "g3",
+      "label": "Grade 3",
+      "group": "Primary · PYP",
+      "events": [
+        {
+          "service": "morning",
+          "time": "8:40 – 8:55 am",
+          "sort": 520,
+          "location": "Second Floor, Block 6"
+        },
+        {
+          "service": "lunch",
+          "time": "12:00 – 12:20 pm",
+          "sort": 720,
+          "location": "Respective Classroom"
+        },
+        {
+          "service": "pantry",
+          "time": "12:00 – 12:20 pm",
+          "sort": 720,
+          "location": "Second Floor, Block 6"
+        },
+        {
+          "service": "exit",
+          "time": "1:40 – 1:55 pm",
+          "sort": 820,
+          "location": "Near Ramp, Block 1  /  Assembly Area"
+        }
+      ]
+    },
+    {
+      "id": "g4",
+      "label": "Grade 4",
+      "group": "Primary · PYP",
+      "events": [
+        {
+          "service": "morning",
+          "time": "8:40 – 8:55 am",
+          "sort": 520,
+          "location": "Second Floor, Block 6"
+        },
+        {
+          "service": "lunch",
+          "time": "12:00 – 12:20 pm",
+          "sort": 720,
+          "location": "Respective Classroom"
+        },
+        {
+          "service": "pantry",
+          "time": "12:00 – 12:20 pm",
+          "sort": 720,
+          "location": "Second Floor, Block 6"
+        },
+        {
+          "service": "exit",
+          "time": "1:40 – 1:55 pm",
+          "sort": 820,
+          "location": "Near Ramp, Block 1  /  Assembly Area"
+        }
+      ]
+    },
+    {
+      "id": "g5",
+      "label": "Grade 5",
+      "group": "Primary · PYP",
+      "events": [
+        {
+          "service": "morning",
+          "time": "8:40 – 8:55 am",
+          "sort": 520,
+          "location": "First Floor, Block 6"
+        },
+        {
+          "service": "lunch",
+          "time": "12:00 – 12:20 pm",
+          "sort": 720,
+          "location": "Respective Classroom"
+        },
+        {
+          "service": "pantry",
+          "time": "12:00 – 12:20 pm",
+          "sort": 720,
+          "location": "First Floor, Block 6"
+        },
+        {
+          "service": "exit",
+          "time": "1:40 – 1:55 pm",
+          "sort": 820,
+          "location": "Near Ramp, Block 1  /  Assembly Area"
+        }
+      ]
+    },
+    {
+      "id": "g6",
+      "label": "Grade 6",
+      "group": "Primary · PYP",
+      "events": [
+        {
+          "service": "morning",
+          "time": "8:40 – 8:55 am",
+          "sort": 520,
+          "location": "First Floor, Block 6"
+        },
+        {
+          "service": "lunch",
+          "time": "12:00 – 12:20 pm",
+          "sort": 720,
+          "location": "Respective Classroom"
+        },
+        {
+          "service": "pantry",
+          "time": "12:00 – 12:20 pm",
+          "sort": 720,
+          "location": "First Floor, Block 6"
+        },
+        {
+          "service": "exit",
+          "time": "1:40 – 1:55 pm",
+          "sort": 820,
+          "location": "Near Ramp, Block 1  /  Assembly Area"
+        }
+      ]
+    },
+    {
+      "id": "g7",
+      "label": "Grade 7",
+      "group": "Middle · MYP",
+      "events": [
+        {
+          "service": "morning",
+          "time": "9:55 – 10:15 am",
+          "sort": 595,
+          "location": "Outside Library, Block 3–4"
+        },
+        {
+          "service": "lunch",
+          "time": "12:40 – 1:10 pm",
+          "sort": 760,
+          "location": "Outside Classroom, 1st Floor, Block 4"
+        },
+        {
+          "service": "pantry",
+          "time": "12:40 – 1:10 pm",
+          "sort": 760,
+          "location": "Outside Library, Block 3–4"
+        },
+        {
+          "service": "exit",
+          "time": "3:30 – 3:45 pm",
+          "sort": 930,
+          "location": "Near Ramp, Block 1"
+        }
+      ]
+    },
+    {
+      "id": "g8",
+      "label": "Grade 8",
+      "group": "Middle · MYP",
+      "events": [
+        {
+          "service": "morning",
+          "time": "9:55 – 10:15 am",
+          "sort": 595,
+          "location": "Second Floor Bridge Area, Block 3–4"
+        },
+        {
+          "service": "lunch",
+          "time": "12:40 – 1:10 pm",
+          "sort": 760,
+          "location": "Outside Classroom, 2nd Floor, Block 4"
+        },
+        {
+          "service": "pantry",
+          "time": "12:40 – 1:10 pm",
+          "sort": 760,
+          "location": "Second Floor Bridge Area, Block 3–4"
+        },
+        {
+          "service": "exit",
+          "time": "3:30 – 3:45 pm",
+          "sort": 930,
+          "location": "Near Ramp, Block 1"
+        }
+      ]
+    },
+    {
+      "id": "g9",
+      "label": "Grade 9",
+      "group": "Middle · MYP",
+      "events": [
+        {
+          "service": "morning",
+          "time": "9:55 – 10:15 am",
+          "sort": 595,
+          "location": "Outside Library, Block 3–4"
+        },
+        {
+          "service": "lunch",
+          "time": "12:40 – 1:10 pm",
+          "sort": 760,
+          "location": "Itadakimasu"
+        },
+        {
+          "service": "pantry",
+          "time": "12:40 – 1:10 pm",
+          "sort": 760,
+          "location": "Outside Library, Block 3–4"
+        },
+        {
+          "service": "exit",
+          "time": "3:30 – 3:45 pm",
+          "sort": 930,
+          "location": "Near Ramp, Block 1"
+        }
+      ]
+    },
+    {
+      "id": "g10",
+      "label": "Grade 10",
+      "group": "Middle · MYP",
+      "events": [
+        {
+          "service": "morning",
+          "time": "9:55 – 10:15 am",
+          "sort": 595,
+          "location": "Second Floor Bridge Area, Block 3–4"
+        },
+        {
+          "service": "lunch",
+          "time": "12:40 – 1:10 pm",
+          "sort": 760,
+          "location": "Outside Classroom, 2nd Floor, Block 3"
+        },
+        {
+          "service": "pantry",
+          "time": "12:40 – 1:10 pm",
+          "sort": 760,
+          "location": "Second Floor Bridge Area, Block 3–4"
+        },
+        {
+          "service": "exit",
+          "time": "3:30 – 3:45 pm",
+          "sort": 930,
+          "location": "Near Ramp, Block 1"
+        }
+      ]
+    },
+    {
+      "id": "g11",
+      "label": "Grade 11",
+      "group": "Diploma · DP",
+      "events": [
+        {
+          "service": "morning",
+          "time": "10:45 – 11:05 am",
+          "sort": 645,
+          "location": "Bon Appétit"
+        },
+        {
+          "service": "lunch",
+          "time": "1:30 – 2:00 pm",
+          "sort": 810,
+          "location": "Bon Appétit"
+        },
+        {
+          "service": "pantry",
+          "time": "1:30 – 2:00 pm",
+          "sort": 810,
+          "location": "Second Floor Bridge Area, Block 1–2"
+        },
+        {
+          "service": "exit",
+          "time": "3:30 – 3:45 pm",
+          "sort": 930,
+          "location": "Assembly Area"
+        }
+      ]
+    },
+    {
+      "id": "g12",
+      "label": "Grade 12",
+      "group": "Diploma · DP",
+      "events": [
+        {
+          "service": "morning",
+          "time": "10:45 – 11:05 am",
+          "sort": 645,
+          "location": "Itadakimasu"
+        },
+        {
+          "service": "lunch",
+          "time": "1:30 – 2:00 pm",
+          "sort": 810,
+          "location": "Itadakimasu"
+        },
+        {
+          "service": "pantry",
+          "time": "1:30 – 2:00 pm",
+          "sort": 810,
+          "location": "Second Floor Bridge Area, Block 1–2"
+        },
+        {
+          "service": "exit",
+          "time": "3:30 – 3:45 pm",
+          "sort": 930,
+          "location": "Assembly Area"
+        }
+      ]
+    },
+    {
+      "id": "mlc56",
+      "label": "MLC 5 & 6",
+      "group": "MLC",
+      "events": [
+        {
+          "service": "morning",
+          "time": "8:40 – 8:55 am",
+          "sort": 520,
+          "location": "Itadakimasu"
+        },
+        {
+          "service": "lunch",
+          "time": "12:00 – 12:20 pm",
+          "sort": 720,
+          "location": "Itadakimasu"
+        }
+      ]
+    },
+    {
+      "id": "mlc710",
+      "label": "MLC 7–10",
+      "group": "MLC",
+      "events": [
+        {
+          "service": "morning",
+          "time": "9:55 – 10:15 am",
+          "sort": 595,
+          "location": "Outside Classroom, 1st Floor, Block 1"
+        },
+        {
+          "service": "lunch",
+          "time": "12:40 – 1:10 pm",
+          "sort": 760,
+          "location": "Outside Classroom, 1st Floor, Block 1"
+        }
+      ]
+    },
+    {
+      "id": "staff",
+      "label": "Staff",
+      "group": "Staff",
+      "events": [
+        {
+          "service": "morning",
+          "time": "8:30 – 9:30 am",
+          "sort": 510,
+          "location": "Itadakimasu",
+          "sub": "Admin & Support Staff"
+        },
+        {
+          "service": "morning",
+          "time": "8:30 – 9:30 am",
+          "sort": 510,
+          "location": "Bon Appétit",
+          "sub": "All Staff"
+        },
+        {
+          "service": "lunch",
+          "time": "11:00 am – 12:00 pm",
+          "sort": 660,
+          "location": "Bon Appétit",
+          "sub": "All Staff · Sitting 1"
+        },
+        {
+          "service": "lunch",
+          "time": "1:55 – 2:15 pm",
+          "sort": 835,
+          "location": "Itadakimasu",
+          "sub": "All Staff · Sitting 2"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex, nofollow">
+<title>FWGS — Embed Test</title>
+<style>
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 40px 24px 80px;
+    color: #14201B;
+    line-height: 1.5;
+    background: #FAF7F0;
+  }
+  h1 { font-size: 30px; margin-bottom: 8px; letter-spacing: -0.01em; }
+  .lede { color: #4F5C56; margin-bottom: 8px; max-width: 720px; }
+  .meta { color: #8A9189; font-size: 13px; margin-bottom: 40px; }
+  section { margin-bottom: 56px; padding-top: 28px; border-top: 1px solid #E2DCC9; }
+  h2 { font-size: 20px; margin-bottom: 6px; }
+  .note { font-size: 13px; color: #8A9189; margin-bottom: 18px; }
+  code { font-family: "JetBrains Mono", Consolas, monospace; font-size: 12.5px; color: #1A4D3E; }
+
+  /* 1 — brand */
+  .brand { text-align: center; padding: 36px 24px; background: #fff; border: 1px solid #E2DCC9; border-radius: 4px; }
+  .brand img { max-width: 360px; max-height: 160px; height: auto; }
+
+  /* 2 — photos */
+  .photo-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 10px; }
+  .photo-grid img { width: 100%; aspect-ratio: 4/3; object-fit: cover; border: 1px solid #E2DCC9; border-radius: 2px; display: block; }
+
+  /* 3 — links */
+  .link-list { display: grid; gap: 10px; }
+  .link-list a {
+    padding: 14px 18px; background: #fff; border: 1px solid #E2DCC9;
+    border-radius: 4px; text-decoration: none; color: #1A4D3E;
+    font-weight: 600; display: flex; justify-content: space-between; align-items: center;
+  }
+  .link-list a:hover { background: #DEEAE3; border-color: #1A4D3E; }
+  .link-list a::after { content: "↗"; color: #1A4D3E; }
+
+  /* 4 — embeds */
+  .embed-block { margin-bottom: 32px; }
+  .embed-block h3 { font-size: 16px; margin-bottom: 8px; font-weight: 600; }
+  .embed-block iframe {
+    width: 100%; height: 620px; border: 1px solid #E2DCC9;
+    background: #fff; border-radius: 2px; display: block;
+  }
+</style>
+</head>
+<body>
+
+  <h1>FWGS — Embed Test</h1>
+  <p class="lede">Sanity check before going further: does the brand logo render, do the photos load with relative paths, and do the four Drive PDFs work as both links and inline iframe embeds?</p>
+  <p class="meta">Open locally for path checks, then push to GitHub Pages and re-test before embedding in Google Sites.</p>
+
+  <!-- 1 · BRAND -->
+  <section>
+    <h2>1 · Brand logo</h2>
+    <p class="note">Loaded from <code>assets/brand/</code>. Tests SVG rendering and that filenames-with-spaces resolve.</p>
+    <div class="brand">
+      <img src="assets/brand/FWGS - SVG Logo.svg" alt="FWGS logo">
+    </div>
+  </section>
+
+  <!-- 2 · PHOTOS -->
+  <section>
+    <h2>2 · Photos</h2>
+    <p class="note">Loaded from <code>assets/images/</code>. Showing 4 of 12 — pick any others to swap in.</p>
+    <div class="photo-grid">
+      <img src="assets/images/2N0A3415.jpg" alt="">
+      <img src="assets/images/2N0A3970.jpg" alt="">
+      <img src="assets/images/2N0A6982.jpg" alt="">
+      <img src="assets/images/DJI_20260305154203_0152_D.jpg" alt="">
+    </div>
+  </section>
+
+  <!-- 3 · PDF LINKS -->
+  <section>
+    <h2>3 · Drive PDFs · as links</h2>
+    <p class="note">Auto-wired by <code>resources.js</code> — each anchor's <code>href</code> is set on DOM load from the registry. Opens in a new tab.</p>
+    <div class="link-list">
+      <a data-resource="uniform-policy">Uniform Policy</a>
+      <a data-resource="where-to-buy-uniform">Where to Buy the Uniform</a>
+      <a data-resource="food-policy">Food Policy</a>
+      <a data-resource="bus-rules">Bus Rules</a>
+    </div>
+  </section>
+
+  <!-- 4 · PDF EMBEDS -->
+  <section>
+    <h2>4 · Drive PDFs · as inline embeds</h2>
+    <p class="note">Same source, different mode — <code>data-mode="embed"</code> sets the iframe <code>src</code> to Drive's <code>/preview</code> URL. <strong>Requires each Drive file to be shared as "Anyone with the link can view"</strong>; if a file's restricted, the iframe will show a Drive login wall instead of the document.</p>
+
+    <div class="embed-block">
+      <h3>Uniform Policy</h3>
+      <iframe data-resource="uniform-policy" data-mode="embed" loading="lazy" title="Uniform Policy PDF"></iframe>
+    </div>
+    <div class="embed-block">
+      <h3>Where to Buy the Uniform</h3>
+      <iframe data-resource="where-to-buy-uniform" data-mode="embed" loading="lazy" title="Where to Buy the Uniform PDF"></iframe>
+    </div>
+    <div class="embed-block">
+      <h3>Food Policy</h3>
+      <iframe data-resource="food-policy" data-mode="embed" loading="lazy" title="Food Policy PDF"></iframe>
+    </div>
+    <div class="embed-block">
+      <h3>Bus Rules</h3>
+      <iframe data-resource="bus-rules" data-mode="embed" loading="lazy" title="Bus Rules PDF"></iframe>
+    </div>
+  </section>
+
+  <script src="assets/resources.js"></script>
+</body>
+</html>
