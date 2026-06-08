@@ -48,6 +48,12 @@
     width: 100%; height: 620px; border: 1px solid #E2DCC9;
     background: #fff; border-radius: 2px; display: block;
   }
+
+  /* Mobile: hide the inline PDF embeds — too tall/unreadable on small screens.
+   * Section 3 (link list) still gives parents access to the same PDFs. */
+  @media (max-width: 768px) {
+    #pdf-embeds { display: none; }
+  }
 </style>
 </head>
 <body>
@@ -90,7 +96,7 @@
   </section>
 
   <!-- 4 · PDF EMBEDS -->
-  <section>
+  <section id="pdf-embeds">
     <h2>4 · Drive PDFs · as inline embeds</h2>
     <p class="note">Same source, different mode — <code>data-mode="embed"</code> sets the iframe <code>src</code> to Drive's <code>/preview</code> URL. <strong>Requires each Drive file to be shared as "Anyone with the link can view"</strong>; if a file's restricted, the iframe will show a Drive login wall instead of the document.</p>
 
