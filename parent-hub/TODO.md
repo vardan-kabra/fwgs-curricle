@@ -58,6 +58,32 @@ Academic content (separate build; see `SPEC.md`). Registry slugs already reserve
 
 ---
 
+## 4 · Code-review follow-ups (`/code-review` pass, 2026-06-09)
+
+> None blocking; the page shipped fine. Line numbers are approximate (as of commit `62682ed`)
+> and will drift — the selector/section locators are the durable reference.
+
+**🔲 Decision needed**
+- **Staff directory sits on a public URL.** Pillar 4 (`#pillar-contacts`) lists 11 names + emails,
+  the WhatsApp number, and the admissions number. GitHub Pages is publicly readable, and
+  `noindex` only stops *search indexing* — not direct access. Confirm this public exposure is
+  intended, or keep the directory only inside the access-gated Google Site.
+
+**🔭 Polish / fixes (low-risk — can be batched in one pass)**
+
+| Fix | Where | Category |
+|---|---|---|
+| External WhatsApp links open in the **same tab** — add `target="_blank" rel="noopener noreferrer"` (the `data-resource` links already get this from `resources.js` `wire()`); matters most when embedded in the Google Site iframe | the 3 `wa.me` links (~L693, 716, 791) | Correctness / UX |
+| **Optimize photos for web** — hero + 4 section banners are full-res drone/camera JPEGs; resize/compress, and consider `<link rel="preload" as="image">` for the hero background (it's the LCP) | `.hero-bg` (~L62) + `.sec-media img` | Performance |
+| **`--ink-faint` (#8A9189) fails WCAG AA** (~2.9:1 on cream) — darken (~#6A716B) or use `--ink-soft` for the footer text and the `.lead` labels | token ~L16; used L184, 213 | Accessibility |
+| Add `scope="col"` to the `.tbl` `<th>`s (optional: a visually-hidden `<caption>`) | ladder + directory tables (~L754, 771) | Accessibility |
+| Remove the dead empty `.band{ }` rule | ~L87 | Cleanup |
+| If old Safari (<12.1) matters, add `xlink:href` alongside `href` on `<use>` — else skip | sprite uses (~L361+) | Compatibility (low) |
+
+*(The review's note on the PTA `href="#"` placeholder is already covered by the "PTA nomination form URL" item in §1.)*
+
+---
+
 ## ✅ Done
 - **Bus routes** → linked to the live finder (`fsk-apps.pages.dev/buses`) via the `bus-routes` registry entry.
 - **Student-email grade boundary** → confirmed **Grade 6 and above** (was TBC, 5-or-6).
