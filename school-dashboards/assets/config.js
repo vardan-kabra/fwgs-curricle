@@ -8,8 +8,8 @@
  * the endpoint is wired up).
  */
 window.FWGS_CONFIG = {
-  // e.g. "https://script.google.com/macros/s/AKfycbXXXXXXXX/exec"
-  endpoint: "",
+  // Apps Script Web App /exec URL (currently pointed at the TEST COPIES).
+  endpoint: "https://script.google.com/macros/s/AKfycbzTEtZcwnaHlE6e9NO-9QVSrb9RavX1YaGvwRbPhSc4DqTWyMRb--gbcvOw03r026Q1VA/exec",
 
   // Within this many minutes of a successful load, reuse the cached copy
   // instead of hitting the network again.

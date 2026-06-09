@@ -18,11 +18,13 @@
  */
 
 var SPREADSHEETS = {
-  meals: '1ctLuODdEoNEyybp3wA0QH7rnpmiK-wF8-0Nm7i0JE6s',
-  buses: '1dmoD4HtEh9VlnWfPKypOhmEGtprnUD_hPAWzUwMP2x4',
+  // ⚠ TEST COPIES (owned by you) — switch to the shared originals when ready to go live.
+  meals: '1dmoD4HtEh9VlnWfPKypOhmEGtprnUD_hPAWzUwMP2x4', // "Copy of Meal Break Timings 2026-2027"
+  buses: '1ctLuODdEoNEyybp3wA0QH7rnpmiK-wF8-0Nm7i0JE6s', // "Copy of Transport Route 2026-27"
 };
 var MEAL_TAB = 'Dashboard Data';   // the clean tab pasted from out/meal-dashboard-tab.csv
 var CACHE_SECONDS = 600;           // server-side cache so we don't re-read sheets every hit
+var VERSION = 'bus-fix-1';         // bump + redeploy to confirm a NEW version actually went live
 
 // ----------------------------------------------------------------- plumbing
 
@@ -36,6 +38,7 @@ function doGet(e) {
 }
 
 function getData_(sheet) {
+  if (sheet === '__debug') return debugInfo_();
   if (!SPREADSHEETS[sheet]) throw new Error('Unknown sheet "' + sheet + '"');
   var cache = CacheService.getScriptCache();
   var key = 'fwgs:v1:' + sheet;
@@ -48,6 +51,18 @@ function getData_(sheet) {
 
 function json_(obj) {
   return ContentService.createTextOutput(JSON.stringify(obj)).setMimeType(ContentService.MimeType.JSON);
+}
+
+/** ?sheet=__debug — reports the live deployment's IDs + the tabs it actually sees,
+ *  so a config/version mismatch is visible. Safe to leave in; remove later if you like. */
+function debugInfo_() {
+  var out = { version: VERSION, ids: SPREADSHEETS, tabs: {} };
+  ['meals', 'buses'].forEach(function (k) {
+    try {
+      out.tabs[k] = SpreadsheetApp.openById(SPREADSHEETS[k]).getSheets().map(function (s) { return s.getName(); });
+    } catch (e) { out.tabs[k] = 'ERROR: ' + e.message; }
+  });
+  return out;
 }
 
 /** Read a tab as { header: value } row objects. getDisplayValues keeps the
@@ -105,7 +120,7 @@ var BUS_ORDER = ['am740', 'am905', 'pm1210', 'pm210', 'pm345'];
 /** Identify a trip from its tab name by the time token (robust to reordering
  *  and to the notice tab, which matches nothing). Check 1210 before 210. */
 function tripMetaForTab_(name) {
-  var n = String(name || '').replace(/\s+/g, ' ').trim();
+  var n = String(name || '').replace(/:/g, '').replace(/\s+/g, ' ').trim(); // strip ':' so "7:40"/"12:10" match 740/1210
   if (/(^|\D)740(\D|$)/.test(n)) return BUS_TRIPS.am740;
   if (/(^|\D)905(\D|$)/.test(n)) return BUS_TRIPS.am905;
   if (/1210/.test(n)) return BUS_TRIPS.pm1210;
