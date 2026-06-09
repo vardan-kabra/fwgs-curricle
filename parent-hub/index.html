@@ -1,0 +1,884 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex, nofollow">
+<title>Fountainhead Wockhardt Global School — Parent Hub</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400..700&family=Manrope:wght@400..800&family=JetBrains+Mono:wght@500..600&display=swap" rel="stylesheet">
+
+<style>
+  :root{
+    --bg:#FAF7F0; --bg-card:#FFFFFF; --bg-soft:#F1ECDF; --bg-warm:#F4E9D8;
+    --ink:#14201B; --ink-soft:#4F5C56; --ink-faint:#8A9189; --rule:#E2DCC9;
+    --accent:#1A4D3E; --accent-soft:#DEEAE3;
+    --warn:#B8341B; --warn-soft:#F4DDD5;
+    --info:#2D6A8E; --info-soft:#DAE7EE;
+    --gold:#A07A2C; --gold-soft:#EFE3C5;
+    --display:"Fraunces",Georgia,serif;
+    --body:"Manrope",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;
+    --mono:"JetBrains Mono","Courier New",monospace;
+    --maxw:1040px;
+    --nav-h:78px;
+    --shadow-card:0 10px 30px -20px rgba(20,32,27,.40);
+    --shadow-lift:0 22px 50px -28px rgba(20,32,27,.55);
+  }
+
+  *,*::before,*::after{ box-sizing:border-box; }
+  html{ scroll-behavior:smooth; }
+  body{
+    margin:0; background:var(--bg); color:var(--ink);
+    font-family:var(--body); font-size:16px; line-height:1.6;
+    -webkit-font-smoothing:antialiased; text-rendering:optimizeLegibility;
+  }
+  img{ max-width:100%; display:block; }
+  a{ color:var(--accent); }
+  .sprite{ position:absolute; width:0; height:0; overflow:hidden; }
+  [id]{ scroll-margin-top:calc(var(--nav-h) + 12px); }
+
+  /* Build-now-hide-now: pending sections/tiles ship in the HTML but stay hidden
+     until their data lands. Enable by removing the data-status attribute. */
+  [data-status="pending"]{ display:none !important; }
+
+  /* ---- top nav ---- */
+  .nav{
+    position:sticky; top:0; z-index:50; height:var(--nav-h);
+    display:flex; align-items:center; justify-content:space-between; gap:24px;
+    padding:0 30px; background:rgba(250,247,240,.88);
+    backdrop-filter:saturate(140%) blur(12px); -webkit-backdrop-filter:saturate(140%) blur(12px);
+    border-bottom:1px solid var(--rule);
+  }
+  .nav-logo{ display:flex; align-items:center; }
+  .nav-logo img{ height:48px; width:auto; }
+  .nav-links{ display:flex; gap:26px; align-items:center; }
+  .nav-links a{ font-size:14.5px; font-weight:600; color:var(--ink-soft); text-decoration:none; }
+  .nav-links a:hover{ color:var(--accent); }
+
+  /* ---- hero ---- */
+  .hero{ position:relative; min-height:564px; display:flex; align-items:flex-end; color:#fff; overflow:hidden; }
+  .hero-bg{ position:absolute; inset:0; background:url("assets/images/DJI_20260305154203_0152_D.jpg") center 40%/cover no-repeat; }
+  /* lighter than before — campus shows through; text legibility comes from a soft
+     bottom + left wash plus per-element text-shadows */
+  .hero-bg::after{
+    content:""; position:absolute; inset:0;
+    background:
+      linear-gradient(180deg, rgba(20,32,27,.05) 0%, rgba(20,32,27,.10) 45%, rgba(20,32,27,.50) 100%),
+      linear-gradient(95deg, rgba(20,32,27,.42) 0%, rgba(20,32,27,0) 62%);
+  }
+  .hero-inner{ position:relative; max-width:var(--maxw); margin:0 auto; width:100%; padding:0 30px 72px; }
+  .eyebrow{
+    font-family:var(--mono); font-size:13px; letter-spacing:.18em; text-transform:uppercase;
+    color:rgba(255,255,255,.92); margin:0 0 20px; text-shadow:0 1px 14px rgba(0,0,0,.45);
+  }
+  .hero h1{
+    font-family:var(--display); font-weight:600; font-size:clamp(38px,5.6vw,66px);
+    line-height:1.02; letter-spacing:-.015em; margin:0 0 20px; max-width:16ch;
+    text-shadow:0 2px 30px rgba(0,0,0,.42);
+  }
+  .hero-lede{
+    font-size:clamp(16px,1.9vw,20px); line-height:1.55; color:rgba(255,255,255,.95);
+    max-width:56ch; margin:0; text-shadow:0 1px 20px rgba(0,0,0,.5);
+  }
+
+  /* ---- section bands (full-bleed, alternating) ---- */
+  .band{ }
+  .band.alt{ background:var(--bg-soft); }
+  .band > .inner{ max-width:var(--maxw); margin:0 auto; padding:78px 30px; }
+  .sec-eyebrow{
+    font-family:var(--mono); font-size:12.5px; letter-spacing:.16em; text-transform:uppercase;
+    color:var(--accent); margin:0 0 13px; display:flex; align-items:center; gap:11px;
+  }
+  .sec-eyebrow::before{ content:""; width:28px; height:2px; border-radius:2px; background:var(--accent); }
+  .sec-title{
+    font-family:var(--display); font-weight:600; font-size:clamp(28px,3.6vw,42px);
+    line-height:1.08; letter-spacing:-.015em; margin:0 0 14px;
+  }
+  .sec-intro{ color:var(--ink-soft); max-width:64ch; margin:0 0 36px; font-size:17px; }
+
+  /* ---- per-section photo banner ---- */
+  .sec-media{
+    position:relative; margin:0 0 42px; border-radius:18px; overflow:hidden;
+    aspect-ratio:5 / 2; box-shadow:var(--shadow-card);
+  }
+  .sec-media img{ width:100%; height:100%; object-fit:cover; }
+  .sec-media::after{
+    content:""; position:absolute; inset:0;
+    background:linear-gradient(180deg, rgba(20,32,27,0) 52%, rgba(20,32,27,.30));
+  }
+
+  /* ---- topic tiles (native <details> accordion) ---- */
+  .tiles{ display:flex; flex-direction:column; gap:16px; }
+  .tile{
+    background:var(--bg-card); border:1px solid var(--rule); border-radius:16px; overflow:hidden;
+    box-shadow:var(--shadow-card);
+    transition:transform .18s ease, box-shadow .18s ease, border-color .18s ease;
+  }
+  .tile:hover{ transform:translateY(-2px); box-shadow:var(--shadow-lift); border-color:#d4cdb6; }
+  .tile[open]{ box-shadow:var(--shadow-lift); border-color:#cfc8b2; }
+  .tile[open]:hover{ transform:none; }
+  .tile > summary{ list-style:none; cursor:pointer; display:flex; align-items:center; gap:18px; padding:22px 24px; }
+  .tile > summary::-webkit-details-marker{ display:none; }
+  .tile-icon{
+    flex-shrink:0; width:50px; height:50px; border-radius:14px;
+    background:var(--accent-soft); color:var(--accent);
+    display:flex; align-items:center; justify-content:center;
+  }
+  .tile-icon svg{ width:26px; height:26px; }
+  .tile-head{ flex:1; min-width:0; }
+  .tile-title{ font-family:var(--display); font-weight:600; font-size:22px; line-height:1.2; display:block; }
+  .tile-sum{ color:var(--ink-soft); font-size:15px; margin-top:4px; display:block; }
+  .tile-chev{
+    flex-shrink:0; width:34px; height:34px; border-radius:50%; border:1px solid var(--rule);
+    display:flex; align-items:center; justify-content:center;
+    color:var(--accent); font-size:22px; line-height:1; font-weight:300;
+    transition:transform .2s ease, background .2s ease, color .2s ease, border-color .2s ease;
+  }
+  .tile[open] .tile-chev{ transform:rotate(45deg); background:var(--accent); color:#fff; border-color:var(--accent); }
+  .tile-body{ padding:22px 24px 26px; border-top:1px solid var(--rule); }
+  .tile-body > *:first-child{ margin-top:0; }
+
+  /* short context line above the links/embeds in a tile */
+  .tile-note{
+    font-size:15px; color:var(--ink-soft);
+    background:var(--bg-soft); border:1px solid var(--rule); border-left:3px solid var(--accent);
+    border-radius:8px; padding:14px 16px; margin:0 0 18px;
+  }
+  .tile-note strong{ color:var(--ink); }
+
+  /* ---- link list (reused across sections) ---- */
+  .link-list{ display:grid; gap:10px; margin:0; }
+  .link-list a{
+    padding:15px 18px; background:var(--bg); border:1px solid var(--rule); border-radius:10px;
+    text-decoration:none; color:var(--accent); font-weight:600;
+    display:flex; justify-content:space-between; align-items:center; gap:12px;
+    transition:background .15s ease, border-color .15s ease;
+  }
+  .link-list a:hover{ background:var(--accent-soft); border-color:var(--accent); }
+  .link-list a::after{ content:"↗"; color:var(--accent); font-weight:400; }
+
+  /* ---- primary action button ---- */
+  .btn-row{ display:flex; flex-wrap:wrap; gap:10px; margin:0 0 18px; }
+  .btn{
+    display:inline-flex; align-items:center; gap:9px; padding:14px 22px; border-radius:10px;
+    font-weight:700; font-size:15px; text-decoration:none; transition:background .15s ease, transform .15s ease;
+  }
+  .btn-primary{ background:var(--accent); color:#fff; box-shadow:0 12px 26px -16px rgba(26,77,62,.95); }
+  .btn-primary:hover{ background:#143f33; transform:translateY(-1px); }
+  .btn-primary::after{ content:"→"; }
+
+  /* ---- inline PDF embeds (hidden on mobile — too tall to read) ---- */
+  .pdf-embed{ margin-top:18px; }
+  .pdf-embed iframe{
+    width:100%; height:600px; border:1px solid var(--rule); border-radius:10px;
+    background:#fff; display:block;
+  }
+  .pdf-embed + .pdf-embed{ margin-top:14px; }
+
+  /* ---- footer ---- */
+  .foot{ border-top:1px solid var(--rule); background:var(--bg-soft); }
+  .foot-inner{
+    max-width:var(--maxw); margin:0 auto; padding:40px 30px;
+    color:var(--ink-faint); font-size:13.5px;
+    display:flex; justify-content:space-between; gap:18px; flex-wrap:wrap;
+  }
+  .foot-inner strong{ color:var(--ink-soft); font-weight:600; }
+
+  /* ---- inline code ---- */
+  code{ font-family:var(--mono); font-size:.9em; background:rgba(26,77,62,.09); color:var(--accent); padding:2px 6px; border-radius:5px; }
+
+  /* ---- communication: overview cards ---- */
+  .ovw-grid{ display:grid; grid-template-columns:repeat(2,1fr); gap:14px; margin:0; }
+  .ovw-card{ display:flex; flex-direction:column; gap:5px; padding:20px 22px; background:var(--bg-card); border:1px solid var(--rule); border-radius:14px; text-decoration:none; color:inherit; box-shadow:var(--shadow-card); transition:transform .16s ease, box-shadow .16s ease, border-color .16s ease; }
+  .ovw-card:hover{ transform:translateY(-2px); box-shadow:var(--shadow-lift); border-color:#d4cdb6; }
+  .ovw-card .num{ font-family:var(--mono); font-size:11.5px; letter-spacing:.06em; text-transform:uppercase; color:var(--accent); }
+  .ovw-card .t{ font-family:var(--display); font-weight:600; font-size:19px; line-height:1.2; }
+  .ovw-card .d{ color:var(--ink-soft); font-size:14.5px; }
+  .ovw-card .go{ margin-top:3px; color:var(--accent); font-weight:700; font-size:13.5px; }
+
+  /* ---- communication: pillars ---- */
+  .pillar{ padding-top:46px; margin-top:46px; border-top:1px solid var(--rule); }
+  .pillar-eyebrow{ font-family:var(--mono); font-size:12px; letter-spacing:.14em; text-transform:uppercase; color:var(--accent); margin:0 0 8px; }
+  .pillar-title{ font-family:var(--display); font-weight:600; font-size:clamp(23px,2.7vw,30px); line-height:1.14; margin:0 0 6px; }
+  .pillar p{ color:var(--ink-soft); max-width:70ch; margin:14px 0 0; }
+  .sub-h{ font-family:var(--display); font-weight:600; font-size:19px; margin:30px 0 12px; }
+  .h4-ico{ width:22px; height:22px; flex:none; color:var(--accent); }
+
+  /* ---- paired cards ---- */
+  .cols2{ display:grid; grid-template-columns:repeat(2,1fr); gap:16px; margin:20px 0 0; }
+  .subcard{ background:var(--bg-card); border:1px solid var(--rule); border-radius:14px; padding:22px 24px; box-shadow:var(--shadow-card); }
+  .subcard h4{ font-family:var(--display); font-weight:600; font-size:18px; margin:0 0 4px; display:flex; align-items:center; gap:10px; }
+  .subcard .lead{ font-family:var(--mono); color:var(--ink-faint); font-size:11.5px; font-weight:600; text-transform:uppercase; letter-spacing:.07em; margin:0 0 10px; }
+  .subcard p{ color:var(--ink-soft); font-size:15px; margin:12px 0 0; }
+  .subcard ul{ margin:12px 0 0; padding-left:18px; color:var(--ink-soft); font-size:15px; }
+  .subcard ul li{ margin:6px 0; }
+
+  /* ---- callouts ---- */
+  .callout{ border:1px solid var(--rule); border-left:4px solid var(--info); background:var(--info-soft); border-radius:10px; padding:16px 20px; margin:20px 0 0; }
+  .callout h4{ margin:0 0 6px; font-family:var(--display); font-weight:600; font-size:17px; }
+  .callout p{ margin:0; color:var(--ink); font-size:15px; }
+  .callout.warn{ border-left-color:var(--warn); background:var(--warn-soft); }
+  .callout.warn h4{ color:var(--warn); }
+  .callout.big{ padding:22px 24px; }
+  .callout.big h4{ font-size:clamp(19px,2.3vw,23px); margin-bottom:8px; }
+
+  /* ---- bulletin flags ---- */
+  .flag-row{ display:grid; grid-template-columns:repeat(2,1fr); gap:14px; margin:16px 0 0; }
+  .flag{ border:1px solid var(--rule); border-radius:12px; padding:16px 18px; background:var(--bg-card); }
+  .flag .tag{ display:inline-block; font-family:var(--mono); font-size:11px; font-weight:600; letter-spacing:.05em; padding:4px 10px; border-radius:999px; margin-bottom:9px; }
+  .flag.must .tag{ background:var(--warn-soft); color:var(--warn); }
+  .flag.good .tag{ background:var(--info-soft); color:var(--info); }
+  .flag p{ margin:0; font-size:14.5px; color:var(--ink-soft); }
+
+  /* ---- ordered preference steps ---- */
+  .steps{ list-style:none; counter-reset:step; margin:16px 0 0; padding:0; }
+  .steps li{ counter-increment:step; position:relative; padding:0 0 16px 42px; }
+  .steps li:last-child{ padding-bottom:0; }
+  .steps li::before{ content:counter(step); position:absolute; left:0; top:-2px; width:28px; height:28px; border-radius:50%; background:var(--accent); color:#fff; font-family:var(--mono); font-size:13px; display:flex; align-items:center; justify-content:center; }
+  .steps .s-t{ font-weight:700; display:block; }
+  .steps .s-d{ color:var(--ink-soft); font-size:14.5px; }
+
+  /* ---- inline link ---- */
+  .lnk{ font-weight:600; color:var(--accent); text-decoration:none; border-bottom:1px solid var(--accent-soft); }
+  .lnk:hover{ border-bottom-color:var(--accent); }
+
+  /* ---- tables (directory + ladders) ---- */
+  .tbl-wrap{ overflow-x:auto; margin:16px 0 0; border:1px solid var(--rule); border-radius:12px; }
+  .tbl{ width:100%; border-collapse:collapse; font-size:14.5px; min-width:540px; }
+  .tbl th, .tbl td{ text-align:left; padding:12px 16px; border-bottom:1px solid var(--rule); vertical-align:top; }
+  .tbl thead th{ background:var(--bg-soft); font-family:var(--mono); font-size:11px; letter-spacing:.06em; text-transform:uppercase; color:var(--ink-soft); }
+  .tbl tbody tr:last-child td{ border-bottom:none; }
+  .tbl td.role{ color:var(--ink-soft); }
+
+  /* ---- quick reference rows ---- */
+  .qref{ display:grid; gap:10px; margin:14px 0 0; }
+  .qref .row{ display:flex; gap:14px; align-items:baseline; padding:13px 16px; background:var(--bg-card); border:1px solid var(--rule); border-radius:10px; }
+  .qref .row .k{ font-weight:700; min-width:185px; flex:none; }
+  .qref .row .v{ color:var(--ink-soft); font-size:14.5px; }
+
+  /* ---- get involved ---- */
+  .gi-grid{ display:grid; grid-template-columns:repeat(2,1fr); gap:16px; }
+
+  /* ---- calendar / faq tile badge medallion ---- */
+  .tile-icon.badge{ font-family:var(--mono); font-weight:700; font-size:13.5px; letter-spacing:.01em; }
+  .ans{ color:var(--ink-soft); font-size:15px; margin:0; }
+
+  /* ---- mobile ---- */
+  @media (max-width:768px){
+    :root{ --nav-h:66px; }
+    .pdf-embed{ display:none; }              /* link-outs remain accessible */
+    .band > .inner{ padding:56px 20px; }
+    .hero{ min-height:486px; }
+    .hero-inner{ padding:0 20px 50px; }
+    .nav{ padding:0 18px; }
+    .nav-logo img{ height:38px; }
+    .nav-links{ gap:16px; }
+    .nav-links a{ font-size:13px; }
+    .sec-media{ aspect-ratio:16 / 10; margin-bottom:30px; }
+    .tile > summary{ padding:18px 16px; gap:14px; }
+    .tile-icon{ width:44px; height:44px; border-radius:12px; }
+    .tile-icon svg{ width:23px; height:23px; }
+    .tile-title{ font-size:20px; }
+    .tile-body{ padding:20px 16px 22px; }
+    .ovw-grid, .cols2, .flag-row, .gi-grid{ grid-template-columns:1fr; }
+    .qref .row{ flex-direction:column; gap:3px; }
+    .qref .row .k{ min-width:0; }
+    .pillar{ padding-top:36px; margin-top:36px; }
+  }
+  @media (max-width:560px){
+    .nav-links{ display:none; }               /* single scrollable page; logo stays */
+  }
+</style>
+</head>
+<body>
+
+  <!-- icon sprite (referenced by tiles via <use>) -->
+  <svg class="sprite" aria-hidden="true" focusable="false">
+    <symbol id="ic-shirt" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M20.38 3.46 16 2a4 4 0 0 1-8 0L3.62 3.46a2 2 0 0 0-1.34 2.23l.58 3.47a1 1 0 0 0 .99.84H6v10c0 1.1.9 2 2 2h8a2 2 0 0 0 2-2V10h2.15a1 1 0 0 0 .99-.84l.58-3.47a2 2 0 0 0-1.34-2.23z"/>
+    </symbol>
+    <symbol id="ic-apple" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M12 20.94c1.5 0 2.75 1.06 4 1.06 3 0 6-8 6-12.22A4.91 4.91 0 0 0 17 5c-2.22 0-4 1.44-5 2-1-.56-2.78-2-5-2a4.9 4.9 0 0 0-5 4.78C2 14 5 22 8 22c1.25 0 2.5-1.06 4-1.06Z"/>
+      <path d="M10 2c1 .5 2 2 2 5"/>
+    </symbol>
+    <symbol id="ic-bus" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M8 6v6"/><path d="M15 6v6"/><path d="M2 12h19.6"/>
+      <path d="M18 18h3s.5-1.7.8-2.8c.1-.4.2-.8.2-1.2 0-.4-.1-.8-.2-1.2l-1.4-5C20.1 6.8 19.1 6 18 6H4a2 2 0 0 0-2 2v10h3"/>
+      <circle cx="7" cy="18" r="2"/><path d="M9 18h5"/><circle cx="16" cy="18" r="2"/>
+    </symbol>
+    <symbol id="ic-tag" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+      <path d="m19 21-7-4-7 4V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"/>
+    </symbol>
+    <symbol id="ic-users" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+    </symbol>
+    <symbol id="ic-chat" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
+    </symbol>
+  </svg>
+
+  <!-- ============ TOP NAV ============ -->
+  <nav class="nav">
+    <a class="nav-logo" href="#top" aria-label="Fountainhead Wockhardt Global School — home">
+      <img src="assets/brand/FWGS - SVG Logo.svg" alt="Fountainhead Wockhardt Global School">
+    </a>
+    <div class="nav-links">
+      <a href="#essentials">Essentials</a>
+      <a href="#calendars">Calendars</a>
+      <a href="#communication">Communication</a>
+      <a href="#involved">Get Involved</a>
+    </div>
+  </nav>
+
+  <!-- ============ HERO ============ -->
+  <header class="hero" id="top">
+    <div class="hero-bg" role="img" aria-label="Aerial view of the Fountainhead Wockhardt Global School campus"></div>
+    <div class="hero-inner">
+      <p class="eyebrow">AY 2026–27 · Parent Hub</p>
+      <h1>Your parent hub for the year ahead</h1>
+      <p class="hero-lede">Welcome to Fountainhead Wockhardt Global School. Here is everything you need for the practical side of school life — uniform, food, transport, calendars, and how we stay in touch through the year.</p>
+    </div>
+  </header>
+
+  <!-- ============ §1 · TOPIC TILES ============ -->
+  <section class="band" id="essentials">
+    <div class="inner">
+      <p class="sec-eyebrow">The basics</p>
+      <h2 class="sec-title">Everyday essentials</h2>
+      <p class="sec-intro">Tap any card to open the full policy. Uniform, food, and transport are ready now — more day-to-day topics will appear here as the year gets underway.</p>
+
+      <figure class="sec-media">
+        <img src="assets/images/2N0A7073.jpg" alt="A teacher greeting students arriving at school" loading="lazy">
+      </figure>
+
+      <div class="tiles">
+
+        <!-- Uniform -->
+        <details class="tile" id="uniform">
+          <summary>
+            <span class="tile-icon"><svg viewBox="0 0 24 24"><use href="#ic-shirt"></use></svg></span>
+            <span class="tile-head">
+              <span class="tile-title">Uniform</span>
+              <span class="tile-sum">What to wear, and where to buy it.</span>
+            </span>
+            <span class="tile-chev" aria-hidden="true">+</span>
+          </summary>
+          <div class="tile-body">
+            <p class="tile-note">The complete dress code for every grade, plus our recommended supplier and what to buy.</p>
+            <div class="link-list">
+              <a data-resource="uniform-policy">Uniform Policy</a>
+              <a data-resource="where-to-buy-uniform">Where to Buy the Uniform</a>
+            </div>
+            <div class="pdf-embed">
+              <iframe data-resource="uniform-policy" data-mode="embed" loading="lazy" title="Uniform Policy PDF"></iframe>
+            </div>
+            <div class="pdf-embed">
+              <iframe data-resource="where-to-buy-uniform" data-mode="embed" loading="lazy" title="Where to Buy the Uniform PDF"></iframe>
+            </div>
+          </div>
+        </details>
+
+        <!-- Food -->
+        <details class="tile" id="food">
+          <summary>
+            <span class="tile-icon"><svg viewBox="0 0 24 24"><use href="#ic-apple"></use></svg></span>
+            <span class="tile-head">
+              <span class="tile-title">Food</span>
+              <span class="tile-sum">What's served at school, and what to pack.</span>
+            </span>
+            <span class="tile-chev" aria-hidden="true">+</span>
+          </summary>
+          <div class="tile-body">
+            <p class="tile-note">Only <strong>vegetarian</strong> food is served from our kitchen. Lunchboxes should be free of junk, packaged, and processed foods.</p>
+            <div class="link-list">
+              <a data-resource="food-policy">Food Policy</a>
+            </div>
+            <div class="pdf-embed">
+              <iframe data-resource="food-policy" data-mode="embed" loading="lazy" title="Food Policy PDF"></iframe>
+            </div>
+          </div>
+        </details>
+
+        <!-- Transport -->
+        <details class="tile" id="transport">
+          <summary>
+            <span class="tile-icon"><svg viewBox="0 0 24 24"><use href="#ic-bus"></use></svg></span>
+            <span class="tile-head">
+              <span class="tile-title">Bus &amp; Transport</span>
+              <span class="tile-sum">Bus rules, and how to find your child's route and stop.</span>
+            </span>
+            <span class="tile-chev" aria-hidden="true">+</span>
+          </summary>
+          <div class="tile-body">
+            <p class="tile-note">Find your child's pickup stop and timing in the live route finder, and read the full bus rules below.</p>
+            <div class="btn-row">
+              <a class="btn btn-primary" data-resource="bus-routes">Find your bus route &amp; stop</a>
+            </div>
+            <div class="link-list">
+              <a data-resource="bus-rules">Bus Rules</a>
+            </div>
+            <div class="pdf-embed">
+              <iframe data-resource="bus-rules" data-mode="embed" loading="lazy" title="Bus Rules PDF"></iframe>
+            </div>
+          </div>
+        </details>
+
+        <!-- ===== Hidden tiles: shipped, revealed when data lands (remove data-status to enable) ===== -->
+        <details class="tile" id="icard" data-status="pending">
+          <summary>
+            <span class="tile-icon"><svg viewBox="0 0 24 24"><use href="#ic-tag"></use></svg></span>
+            <span class="tile-head">
+              <span class="tile-title">I-Card &amp; Bearer Card</span>
+              <span class="tile-sum">Student identity cards and parent bearer cards — what they're for and how to replace one.</span>
+            </span>
+            <span class="tile-chev" aria-hidden="true">+</span>
+          </summary>
+          <div class="tile-body"><!-- content pending --></div>
+        </details>
+
+        <details class="tile" id="stationery" data-status="pending">
+          <summary>
+            <span class="tile-icon"><svg viewBox="0 0 24 24"><use href="#ic-tag"></use></svg></span>
+            <span class="tile-head">
+              <span class="tile-title">Stationery</span>
+              <span class="tile-sum">Booklists and stationery requirements by grade.</span>
+            </span>
+            <span class="tile-chev" aria-hidden="true">+</span>
+          </summary>
+          <div class="tile-body"><!-- content pending --></div>
+        </details>
+
+        <details class="tile" id="attendance" data-status="pending">
+          <summary>
+            <span class="tile-icon"><svg viewBox="0 0 24 24"><use href="#ic-tag"></use></svg></span>
+            <span class="tile-head">
+              <span class="tile-title">Attendance &amp; Leave</span>
+              <span class="tile-sum">Reporting absences, planned leave, and attendance expectations.</span>
+            </span>
+            <span class="tile-chev" aria-hidden="true">+</span>
+          </summary>
+          <div class="tile-body"><!-- content pending --></div>
+        </details>
+
+        <details class="tile" id="visits" data-status="pending">
+          <summary>
+            <span class="tile-icon"><svg viewBox="0 0 24 24"><use href="#ic-tag"></use></svg></span>
+            <span class="tile-head">
+              <span class="tile-title">School Visits</span>
+              <span class="tile-sum">Booking a visit and what to expect when you come to campus.</span>
+            </span>
+            <span class="tile-chev" aria-hidden="true">+</span>
+          </summary>
+          <div class="tile-body"><!-- content pending --></div>
+        </details>
+
+        <details class="tile" id="birthdays" data-status="pending">
+          <summary>
+            <span class="tile-icon"><svg viewBox="0 0 24 24"><use href="#ic-tag"></use></svg></span>
+            <span class="tile-head">
+              <span class="tile-title">Birthdays</span>
+              <span class="tile-sum">How birthdays are celebrated at school.</span>
+            </span>
+            <span class="tile-chev" aria-hidden="true">+</span>
+          </summary>
+          <div class="tile-body"><!-- content pending --></div>
+        </details>
+
+        <details class="tile" id="belongings" data-status="pending">
+          <summary>
+            <span class="tile-icon"><svg viewBox="0 0 24 24"><use href="#ic-tag"></use></svg></span>
+            <span class="tile-head">
+              <span class="tile-title">Personal Belongings</span>
+              <span class="tile-sum">What to send, what to label, and what to leave at home.</span>
+            </span>
+            <span class="tile-chev" aria-hidden="true">+</span>
+          </summary>
+          <div class="tile-body"><!-- content pending --></div>
+        </details>
+
+        <details class="tile" id="safety" data-status="pending">
+          <summary>
+            <span class="tile-icon"><svg viewBox="0 0 24 24"><use href="#ic-tag"></use></svg></span>
+            <span class="tile-head">
+              <span class="tile-title">Safety &amp; Wellbeing</span>
+              <span class="tile-sum">Health, safety, and pastoral support for your child.</span>
+            </span>
+            <span class="tile-chev" aria-hidden="true">+</span>
+          </summary>
+          <div class="tile-body"><!-- content pending --></div>
+        </details>
+
+        <details class="tile" id="lost-found" data-status="pending">
+          <summary>
+            <span class="tile-icon"><svg viewBox="0 0 24 24"><use href="#ic-tag"></use></svg></span>
+            <span class="tile-head">
+              <span class="tile-title">Lost &amp; Found</span>
+              <span class="tile-sum">Where lost items go and how to claim them.</span>
+            </span>
+            <span class="tile-chev" aria-hidden="true">+</span>
+          </summary>
+          <div class="tile-body"><!-- content pending --></div>
+        </details>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ §2 · ACADEMIC CALENDARS ============ -->
+  <section class="band alt" id="calendars">
+    <div class="inner">
+      <p class="sec-eyebrow">Dates &amp; terms</p>
+      <h2 class="sec-title">Academic calendars</h2>
+      <p class="sec-intro">Term dates, holidays, and parent–teacher interactions for each programme. Open a calendar to view it inline, or download the PDF.</p>
+      <figure class="sec-media">
+        <img src="assets/images/2N0A7498.jpg" alt="An early-years classroom with the months of the year displayed on the wall" loading="lazy">
+      </figure>
+      <div class="tiles">
+
+        <details class="tile" id="cal-pyp">
+          <summary>
+            <span class="tile-icon badge">PYP</span>
+            <span class="tile-head">
+              <span class="tile-title">PYP Academic Calendar</span>
+              <span class="tile-sum">Primary Years Programme — term dates, holidays &amp; PTIs.</span>
+            </span>
+            <span class="tile-chev" aria-hidden="true">+</span>
+          </summary>
+          <div class="tile-body">
+            <div class="link-list">
+              <a data-resource="pyp-academic-calendar">Open the PYP calendar (PDF)</a>
+            </div>
+            <div class="pdf-embed">
+              <iframe data-resource="pyp-academic-calendar" data-mode="embed" loading="lazy" title="PYP Academic Calendar PDF"></iframe>
+            </div>
+          </div>
+        </details>
+
+        <details class="tile" id="cal-myp">
+          <summary>
+            <span class="tile-icon badge">MYP</span>
+            <span class="tile-head">
+              <span class="tile-title">MYP Academic Calendar</span>
+              <span class="tile-sum">Middle Years Programme — term dates, holidays &amp; PTIs.</span>
+            </span>
+            <span class="tile-chev" aria-hidden="true">+</span>
+          </summary>
+          <div class="tile-body">
+            <div class="link-list">
+              <a data-resource="myp-academic-calendar">Open the MYP calendar (PDF)</a>
+            </div>
+            <div class="pdf-embed">
+              <iframe data-resource="myp-academic-calendar" data-mode="embed" loading="lazy" title="MYP Academic Calendar PDF"></iframe>
+            </div>
+          </div>
+        </details>
+
+        <details class="tile" id="cal-dp">
+          <summary>
+            <span class="tile-icon badge">DP</span>
+            <span class="tile-head">
+              <span class="tile-title">DP Academic Calendar</span>
+              <span class="tile-sum">Diploma Programme — term dates, holidays &amp; PTIs.</span>
+            </span>
+            <span class="tile-chev" aria-hidden="true">+</span>
+          </summary>
+          <div class="tile-body">
+            <div class="link-list">
+              <a data-resource="dp-academic-calendar">Open the DP calendar (PDF)</a>
+            </div>
+            <div class="pdf-embed">
+              <iframe data-resource="dp-academic-calendar" data-mode="embed" loading="lazy" title="DP Academic Calendar PDF"></iframe>
+            </div>
+          </div>
+        </details>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ §3 · COMMUNICATION SYSTEM ============ -->
+  <section class="band" id="communication">
+    <div class="inner">
+      <p class="sec-eyebrow">Staying in touch</p>
+      <h2 class="sec-title">How we communicate</h2>
+      <p class="sec-intro">How the school reaches you, how you reach us, and who to contact for what. Start with the four pillars below, then dive into the details.</p>
+      <figure class="sec-media">
+        <img src="assets/images/2N0A7146.jpg" alt="A teacher in conversation with two students on campus" loading="lazy">
+      </figure>
+      <div class="ovw-grid">
+        <a class="ovw-card" href="#pillar-email">
+          <span class="num">Pillar 1</span>
+          <span class="t">Your school email ID</span>
+          <span class="d">Your <code>p.firstname@fwgs.in</code> address — and the one login step that matters most.</span>
+          <span class="go">See details →</span>
+        </a>
+        <a class="ovw-card" href="#pillar-outbound">
+          <span class="num">Pillar 2</span>
+          <span class="t">How we reach you</span>
+          <span class="d">Google Classroom, Nucleus, and our official WhatsApp broadcast.</span>
+          <span class="go">See details →</span>
+        </a>
+        <a class="ovw-card" href="#pillar-inbound">
+          <span class="num">Pillar 3</span>
+          <span class="t">How you reach us</span>
+          <span class="d">The right channel for admin questions and for academic ones.</span>
+          <span class="go">See details →</span>
+        </a>
+        <a class="ovw-card" href="#pillar-contacts">
+          <span class="num">Pillar 4</span>
+          <span class="t">Who to contact</span>
+          <span class="d">The full staff directory and escalation ladders.</span>
+          <span class="go">See details →</span>
+        </a>
+      </div>
+
+      <!-- Pillar 1 -->
+      <div class="pillar" id="pillar-email">
+        <p class="pillar-eyebrow">Pillar 1</p>
+        <h3 class="pillar-title">Your school email ID</h3>
+        <p>Every family gets a school email address in this format:</p>
+        <div class="callout">
+          <h4><code>p.firstname.lastname@fwgs.in</code></h4>
+          <p><strong>p.</strong> = parent · <strong>firstname.lastname</strong> = your child's name · <strong>fwgs.in</strong> = the school domain. Students in <strong>Grade 6 and above</strong> also receive a school email, with an <strong>s.</strong> prefix in place of <code>p.</code></p>
+        </div>
+        <div class="callout warn big">
+          <h4>Enter your own age, not your child's.</h4>
+          <p>When Google asks for your age at first login, enter <strong>your</strong> age — not your child's. Google automatically deactivates accounts it believes belong to someone under 13, and reactivating a deactivated account takes <strong>45 days</strong>. This is the single most important step when you first sign in.</p>
+        </div>
+      </div>
+
+      <!-- Pillar 2 -->
+      <div class="pillar" id="pillar-outbound">
+        <p class="pillar-eyebrow">Pillar 2</p>
+        <h3 class="pillar-title">How we reach you</h3>
+        <p>Two parallel hubs carry almost everything the school sends you — one academic, one administrative.</p>
+        <div class="cols2">
+          <div class="subcard">
+            <p class="lead">Academic</p>
+            <h4>Google Classroom</h4>
+            <ul>
+              <li>Academic updates &amp; unit overviews</li>
+              <li>Homework &amp; assignments</li>
+              <li>Period &amp; daily highlights</li>
+              <li>Materials, resources &amp; curriculum</li>
+            </ul>
+            <p>Turn on <strong>guardian summaries</strong> to receive these by email.</p>
+          </div>
+          <div class="subcard">
+            <p class="lead">Administrative · iOS · Android · Web</p>
+            <h4>Nucleus</h4>
+            <ul>
+              <li>Newsletters, PTC &amp; term-end reports</li>
+              <li>Events, field trips &amp; opportunities</li>
+              <li>Fees, transport &amp; attendance</li>
+              <li>LC applications, grievances &amp; forms</li>
+            </ul>
+          </div>
+        </div>
+        <p>Inside Nucleus' <strong>Bulletin</strong>, every post is flagged so you know how to treat it:</p>
+        <div class="flag-row">
+          <div class="flag must">
+            <span class="tag">MUST KNOW</span>
+            <p>Critical, time-sensitive, or compulsory. Don't miss these.</p>
+          </div>
+          <div class="flag good">
+            <span class="tag">GOOD TO KNOW</span>
+            <p>Optional and informational — useful, but not urgent.</p>
+          </div>
+        </div>
+        <div class="callout">
+          <h4>Official WhatsApp broadcast</h4>
+          <p>The school runs <strong>whole-school and grade-wise</strong> broadcast lists for short nudges that link back here or to Nucleus. <a class="lnk" href="https://wa.me/919657662888">Save our number</a> to receive them. Parent-created WhatsApp groups are <strong>not</strong> official channels.</p>
+        </div>
+        <div class="callout">
+          <h4>Managing your inbox</h4>
+          <p><strong>Primary</strong> tab: Must-Know notices and 1:1 emails from teachers or leaders. <strong>Promotions</strong>: Good-to-Know updates. <strong>Classroom</strong> category: academic notifications. Treat any personal 1:1 email as a priority — we aim to reply within a working day, and ask the same of you.</p>
+        </div>
+      </div>
+
+      <!-- Pillar 3 -->
+      <div class="pillar" id="pillar-inbound">
+        <p class="pillar-eyebrow">Pillar 3</p>
+        <h3 class="pillar-title">How you reach us</h3>
+        <p>Pick the stream that matches your question, then start at the top of the list and work down.</p>
+        <div class="cols2">
+          <div class="subcard">
+            <p class="lead">Stream A — Admin</p>
+            <h4>Transport, food, I-Card, uniform, fees</h4>
+            <ol class="steps">
+              <li>
+                <span class="s-t">Email <a class="lnk" href="mailto:info@fwgs.in">info@fwgs.in</a></span>
+                <span class="s-d">Our primary admin channel — actively encouraged for all logistical queries.</span>
+              </li>
+              <li>
+                <span class="s-t">WhatsApp <a class="lnk" href="https://wa.me/919657662888">+91 96576 62888</a></span>
+                <span class="s-d">Text preferred. Voice notes won't be addressed.</span>
+              </li>
+              <li>
+                <span class="s-t">Call <a class="lnk" href="tel:+919657662888">+91 96576 62888</a></span>
+                <span class="s-d">Last resort — not for routine queries; emergencies only.</span>
+              </li>
+            </ol>
+            <p>Still stuck? Escalate to <a class="lnk" href="mailto:kiran.kante@fwgs.in">Kiran Kante</a> (Admin Operations Manager) or <a class="lnk" href="mailto:abhijit.dive@fwgs.in">Abhijit Dive</a> (Head of Admin). Structured requests — LC, grievances, fees — move to Nucleus forms as those modules come online.</p>
+          </div>
+          <div class="subcard">
+            <p class="lead">Stream B — Academic</p>
+            <h4>Learning, progress, classroom matters</h4>
+            <ol class="steps">
+              <li>
+                <span class="s-t">Email your child's teacher</span>
+                <span class="s-d"><code>firstname.lastname@fwgs.in</code> — teachers are also reachable through Google Classroom.</span>
+              </li>
+              <li>
+                <span class="s-t">Escalate up the ladder</span>
+                <span class="s-d">Team Leader → Coordinator → Head of School (see the directory below).</span>
+              </li>
+              <li>
+                <span class="s-t">Something confidential?</span>
+                <span class="s-d">Write directly to the Team Leader, Coordinator, or Head of School.</span>
+              </li>
+            </ol>
+          </div>
+        </div>
+      </div>
+
+      <!-- Pillar 4 -->
+      <div class="pillar" id="pillar-contacts">
+        <p class="pillar-eyebrow">Pillar 4</p>
+        <h3 class="pillar-title">Who to contact</h3>
+        <p>Academic questions start with your child's teacher, then climb this ladder:</p>
+        <div class="tbl-wrap">
+          <table class="tbl">
+            <thead><tr><th>Programme / Area</th><th>Escalation ladder</th></tr></thead>
+            <tbody>
+              <tr><td>PYP · Early Years &amp; Single Subjects</td><td>Anjali Bindra (TL) → Hetal Ahivasi (Coord.) → Pradeep Sharma (HoS)</td></tr>
+              <tr><td>PYP · Grade 1–3</td><td>Anisha Law (TL) → Hetal Ahivasi (Coord.) → Pradeep Sharma (HoS)</td></tr>
+              <tr><td>PYP · Grade 4–5</td><td>Zarina Khan (TL) → Hetal Ahivasi (Coord.) → Pradeep Sharma (HoS)</td></tr>
+              <tr><td>MYP</td><td>Vichitra Parmal (Coord.) → Pradeep Sharma (HoS)</td></tr>
+              <tr><td>DP</td><td>Bhavana Goraksha (Coord.) → Pradeep Sharma (HoS)</td></tr>
+              <tr><td>CBSE</td><td>Farhat Khan (Coord.) → Abhijit Dive (CBSE Principal) → Pradeep Sharma (HoS)</td></tr>
+              <tr><td>Sports &amp; PE (whole school)</td><td>Shailendra Law (TL) → Pradeep Sharma (HoS)</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p>For admin matters, escalate to <a class="lnk" href="mailto:kiran.kante@fwgs.in">Kiran Kante</a> (Admin Operations Manager) or <a class="lnk" href="mailto:abhijit.dive@fwgs.in">Abhijit Dive</a> (Head of Admin).</p>
+
+        <h4 class="sub-h">Full directory</h4>
+        <div class="tbl-wrap">
+          <table class="tbl">
+            <thead><tr><th>Name</th><th>Role</th><th>Email</th></tr></thead>
+            <tbody>
+              <tr><td>Pradeep Sharma</td><td class="role">Head of School</td><td><a class="lnk" href="mailto:pradeep.sharma@fwgs.in">pradeep.sharma@fwgs.in</a></td></tr>
+              <tr><td>Abhijit Dive</td><td class="role">Head of Admin &amp; CBSE Principal</td><td><a class="lnk" href="mailto:abhijit.dive@fwgs.in">abhijit.dive@fwgs.in</a></td></tr>
+              <tr><td>Kiran Kante</td><td class="role">Admin Operations Manager</td><td><a class="lnk" href="mailto:kiran.kante@fwgs.in">kiran.kante@fwgs.in</a></td></tr>
+              <tr><td>Hetal Ahivasi</td><td class="role">PYP Coordinator</td><td><a class="lnk" href="mailto:hetal.ahivasi@fwgs.in">hetal.ahivasi@fwgs.in</a></td></tr>
+              <tr><td>Anjali Bindra</td><td class="role">TL — Early Years &amp; Single Subjects (PYP)</td><td><a class="lnk" href="mailto:anjali.bindra@fwgs.in">anjali.bindra@fwgs.in</a></td></tr>
+              <tr><td>Anisha Law</td><td class="role">PYP TL — Grade 1–3</td><td><a class="lnk" href="mailto:anisha.law@fwgs.in">anisha.law@fwgs.in</a></td></tr>
+              <tr><td>Zarina Khan</td><td class="role">PYP TL — Grade 4–5</td><td><a class="lnk" href="mailto:zarina.khan@fwgs.in">zarina.khan@fwgs.in</a></td></tr>
+              <tr><td>Vichitra Parmal</td><td class="role">MYP Coordinator</td><td><a class="lnk" href="mailto:vichitra.parmal@fwgs.in">vichitra.parmal@fwgs.in</a></td></tr>
+              <tr><td>Bhavana Goraksha</td><td class="role">DP Coordinator</td><td><a class="lnk" href="mailto:bhavana.goraksha@fwgs.in">bhavana.goraksha@fwgs.in</a></td></tr>
+              <tr><td>Farhat Khan</td><td class="role">CBSE &amp; IB Processes Coordinator</td><td><a class="lnk" href="mailto:farhat.khan@fwgs.in">farhat.khan@fwgs.in</a></td></tr>
+              <tr><td>Shailendra Law</td><td class="role">Whole School Sports &amp; PE TL</td><td><a class="lnk" href="mailto:shailendra.law@fwgs.in">shailendra.law@fwgs.in</a></td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <h4 class="sub-h">Quick reference</h4>
+        <div class="qref">
+          <div class="row"><span class="k">Admin queries</span><span class="v"><a class="lnk" href="mailto:info@fwgs.in">info@fwgs.in</a></span></div>
+          <div class="row"><span class="k">WhatsApp &amp; calls</span><span class="v"><a class="lnk" href="https://wa.me/919657662888">+91 96576 62888</a> — text preferred · no voice notes · calls for emergencies only</span></div>
+          <div class="row"><span class="k">Admissions &amp; Inquiries</span><span class="v"><a class="lnk" href="tel:+919274770453">+91 92747 70453</a></span></div>
+        </div>
+        <div class="callout">
+          <p>Know someone interested in FWGS? Share our Admissions &amp; Inquiries number — <a class="lnk" href="tel:+919274770453">+91 92747 70453</a> — with friends and family.</p>
+        </div>
+
+        <h4 class="sub-h">Where each thing lives</h4>
+        <div class="qref">
+          <div class="row"><span class="k">Homework &amp; materials</span><span class="v">Google Classroom</span></div>
+          <div class="row"><span class="k">Announcements, fees &amp; forms</span><span class="v">Nucleus</span></div>
+          <div class="row"><span class="k">Daily timetable</span><span class="v">ASC Timetable</span></div>
+          <div class="row"><span class="k">1:1 with a teacher</span><span class="v">School email</span></div>
+          <div class="row"><span class="k">Admin queries</span><span class="v"><a class="lnk" href="mailto:info@fwgs.in">info@fwgs.in</a></span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ §4 · GET INVOLVED ============ -->
+  <section class="band alt" id="involved">
+    <div class="inner">
+      <p class="sec-eyebrow">Be part of it</p>
+      <h2 class="sec-title">Get involved</h2>
+      <p class="sec-intro">There's always room for parents at FWGS — from the Parent Teacher Association to sharing your feedback.</p>
+      <figure class="sec-media">
+        <img src="assets/images/2N0A7006.jpg" alt="The school courtyard with a welcome sign and student artwork" loading="lazy">
+      </figure>
+      <div class="gi-grid">
+        <div class="subcard">
+          <h4><svg class="h4-ico" viewBox="0 0 24 24"><use href="#ic-users"></use></svg> Parent Teacher Association</h4>
+          <p>The PTA brings parents and the school together on events, initiatives, and shared priorities. Nominations open at the start of the year — the form will appear here when it's live.</p>
+          <div class="link-list" data-status="pending" style="margin-top:14px;">
+            <a href="#">PTA nomination form</a>
+          </div>
+        </div>
+        <div class="subcard">
+          <h4><svg class="h4-ico" viewBox="0 0 24 24"><use href="#ic-chat"></use></svg> Share your feedback</h4>
+          <p>We welcome your input, formally and informally:</p>
+          <ul>
+            <li><strong>Formal</strong> — Parent–Teacher Interactions, surveys, and the grievance process.</li>
+            <li><strong>Informal</strong> — a quick email, or a word with your child's teacher.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ §5 · FAQ (hidden until questions curated) ============ -->
+  <section class="band" id="faq" data-status="pending">
+    <div class="inner">
+      <p class="sec-eyebrow">Good to know</p>
+      <h2 class="sec-title">Frequently asked questions</h2>
+      <p class="sec-intro">Answers to the questions parents ask most.</p>
+      <div class="tiles">
+        <details class="tile">
+          <summary>
+            <span class="tile-icon badge">Q</span>
+            <span class="tile-head"><span class="tile-title">Example question — replace when real FAQs are curated</span></span>
+            <span class="tile-chev" aria-hidden="true">+</span>
+          </summary>
+          <div class="tile-body"><p class="ans">Example answer. This whole section stays hidden (<code>data-status="pending"</code> on the band) until real questions are ready — remove that attribute to publish.</p></div>
+        </details>
+        <details class="tile">
+          <summary>
+            <span class="tile-icon badge">Q</span>
+            <span class="tile-head"><span class="tile-title">Second example question</span></span>
+            <span class="tile-chev" aria-hidden="true">+</span>
+          </summary>
+          <div class="tile-body"><p class="ans">Example answer.</p></div>
+        </details>
+        <details class="tile">
+          <summary>
+            <span class="tile-icon badge">Q</span>
+            <span class="tile-head"><span class="tile-title">Third example question</span></span>
+            <span class="tile-chev" aria-hidden="true">+</span>
+          </summary>
+          <div class="tile-body"><p class="ans">Example answer.</p></div>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="foot">
+    <div class="foot-inner">
+      <span><strong>Fountainhead Wockhardt Global School</strong> · Parent Hub</span>
+      <span>Last updated: June 2026</span>
+    </div>
+  </footer>
+
+  <script src="assets/resources.js"></script>
+</body>
+</html>

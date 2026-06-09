@@ -41,6 +41,12 @@ window.FWGS_RESOURCES = {
     driveId: "1KZDKqsfwTwuKzsJWiN-IIbP5yvtoFm_a"
   },
 
+  "bus-routes": {
+    title: "Bus Routes & Stop Finder",
+    type: "url",
+    url: "https://fsk-apps.pages.dev/buses"
+  },
+
   "pyp-academic-calendar": {
     title: "PYP Academic Calendar",
     type: "drive-pdf",
