@@ -7,7 +7,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 One GitHub repo (`fwgs-curricle`), two **independent static apps** under it, each self-contained with its own `assets/` and `tools/serve.mjs`:
 
 - **`school-dashboards/`** — live Meal Break Finder + Bus Stop Finder. Static frontend that fetches JSON from a Google Apps Script web app reading private Google Sheets.
-- **`parent-hub/`** — parent-facing pages that embed Google Drive PDFs via a slug-based registry. Currently just a `test-embed.html` scaffold.
+- **`parent-hub/`** — parent-facing pages that embed Google Drive PDFs via a slug-based registry. Planned split: **`index.html`** (admin/logistical — uniform, food, transport, academic calendars, communication, contacts) and a future **`academics.html`** (academic content — IB policies, programme brochures, programme info, Google-Site programme-page links). `test-embed.html` is a sandbox for the embed pattern. Working spec for `index.html` is at `parent-hub/SPEC.md`.
 
 No build step, no `npm install`, no bundler. Pages are plain HTML loading vanilla JS that exposes globals (`window.FWGS_CONFIG`, `window.FWGS_RESOURCES`, `window.FWGSLiveData`, `window.FWGSResources`). Editing a JS file in an `assets/` folder IS the deploy step.
 
@@ -84,6 +84,11 @@ Entry types:
 To verify Drive PDF embeds, the file must be shared as **"Anyone with the link can view"** — otherwise the iframe shows a Drive sign-in wall instead of the document.
 
 The `assets/config.js` and `assets/live-data.js` in `parent-hub/` are copies of the school-dashboards versions; they are unused by `test-embed.html` but available if a parent-hub page later wants live sheet data.
+
+**The admin hub (`index.html`) is spec-driven** — `parent-hub/SPEC.md` is the canonical structure doc. Read it before editing `index.html`. Key patterns it establishes:
+- **Single source of truth:** each topic has exactly one home section; cross-refs are anchor links, not duplicated content.
+- **Build-now-hide-now:** sections/tiles for content that's pending (no data yet) ship in the HTML wrapped in `<... data-status="pending">` + a global CSS rule `[data-status="pending"] { display: none; }`. To enable later, remove the attribute — no structural change needed.
+- **Content from external specs** (e.g., the user's separate Communication Build Spec for Section 3) goes straight into the rendered HTML; we don't copy the source spec into the repo if it contains internal/operational notes marked "do not render."
 
 ## Conventions / gotchas
 

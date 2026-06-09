@@ -1,81 +1,127 @@
-# Parent Hub — Spec (Draft v0.1)
+# Parent Hub — Spec (v0.3)
 
-> Working spec for `parent-hub/index.html`. Iterate here BEFORE building. Items
-> tagged `[?]` need a decision; `[NEEDED]` means data the user will supply.
+> Working spec for `parent-hub/index.html`. `[NEEDED]` = data the user will supply; `[hidden]` = built into HTML now but hidden until data lands.
 
-## Design principle
+## Scope: admin / logistical only
 
-**Single source of truth.** Each topic has exactly one home section.
-Cross-references are anchor links that scroll to that home — never duplicated content.
+This hub covers the **admin/logistical** content parents need — uniform, food, transport, **academic calendars** (logistical: dates, vacations, PTI), communication, contacts. **Academic content** (IB policies, programme brochures, curriculum, programme leads) lives on a separate page at `parent-hub/academics.html` (future build).
+
+## Design principles
+
+- **Single source of truth.** Each topic has exactly one home section. Cross-references are anchor links — never duplicated content.
+- **Build-now-hide-now.** Sections/tiles tagged `[hidden]` are in the HTML but hidden via `data-status="pending"` + CSS `display: none`. Enable later by removing the attribute — no structural change.
 
 ## Sections (top → bottom, single scrollable page)
 
 ### 0 · Hero / Welcome
-- School name: **Fountainhead Wockhardt Global School**
+- School name: **Fountainhead Wockhardt Global School** (confirmed)
 - Eyebrow: "AY 2026–27 · Parent Hub"
-- Welcome line (short, warm)
+- Welcome line (short, warm) — addresses all FWGS parents (does **not** call out IB vs CBSE as separate streams)
 - Background: drone aerial (`assets/images/DJI_20260305154203_0152_D.jpg`)
-- **[?]** Keep the original sample's 3 hero quick-link cards (When does school start / What to wear / How to stay in touch) or drop them now that the topic tile grid is right below the hero?
+- No quick-link cards (topic tile grid is right below)
 
-### 1 · Topic tiles (2×2 grid)
-Four anchor targets, each its own section.
+### 1 · Topic tiles (accordion grid)
 
-| Tile | PDFs available | Content needed |
+**Behaviour:** title + 1-2 line summary always visible. Tap to expand → PDFs/content reveal below summary, same tile. Multiple tiles can be open at once. On mobile (≤768px) inline PDFs hide; summary + link-out remain.
+
+**Active tiles:**
+
+| Tile | Anchor | Inline embeds |
 |---|---|---|
-| **Uniform** | `uniform-policy`, `where-to-buy-uniform` | 1–2 line summary above embeds |
-| **Food** | `food-policy` | 1–2 line summary above embed |
-| **Bus / Transport** | `bus-rules` | 1–2 line summary; routes [NEEDED later] |
-| **Who to Contact** | none | Escalation map (homeroom → programme lead → front office → emergencies) |
+| **Uniform** | `#uniform` | `uniform-policy` + `where-to-buy-uniform` |
+| **Food** | `#food` | `food-policy` |
+| **Bus / Transport** | `#transport` | `bus-rules` (routes [NEEDED later]) |
 
-- **[?]** Tile behaviour: **expand inline** (accordion — summary visible, PDFs reveal below on tap) OR **jump** to a fuller section further down the page?
+**Hidden tiles** (same grid, `data-status="pending"`, enable when data arrives):
+- I-Card & Bearer Card
+- Stationery
+- Attendance & leave
+- School visits
+- Birthdays
+- Personal belongings
+- Safety & wellbeing
+- Lost and found
 
 ### 2 · Academic Calendars
-Three programme calendars, embedded full-width with mobile fallback to text links (existing pattern from `test-embed.html`).
-- PYP — **[NEEDED]** Drive link
-- MYP — **[NEEDED]** Drive link
-- DP — **[NEEDED]** Drive link
 
-### 3 · IT Systems
-How we communicate. Three platforms + one tagging convention.
-- **Nucleus** — admin: announcements, fees, transport, reports, forms
-- **Google Classroom** — academic: homework, materials, daily highlights
-- **Email** — 1:1 with teachers; parent email convention `p.firstname.lastname@fwgs.in`
-- **Must Know / Good to Know** — tags on every Nucleus & Classroom announcement (critical vs. optional)
-- Carry over from sample: the **"enter your own age" alert** when first logging in (gold-standard specific advice)
+Three programme calendars, embedded inline (~3-5 MB each). Mobile fallback: hide embeds, keep link-outs.
+
+| Programme | Slug |
+|---|---|
+| PYP | `pyp-academic-calendar` |
+| MYP | `myp-academic-calendar` |
+| DP | `dp-academic-calendar` |
+
+(Brochures + programme-page links live on the future academics page, not here.)
+
+### 3 · Communication System
+
+**Source:** the user's separate Build Spec doc ("FWGS Parent Communication System - Build Spec.md") — canonical for content. Content goes straight into the rendered HTML; this section captures structure only.
+
+**Layout:**
+- 4 brief overview cards on top (one per pillar, 1-line summary each)
+- Card click → anchor jump to the matching pillar section below
+- 4 detailed pillar sections below as the canonical reference
+- **No popup modals** (anchor jump preferred — simpler, accessible, JS-optional)
+
+**4 pillars** (in order):
+1. **Your school email ID** — parent address format `p.firstname.lastname@fwgs.in`. **Prominently display** the "enter YOUR age, not your child's" warning — the single most consequential item on this page.
+2. **How we reach you (outbound)** — Google Classroom + Nucleus + Must Know / Good to Know flags + Official WhatsApp broadcast + inbox-management advisory.
+3. **How you reach us (inbound)** — two streams:
+   - **Admin** (transport/food/I-Card/uniform/fees logistics): email `info@fwgs.in` > WhatsApp text `9657662888` > phone `9657662888` (emergencies only)
+   - **Academic** (learning, classroom matters): teacher email > escalation ladder
+4. **Who to contact (directory & escalation)** — academic escalation ladders (PYP×3, MYP, DP, **CBSE**, Sports & PE) + admin escalation contacts (Kiran Kante, Abhijit Dive) + full staff directory with `mailto:` emails + quick-reference numbers + admissions referral note + "where each thing lives" cheat sheet.
+
+**Technical requirements (from Build Spec):**
+- All emails: `mailto:` clickable
+- All phone numbers: `tel:` clickable
+- WhatsApp link: `https://wa.me/919657662888`
+- No browser storage APIs
+
+**⚠ DO NOT RENDER:** the internal note about `info@fwgs.in` being a Google Group routed to internal owners. Parents see only the clean address. (This note is operational; not user-facing.)
+
+**CBSE handling:**
+- **NOT mentioned in hero/welcome** as a separate stream
+- **Retained in staff designations** (e.g., "Head of Admin & CBSE Principal" for Abhijit Dive)
+- **Retained in escalation ladder** as one row (Farhat Khan → Abhijit Dive → Pradeep Sharma) — CBSE parents need a contact path
 
 ### 4 · Get Involved
+
 - **PTA** — Parent Teacher Association, nomination form when available
-- **Feedback** — formal (PTI, surveys, grievances) + informal (email, comment to teacher)
-- **Events Through the Year** — **[?]** scope: Saturday parent sessions? PTI dates? Sports day, house events? Whole-year parent-facing calendar?
+- **Feedback** — formal (PTI, surveys, grievances) + informal (email, teacher comment)
 
-### 5 · IB Policies
-Five IB framework documents: Language · Learning Diversity · Academic Integrity · Admission · Assessment.
-- **[NEEDED]** Drive links × 5
+### 5 · FAQ `[hidden]`
 
-## Dropped from original sample (and why)
+Built into structure, hidden via `data-status="pending"`. Enable later when real parent questions are curated.
 
-- **"Year ahead" / Key dates table** — dynamic content; may return as a live "Upcoming Dates" strip if we add a Google Sheet route (separate workstream).
-- **"New for AY 2026-27" strip** — redundant: each new feature already lives in its own section.
-- **"Your child's day" 11-card omnibus** — split into the 4 topic tiles. Smaller items (I-Card, Stationery, Attendance, School visits, Birthdays, Personal belongings, Safety drills, Lost & Found) currently dropped — **[?] permanently, or return later as more tiles?**
-- **Learning section** (PYP/MYP/DP curriculum content, programme leads, kickoff week) — currently dropped — **[?] dropped from the hub, or moved to a different surface?**
-- **General Policies list** — replaced. Topic policies live in their tiles (Uniform, Food, Bus); IB-framework policies in their own section.
-- **FAQ ("Questions parents ask")** — strikethrough on wireframe → dropping. **[?] confirm.**
-- **WhatsApp strip + Inbox advisory** — dropped. Brief mention in IT Systems if needed.
+## Registry (`assets/resources.js`) — 10 entries
 
-## Open questions (numbered for reference)
+**Used by this hub (7):**
+- `uniform-policy`, `where-to-buy-uniform`, `food-policy`, `bus-rules`
+- `pyp-academic-calendar`, `myp-academic-calendar`, `dp-academic-calendar`
 
-1. Hero quick-links: keep, drop, or repurpose?
-2. Tile behaviour: expand inline (accordion) or jump to a section?
-3. Smaller "day" items (Birthdays, Stationery, etc.): dropped permanently or come back?
-4. Learning section: dropped from the hub?
-5. FAQ: dropped permanently?
-6. "Events Through the Year": scope = ?
+**Reserved for `parent-hub/academics.html` (3):**
+- `pyp-brochure`, `myp-brochure`, `dp-brochure`
 
-## Data the user will supply
+## Dropped from original sample
 
-- 3 academic calendar Drive links (PYP / MYP / DP)
+- Year ahead / Key dates table — may return as a Sheet-backed live strip (separate workstream)
+- "New for AY 2026-27" strip — features live in their own sections now
+- "Your child's day" 11-card omnibus → 3 active tiles + 8 hidden
+- Original Learning section (PYP curriculum, programme leads, kickoff week) → moves to academics page
+- General Policies list — topic policies in tiles; IB policies on academics page
+- Events Through the Year — covered by Academic Calendars
+- WhatsApp strip + Inbox advisory — absorbed into Communication Pillar 2
+- Hero quick-link cards — dropped (tile grid is right below)
+- Who to Contact tile — subsumed into Communication Pillar 4
+
+## Data still pending
+
+For this hub:
+- Routes information for Bus tile (separate from Bus Rules)
+- Eventually: data for 8 hidden day-item tiles; FAQ entries
+
+For the future academics page:
+- 3 Google Site URLs (PYP / MYP / DP programme pages)
 - 5 IB policy Drive links (Language / Learning Diversity / Academic Integrity / Admission / Assessment)
-- "How we communicate" content variants (or confirm sample text is usable as-is)
-- "Who to Contact" content (escalation map text + actual contact details — currently TBC)
-- Final contact info: general email, admissions email, front office number, official WhatsApp, emergency line
-- Routes PDF for the Bus tile (separate from Bus Rules)
+- Programme leads contact info (if not covered by Comms directory)
