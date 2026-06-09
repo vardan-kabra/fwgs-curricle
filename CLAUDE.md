@@ -7,7 +7,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 One GitHub repo (`fwgs-curricle`), two **independent static apps** under it, each self-contained with its own `assets/` and `tools/serve.mjs`:
 
 - **`school-dashboards/`** — live Meal Break Finder + Bus Stop Finder. Static frontend that fetches JSON from a Google Apps Script web app reading private Google Sheets.
-- **`parent-hub/`** — parent-facing pages that embed Google Drive PDFs via a slug-based registry. Planned split: **`index.html`** (admin/logistical — uniform, food, transport, academic calendars, communication, contacts) and a future **`academics.html`** (academic content — IB policies, programme brochures, programme info, Google-Site programme-page links). `test-embed.html` is a sandbox for the embed pattern. Working spec for `index.html` is at `parent-hub/SPEC.md`.
+- **`parent-hub/`** — parent-facing pages that embed Google Drive PDFs via a slug-based registry. Planned split: **`index.html`** (admin/logistical — uniform, food, transport, academic calendars, communication, contacts) and a future **`academics.html`** (academic content — IB policies, programme brochures, programme info, Google-Site programme-page links). `test-embed.html` is a sandbox for the embed pattern. Working spec for `index.html` is at `parent-hub/SPEC.md`; pending data and planned enhancements (comms-app links, the Who-to-Contact organogram, etc.) are tracked in `parent-hub/TODO.md` — the live backlog.
 
 No build step, no `npm install`, no bundler. Pages are plain HTML loading vanilla JS that exposes globals (`window.FWGS_CONFIG`, `window.FWGS_RESOURCES`, `window.FWGSLiveData`, `window.FWGSResources`). Editing a JS file in an `assets/` folder IS the deploy step.
 
