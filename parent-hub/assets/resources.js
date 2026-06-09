@@ -41,6 +41,42 @@ window.FWGS_RESOURCES = {
     driveId: "1KZDKqsfwTwuKzsJWiN-IIbP5yvtoFm_a"
   },
 
+  "pyp-academic-calendar": {
+    title: "PYP Academic Calendar",
+    type: "drive-pdf",
+    driveId: "1w3BNKq-Mb5tzy3GCwb43irk01LdW68ON"
+  },
+
+  "myp-academic-calendar": {
+    title: "MYP Academic Calendar",
+    type: "drive-pdf",
+    driveId: "1B1AdgbR9EIfSU6ECsvwvHVcEEZDJkDCy"
+  },
+
+  "dp-academic-calendar": {
+    title: "DP Academic Calendar",
+    type: "drive-pdf",
+    driveId: "1ZHkyMjIkFz8gme3Lwc0FJQAz7d6evl4U"
+  },
+
+  "pyp-brochure": {
+    title: "PYP Brochure",
+    type: "drive-pdf",
+    driveId: "1l9PXBjKaSUWXbGu0HQ0qYwWKM7yKqbbt"
+  },
+
+  "myp-brochure": {
+    title: "MYP Brochure",
+    type: "drive-pdf",
+    driveId: "1f7jJxmuO2MKkWlZQ0uL-76cqWbRQ578I"
+  },
+
+  "dp-brochure": {
+    title: "DP Brochure",
+    type: "drive-pdf",
+    driveId: "1g5pytFKguLR--i-tk3oQhbFZ58HQFnVl"
+  },
+
   // — more entries added as links are shared —
 };
 
