@@ -62,7 +62,7 @@ window.FWGS_RESOURCES = {
   "dp-academic-calendar": {
     title: "DP Academic Calendar",
     type: "drive-pdf",
-    driveId: "1ZHkyMjIkFz8gme3Lwc0FJQAz7d6evl4U"
+    driveId: "13bsdhY7v3J1OTsRQ4ZJhmseCqp9-hA1b"
   },
 
   "pyp-brochure": {
@@ -81,6 +81,19 @@ window.FWGS_RESOURCES = {
     title: "DP Brochure",
     type: "drive-pdf",
     driveId: "1g5pytFKguLR--i-tk3oQhbFZ58HQFnVl"
+  },
+
+  // — communication apps (Pillar 2 / getting-started checklist) —
+  "nucleus": {
+    title: "Nucleus — Parent Login",
+    type: "url",
+    url: "https://fwgsparents.nucleusedu.in/login"
+  },
+
+  "google-classroom": {
+    title: "Google Classroom",
+    type: "url",
+    url: "https://classroom.google.com/"
   },
 
   // — more entries added as links are shared —

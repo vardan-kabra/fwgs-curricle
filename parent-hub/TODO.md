@@ -24,6 +24,8 @@
 | ⏳ 8 topic tiles | Essentials (`#essentials`) — hidden `<details>` tiles | Add body content + a fitting icon (currently generic `#ic-tag`), remove `data-status` |
 | ⏳ FAQ questions | FAQ band (`#faq`) — hidden, example scaffold | Replace the example Q&As with real ones, remove `data-status` on the `#faq` band |
 | ⏳ "Last updated" footer date | Footer | Update the placeholder ("June 2026") |
+| ✅ Updated **DP calendar** (de-duplicated) | `resources.js` → `dp-academic-calendar` | **Swapped** `driveId` → `13bsdhY7v3J1OTsRQ4ZJhmseCqp9-hA1b` (corrected 2-page→clean PDF, 2026-06-10). ⚠ Verify the new file is shared "Anyone with the link" so the embed renders. |
+| ✅ **School timings** data received | new tile in Essentials (`#essentials`) | **8:00 AM – 3:00 PM, Mon–Fri.** Select Saturdays are working (marked in calendar / see key-dates). Closed on public holidays. Build the "School Timings" tile in the batch. |
 
 **The 8 hidden tiles:** I-Card & Bearer Card · Stationery · Attendance & Leave · School Visits · Birthdays · Personal Belongings · Safety & Wellbeing · Lost & Found.
 
@@ -38,6 +40,10 @@ Add `resources.js` `url`-type entries, then surface as buttons/links in the rele
 - 🔭 **School email** — a "Sign in to your school email" link in **Pillar 1**. Rationale: parents
   already access the site using their school email ID, so a direct Google/Gmail login link is
   simple and useful. *(Confirm the exact target URL.)*
+- 🔭 **Getting-started checklist** (Rashida, 2026-06-09) — a numbered "first week" setup block:
+  (1) sign in to the school parent email, (2) install Nucleus, (3) join Google Classroom,
+  (4) save the school WhatsApp number. Natural home: top of the Communication section or
+  Pillar 1; reuses the app links above. Build with this batch.
 
 ### 2.2 — "Who to contact" → organogram  *(Pillar 4 redesign)*
 - 🔭 Replace / augment the current **escalation-ladder table + full directory table** with an
@@ -46,6 +52,8 @@ Add `resources.js` `url`-type entries, then surface as buttons/links in the rele
 - 🔭 Add **Directors** at the top of the chart.
   Director email: **directors@fountainheadschools.org**
   ⚠️ Domain is **fountainheadschools.org**, *not* `fwgs.in` like the rest of the staff — keep it as written.
+- 📷 **Leadership Team Photos** received — folder `parent-hub/assets/images/Leadership Team Photos/`
+  (untracked locally, not yet committed). These are the headshots for the organogram.
 
 ---
 
@@ -81,6 +89,40 @@ Academic content (separate build; see `SPEC.md`). Registry slugs already reserve
 | If old Safari (<12.1) matters, add `xlink:href` alongside `href` on `<use>` — else skip | sprite uses (~L361+) | Compatibility (low) |
 
 *(The review's note on the PTA `href="#"` placeholder is already covered by the "PTA nomination form URL" item in §1.)*
+
+---
+
+## 5 · Team feedback log — 2026-06-09
+
+Raw comments from the review thread + where each is tracked (this is an index, not a second backlog).
+
+**Quick correctness fixes (confirmed — apply in next edit pass):**
+- ✅-to-do **Email format mismatch.** Overview card (Pillar 1, ~L614) shows `p.firstname@fwgs.in`;
+  detail (~L643) shows `p.firstname.lastname@fwgs.in`. Kiran confirmed: it should be
+  **`p.firstname.lastname@fwgs.in`** everywhere. Fix the card.
+
+**Decisions (resolved 2026-06-09):**
+- ✅ **Number format** (Zainab) → display **digits only** (`9657662888`, `9274770453`) as one unbroken block. Keep the full international form in the hrefs (`tel:+9196…`, `wa.me/9196…`). Apply in next edit pass.
+- ⏳ **Key dates** (Suparna) → parent-facing dates **extracted** from the FWGS Student's Calendar → `parent-hub/key-dates.md` (review/trim; see its open questions). Presentation (static list vs live sheet-backed strip) still pending user comments. (A key-dates table was dropped earlier as "too dynamic" — team now wants it back.)
+- ✅ **School timings** (Rashida) → **new tile in Essentials** (see §1). Needs the actual reporting/dispersal times.
+- ✅ **School Values / mission** (Suparna) → **keep OUT of this admin hub** — belongs on the academics page or the main school site.
+
+**Routed to existing backlog items:**
+- Enrollment steps (Rashida) → §2.1 *Getting-started checklist*.
+- DP calendar duplicate page (Honey) → §1 *Updated DP calendar* (pending corrected Drive link).
+- "Who to contact" repetition → already §2.2 *organogram* (Leadership photos now received).
+
+**Clarified / no action now:**
+- **Transport shows "Fountainhead School Surat"** (Honey) — that text is in the *linked bus finder*
+  (`fsk-apps.pages.dev/buses`, the school-dashboards app), **not** `index.html`. Cross-app branding
+  fix; track in school-dashboards. Surat **stops are intentional** for now — CSN routes not final;
+  Kiran to confirm when finalized (user, 2026-06-09).
+- **Timetable** (Honey) — deferred; "add once ready" (user). Already referenced under Pillar 4 *Where each thing lives* (ASC Timetable).
+- **"PYP is not clickable"** (Kiran) — in the built page the PYP *calendar* tile is clickable with
+  content. ❓ Awaiting clarification whether Kiran meant the not-yet-built PYP *programme page*
+  (`academics.html`) or something else.
+- **Homework / attendance / celebration policy** (Suparna) — attendance & birthdays(celebration) are
+  already among the 8 hidden tiles (await content); *homework* would be a new tile/topic.
 
 ---
 
