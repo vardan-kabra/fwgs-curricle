@@ -265,6 +265,38 @@
   .tile-icon.badge{ font-family:var(--mono); font-weight:700; font-size:13.5px; letter-spacing:.01em; }
   .ans{ color:var(--ink-soft); font-size:15px; margin:0; }
 
+  /* ---- getting-started checklist ---- */
+  .gs-box{ background:var(--bg-card); border:1px solid var(--rule); border-left:4px solid var(--accent); border-radius:14px; padding:24px 26px; margin:0 0 36px; box-shadow:var(--shadow-card); }
+  .gs-box h3{ font-family:var(--display); font-weight:600; font-size:21px; margin:0 0 4px; }
+  .gs-box .gs-sub{ color:var(--ink-soft); font-size:15px; margin:0 0 4px; }
+  .gs-actions{ margin-top:8px; display:flex; flex-wrap:wrap; gap:8px; }
+  .pill-link{ display:inline-flex; align-items:center; gap:6px; padding:8px 15px; border-radius:999px; background:var(--accent-soft); color:var(--accent); font-weight:700; font-size:13px; text-decoration:none; border:1px solid transparent; cursor:pointer; font-family:var(--body); }
+  .pill-link:hover{ border-color:var(--accent); }
+  .pill-link::after{ content:"↗"; font-weight:400; }
+  .pill-link.plain::after{ content:""; }
+
+  /* ---- who-to-contact: leadership apex + person cards + ladders ---- */
+  .apex{ display:flex; flex-wrap:wrap; gap:14px; margin:16px 0 26px; }
+  .person{ display:flex; gap:13px; align-items:center; background:var(--bg-card); border:1px solid var(--rule); border-radius:12px; padding:12px 15px; box-shadow:var(--shadow-card); min-width:240px; flex:1 1 240px; }
+  .person .ph{ width:52px; height:52px; border-radius:50%; object-fit:cover; flex:none; background:var(--bg-soft); border:1px solid var(--rule); }
+  .person .ph.initials{ display:flex; align-items:center; justify-content:center; font-family:var(--display); font-weight:600; color:var(--accent); font-size:19px; }
+  .person .pn{ font-weight:700; font-size:14.5px; line-height:1.2; }
+  .person .pr{ color:var(--ink-soft); font-size:12px; margin:2px 0 3px; }
+  .person .pe{ font-size:12px; word-break:break-word; }
+  .ladder{ display:flex; flex-wrap:wrap; gap:10px; align-items:center; }
+  .ladder .arr{ color:var(--ink-faint); font-size:17px; flex:none; }
+  .group-note{ color:var(--ink-soft); font-size:14.5px; margin:0 0 18px; }
+
+  /* ---- key dates ---- */
+  .kd-legend{ font-size:13px; color:var(--ink-soft); margin:0 0 20px; }
+  .kd-month{ margin:0 0 20px; }
+  .kd-month > h4{ font-family:var(--display); font-weight:600; font-size:18px; margin:0 0 10px; padding-bottom:7px; border-bottom:1px solid var(--rule); }
+  .kd-list{ display:grid; gap:7px; }
+  .kd-item{ display:flex; gap:14px; align-items:baseline; }
+  .kd-item .kd-when{ font-family:var(--mono); font-size:12.5px; color:var(--accent); font-weight:600; min-width:84px; flex:none; }
+  .kd-item .kd-what{ font-size:14.5px; }
+  .kd-hidden{ display:none; }
+
   /* ---- mobile ---- */
   @media (max-width:768px){
     :root{ --nav-h:66px; }
@@ -286,6 +318,11 @@
     .qref .row{ flex-direction:column; gap:3px; }
     .qref .row .k{ min-width:0; }
     .pillar{ padding-top:36px; margin-top:36px; }
+    .apex{ flex-direction:column; }
+    .ladder{ flex-direction:column; align-items:stretch; }
+    .ladder .arr{ transform:rotate(90deg); align-self:flex-start; margin:1px 0 1px 22px; }
+    .person{ min-width:0; }
+    .kd-item .kd-when{ min-width:74px; }
   }
   @media (max-width:560px){
     .nav-links{ display:none; }               /* single scrollable page; logo stays */
@@ -317,6 +354,9 @@
     <symbol id="ic-chat" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
       <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
     </symbol>
+    <symbol id="ic-clock" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+      <circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/>
+    </symbol>
   </svg>
 
   <!-- ============ TOP NAV ============ -->
@@ -347,13 +387,32 @@
     <div class="inner">
       <p class="sec-eyebrow">The basics</p>
       <h2 class="sec-title">Everyday essentials</h2>
-      <p class="sec-intro">Tap any card to open the full policy. Uniform, food, and transport are ready now — more day-to-day topics will appear here as the year gets underway.</p>
+      <p class="sec-intro">Tap any card to open it. School timings, uniform, food, and transport are ready now — more day-to-day topics will appear here as the year gets underway.</p>
 
       <figure class="sec-media">
         <img src="assets/images/2N0A7073.jpg" alt="A teacher greeting students arriving at school" loading="lazy">
       </figure>
 
       <div class="tiles">
+
+        <!-- School Timings -->
+        <details class="tile" id="timings" open>
+          <summary>
+            <span class="tile-icon"><svg viewBox="0 0 24 24"><use href="#ic-clock"></use></svg></span>
+            <span class="tile-head">
+              <span class="tile-title">School Timings</span>
+              <span class="tile-sum">When the school day starts and ends.</span>
+            </span>
+            <span class="tile-chev" aria-hidden="true">+</span>
+          </summary>
+          <div class="tile-body">
+            <p class="tile-note"><strong>8:00 AM – 3:00 PM</strong>, Monday to Friday, for all students.</p>
+            <ul>
+              <li>Some Saturdays are working days — these are marked in <a class="lnk" href="#calendars">Key dates</a>.</li>
+              <li>The school is closed on public holidays (also listed in Key dates).</li>
+            </ul>
+          </div>
+        </details>
 
         <!-- Uniform -->
         <details class="tile" id="uniform">
@@ -535,6 +594,14 @@
       <figure class="sec-media">
         <img src="assets/images/2N0A7498.jpg" alt="An early-years classroom with the months of the year displayed on the wall" loading="lazy">
       </figure>
+
+      <!-- Key dates (rendered by the inline script before </body>) -->
+      <h3 style="font-family:var(--display);font-weight:600;font-size:24px;margin:0 0 6px;">Key dates</h3>
+      <p class="kd-legend">🎓 parent event · 📝 exam · 🏖️ vacation / re-open · 🎉 school event · 🚫 holiday (closed) · 📅 working Saturday. Full detail is in the programme calendars below.</p>
+      <div id="kd-months"></div>
+      <button id="kd-more" class="pill-link plain" type="button">Show more dates →</button>
+
+      <h3 style="font-family:var(--display);font-weight:600;font-size:24px;margin:48px 0 18px;">Programme calendars</h3>
       <div class="tiles">
 
         <details class="tile" id="cal-pyp">
@@ -607,11 +674,39 @@
       <figure class="sec-media">
         <img src="assets/images/2N0A7146.jpg" alt="A teacher in conversation with two students on campus" loading="lazy">
       </figure>
+
+      <div class="gs-box">
+        <h3>New here? Start with these four steps</h3>
+        <p class="gs-sub">A quick setup so you don't miss anything in the first week.</p>
+        <ol class="steps">
+          <li>
+            <span class="s-t">Sign in to your school email</span>
+            <span class="s-d">Use your <code>p.firstname.lastname@fwgs.in</code> address. <a class="lnk" href="#pillar-email">See the one login step that matters →</a></span>
+            <span class="gs-actions"><a class="pill-link" href="https://accounts.google.com/" target="_blank" rel="noopener">Google sign-in</a></span>
+          </li>
+          <li>
+            <span class="s-t">Install Nucleus</span>
+            <span class="s-d">The school app for announcements, fees, transport, reports, and forms.</span>
+            <span class="gs-actions"><a class="pill-link" data-resource="nucleus">Open Nucleus</a></span>
+          </li>
+          <li>
+            <span class="s-t">Join Google Classroom</span>
+            <span class="s-d">Turn on guardian summaries to follow your child's learning.</span>
+            <span class="gs-actions"><a class="pill-link" data-resource="google-classroom">Open Classroom</a></span>
+          </li>
+          <li>
+            <span class="s-t">Save the school WhatsApp number</span>
+            <span class="s-d">For our official broadcast updates — save <strong>9657662888</strong>.</span>
+            <span class="gs-actions"><a class="pill-link" href="https://wa.me/919657662888" target="_blank" rel="noopener">Save on WhatsApp</a></span>
+          </li>
+        </ol>
+      </div>
+
       <div class="ovw-grid">
         <a class="ovw-card" href="#pillar-email">
           <span class="num">Pillar 1</span>
           <span class="t">Your school email ID</span>
-          <span class="d">Your <code>p.firstname@fwgs.in</code> address — and the one login step that matters most.</span>
+          <span class="d">Your <code>p.firstname.lastname@fwgs.in</code> address — and the one login step that matters most.</span>
           <span class="go">See details →</span>
         </a>
         <a class="ovw-card" href="#pillar-outbound">
@@ -713,11 +808,11 @@
                 <span class="s-d">Our primary admin channel — actively encouraged for all logistical queries.</span>
               </li>
               <li>
-                <span class="s-t">WhatsApp <a class="lnk" href="https://wa.me/919657662888">+91 96576 62888</a></span>
+                <span class="s-t">WhatsApp <a class="lnk" href="https://wa.me/919657662888">9657662888</a></span>
                 <span class="s-d">Text preferred. Voice notes won't be addressed.</span>
               </li>
               <li>
-                <span class="s-t">Call <a class="lnk" href="tel:+919657662888">+91 96576 62888</a></span>
+                <span class="s-t">Call <a class="lnk" href="tel:+919657662888">9657662888</a></span>
                 <span class="s-d">Last resort — not for routine queries; emergencies only.</span>
               </li>
             </ol>
@@ -748,51 +843,171 @@
       <div class="pillar" id="pillar-contacts">
         <p class="pillar-eyebrow">Pillar 4</p>
         <h3 class="pillar-title">Who to contact</h3>
-        <p>Academic questions start with your child's teacher, then climb this ladder:</p>
-        <div class="tbl-wrap">
-          <table class="tbl">
-            <thead><tr><th>Programme / Area</th><th>Escalation ladder</th></tr></thead>
-            <tbody>
-              <tr><td>PYP · Early Years &amp; Single Subjects</td><td>Anjali Bindra (TL) → Hetal Ahivasi (Coord.) → Pradeep Sharma (HoS)</td></tr>
-              <tr><td>PYP · Grade 1–3</td><td>Anisha Law (TL) → Hetal Ahivasi (Coord.) → Pradeep Sharma (HoS)</td></tr>
-              <tr><td>PYP · Grade 4–5</td><td>Zarina Khan (TL) → Hetal Ahivasi (Coord.) → Pradeep Sharma (HoS)</td></tr>
-              <tr><td>MYP</td><td>Vichitra Parmal (Coord.) → Pradeep Sharma (HoS)</td></tr>
-              <tr><td>DP</td><td>Bhavana Goraksha (Coord.) → Pradeep Sharma (HoS)</td></tr>
-              <tr><td>CBSE</td><td>Farhat Khan (Coord.) → Abhijit Dive (CBSE Principal) → Pradeep Sharma (HoS)</td></tr>
-              <tr><td>Sports &amp; PE (whole school)</td><td>Shailendra Law (TL) → Pradeep Sharma (HoS)</td></tr>
-            </tbody>
-          </table>
-        </div>
-        <p>For admin matters, escalate to <a class="lnk" href="mailto:kiran.kante@fwgs.in">Kiran Kante</a> (Admin Operations Manager) or <a class="lnk" href="mailto:abhijit.dive@fwgs.in">Abhijit Dive</a> (Head of Admin).</p>
+        <p>Start with your child's teacher. If you need to go further, open the group that fits your child below — each shows the path teacher → up the ladder. Overall leadership sits at the top.</p>
 
-        <h4 class="sub-h">Full directory</h4>
-        <div class="tbl-wrap">
-          <table class="tbl">
-            <thead><tr><th>Name</th><th>Role</th><th>Email</th></tr></thead>
-            <tbody>
-              <tr><td>Pradeep Sharma</td><td class="role">Head of School</td><td><a class="lnk" href="mailto:pradeep.sharma@fwgs.in">pradeep.sharma@fwgs.in</a></td></tr>
-              <tr><td>Abhijit Dive</td><td class="role">Head of Admin &amp; CBSE Principal</td><td><a class="lnk" href="mailto:abhijit.dive@fwgs.in">abhijit.dive@fwgs.in</a></td></tr>
-              <tr><td>Kiran Kante</td><td class="role">Admin Operations Manager</td><td><a class="lnk" href="mailto:kiran.kante@fwgs.in">kiran.kante@fwgs.in</a></td></tr>
-              <tr><td>Hetal Ahivasi</td><td class="role">PYP Coordinator</td><td><a class="lnk" href="mailto:hetal.ahivasi@fwgs.in">hetal.ahivasi@fwgs.in</a></td></tr>
-              <tr><td>Anjali Bindra</td><td class="role">TL — Early Years &amp; Single Subjects (PYP)</td><td><a class="lnk" href="mailto:anjali.bindra@fwgs.in">anjali.bindra@fwgs.in</a></td></tr>
-              <tr><td>Anisha Law</td><td class="role">PYP TL — Grade 1–3</td><td><a class="lnk" href="mailto:anisha.law@fwgs.in">anisha.law@fwgs.in</a></td></tr>
-              <tr><td>Zarina Khan</td><td class="role">PYP TL — Grade 4–5</td><td><a class="lnk" href="mailto:zarina.khan@fwgs.in">zarina.khan@fwgs.in</a></td></tr>
-              <tr><td>Vichitra Parmal</td><td class="role">MYP Coordinator</td><td><a class="lnk" href="mailto:vichitra.parmal@fwgs.in">vichitra.parmal@fwgs.in</a></td></tr>
-              <tr><td>Bhavana Goraksha</td><td class="role">DP Coordinator</td><td><a class="lnk" href="mailto:bhavana.goraksha@fwgs.in">bhavana.goraksha@fwgs.in</a></td></tr>
-              <tr><td>Farhat Khan</td><td class="role">CBSE &amp; IB Processes Coordinator</td><td><a class="lnk" href="mailto:farhat.khan@fwgs.in">farhat.khan@fwgs.in</a></td></tr>
-              <tr><td>Shailendra Law</td><td class="role">Whole School Sports &amp; PE TL</td><td><a class="lnk" href="mailto:shailendra.law@fwgs.in">shailendra.law@fwgs.in</a></td></tr>
-            </tbody>
-          </table>
+        <h4 class="sub-h">School leadership</h4>
+        <div class="apex">
+          <div class="person">
+            <div class="ph initials" aria-hidden="true">D</div>
+            <div>
+              <div class="pn">Directors</div>
+              <div class="pr">FWGS Leadership</div>
+              <div class="pe"><a class="lnk" href="mailto:directors@fountainheadschools.org">directors@fountainheadschools.org</a></div>
+            </div>
+          </div>
+          <div class="person">
+            <img class="ph" src="assets/images/Leadership Team Photos/PradeepSharma.jpg" alt="Pradeep Sharma" loading="lazy">
+            <div>
+              <div class="pn">Pradeep Sharma</div>
+              <div class="pr">Head of School</div>
+              <div class="pe"><a class="lnk" href="mailto:pradeep.sharma@fwgs.in">pradeep.sharma@fwgs.in</a></div>
+            </div>
+          </div>
+        </div>
+
+        <p class="group-note">Open the group that fits your child to see exactly who to contact — teacher first, then up the ladder only if needed.</p>
+
+        <div class="tiles">
+
+          <details class="tile">
+            <summary>
+              <span class="tile-icon badge">PYP</span>
+              <span class="tile-head"><span class="tile-title">PYP · Early Years &amp; Single Subjects</span><span class="tile-sum">Anjali Bindra → Hetal Ahivasi → Pradeep Sharma</span></span>
+              <span class="tile-chev" aria-hidden="true">+</span>
+            </summary>
+            <div class="tile-body">
+              <div class="ladder">
+                <div class="person"><img class="ph" src="assets/images/Leadership Team Photos/AnjaliBindra.jpg" alt="Anjali Bindra" loading="lazy"><div><div class="pn">Anjali Bindra</div><div class="pr">Team Leader · EY &amp; Single Subjects</div><div class="pe"><a class="lnk" href="mailto:anjali.bindra@fwgs.in">anjali.bindra@fwgs.in</a></div></div></div>
+                <span class="arr" aria-hidden="true">→</span>
+                <div class="person"><img class="ph" src="assets/images/Leadership Team Photos/HetalAhivasi.jpg" alt="Hetal Ahivasi" loading="lazy"><div><div class="pn">Hetal Ahivasi</div><div class="pr">PYP Coordinator</div><div class="pe"><a class="lnk" href="mailto:hetal.ahivasi@fwgs.in">hetal.ahivasi@fwgs.in</a></div></div></div>
+                <span class="arr" aria-hidden="true">→</span>
+                <div class="person"><img class="ph" src="assets/images/Leadership Team Photos/PradeepSharma.jpg" alt="Pradeep Sharma" loading="lazy"><div><div class="pn">Pradeep Sharma</div><div class="pr">Head of School</div><div class="pe"><a class="lnk" href="mailto:pradeep.sharma@fwgs.in">pradeep.sharma@fwgs.in</a></div></div></div>
+              </div>
+            </div>
+          </details>
+
+          <details class="tile">
+            <summary>
+              <span class="tile-icon badge">PYP</span>
+              <span class="tile-head"><span class="tile-title">PYP · Grade 1–3</span><span class="tile-sum">Anisha Law → Hetal Ahivasi → Pradeep Sharma</span></span>
+              <span class="tile-chev" aria-hidden="true">+</span>
+            </summary>
+            <div class="tile-body">
+              <div class="ladder">
+                <div class="person"><img class="ph" src="assets/images/Leadership Team Photos/AnishLaw.jpg" alt="Anisha Law" loading="lazy"><div><div class="pn">Anisha Law</div><div class="pr">PYP Team Leader · Grade 1–3</div><div class="pe"><a class="lnk" href="mailto:anisha.law@fwgs.in">anisha.law@fwgs.in</a></div></div></div>
+                <span class="arr" aria-hidden="true">→</span>
+                <div class="person"><img class="ph" src="assets/images/Leadership Team Photos/HetalAhivasi.jpg" alt="Hetal Ahivasi" loading="lazy"><div><div class="pn">Hetal Ahivasi</div><div class="pr">PYP Coordinator</div><div class="pe"><a class="lnk" href="mailto:hetal.ahivasi@fwgs.in">hetal.ahivasi@fwgs.in</a></div></div></div>
+                <span class="arr" aria-hidden="true">→</span>
+                <div class="person"><img class="ph" src="assets/images/Leadership Team Photos/PradeepSharma.jpg" alt="Pradeep Sharma" loading="lazy"><div><div class="pn">Pradeep Sharma</div><div class="pr">Head of School</div><div class="pe"><a class="lnk" href="mailto:pradeep.sharma@fwgs.in">pradeep.sharma@fwgs.in</a></div></div></div>
+              </div>
+            </div>
+          </details>
+
+          <details class="tile">
+            <summary>
+              <span class="tile-icon badge">PYP</span>
+              <span class="tile-head"><span class="tile-title">PYP · Grade 4–5</span><span class="tile-sum">Zarina Khan → Hetal Ahivasi → Pradeep Sharma</span></span>
+              <span class="tile-chev" aria-hidden="true">+</span>
+            </summary>
+            <div class="tile-body">
+              <div class="ladder">
+                <div class="person"><img class="ph" src="assets/images/Leadership Team Photos/ZarinaKhan.jpg" alt="Zarina Khan" loading="lazy"><div><div class="pn">Zarina Khan</div><div class="pr">PYP Team Leader · Grade 4–5</div><div class="pe"><a class="lnk" href="mailto:zarina.khan@fwgs.in">zarina.khan@fwgs.in</a></div></div></div>
+                <span class="arr" aria-hidden="true">→</span>
+                <div class="person"><img class="ph" src="assets/images/Leadership Team Photos/HetalAhivasi.jpg" alt="Hetal Ahivasi" loading="lazy"><div><div class="pn">Hetal Ahivasi</div><div class="pr">PYP Coordinator</div><div class="pe"><a class="lnk" href="mailto:hetal.ahivasi@fwgs.in">hetal.ahivasi@fwgs.in</a></div></div></div>
+                <span class="arr" aria-hidden="true">→</span>
+                <div class="person"><img class="ph" src="assets/images/Leadership Team Photos/PradeepSharma.jpg" alt="Pradeep Sharma" loading="lazy"><div><div class="pn">Pradeep Sharma</div><div class="pr">Head of School</div><div class="pe"><a class="lnk" href="mailto:pradeep.sharma@fwgs.in">pradeep.sharma@fwgs.in</a></div></div></div>
+              </div>
+            </div>
+          </details>
+
+          <details class="tile">
+            <summary>
+              <span class="tile-icon badge">MYP</span>
+              <span class="tile-head"><span class="tile-title">MYP</span><span class="tile-sum">Vichitra Parmal → Pradeep Sharma</span></span>
+              <span class="tile-chev" aria-hidden="true">+</span>
+            </summary>
+            <div class="tile-body">
+              <div class="ladder">
+                <div class="person"><img class="ph" src="assets/images/Leadership Team Photos/VichitraParmal.jpg" alt="Vichitra Parmal" loading="lazy"><div><div class="pn">Vichitra Parmal</div><div class="pr">MYP Coordinator</div><div class="pe"><a class="lnk" href="mailto:vichitra.parmal@fwgs.in">vichitra.parmal@fwgs.in</a></div></div></div>
+                <span class="arr" aria-hidden="true">→</span>
+                <div class="person"><img class="ph" src="assets/images/Leadership Team Photos/PradeepSharma.jpg" alt="Pradeep Sharma" loading="lazy"><div><div class="pn">Pradeep Sharma</div><div class="pr">Head of School</div><div class="pe"><a class="lnk" href="mailto:pradeep.sharma@fwgs.in">pradeep.sharma@fwgs.in</a></div></div></div>
+              </div>
+            </div>
+          </details>
+
+          <details class="tile">
+            <summary>
+              <span class="tile-icon badge">DP</span>
+              <span class="tile-head"><span class="tile-title">DP</span><span class="tile-sum">Bhavana Goraksha → Pradeep Sharma</span></span>
+              <span class="tile-chev" aria-hidden="true">+</span>
+            </summary>
+            <div class="tile-body">
+              <div class="ladder">
+                <div class="person"><img class="ph" src="assets/images/Leadership Team Photos/BhavanaGoraksha.jpg" alt="Bhavana Goraksha" loading="lazy"><div><div class="pn">Bhavana Goraksha</div><div class="pr">DP Coordinator</div><div class="pe"><a class="lnk" href="mailto:bhavana.goraksha@fwgs.in">bhavana.goraksha@fwgs.in</a></div></div></div>
+                <span class="arr" aria-hidden="true">→</span>
+                <div class="person"><img class="ph" src="assets/images/Leadership Team Photos/PradeepSharma.jpg" alt="Pradeep Sharma" loading="lazy"><div><div class="pn">Pradeep Sharma</div><div class="pr">Head of School</div><div class="pe"><a class="lnk" href="mailto:pradeep.sharma@fwgs.in">pradeep.sharma@fwgs.in</a></div></div></div>
+              </div>
+            </div>
+          </details>
+
+          <details class="tile">
+            <summary>
+              <span class="tile-icon badge">CBSE</span>
+              <span class="tile-head"><span class="tile-title">CBSE</span><span class="tile-sum">Farhat Khan → Abhijit Dive → Pradeep Sharma</span></span>
+              <span class="tile-chev" aria-hidden="true">+</span>
+            </summary>
+            <div class="tile-body">
+              <div class="ladder">
+                <div class="person"><img class="ph" src="assets/images/Leadership Team Photos/FarhatKhan.jpg" alt="Farhat Khan" loading="lazy"><div><div class="pn">Farhat Khan</div><div class="pr">CBSE &amp; IB Processes Coordinator</div><div class="pe"><a class="lnk" href="mailto:farhat.khan@fwgs.in">farhat.khan@fwgs.in</a></div></div></div>
+                <span class="arr" aria-hidden="true">→</span>
+                <div class="person"><img class="ph" src="assets/images/Leadership Team Photos/AbhijitDave.jpg" alt="Abhijit Dive" loading="lazy"><div><div class="pn">Abhijit Dive</div><div class="pr">CBSE Principal &amp; Head of Admin</div><div class="pe"><a class="lnk" href="mailto:abhijit.dive@fwgs.in">abhijit.dive@fwgs.in</a></div></div></div>
+                <span class="arr" aria-hidden="true">→</span>
+                <div class="person"><img class="ph" src="assets/images/Leadership Team Photos/PradeepSharma.jpg" alt="Pradeep Sharma" loading="lazy"><div><div class="pn">Pradeep Sharma</div><div class="pr">Head of School</div><div class="pe"><a class="lnk" href="mailto:pradeep.sharma@fwgs.in">pradeep.sharma@fwgs.in</a></div></div></div>
+              </div>
+            </div>
+          </details>
+
+          <details class="tile">
+            <summary>
+              <span class="tile-icon badge">PE</span>
+              <span class="tile-head"><span class="tile-title">Sports &amp; PE (whole school)</span><span class="tile-sum">Shailendra Law → Pradeep Sharma</span></span>
+              <span class="tile-chev" aria-hidden="true">+</span>
+            </summary>
+            <div class="tile-body">
+              <div class="ladder">
+                <div class="person"><img class="ph" src="assets/images/Leadership Team Photos/ShailendraLaw.jpg" alt="Shailendra Law" loading="lazy"><div><div class="pn">Shailendra Law</div><div class="pr">Whole-School Sports &amp; PE Team Leader</div><div class="pe"><a class="lnk" href="mailto:shailendra.law@fwgs.in">shailendra.law@fwgs.in</a></div></div></div>
+                <span class="arr" aria-hidden="true">→</span>
+                <div class="person"><img class="ph" src="assets/images/Leadership Team Photos/PradeepSharma.jpg" alt="Pradeep Sharma" loading="lazy"><div><div class="pn">Pradeep Sharma</div><div class="pr">Head of School</div><div class="pe"><a class="lnk" href="mailto:pradeep.sharma@fwgs.in">pradeep.sharma@fwgs.in</a></div></div></div>
+              </div>
+            </div>
+          </details>
+
+          <details class="tile">
+            <summary>
+              <span class="tile-icon badge">ADM</span>
+              <span class="tile-head"><span class="tile-title">Admin (transport, food, fees, I-Card)</span><span class="tile-sum">info@fwgs.in first · escalate Kiran Kante → Abhijit Dive</span></span>
+              <span class="tile-chev" aria-hidden="true">+</span>
+            </summary>
+            <div class="tile-body">
+              <p class="group-note">For most admin questions, email <a class="lnk" href="mailto:info@fwgs.in">info@fwgs.in</a> first (see <a class="lnk" href="#pillar-inbound">How you reach us</a>). To escalate:</p>
+              <div class="ladder">
+                <div class="person"><img class="ph" src="assets/images/Leadership Team Photos/KiranKante.jpg" alt="Kiran Kante" loading="lazy"><div><div class="pn">Kiran Kante</div><div class="pr">Admin Operations Manager</div><div class="pe"><a class="lnk" href="mailto:kiran.kante@fwgs.in">kiran.kante@fwgs.in</a></div></div></div>
+                <span class="arr" aria-hidden="true">→</span>
+                <div class="person"><img class="ph" src="assets/images/Leadership Team Photos/AbhijitDave.jpg" alt="Abhijit Dive" loading="lazy"><div><div class="pn">Abhijit Dive</div><div class="pr">Head of Admin &amp; CBSE Principal</div><div class="pe"><a class="lnk" href="mailto:abhijit.dive@fwgs.in">abhijit.dive@fwgs.in</a></div></div></div>
+              </div>
+            </div>
+          </details>
+
         </div>
 
         <h4 class="sub-h">Quick reference</h4>
         <div class="qref">
           <div class="row"><span class="k">Admin queries</span><span class="v"><a class="lnk" href="mailto:info@fwgs.in">info@fwgs.in</a></span></div>
-          <div class="row"><span class="k">WhatsApp &amp; calls</span><span class="v"><a class="lnk" href="https://wa.me/919657662888">+91 96576 62888</a> — text preferred · no voice notes · calls for emergencies only</span></div>
-          <div class="row"><span class="k">Admissions &amp; Inquiries</span><span class="v"><a class="lnk" href="tel:+919274770453">+91 92747 70453</a></span></div>
+          <div class="row"><span class="k">WhatsApp &amp; calls</span><span class="v"><a class="lnk" href="https://wa.me/919657662888">9657662888</a> — text preferred · no voice notes · calls for emergencies only</span></div>
+          <div class="row"><span class="k">Admissions &amp; Inquiries</span><span class="v"><a class="lnk" href="tel:+919274770453">9274770453</a></span></div>
         </div>
         <div class="callout">
-          <p>Know someone interested in FWGS? Share our Admissions &amp; Inquiries number — <a class="lnk" href="tel:+919274770453">+91 92747 70453</a> — with friends and family.</p>
+          <p>Know someone interested in FWGS? Share our Admissions &amp; Inquiries number — <a class="lnk" href="tel:+919274770453">9274770453</a> — with friends and family.</p>
         </div>
 
         <h4 class="sub-h">Where each thing lives</h4>
@@ -878,6 +1093,138 @@
       <span>Last updated: June 2026</span>
     </div>
   </footer>
+
+  <!-- Key dates data + progressive reveal (2 months at a time) -->
+  <script>
+    window.KEYDATES = [
+      { m: "June 2026", items: [
+        ["16 Jun", "🏖️ School re-opens (EY–Gr 12) · Synergy Camp"],
+        ["20 Jun", "🎓 Parents Orientation"],
+        ["26 Jun", "🚫 Moharram · long weekend"]
+      ]},
+      { m: "July 2026", items: [
+        ["11 Jul", "📅 Working Saturday"],
+        ["18 Jul", "🎓 SLC & Goal Setting (EY/PYP/MYP) · DP Goal Setting · 📅 Sat"]
+      ]},
+      { m: "August 2026", items: [
+        ["8 Aug", "📅 Working Saturday"],
+        ["15 Aug", "🎉 Independence Day Celebration · 📅 Sat"],
+        ["22 Aug", "🎓 DP PTM · 🎉 Culmination (EY/PYP/MYP) · 📅 Sat"],
+        ["26 Aug", "🚫 Eid-e-Milad · long weekend"],
+        ["27 Aug", "🚫 Student holiday"],
+        ["28 Aug", "🚫 Rakshabandhan"]
+      ]},
+      { m: "September 2026", items: [
+        ["5 Sep", "🚫 Janmashtami"],
+        ["12 Sep", "🎓 MYP & DP Check-ins · 📅 Sat"],
+        ["14 Sep", "🚫 Ganesh Chaturthi"],
+        ["17 Sep", "🚫 Marathwada Mukti Sangram Diwas · long weekend"],
+        ["18 Sep", "🚫 Gauri Pooja"],
+        ["25 Sep", "🚫 Ganesh Visarjan"]
+      ]},
+      { m: "October 2026", items: [
+        ["2 Oct", "🚫 Gandhi Jayanti"],
+        ["10 Oct", "🎓 EY & PYP PTM · 📅 Sat"],
+        ["17 Oct", "📅 Working Saturday"],
+        ["19 Oct", "📝 Term 1 Exams begin (Grade 6–12)"],
+        ["20 Oct", "🚫 Dussehra"],
+        ["31 Oct", "🎓 EY & PYP Report Card + Goal Setting · 🎉 Light Fest"]
+      ]},
+      { m: "November 2026", items: [
+        ["1 Nov", "🏖️ Diwali vacations begin"],
+        ["8 Nov", "ℹ️ Diwali"],
+        ["16 Nov", "🏖️ School re-opens"],
+        ["24 Nov", "🚫 Gurunanak Jayanti"],
+        ["28 Nov", "🎓 MYP & DP Report Card · EY & PYP PTM"]
+      ]},
+      { m: "December 2026", items: [
+        ["5 Dec", "📅 Working Saturday"],
+        ["12 Dec", "📅 Working Saturday"],
+        ["19 Dec", "🎉 Annual Day · 📅 Sat"],
+        ["25 Dec", "🚫 Christmas · 🏖️ Winter Break begins"]
+      ]},
+      { m: "January 2027", items: [
+        ["4 Jan", "🏖️ School re-opens"],
+        ["9 Jan", "🎉 MUN (Grade 3 – MYP 8)"],
+        ["14 Jan", "🎉 Kite Fest"],
+        ["15 Jan", "🚫 Makarsankranti · long weekend"],
+        ["22 Jan", "🎉 Sports Day"],
+        ["26 Jan", "🎉 Republic Day Celebration · 📅 working day"]
+      ]},
+      { m: "February 2027", items: [
+        ["6 Feb", "🎓 EY & PYP SLC · MYP & DP Check-ins · 📅 Sat"],
+        ["13 Feb", "🎓 Exhibition — Personal Project & TOK · 📅 Sat"],
+        ["19 Feb", "📝 Study leave begins (MYP 5 & DP 2) · 🚫 Shivaji Jayanti · long weekend"]
+      ]},
+      { m: "March 2027", items: [
+        ["6 Mar", "🚫 Mahashivratri"],
+        ["10 Mar", "🚫 Ramadan Eid"],
+        ["13 Mar", "📅 Working Saturday"],
+        ["20 Mar", "long weekend for students"],
+        ["22 Mar", "🚫 Dhuleti"],
+        ["26 Mar", "🚫 Good Friday"],
+        ["31 Mar", "📝 Term 2 Exams begin (Grade 6–9 & 11)"]
+      ]},
+      { m: "April 2027", items: [
+        ["3 Apr", "🎓 Graduation Day"],
+        ["4 Apr", "🎉 Prom Night"],
+        ["7 Apr", "🚫 Gudi Padwa"],
+        ["13 Apr", "🎓 PYP Exhibition · last working day for students"],
+        ["14 Apr", "🚫 Ambedkar Jayanti"],
+        ["15 Apr", "🚫 Ramnavmi"],
+        ["24 Apr", "📝 Result Day"]
+      ]},
+      { m: "May 2027", items: [
+        ["5 May", "📝 Senior School Result Day"],
+        ["14 May", "📝 MYP Exams end"],
+        ["19 May", "📝 DP Exams end"],
+        ["20 May", "🚫 Buddh Purnima"]
+      ]}
+    ];
+    (function () {
+      var data = window.KEYDATES || [];
+      var box = document.getElementById("kd-months");
+      var btn = document.getElementById("kd-more");
+      if (!box) return;
+      data.forEach(function (mo) {
+        var sec = document.createElement("div");
+        sec.className = "kd-month kd-hidden";
+        var h = document.createElement("h4");
+        h.textContent = mo.m;
+        sec.appendChild(h);
+        var list = document.createElement("div");
+        list.className = "kd-list";
+        mo.items.forEach(function (it) {
+          var row = document.createElement("div");
+          row.className = "kd-item";
+          var w = document.createElement("span");
+          w.className = "kd-when";
+          w.textContent = it[0];
+          var t = document.createElement("span");
+          t.className = "kd-what";
+          t.textContent = it[1];
+          row.appendChild(w);
+          row.appendChild(t);
+          list.appendChild(row);
+        });
+        sec.appendChild(list);
+        box.appendChild(sec);
+      });
+      var months = box.querySelectorAll(".kd-month");
+      var STEP = 2, shown = 0;
+      function more() {
+        for (var i = 0; i < STEP && shown < months.length; i++) {
+          months[shown].classList.remove("kd-hidden");
+          shown++;
+        }
+        if (!btn) return;
+        if (shown >= months.length) { btn.style.display = "none"; }
+        else { btn.textContent = "Show more dates (" + (months.length - shown) + " more months) →"; }
+      }
+      if (btn) btn.addEventListener("click", more);
+      more();
+    })();
+  </script>
 
   <script src="assets/resources.js"></script>
 </body>
