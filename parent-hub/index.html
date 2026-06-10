@@ -288,12 +288,19 @@
   .group-note{ color:var(--ink-soft); font-size:14.5px; margin:0 0 18px; }
 
   /* ---- key dates ---- */
-  .kd-legend{ font-size:13px; color:var(--ink-soft); margin:0 0 20px; }
-  .kd-month{ margin:0 0 20px; }
-  .kd-month > h4{ font-family:var(--display); font-weight:600; font-size:18px; margin:0 0 10px; padding-bottom:7px; border-bottom:1px solid var(--rule); }
-  .kd-list{ display:grid; gap:7px; }
+  .kd-legend{ font-size:13px; color:var(--ink-soft); margin:0 0 5px; }
+  .kd-note{ font-size:12.5px; font-style:italic; color:var(--ink-faint); margin:0 0 20px; }
+  details.kd-month{ border-bottom:1px solid var(--rule); }
+  details.kd-month > summary{ list-style:none; cursor:pointer; display:flex; align-items:center; gap:10px; padding:13px 2px; font-family:var(--display); font-weight:600; font-size:18px; }
+  details.kd-month > summary::-webkit-details-marker{ display:none; }
+  details.kd-month > summary::after{ content:"+"; margin-left:auto; color:var(--accent); font-weight:400; font-size:21px; line-height:1; }
+  details.kd-month[open] > summary::after{ content:"–"; }
+  details.kd-month .kd-count{ font-family:var(--mono); font-size:11.5px; font-weight:600; color:var(--ink-faint); }
+  .kd-list{ display:grid; gap:7px; padding:2px 2px 16px; }
   .kd-item{ display:flex; gap:14px; align-items:baseline; }
-  .kd-item .kd-when{ font-family:var(--mono); font-size:12.5px; color:var(--accent); font-weight:600; min-width:84px; flex:none; }
+  .kd-item .kd-when{ font-family:var(--mono); font-size:12.5px; color:var(--ink-soft); font-weight:600; min-width:96px; flex:none; }
+  .kd-when .dow{ color:var(--ink-faint); }
+  .kd-when .dow.sat{ color:var(--accent); }
   .kd-item .kd-what{ font-size:14.5px; }
   .kd-hidden{ display:none; }
 
@@ -322,7 +329,7 @@
     .ladder{ flex-direction:column; align-items:stretch; }
     .ladder .arr{ transform:rotate(90deg); align-self:flex-start; margin:1px 0 1px 22px; }
     .person{ min-width:0; }
-    .kd-item .kd-when{ min-width:74px; }
+    .kd-item .kd-when{ min-width:88px; }
   }
   @media (max-width:560px){
     .nav-links{ display:none; }               /* single scrollable page; logo stays */
@@ -597,7 +604,8 @@
 
       <!-- Key dates (rendered by the inline script before </body>) -->
       <h3 style="font-family:var(--display);font-weight:600;font-size:24px;margin:0 0 6px;">Key dates</h3>
-      <p class="kd-legend">🎓 parent event · 📝 exam · 🏖️ vacation / re-open · 🎉 school event · 🚫 holiday (closed) · 📅 working Saturday. Full detail is in the programme calendars below.</p>
+      <p class="kd-legend">🎓 parent event · 📝 exam · 🏖️ vacation / re-open · 🎉 school event · 🚫 holiday (closed)</p>
+      <p class="kd-note">Saturdays are highlighted — many parent events fall on a Saturday. Full month-by-month detail is in the programme calendars below.</p>
       <div id="kd-months"></div>
       <button id="kd-more" class="pill-link plain" type="button">Show more dates →</button>
 
@@ -671,7 +679,18 @@
       <p class="sec-eyebrow">Staying in touch</p>
       <h2 class="sec-title">How we communicate</h2>
       <p class="sec-intro">How the school reaches you, how you reach us, and who to contact for what. Start with the four pillars below, then dive into the details.</p>
-      <figure class="sec-media">
+
+      <h3 style="font-family:var(--display);font-weight:600;font-size:21px;margin:6px 0 12px;">Where to find what</h3>
+      <div class="qref">
+        <div class="row"><span class="k">Homework &amp; materials</span><span class="v"><a class="lnk" data-resource="google-classroom">Google Classroom</a></span></div>
+        <div class="row"><span class="k">Announcements, fees &amp; forms</span><span class="v"><a class="lnk" data-resource="nucleus">Nucleus</a></span></div>
+        <div class="row"><span class="k">Daily timetable</span><span class="v"><a class="lnk" data-resource="asc-timetable">ASC Timetable</a></span></div>
+        <div class="row"><span class="k">1:1 with a teacher</span><span class="v"><a class="lnk" href="#pillar-email">Your school email</a></span></div>
+        <div class="row"><span class="k">Admin queries</span><span class="v"><a class="lnk" href="mailto:info@fwgs.in">info@fwgs.in</a></span></div>
+        <div class="row"><span class="k">Who to contact</span><span class="v"><a class="lnk" href="#pillar-contacts">Staff directory &amp; ladders</a></span></div>
+      </div>
+
+      <figure class="sec-media" style="margin-top:36px;">
         <img src="assets/images/2N0A7146.jpg" alt="A teacher in conversation with two students on campus" loading="lazy">
       </figure>
 
@@ -1010,14 +1029,6 @@
           <p>Know someone interested in FWGS? Share our Admissions &amp; Inquiries number — <a class="lnk" href="tel:+919274770453">9274770453</a> — with friends and family.</p>
         </div>
 
-        <h4 class="sub-h">Where each thing lives</h4>
-        <div class="qref">
-          <div class="row"><span class="k">Homework &amp; materials</span><span class="v">Google Classroom</span></div>
-          <div class="row"><span class="k">Announcements, fees &amp; forms</span><span class="v">Nucleus</span></div>
-          <div class="row"><span class="k">Daily timetable</span><span class="v">ASC Timetable</span></div>
-          <div class="row"><span class="k">1:1 with a teacher</span><span class="v">School email</span></div>
-          <div class="row"><span class="k">Admin queries</span><span class="v"><a class="lnk" href="mailto:info@fwgs.in">info@fwgs.in</a></span></div>
-        </div>
       </div>
     </div>
   </section>
@@ -1094,127 +1105,117 @@
     </div>
   </footer>
 
-  <!-- Key dates data + progressive reveal (2 months at a time) -->
+  <!-- Key dates: ISO date + label → grouped into collapsible months, 2 revealed at a time -->
   <script>
     window.KEYDATES = [
-      { m: "June 2026", items: [
-        ["16 Jun", "🏖️ School re-opens (EY–Gr 12) · Synergy Camp"],
-        ["20 Jun", "🎓 Parents Orientation"],
-        ["26 Jun", "🚫 Moharram · long weekend"]
-      ]},
-      { m: "July 2026", items: [
-        ["11 Jul", "📅 Working Saturday"],
-        ["18 Jul", "🎓 SLC & Goal Setting (EY/PYP/MYP) · DP Goal Setting · 📅 Sat"]
-      ]},
-      { m: "August 2026", items: [
-        ["8 Aug", "📅 Working Saturday"],
-        ["15 Aug", "🎉 Independence Day Celebration · 📅 Sat"],
-        ["22 Aug", "🎓 DP PTM · 🎉 Culmination (EY/PYP/MYP) · 📅 Sat"],
-        ["26 Aug", "🚫 Eid-e-Milad · long weekend"],
-        ["27 Aug", "🚫 Student holiday"],
-        ["28 Aug", "🚫 Rakshabandhan"]
-      ]},
-      { m: "September 2026", items: [
-        ["5 Sep", "🚫 Janmashtami"],
-        ["12 Sep", "🎓 MYP & DP Check-ins · 📅 Sat"],
-        ["14 Sep", "🚫 Ganesh Chaturthi"],
-        ["17 Sep", "🚫 Marathwada Mukti Sangram Diwas · long weekend"],
-        ["18 Sep", "🚫 Gauri Pooja"],
-        ["25 Sep", "🚫 Ganesh Visarjan"]
-      ]},
-      { m: "October 2026", items: [
-        ["2 Oct", "🚫 Gandhi Jayanti"],
-        ["10 Oct", "🎓 EY & PYP PTM · 📅 Sat"],
-        ["17 Oct", "📅 Working Saturday"],
-        ["19 Oct", "📝 Term 1 Exams begin (Grade 6–12)"],
-        ["20 Oct", "🚫 Dussehra"],
-        ["31 Oct", "🎓 EY & PYP Report Card + Goal Setting · 🎉 Light Fest"]
-      ]},
-      { m: "November 2026", items: [
-        ["1 Nov", "🏖️ Diwali vacations begin"],
-        ["8 Nov", "ℹ️ Diwali"],
-        ["16 Nov", "🏖️ School re-opens"],
-        ["24 Nov", "🚫 Gurunanak Jayanti"],
-        ["28 Nov", "🎓 MYP & DP Report Card · EY & PYP PTM"]
-      ]},
-      { m: "December 2026", items: [
-        ["5 Dec", "📅 Working Saturday"],
-        ["12 Dec", "📅 Working Saturday"],
-        ["19 Dec", "🎉 Annual Day · 📅 Sat"],
-        ["25 Dec", "🚫 Christmas · 🏖️ Winter Break begins"]
-      ]},
-      { m: "January 2027", items: [
-        ["4 Jan", "🏖️ School re-opens"],
-        ["9 Jan", "🎉 MUN (Grade 3 – MYP 8)"],
-        ["14 Jan", "🎉 Kite Fest"],
-        ["15 Jan", "🚫 Makarsankranti · long weekend"],
-        ["22 Jan", "🎉 Sports Day"],
-        ["26 Jan", "🎉 Republic Day Celebration · 📅 working day"]
-      ]},
-      { m: "February 2027", items: [
-        ["6 Feb", "🎓 EY & PYP SLC · MYP & DP Check-ins · 📅 Sat"],
-        ["13 Feb", "🎓 Exhibition — Personal Project & TOK · 📅 Sat"],
-        ["19 Feb", "📝 Study leave begins (MYP 5 & DP 2) · 🚫 Shivaji Jayanti · long weekend"]
-      ]},
-      { m: "March 2027", items: [
-        ["6 Mar", "🚫 Mahashivratri"],
-        ["10 Mar", "🚫 Ramadan Eid"],
-        ["13 Mar", "📅 Working Saturday"],
-        ["20 Mar", "long weekend for students"],
-        ["22 Mar", "🚫 Dhuleti"],
-        ["26 Mar", "🚫 Good Friday"],
-        ["31 Mar", "📝 Term 2 Exams begin (Grade 6–9 & 11)"]
-      ]},
-      { m: "April 2027", items: [
-        ["3 Apr", "🎓 Graduation Day"],
-        ["4 Apr", "🎉 Prom Night"],
-        ["7 Apr", "🚫 Gudi Padwa"],
-        ["13 Apr", "🎓 PYP Exhibition · last working day for students"],
-        ["14 Apr", "🚫 Ambedkar Jayanti"],
-        ["15 Apr", "🚫 Ramnavmi"],
-        ["24 Apr", "📝 Result Day"]
-      ]},
-      { m: "May 2027", items: [
-        ["5 May", "📝 Senior School Result Day"],
-        ["14 May", "📝 MYP Exams end"],
-        ["19 May", "📝 DP Exams end"],
-        ["20 May", "🚫 Buddh Purnima"]
-      ]}
+      {d:"2026-06-16", t:"🏖️ School re-opens (EY–Gr 12) · Synergy Camp"},
+      {d:"2026-06-20", t:"🎓 Parents Orientation"},
+      {d:"2026-06-26", t:"🚫 Moharram · long weekend"},
+      {d:"2026-07-11", t:"Working Saturday"},
+      {d:"2026-07-18", t:"🎓 SLC & Goal Setting (EY/PYP/MYP) · DP Goal Setting"},
+      {d:"2026-08-08", t:"Working Saturday"},
+      {d:"2026-08-15", t:"🎉 Independence Day Celebration"},
+      {d:"2026-08-22", t:"🎓 DP PTM · 🎉 Culmination (EY/PYP/MYP)"},
+      {d:"2026-08-26", t:"🚫 Eid-e-Milad · long weekend"},
+      {d:"2026-08-27", t:"🚫 Student holiday"},
+      {d:"2026-08-28", t:"🚫 Rakshabandhan"},
+      {d:"2026-09-05", t:"🚫 Janmashtami"},
+      {d:"2026-09-12", t:"🎓 MYP & DP Check-ins"},
+      {d:"2026-09-14", t:"🚫 Ganesh Chaturthi"},
+      {d:"2026-09-17", t:"🚫 Marathwada Mukti Sangram Diwas · long weekend"},
+      {d:"2026-09-18", t:"🚫 Gauri Pooja"},
+      {d:"2026-09-25", t:"🚫 Ganesh Visarjan"},
+      {d:"2026-10-02", t:"🚫 Gandhi Jayanti"},
+      {d:"2026-10-10", t:"🎓 EY & PYP PTM"},
+      {d:"2026-10-17", t:"Working Saturday"},
+      {d:"2026-10-19", t:"📝 Term 1 Exams begin (Grade 6–12)"},
+      {d:"2026-10-20", t:"🚫 Dussehra"},
+      {d:"2026-10-31", t:"🎓 EY & PYP Report Card + Goal Setting · 🎉 Light Fest"},
+      {d:"2026-11-01", t:"🏖️ Diwali vacations begin"},
+      {d:"2026-11-08", t:"ℹ️ Diwali"},
+      {d:"2026-11-16", t:"🏖️ School re-opens"},
+      {d:"2026-11-24", t:"🚫 Gurunanak Jayanti"},
+      {d:"2026-11-28", t:"🎓 MYP & DP Report Card · EY & PYP PTM"},
+      {d:"2026-12-05", t:"Working Saturday"},
+      {d:"2026-12-12", t:"Working Saturday"},
+      {d:"2026-12-19", t:"🎉 Annual Day"},
+      {d:"2026-12-25", t:"🚫 Christmas · 🏖️ Winter Break begins"},
+      {d:"2027-01-04", t:"🏖️ School re-opens"},
+      {d:"2027-01-09", t:"🎉 MUN (Grade 3 – MYP 8)"},
+      {d:"2027-01-14", t:"🎉 Kite Fest"},
+      {d:"2027-01-15", t:"🚫 Makarsankranti · long weekend"},
+      {d:"2027-01-22", t:"🎉 Sports Day"},
+      {d:"2027-01-26", t:"🎉 Republic Day Celebration"},
+      {d:"2027-02-06", t:"🎓 EY & PYP SLC · MYP & DP Check-ins"},
+      {d:"2027-02-13", t:"🎓 Exhibition — Personal Project & TOK"},
+      {d:"2027-02-19", t:"📝 Study leave begins (MYP 5 & DP 2) · 🚫 Shivaji Jayanti · long weekend"},
+      {d:"2027-03-06", t:"🚫 Mahashivratri"},
+      {d:"2027-03-10", t:"🚫 Ramadan Eid"},
+      {d:"2027-03-13", t:"Working Saturday"},
+      {d:"2027-03-20", t:"long weekend for students"},
+      {d:"2027-03-22", t:"🚫 Dhuleti"},
+      {d:"2027-03-26", t:"🚫 Good Friday"},
+      {d:"2027-03-31", t:"📝 Term 2 Exams begin (Grade 6–9 & 11)"},
+      {d:"2027-04-03", t:"🎓 Graduation Day"},
+      {d:"2027-04-04", t:"🎉 Prom Night"},
+      {d:"2027-04-07", t:"🚫 Gudi Padwa"},
+      {d:"2027-04-13", t:"🎓 PYP Exhibition · last working day for students"},
+      {d:"2027-04-14", t:"🚫 Ambedkar Jayanti"},
+      {d:"2027-04-15", t:"🚫 Ramnavmi"},
+      {d:"2027-04-24", t:"📝 Result Day"},
+      {d:"2027-05-05", t:"📝 Senior School Result Day"},
+      {d:"2027-05-14", t:"📝 MYP Exams end"},
+      {d:"2027-05-19", t:"📝 DP Exams end"},
+      {d:"2027-05-20", t:"🚫 Buddh Purnima"}
     ];
     (function () {
       var data = window.KEYDATES || [];
       var box = document.getElementById("kd-months");
       var btn = document.getElementById("kd-more");
       if (!box) return;
-      data.forEach(function (mo) {
-        var sec = document.createElement("div");
-        sec.className = "kd-month kd-hidden";
-        var h = document.createElement("h4");
-        h.textContent = mo.m;
-        sec.appendChild(h);
+      var WD = ["Sun","Mon","Tue","Wed","Thu","Fri","Sat"];
+      var MO = ["January","February","March","April","May","June","July","August","September","October","November","December"];
+      var MOS = ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
+      var groups = [], byKey = {};
+      data.forEach(function (e) {
+        var p = e.d.split("-"), y = +p[0], mi = +p[1] - 1, day = +p[2];
+        var key = y + "-" + mi;
+        if (!byKey[key]) { byKey[key] = { y: y, mi: mi, items: [] }; groups.push(byKey[key]); }
+        byKey[key].items.push({ mi: mi, day: day, dow: new Date(y, mi, day).getDay(), t: e.t });
+      });
+      groups.forEach(function (g) {
+        var det = document.createElement("details");
+        det.className = "kd-month kd-hidden";
+        var sm = document.createElement("summary");
+        var label = document.createElement("span");
+        label.textContent = MO[g.mi] + " " + g.y;
+        var cnt = document.createElement("span");
+        cnt.className = "kd-count";
+        cnt.textContent = g.items.length + (g.items.length === 1 ? " date" : " dates");
+        sm.appendChild(label); sm.appendChild(cnt);
+        det.appendChild(sm);
         var list = document.createElement("div");
         list.className = "kd-list";
-        mo.items.forEach(function (it) {
-          var row = document.createElement("div");
-          row.className = "kd-item";
-          var w = document.createElement("span");
-          w.className = "kd-when";
-          w.textContent = it[0];
-          var t = document.createElement("span");
-          t.className = "kd-what";
-          t.textContent = it[1];
-          row.appendChild(w);
-          row.appendChild(t);
+        g.items.forEach(function (it) {
+          var row = document.createElement("div"); row.className = "kd-item";
+          var when = document.createElement("span"); when.className = "kd-when";
+          var dow = document.createElement("span"); dow.className = "dow" + (it.dow === 6 ? " sat" : "");
+          dow.textContent = WD[it.dow];
+          when.appendChild(dow);
+          when.appendChild(document.createTextNode(" " + it.day + " " + MOS[it.mi]));
+          var what = document.createElement("span"); what.className = "kd-what"; what.textContent = it.t;
+          row.appendChild(when); row.appendChild(what);
           list.appendChild(row);
         });
-        sec.appendChild(list);
-        box.appendChild(sec);
+        det.appendChild(list);
+        box.appendChild(det);
       });
       var months = box.querySelectorAll(".kd-month");
       var STEP = 2, shown = 0;
       function more() {
         for (var i = 0; i < STEP && shown < months.length; i++) {
           months[shown].classList.remove("kd-hidden");
+          months[shown].setAttribute("open", "");
           shown++;
         }
         if (!btn) return;

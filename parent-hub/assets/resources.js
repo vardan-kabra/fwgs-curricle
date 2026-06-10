@@ -96,6 +96,12 @@ window.FWGS_RESOURCES = {
     url: "https://classroom.google.com/"
   },
 
+  "asc-timetable": {
+    title: "ASC Timetable",
+    type: "url",
+    url: "https://fwgs.edupage.org/timetable/"
+  },
+
   // — more entries added as links are shared —
 };
 

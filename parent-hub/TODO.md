@@ -131,6 +131,13 @@ Raw comments from the review thread + where each is tracked (this is an index, n
 ---
 
 ## ✅ Done
+- **Batch build (2026-06-10)** — verified on preview, **pending commit**:
+  - Quick fixes: email card → `p.firstname.lastname@fwgs.in`; phone display digits-only (`9657662888` / `9274770453`, `tel:`/`wa.me` hrefs keep `+91`).
+  - **School Timings** tile (8–3 Mon–Fri, working Saturdays, holidays).
+  - **Getting-started** checklist + app links: `nucleus`, `google-classroom`, `asc-timetable` (registry `url` entries); school-email = Google sign-in.
+  - **Who-to-contact** rebuilt as openable per-programme ladders with 21 photo cards (Directors + HoS apex). Tables removed.
+  - **Key dates** in Calendars: collapsible months (`<details>`), **weekday shown + Saturdays highlighted**, 2-months-at-a-time reveal, `📅 Sat` tags dropped, legend split.
+  - **"Where each thing lives"** → moved to top of Communication as linked **"Where to find what"** router; bottom copy removed.
 - **Bus routes** → linked to the live finder (`fsk-apps.pages.dev/buses`) via the `bus-routes` registry entry.
 - **Student-email grade boundary** → confirmed **Grade 6 and above** (was TBC, 5-or-6).
 - **`index.html` full build** (hero · tiles · calendars · communication · get involved · hidden FAQ) — shipped 2026-06-09, commit `62682ed`.
