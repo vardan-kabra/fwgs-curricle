@@ -61,6 +61,16 @@ group(s) they serve — no repeated directory table.
 
 ---
 
+### 2.3 — Hero copy
+- 🔭 Hero headline **"Your parent hub for the year ahead"** → **"Your hub for the year ahead"** (the page is for parents anyway; drop the redundant "parent"). One-line copy change.
+
+### 2.4 — Timetable card in Essentials (more prominence)
+- 🔭 Add a card in **Essentials** for the **ASC Timetable** (`asc-timetable` → `fwgs.edupage.org/timetable/`) showing an **embedded view** of the link.
+  Intro copy: *"Open the link and select your Child's Grade / Section to view the TT. Any updates made to the TT will be published from the same link."*
+  ⚠ Verify edupage allows iframe embedding (X-Frame-Options / CSP). If it blocks framing, fall back to a prominent button/link instead of an inline iframe.
+
+---
+
 ## 3 · Future separate page — `parent-hub/academics.html`
 Academic content (separate build; see `SPEC.md`). Registry slugs already reserved:
 `pyp-brochure`, `myp-brochure`, `dp-brochure`. Still needs:

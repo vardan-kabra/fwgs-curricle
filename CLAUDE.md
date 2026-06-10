@@ -11,7 +11,7 @@ One GitHub repo (`fwgs-curricle`), two **independent static apps** under it, eac
 
 No build step, no `npm install`, no bundler. Pages are plain HTML loading vanilla JS that exposes globals (`window.FWGS_CONFIG`, `window.FWGS_RESOURCES`, `window.FWGSLiveData`, `window.FWGSResources`). Editing a JS file in an `assets/` folder IS the deploy step.
 
-Both apps deploy together to **GitHub Pages from `main` branch root**. Public URL pattern: `https://vardan-kabra.github.io/fwgs-curricle/<app>/<page>.html`.
+Both apps deploy to **Cloudflare Pages** from the `main` branch root — **auto-deploy on every push** (a Pages project connected to the GitHub repo; no build step, build output = repo root). Live URL pattern: `https://fwgs-curricle.pages.dev/<app>/<page>.html` — this is the URL the parent-facing Google Site embeds. (GitHub Pages at `vardan-kabra.github.io/fwgs-curricle/...` was the original host and may still be enabled as a fallback. A Cloudflare **Worker** + Git was tried first and abandoned — a Worker needs a `wrangler` config to deploy; Pages serves the static files with zero config.)
 
 ## Common commands
 
@@ -28,7 +28,7 @@ node tools/validate-meals.mjs             # validate meals fixture against spec
 node tools/validate-buses.mjs             # validate buses fixture against spec
 
 # Publish to live site
-git add -A && git commit -m "..." && git push    # GitHub Pages rebuilds in ~1 min
+git add -A && git commit -m "..." && git push    # Cloudflare Pages auto-deploys in ~1 min
 ```
 
 Each `serve.mjs` resolves its own root as `..` from its location, so server for one app cannot serve files from the other — they are isolated by design.
