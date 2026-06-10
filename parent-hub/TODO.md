@@ -45,15 +45,19 @@ Add `resources.js` `url`-type entries, then surface as buttons/links in the rele
   (4) save the school WhatsApp number. Natural home: top of the Communication section or
   Pillar 1; reuses the app links above. Build with this batch.
 
-### 2.2 — "Who to contact" → organogram  *(Pillar 4 redesign)*
-- 🔭 Replace / augment the current **escalation-ladder table + full directory table** with an
-  **organogram (org chart)** — the two tables currently repeat the same people, and a chart
-  removes that repetition while showing reporting lines at a glance.
-- 🔭 Add **Directors** at the top of the chart.
-  Director email: **directors@fountainheadschools.org**
-  ⚠️ Domain is **fountainheadschools.org**, *not* `fwgs.in` like the rest of the staff — keep it as written.
-- 📷 **Leadership Team Photos** received — folder `parent-hub/assets/images/Leadership Team Photos/`
-  (untracked locally, not yet committed). These are the headshots for the organogram.
+### 2.2 — "Who to contact" → openable per-programme ladders  *(Pillar 4 redesign)*
+**Decided 2026-06-10:** replace the two repeating tables (escalation ladder + full directory) with a
+**collapsed, openable "Who to contact"** that expands to **programme/area groups** (PYP EY, PYP 1–3,
+PYP 4–5, MYP, DP, CBSE, Sports & PE, Admin). Each group shows its escalation path as **photo cards**
+(teacher → TL → Coordinator → HoS) with role + `mailto:`. Single-source: each person appears in the
+group(s) they serve — no repeated directory table.
+- 📷 Photos **committed** → `parent-hub/assets/images/Leadership Team Photos/` (11 files, name-based).
+  ⚠ Filenames `AbhijitDave.jpg`, `AnishLaw.jpg` differ from directory spellings "Abhijit **Dive**",
+  "**Anisha** Law" — confirm correct display spelling; map name→file in code.
+- ✅ Public exposure confirmed OK (faces + names + emails on the public URL).
+- 🔭 **Directors** at the top. Email **directors@fountainheadschools.org**
+  ⚠️ domain is **fountainheadschools.org**, *not* `fwgs.in`. ❓ Need Director name(s) + placement.
+- ❓ Ladders inferred from Pillar 4's existing table; confirm reporting structure + Directors placement.
 
 ---
 
