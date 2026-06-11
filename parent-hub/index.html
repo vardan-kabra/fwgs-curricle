@@ -304,6 +304,20 @@
   .kd-item .kd-what{ font-size:14.5px; }
   .kd-hidden{ display:none; }
 
+  /* ---- do / don't two-column (policy blocks) ---- */
+  .dd{ display:grid; grid-template-columns:1fr 1fr; gap:14px; margin:16px 0 0; }
+  .dd-col{ border:1px solid var(--rule); border-radius:12px; padding:16px 18px; }
+  .dd-col.do{ background:var(--accent-soft); border-color:#bfe0d3; }
+  .dd-col.dont{ background:var(--warn-soft); border-color:#eccabf; }
+  .dd-col h5{ font-size:12px; font-weight:700; letter-spacing:.05em; text-transform:uppercase; margin:0 0 8px; }
+  .dd-col.do h5{ color:var(--accent); }
+  .dd-col.dont h5{ color:var(--warn); }
+  .dd-col ul{ margin:0; padding-left:17px; }
+  .dd-col ul li{ margin:5px 0; font-size:13.5px; color:var(--ink-soft); }
+  /* plain bulleted list inside a tile body (global reset strips default padding) */
+  .t-list{ margin:8px 0 0; padding-left:20px; }
+  .t-list li{ margin:5px 0; font-size:14.5px; color:var(--ink-soft); }
+
   /* ---- mobile ---- */
   @media (max-width:768px){
     :root{ --nav-h:66px; }
@@ -330,6 +344,7 @@
     .ladder .arr{ transform:rotate(90deg); align-self:flex-start; margin:1px 0 1px 22px; }
     .person{ min-width:0; }
     .kd-item .kd-when{ min-width:88px; }
+    .dd{ grid-template-columns:1fr; }
   }
   @media (max-width:560px){
     .nav-links{ display:none; }               /* single scrollable page; logo stays */
@@ -364,6 +379,12 @@
     <symbol id="ic-clock" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
       <circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/>
     </symbol>
+    <symbol id="ic-shield" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+    </symbol>
+    <symbol id="ic-bag" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><path d="M3 6h18"/><path d="M16 10a4 4 0 0 1-8 0"/>
+    </symbol>
   </svg>
 
   <!-- ============ TOP NAV ============ -->
@@ -394,7 +415,7 @@
     <div class="inner">
       <p class="sec-eyebrow">The basics</p>
       <h2 class="sec-title">Everyday essentials</h2>
-      <p class="sec-intro">Tap any card to open it. School timings, uniform, food, and transport are ready now — more day-to-day topics will appear here as the year gets underway.</p>
+      <p class="sec-intro">Tap any card to open it. We'll keep adding more day-to-day topics here as the year gets underway.</p>
 
       <figure class="sec-media">
         <img src="assets/images/2N0A7073.jpg" alt="A teacher greeting students arriving at school" loading="lazy">
@@ -414,7 +435,7 @@
           </summary>
           <div class="tile-body">
             <p class="tile-note"><strong>8:00 AM – 3:00 PM</strong>, Monday to Friday, for all students.</p>
-            <ul>
+            <ul class="t-list">
               <li>Some Saturdays are working days — these are marked in <a class="lnk" href="#calendars">Key dates</a>.</li>
               <li>The school is closed on public holidays (also listed in Key dates).</li>
             </ul>
@@ -552,40 +573,118 @@
           <div class="tile-body"><!-- content pending --></div>
         </details>
 
-        <details class="tile" id="belongings" data-status="pending">
+        <details class="tile" id="safety">
           <summary>
-            <span class="tile-icon"><svg viewBox="0 0 24 24"><use href="#ic-tag"></use></svg></span>
-            <span class="tile-head">
-              <span class="tile-title">Personal Belongings</span>
-              <span class="tile-sum">What to send, what to label, and what to leave at home.</span>
-            </span>
-            <span class="tile-chev" aria-hidden="true">+</span>
-          </summary>
-          <div class="tile-body"><!-- content pending --></div>
-        </details>
-
-        <details class="tile" id="safety" data-status="pending">
-          <summary>
-            <span class="tile-icon"><svg viewBox="0 0 24 24"><use href="#ic-tag"></use></svg></span>
+            <span class="tile-icon"><svg viewBox="0 0 24 24"><use href="#ic-shield"></use></svg></span>
             <span class="tile-head">
               <span class="tile-title">Safety &amp; Wellbeing</span>
-              <span class="tile-sum">Health, safety, and pastoral support for your child.</span>
+              <span class="tile-sum">Keeping your child physically safe and emotionally supported.</span>
             </span>
             <span class="tile-chev" aria-hidden="true">+</span>
           </summary>
-          <div class="tile-body"><!-- content pending --></div>
+          <div class="tile-body">
+            <p class="tile-note">Well-being at FWGS spans three things — <strong>physical safety, emotional health, and a positive place to learn</strong>.</p>
+
+            <h4 class="sub-h" style="margin-top:6px;">CCTV</h4>
+            <p>Cameras across campus exist for one reason: to help keep every student physically safe.</p>
+            <div class="dd">
+              <div class="dd-col do">
+                <h5>What CCTV helps us do</h5>
+                <ul>
+                  <li>Keep watch over campus grounds and discourage unsafe behaviour</li>
+                  <li>Review footage if there's a physical incident, injury, or accident</li>
+                </ul>
+              </div>
+              <div class="dd-col dont">
+                <h5>What CCTV can't do</h5>
+                <ul>
+                  <li>Trace lost or misplaced belongings (see <a class="lnk" href="#belongings-lost-found">Belongings, Lost &amp; Found</a>)</li>
+                  <li>Provide a live watch on everything, everywhere, all the time</li>
+                </ul>
+              </div>
+            </div>
+            <p class="kd-note" style="margin-top:12px;">FWGS has a large campus, so it isn't possible to cover every area fully — the most important areas are covered.</p>
+
+            <h4 class="sub-h">Physical well-being</h4>
+            <ul class="t-list">
+              <li>CCTV and trained staff across campus</li>
+              <li>A campus ambulance on hand for medical emergencies</li>
+              <li>Every physical incident is documented, and we contact you promptly</li>
+            </ul>
+
+            <h4 class="sub-h">Emotional &amp; social well-being</h4>
+            <ul class="t-list">
+              <li>A dedicated Well-Being Counsellor for all students</li>
+              <li>Teachers trained to notice early signs that a child may be struggling</li>
+              <li>A well-being culture rooted in the IB learner profile — caring, reflective, open-minded</li>
+            </ul>
+
+            <div class="person" style="margin-top:16px; max-width:440px;">
+              <img class="ph" src="assets/images/Leadership Team Photos/GauriMhase.jpg" alt="Gauri Mhase" loading="lazy">
+              <div>
+                <div class="pn">Ms. Gauri Mhase</div>
+                <div class="pr">Well-Being Counsellor — confidential support</div>
+                <div class="pe"><a class="lnk" href="mailto:gauri.mhase@fwgs.in">gauri.mhase@fwgs.in</a></div>
+              </div>
+            </div>
+
+            <div class="callout" style="margin-top:16px;">
+              <h4>What you can do</h4>
+              <p>Share any academic, social, or emotional concern with your child's class teacher — or reach out directly, in confidence, to Ms. Gauri Mhase. Every conversation stays private.</p>
+            </div>
+          </div>
         </details>
 
-        <details class="tile" id="lost-found" data-status="pending">
+        <details class="tile" id="belongings-lost-found">
           <summary>
-            <span class="tile-icon"><svg viewBox="0 0 24 24"><use href="#ic-tag"></use></svg></span>
+            <span class="tile-icon"><svg viewBox="0 0 24 24"><use href="#ic-bag"></use></svg></span>
             <span class="tile-head">
-              <span class="tile-title">Lost &amp; Found</span>
-              <span class="tile-sum">Where lost items go and how to claim them.</span>
+              <span class="tile-title">Belongings, Lost &amp; Found</span>
+              <span class="tile-sum">What to send, what to label, and what happens if something goes missing.</span>
             </span>
             <span class="tile-chev" aria-hidden="true">+</span>
           </summary>
-          <div class="tile-body"><!-- content pending --></div>
+          <div class="tile-body">
+            <p class="tile-note">We keep a dedicated Lost &amp; Found and will always help you look. A few simple habits at home make lost items far less likely — and easier to recover.</p>
+
+            <div class="dd">
+              <div class="dd-col do">
+                <h5>What we'll investigate</h5>
+                <ul>
+                  <li>Academic devices: laptops, tablets, and school-issued equipment</li>
+                  <li>May include asking around and reviewing CCTV, decided case by case</li>
+                </ul>
+              </div>
+              <div class="dd-col dont">
+                <h5>What we can't investigate</h5>
+                <ul>
+                  <li>Personal valuables: smartwatches, cash, earphones, footwear, wallets, jewellery</li>
+                  <li>Many of these aren't permitted at school anyway — if brought in and lost, we're not able to investigate</li>
+                  <li>The school can't take responsibility for personal belongings on campus</li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="callout warn" style="margin-top:14px;">
+              <p>Please note: smartwatches, mobiles, or any restricted items brought to school without authorisation will be <strong>confiscated</strong>.</p>
+            </div>
+
+            <h4 class="sub-h">If something goes missing</h4>
+            <ol class="steps">
+              <li><span class="s-t">Tell the Front Desk promptly</span></li>
+              <li><span class="s-t">The team checks Lost &amp; Found and coordinates with class teachers</span></li>
+              <li><span class="s-t">For academic devices, email <a class="lnk" href="mailto:info@fwgs.in">info@fwgs.in</a> to log an official report</span></li>
+            </ol>
+
+            <div class="callout" style="margin-top:16px;">
+              <h4>A few habits that help</h4>
+              <ul class="t-list">
+                <li>Avoid sending expensive or non-essential items to school</li>
+                <li>Label everything clearly — bags, bottles, stationery, clothing</li>
+                <li>Remind your child that their belongings are their responsibility while on campus</li>
+              </ul>
+            </div>
+          </div>
         </details>
 
       </div>

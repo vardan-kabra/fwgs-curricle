@@ -21,13 +21,13 @@
 | Item | Where | Action when ready |
 |---|---|---|
 | ⏳ PTA nomination form URL | Get Involved (`#involved`) — hidden placeholder link | Add URL (ideally a `resources.js` `url` entry) + remove `data-status="pending"` on the link |
-| ⏳ 8 topic tiles | Essentials (`#essentials`) — hidden `<details>` tiles | Add body content + a fitting icon (currently generic `#ic-tag`), remove `data-status` |
+| ⏳ 5 topic tiles (was 8) | Essentials (`#essentials`) — hidden `<details>` tiles | Add body content + a fitting icon (currently generic `#ic-tag`), remove `data-status`. **Built 2026-06-11:** Safety & Wellbeing (incl. CCTV + counsellor); Belongings, Lost & Found (merged Personal Belongings + Lost & Found). |
 | ⏳ FAQ questions | FAQ band (`#faq`) — hidden, example scaffold | Replace the example Q&As with real ones, remove `data-status` on the `#faq` band |
 | ⏳ "Last updated" footer date | Footer | Update the placeholder ("June 2026") |
 | ✅ Updated **DP calendar** (de-duplicated) | `resources.js` → `dp-academic-calendar` | **Swapped** `driveId` → `13bsdhY7v3J1OTsRQ4ZJhmseCqp9-hA1b` (corrected 2-page→clean PDF, 2026-06-10). ⚠ Verify the new file is shared "Anyone with the link" so the embed renders. |
 | ✅ **School timings** data received | new tile in Essentials (`#essentials`) | **8:00 AM – 3:00 PM, Mon–Fri.** Select Saturdays are working (marked in calendar / see key-dates). Closed on public holidays. Build the "School Timings" tile in the batch. |
 
-**The 8 hidden tiles:** I-Card & Bearer Card · Stationery · Attendance & Leave · School Visits · Birthdays · Personal Belongings · Safety & Wellbeing · Lost & Found.
+**The 5 remaining hidden tiles:** I-Card & Bearer Card · Stationery · Attendance & Leave · School Visits · Birthdays. *(Safety & Wellbeing and the merged Belongings, Lost & Found are now live.)*
 
 ---
 
@@ -141,6 +141,7 @@ Raw comments from the review thread + where each is tracked (this is an index, n
 ---
 
 ## ✅ Done
+- **Safety & Belongings build (2026-06-11)** — verified on preview, **pending commit**: enabled the **Safety & Wellbeing** tile (CCTV do/don't + large-campus note, physical/emotional well-being, Well-Being Counsellor Gauri Mhase photo card, "what you can do"); merged Personal Belongings + Lost & Found into **Belongings, Lost & Found** (investigate/won't do/don't, confiscation note, 3-step report, habits). Added `.dd` two-column policy component + `ic-shield`/`ic-bag` icons. `GauriMhase.jpg` added (commit with this).
 - **Batch build (2026-06-10)** — verified on preview, **pending commit**:
   - Quick fixes: email card → `p.firstname.lastname@fwgs.in`; phone display digits-only (`9657662888` / `9274770453`, `tel:`/`wa.me` hrefs keep `+91`).
   - **School Timings** tile (8–3 Mon–Fri, working Saturdays, holidays).
