@@ -102,6 +102,15 @@ window.FWGS_RESOURCES = {
     url: "https://fwgs.edupage.org/timetable/"
   },
 
+  // "My Bus" Apps Script web app (parent-specific bus/route).
+  // ← paste the deployed /exec URL here (see parent-hub/apps-script/README.md),
+  //   then remove data-status="pending" on the button in index.html.
+  "my-bus": {
+    title: "My Bus",
+    type: "url",
+    url: "https://script.google.com/a/macros/fountainheadschools.org/s/AKfycbw9zppWb-t6mgudkFBflbtAFLzmgvbjkpRItSdzO7b4pXaal02ZBbf5tzuPuzEMM5Jt/exec"
+  },
+
   // — more entries added as links are shared —
 };
 

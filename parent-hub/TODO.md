@@ -140,6 +140,26 @@ Raw comments from the review thread + where each is tracked (this is an index, n
 
 ---
 
+## 6 · My Bus — parent login-based bus & route  *(NEW, 2026-06-12)*
+
+Apps Script web app (`parent-hub/apps-script/`) — parent signs in → sees their child's bus + full
+route. Backend written + security-reviewed (identity is session-derived, HTML escaped, lookup keyed
+to the parent-email column only). Hub hooks added (My Bus button in Transport tile, hidden via
+`data-status="pending"` until deployed; best-effort hero greeting).
+
+**Status (2026-06-12):**
+- ✅ Deployed under `fountainheadschools.org`; `/exec` URL set in `resources.js` → `my-bus`; identity read works (same-domain).
+- ✅ Test email added (`vardan.kabra@fountainheadschools.org` → Naman Kunal Sethi).
+- ✅ **Fixed:** lookup matched the wrong column → rewrote the parser to be **header-driven + tab-auto-detecting** (finds the Email/Name columns by header; per-student stop now supported; route falls back to building from the roster when a bus is missing from the routes tab).
+- 🔭 **User: re-deploy the updated `Code.gs`** (Deploy → Manage deployments → edit → New version) and re-test Naman → should now resolve to Bus 1 + route.
+- 🔭 Once confirmed, remove `data-status="pending"` on the Transport "See my child's bus" button to go live (one-line, or I'll do it).
+- ✅ Cross-domain identity: confirmed working same-domain. For `@fwgs.in` parents, deploy under an `@fwgs.in` account; switch to Google Sign-In only if one deployment must serve both domains.
+
+**Enhancements:**
+- 🔭 **Per-student stop highlight:** the roster currently maps student → *bus* (not a specific stop). Add a clean `Stop` value per student row → I'll show their exact stop + pick-up/drop directly, highlighted in the route.
+- 🔭 **Data hygiene:** route stop-name typos are normalised in the display (e.g. school node). I can produce the full correct-at-source list on request.
+- 🔭 **Route display:** currently one stop list with pick-up + drop per stop. Option to split into explicit "morning → school" / "afternoon → home" legs if preferred.
+
 ## ✅ Done
 - **Safety & Belongings build (2026-06-11)** — verified on preview, **pending commit**: enabled the **Safety & Wellbeing** tile (CCTV do/don't + large-campus note, physical/emotional well-being, Well-Being Counsellor Gauri Mhase photo card, "what you can do"); merged Personal Belongings + Lost & Found into **Belongings, Lost & Found** (investigate/won't do/don't, confiscation note, 3-step report, habits). Added `.dd` two-column policy component + `ic-shield`/`ic-bag` icons. `GauriMhase.jpg` added (commit with this).
 - **Batch build (2026-06-10)** — verified on preview, **pending commit**:

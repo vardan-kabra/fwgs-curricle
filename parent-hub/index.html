@@ -82,6 +82,7 @@
     font-size:clamp(16px,1.9vw,20px); line-height:1.55; color:rgba(255,255,255,.95);
     max-width:56ch; margin:0; text-shadow:0 1px 20px rgba(0,0,0,.5);
   }
+  .hero-greeting{ font-family:var(--mono); font-size:14px; letter-spacing:.02em; color:rgba(255,255,255,.95); margin:16px 0 0; text-shadow:0 1px 14px rgba(0,0,0,.5); }
 
   /* ---- section bands (full-bleed, alternating) ---- */
   .band{ }
@@ -407,6 +408,7 @@
       <p class="eyebrow">AY 2026–27 · Parent Hub</p>
       <h1>Your hub for the year ahead</h1>
       <p class="hero-lede">Welcome to Fountainhead Wockhardt Global School. Here is everything you need for the practical side of school life — uniform, food, transport, calendars, and how we stay in touch through the year.</p>
+      <p class="hero-greeting" id="hero-greeting" hidden></p>
     </div>
   </header>
 
@@ -499,11 +501,12 @@
             <span class="tile-chev" aria-hidden="true">+</span>
           </summary>
           <div class="tile-body">
-            <p class="tile-note">Find your child's pickup stop and timing in the bus routes sheet, and read the full bus rules below.</p>
-            <div class="btn-row">
-              <a class="btn btn-primary" data-resource="bus-routes">Find your bus route &amp; stop</a>
+            <p class="tile-note">See your child's bus, route and timings, and read the full bus rules below.</p>
+            <div class="btn-row" data-status="pending">
+              <a class="btn btn-primary" data-resource="my-bus">See my child's bus &amp; stop</a>
             </div>
             <div class="link-list">
+              <a data-resource="bus-routes">All bus routes (sheet)</a>
               <a data-resource="bus-rules">Bus Rules</a>
             </div>
             <div class="pdf-embed">
@@ -1327,5 +1330,28 @@
   </script>
 
   <script src="assets/resources.js"></script>
+
+  <!-- Optional hero greeting: best-effort JSONP to the "My Bus" web app.
+       Self-disables until the my-bus /exec URL is set in resources.js, and
+       fails silently if the Google-Sites iframe blocks the cross-origin call. -->
+  <script>
+    (function () {
+      try {
+        var r = (window.FWGS_RESOURCES || {})["my-bus"];
+        var base = r && r.url;
+        if (!base) return;
+        window.__fwgsWhoami = function (d) {
+          if (d && d.ok && d.studentName) {
+            var el = document.getElementById("hero-greeting");
+            if (el) { el.textContent = "Welcome, parent of " + d.studentName; el.hidden = false; }
+          }
+        };
+        var s = document.createElement("script");
+        s.src = base + (base.indexOf("?") >= 0 ? "&" : "?") + "mode=whoami&callback=__fwgsWhoami";
+        s.async = true; s.onerror = function () {};
+        document.body.appendChild(s);
+      } catch (e) {}
+    })();
+  </script>
 </body>
 </html>
