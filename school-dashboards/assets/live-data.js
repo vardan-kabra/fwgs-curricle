@@ -68,8 +68,10 @@
     } catch (_) { /* private mode / quota — just skip caching */ }
   }
 
-  function fetchSheet(sheet) {
-    return fetch(buildUrl(sheet), { cache: "no-store" }).then(function (res) {
+  function fetchSheet(sheet, token) {
+    var url = buildUrl(sheet);
+    if (token) url += (url.indexOf("?") >= 0 ? "&" : "?") + "idtoken=" + encodeURIComponent(token);
+    return fetch(url, { cache: "no-store" }).then(function (res) {
       if (!res.ok) throw new Error("HTTP " + res.status);
       return res.json();
     });
@@ -157,7 +159,16 @@
 
     function doFetch() {
       setPill("loading", hasData ? "Refreshing…" : "Loading…", false);
-      fetchSheet(sheet).then(function (payload) {
+      var token = opts.getToken ? opts.getToken() : null;
+      fetchSheet(sheet, token).then(function (payload) {
+        if (payload && payload.error) {
+          if (payload.error === "auth_required") {
+            setPill("error", "Sign-in required", false);
+            if (opts.onAuthRequired) opts.onAuthRequired();
+            return;
+          }
+          throw new Error(payload.error);
+        }
         cacheSet(sheet, payload);
         lastFetched = nowMs();
         hasData = true;

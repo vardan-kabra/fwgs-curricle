@@ -93,7 +93,8 @@ function buildMeals() {
 // ---------------------------------------------------------------- BUSES
 function buildBuses() {
   let s = readFileSync(SRC.bus, 'utf8');
-  s = sub(s, '</head>', HEAD_TAGS, 'bus head');
+  // buses also load auth.js (the Google sign-in gate)
+  s = sub(s, '</head>', HEAD_TAGS.replace('</head>', '<script src="assets/auth.js"></script>\n</head>'), 'bus head');
   s = sub(s, '  </header>', STATUS_DIV, 'bus status');
   s = spliceConst(s, 'DATA', 'let DATA = [];');
   s = sub(s, 'function selectTrip(i){', 'function selectTrip(i, skipScroll){', 'bus selectTrip sig');
@@ -109,7 +110,21 @@ function buildBuses() {
     '  buildTrips();',
     '  if(current !== null && DATA[current]) selectTrip(current, true);',
     '}',
-    "FWGSLiveData.init({ sheet:'buses', statusMount:document.getElementById('liveStatus'), onData:applyBusData });",
+    'function startBuses(){',
+    '  FWGSLiveData.init({',
+    "    sheet:'buses',",
+    "    statusMount: document.getElementById('liveStatus'),",
+    '    onData: applyBusData,',
+    '    getToken: function(){ return window.FWGSAuth ? FWGSAuth.getToken() : null; },',
+    "    onAuthRequired: function(){ if(window.FWGSAuth){ FWGSAuth.clear(); FWGSAuth.gate({ onAuth: function(){ location.reload(); } }); } }",
+    '  });',
+    '}',
+    '// Gate the bus app behind Google sign-in when enabled, else load directly.',
+    'if (window.FWGS_CONFIG && window.FWGS_CONFIG.gateBuses && window.FWGSAuth) {',
+    '  FWGSAuth.gate({ onAuth: startBuses });',
+    '} else {',
+    '  startBuses();',
+    '}',
     '</script>',
   ].join('\n');
   s = sub(s, 'buildTrips();\n</script>', init, 'bus bootstrap');

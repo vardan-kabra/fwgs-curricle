@@ -25,12 +25,18 @@ var SPREADSHEETS = {
 var MEAL_TAB = 'Dashboard Data';   // the clean tab pasted from out/meal-dashboard-tab.csv
 var CACHE_SECONDS = 600;           // server-side cache so we don't re-read sheets every hit
 var VERSION = 'bus-fix-1';         // bump + redeploy to confirm a NEW version actually went live
+var GATE_BUSES = true;             // require a Google sign-in for ?sheet=buses
+var CLIENT_ID = '';                // OAuth client id (…apps.googleusercontent.com); MUST match assets/config.js googleClientId
 
 // ----------------------------------------------------------------- plumbing
 
 function doGet(e) {
-  var sheet = (e && e.parameter && e.parameter.sheet) || '';
+  var p = (e && e.parameter) || {};
+  var sheet = p.sheet || '';
   try {
+    if (sheet === 'buses' && GATE_BUSES && !verifyToken_(p.idtoken)) {
+      return json_({ error: 'auth_required' });
+    }
     return json_(getData_(sheet));
   } catch (err) {
     return json_({ error: String((err && err.message) || err) });
@@ -51,6 +57,23 @@ function getData_(sheet) {
 
 function json_(obj) {
   return ContentService.createTextOutput(JSON.stringify(obj)).setMimeType(ContentService.MimeType.JSON);
+}
+
+/** Verify a Google ID token (any Google account). True only if the token is
+ *  valid, not expired, minted for THIS app (aud === CLIENT_ID), with a
+ *  verified email. tokeninfo returns 400 for expired/invalid tokens. */
+function verifyToken_(idtoken) {
+  if (!idtoken || !CLIENT_ID) return false;
+  try {
+    var resp = UrlFetchApp.fetch(
+      'https://oauth2.googleapis.com/tokeninfo?id_token=' + encodeURIComponent(idtoken),
+      { muteHttpExceptions: true });
+    if (resp.getResponseCode() !== 200) return false;
+    var info = JSON.parse(resp.getContentText());
+    return info.aud === CLIENT_ID && String(info.email_verified) === 'true';
+  } catch (e) {
+    return false;
+  }
 }
 
 /** ?sheet=__debug — reports the live deployment's IDs + the tabs it actually sees,
