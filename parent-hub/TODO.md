@@ -62,7 +62,7 @@ group(s) they serve — no repeated directory table.
 ---
 
 ### 2.3 — Hero copy
-- 🔭 Hero headline **"Your parent hub for the year ahead"** → **"Your hub for the year ahead"** (the page is for parents anyway; drop the redundant "parent"). One-line copy change.
+- ✅ Hero headline → **"Your hub for the year ahead"** (dropped redundant "parent"). Done 2026-06-12 (pending commit).
 
 ### 2.4 — Timetable card in Essentials (more prominence)
 - 🔭 Add a card in **Essentials** for the **ASC Timetable** (`asc-timetable` → `fwgs.edupage.org/timetable/`) showing an **embedded view** of the link.
@@ -149,6 +149,6 @@ Raw comments from the review thread + where each is tracked (this is an index, n
   - **Who-to-contact** rebuilt as openable per-programme ladders with 21 photo cards (Directors + HoS apex). Tables removed.
   - **Key dates** in Calendars: collapsible months (`<details>`), **weekday shown + Saturdays highlighted**, 2-months-at-a-time reveal, `📅 Sat` tags dropped, legend split.
   - **"Where each thing lives"** → moved to top of Communication as linked **"Where to find what"** router; bottom copy removed.
-- **Bus routes** → linked to the live finder (`fsk-apps.pages.dev/buses`) via the `bus-routes` registry entry.
+- **Bus routes** → `bus-routes` registry now points to the **routes Google Sheet** (was the `fsk-apps.pages.dev/buses` finder), 2026-06-12. ⚠ Sheet must be shared "anyone with the link can view" and contain only parent-appropriate tabs — the link is on a public page. Pending sharing confirmation before commit.
 - **Student-email grade boundary** → confirmed **Grade 6 and above** (was TBC, 5-or-6).
 - **`index.html` full build** (hero · tiles · calendars · communication · get involved · hidden FAQ) — shipped 2026-06-09, commit `62682ed`.

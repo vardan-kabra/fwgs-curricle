@@ -42,9 +42,9 @@ window.FWGS_RESOURCES = {
   },
 
   "bus-routes": {
-    title: "Bus Routes & Stop Finder",
+    title: "Bus Routes & Stops",
     type: "url",
-    url: "https://fsk-apps.pages.dev/buses"
+    url: "https://docs.google.com/spreadsheets/d/1hDdP67GUblLHpb9hHMH9i8vqFd6ZuNUhTJd4G2WZtpw/edit?gid=683768151#gid=683768151"
   },
 
   "pyp-academic-calendar": {
