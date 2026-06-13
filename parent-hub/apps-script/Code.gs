@@ -266,18 +266,16 @@ function pageShell_(heading, inner) {
 
 function renderMyBus_(child, route) {
   var hasStop = !!child.stop;
-  var nodes = route.stops.map(function (s) {
+  var rowsHtml = route.stops.map(function (s) {
     var isSchool = /global school/i.test(s.name);
     var mine = hasStop && s.name.toLowerCase() === child.stop.toLowerCase();
     var pin = (s.map && /^https?:/i.test(s.map))
       ? ' <a class="pin" href="' + esc_(s.map) + '" target="_blank" rel="noopener" title="Open in Maps">📍</a>' : '';
-    var times = '';
-    if (s.pickup) times += '<span class="tt"><span class="ar">↓</span>' + esc_(s.pickup) + '</span>';
-    if (s.drop) times += '<span class="tt"><span class="ar">↑</span>' + esc_(s.drop) + '</span>';
-    return '<div class="node' + (isSchool ? ' school' : '') + (mine ? ' mine' : '') + '">' +
-      '<span class="dot"></span>' +
-      '<div class="nbody"><div class="nm">' + esc_(s.name) + pin + '</div>' +
-      (times ? '<div class="times">' + times + '</div>' : '') + '</div></div>';
+    return '<tr class="' + (isSchool ? 'school' : '') + (mine ? ' mine' : '') + '">' +
+      '<td class="stop">' + esc_(s.name) + pin + '</td>' +
+      '<td class="t">' + esc_(s.pickup) + '</td>' +
+      '<td class="t">' + esc_(s.drop) + '</td>' +
+    '</tr>';
   }).join('');
 
   var klass = child.klass ? ' <span class="klass">' + esc_(child.klass) + '</span>' : '';
@@ -297,9 +295,9 @@ function renderMyBus_(child, route) {
         '<p class="note">Bus allocation may change for operational reasons.</p>' +
         stopBlock +
         (route.stops.length
-          ? '<div class="leg"><span><span class="ar">↓</span> morning · to school</span><span><span class="ar">↑</span> afternoon · home</span></div>' +
-            '<div class="route-tl">' + nodes + '</div>'
+          ? '<table class="route"><thead><tr><th>Stop</th><th>Pick-up</th><th>Drop</th></tr></thead><tbody>' + rowsHtml + '</tbody></table>'
           : '<p>Route details for this bus aren’t available yet — please write to <a href="mailto:info@fwgs.in">info@fwgs.in</a>.</p>') +
+        '<p class="hint">Pick-up times are morning (to school); drop times are afternoon (home).</p>' +
       '</div>' +
       '<p class="back"><a href="https://fwgs-curricle.pages.dev/parent-hub/">← Back to the Parent Hub</a></p>' +
     '</div>';
@@ -321,22 +319,17 @@ var STYLE_ =
   '.mystop .lbl{font-size:11px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--gold)}' +
   '.mystop .nm{font-size:18px;font-weight:700;margin:3px 0}' +
   '.mystop .tm{font-size:13.5px;color:var(--soft)}' +
-  '.leg{display:flex;gap:18px;flex-wrap:wrap;margin:18px 0 2px;font-size:12px;color:var(--soft)}' +
-  '.leg .ar{color:var(--accent);font-weight:700;margin-right:3px}' +
-  '.route-tl{margin:10px 0 0;padding:2px 0}' +
-  '.node{position:relative;padding:0 0 20px 30px;min-height:30px}' +
-  '.node:last-child{padding-bottom:0}' +
-  '.node::before{content:"";position:absolute;left:8px;top:6px;bottom:-2px;width:2px;background:var(--rule)}' +
-  '.node:last-child::before{display:none}' +
-  '.node .dot{position:absolute;left:2px;top:4px;width:14px;height:14px;border-radius:50%;background:#fff;border:2px solid var(--orange);z-index:1}' +
-  '.node.school .dot{background:var(--accent);border-color:var(--accent)}' +
-  '.node.mine .dot{background:var(--gold);border-color:var(--gold);box-shadow:0 0 0 4px var(--goldSoft)}' +
-  '.node .nm{font-weight:600;font-size:15px;line-height:1.25}' +
-  '.node.school .nm{color:var(--accent);font-weight:700}' +
-  '.node.mine .nm{font-weight:800}' +
-  '.node .times{display:flex;gap:16px;margin-top:2px;font-size:13px;color:var(--soft)}' +
-  '.node .times .ar{color:var(--faint);font-weight:700;margin-right:3px}' +
-  '.node .pin{text-decoration:none;font-size:13px;margin-left:4px}' +
+  '.route{width:100%;border-collapse:collapse;margin:16px 0 6px;font-size:14.5px}' +
+  '.route th{text-align:left;color:var(--soft);font-size:11.5px;text-transform:uppercase;letter-spacing:.05em;border-bottom:1px solid var(--rule);padding:8px 10px}' +
+  '.route td{padding:11px 10px;border-bottom:1px solid var(--rule);vertical-align:top;transition:background .16s ease,box-shadow .16s ease}' +
+  '.route td.t{color:var(--soft);white-space:nowrap;width:84px}' +
+  '.route tbody tr:hover td{background:var(--accentSoft)}' +
+  '.route tbody tr:hover td.stop{box-shadow:inset 3px 0 0 var(--accent)}' +
+  '.route tr.school td{font-weight:700;color:var(--accent)}' +
+  '.route tr.mine td{background:var(--goldSoft);font-weight:700}' +
+  '.route tr.mine:hover td{background:#ecdcb0}' +
+  '.pin{text-decoration:none;font-size:13px;margin-left:4px}' +
+  '.hint{color:var(--soft);font-size:13px;margin:12px 0 0}' +
   '.back{margin-top:20px}.back a{color:var(--accent);text-decoration:none;font-weight:600}' +
   'a{color:var(--accent)}code{background:rgba(26,77,62,.09);padding:1px 5px;border-radius:4px}' +
   '</style>';
