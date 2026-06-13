@@ -147,13 +147,12 @@ route. Backend written + security-reviewed (identity is session-derived, HTML es
 to the parent-email column only). Hub hooks added (My Bus button in Transport tile, hidden via
 `data-status="pending"` until deployed; best-effort hero greeting).
 
-**Status (2026-06-12):**
-- ✅ Deployed under `fountainheadschools.org`; `/exec` URL set in `resources.js` → `my-bus`; identity read works (same-domain).
-- ✅ Test email added (`vardan.kabra@fountainheadschools.org` → Naman Kunal Sethi).
-- ✅ **Fixed:** lookup matched the wrong column → rewrote the parser to be **header-driven + tab-auto-detecting** (finds the Email/Name columns by header; per-student stop now supported; route falls back to building from the roster when a bus is missing from the routes tab).
-- 🔭 **User: re-deploy the updated `Code.gs`** (Deploy → Manage deployments → edit → New version) and re-test Naman → should now resolve to Bus 1 + route.
-- 🔭 Once confirmed, remove `data-status="pending"` on the Transport "See my child's bus" button to go live (one-line, or I'll do it).
-- ✅ Cross-domain identity: confirmed working same-domain. For `@fwgs.in` parents, deploy under an `@fwgs.in` account; switch to Google Sign-In only if one deployment must serve both domains.
+**Status — ✅ BUILT & WORKING (2026-06-12). Goes live when the roster is populated.**
+- ✅ End-to-end, verified live: parent signs in → resolved by email across the correct tab (**header-driven, multi-roster auto-detect**) → **bus + full route + their stop highlighted**. (Test: Ananya Kunal Sikchi → Bus 1.)
+- ✅ Render: route table (Stop · Pick-up · Drop), **full-row highlight** on the parent's stop + **row hover animation**; header-row bug fixed; per-student stop highlights automatically once a Landmark is filled.
+- ✅ Security-reviewed (session-derived identity, escaped output, lookup keyed to the matched email column only). Deployed under `fountainheadschools.org`; identity confirmed same-domain. `?mode=debug` endpoint retained.
+- ⏳ **Roster population in progress** — email IDs being added to "With Parent Emails". Button stays hidden (`data-status="pending"`); **one-line flip to go live** when ready (the `#transport` btn-row in `index.html`).
+- 💡 Optional: add a "Map" column to the sheet → 📍 links appear per stop automatically.
 
 **Enhancements:**
 - 🔭 **Per-student stop highlight:** the roster currently maps student → *bus* (not a specific stop). Add a clean `Stop` value per student row → I'll show their exact stop + pick-up/drop directly, highlighted in the route.
