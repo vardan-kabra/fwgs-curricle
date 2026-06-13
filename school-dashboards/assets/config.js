@@ -19,9 +19,10 @@ window.FWGS_CONFIG = {
   // away every visitor's old cached copy.
   cachePrefix: "fwgs:v1:",
 
-  // --- Bus app sign-in gate ---
-  // Require a Google sign-in (any Gmail) before the Bus Stop Finder loads.
-  gateBuses: true,
+  // --- Bus app sign-in gate (currently OFF) ---
+  // Flip to true (and set googleClientId) to require Google sign-in before the
+  // Bus Stop Finder loads. OFF = static, public bus search.
+  gateBuses: false,
   // OAuth Client ID from Google Cloud (…apps.googleusercontent.com). Must match
   // CLIENT_ID in apps-script/Code.gs. Leave "" until you've created it.
   googleClientId: "",

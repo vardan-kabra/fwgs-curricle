@@ -25,7 +25,7 @@ var SPREADSHEETS = {
 var MEAL_TAB = 'Dashboard Data';   // the clean tab pasted from out/meal-dashboard-tab.csv
 var CACHE_SECONDS = 600;           // server-side cache so we don't re-read sheets every hit
 var VERSION = 'bus-fix-1';         // bump + redeploy to confirm a NEW version actually went live
-var GATE_BUSES = true;             // require a Google sign-in for ?sheet=buses
+var GATE_BUSES = false;            // login gate OFF (static bus search); flip to true to re-enable
 var CLIENT_ID = '';                // OAuth client id (…apps.googleusercontent.com); MUST match assets/config.js googleClientId
 
 // ----------------------------------------------------------------- plumbing
