@@ -13,7 +13,7 @@ window.FWGS_CONFIG = {
 
   // Within this many minutes of a successful load, reuse the cached copy
   // instead of hitting the network again.
-  freshMinutes: 10,
+  freshMinutes: 2,
 
   // Bump this (v1 -> v2 ...) if you ever change the data shape, to throw
   // away every visitor's old cached copy.

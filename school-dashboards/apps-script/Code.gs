@@ -23,7 +23,7 @@ var SPREADSHEETS = {
   buses: '1ctLuODdEoNEyybp3wA0QH7rnpmiK-wF8-0Nm7i0JE6s', // "Copy of Transport Route 2026-27"
 };
 var MEAL_TAB = 'Dashboard Data';   // the clean tab pasted from out/meal-dashboard-tab.csv
-var CACHE_SECONDS = 600;           // server-side cache so we don't re-read sheets every hit
+var CACHE_SECONDS = 120;           // server-side cache (2 min); ?fresh=1 bypasses it
 var VERSION = 'bus-fix-1';         // bump + redeploy to confirm a NEW version actually went live
 var GATE_BUSES = false;            // login gate OFF (static bus search); flip to true to re-enable
 var CLIENT_ID = '';                // OAuth client id (…apps.googleusercontent.com); MUST match assets/config.js googleClientId
@@ -37,19 +37,21 @@ function doGet(e) {
     if (sheet === 'buses' && GATE_BUSES && !verifyToken_(p.idtoken)) {
       return json_({ error: 'auth_required' });
     }
-    return json_(getData_(sheet));
+    return json_(getData_(sheet, p.fresh === '1'));
   } catch (err) {
     return json_({ error: String((err && err.message) || err) });
   }
 }
 
-function getData_(sheet) {
+function getData_(sheet, fresh) {
   if (sheet === '__debug') return debugInfo_();
   if (!SPREADSHEETS[sheet]) throw new Error('Unknown sheet "' + sheet + '"');
   var cache = CacheService.getScriptCache();
   var key = 'fwgs:v1:' + sheet;
-  var hit = cache.get(key);
-  if (hit) return JSON.parse(hit);
+  if (!fresh) {
+    var hit = cache.get(key);
+    if (hit) return JSON.parse(hit);
+  }
   var data = (sheet === 'meals') ? buildMeals_() : buildBuses_();
   cache.put(key, JSON.stringify(data), CACHE_SECONDS);
   return data;

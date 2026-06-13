@@ -19,6 +19,8 @@
   var cfg = (window.FWGS_CONFIG = window.FWGS_CONFIG || {});
   var PREFIX = cfg.cachePrefix || "fwgs:v1:";
   var FRESH_MS = (cfg.freshMinutes != null ? cfg.freshMinutes : 10) * 60000;
+  // ?fresh=1 in the page URL bypasses BOTH caches (handy for verifying sheet edits)
+  var FORCE_FRESH = /[?&]fresh=1(?:&|$)/.test(location.search);
 
   // ---- one-time styles (reuse the page's CSS variables, with fallbacks) ----
   if (!document.getElementById("fwgs-live-style")) {
@@ -70,6 +72,7 @@
 
   function fetchSheet(sheet, token) {
     var url = buildUrl(sheet);
+    if (FORCE_FRESH) url += (url.indexOf("?") >= 0 ? "&" : "?") + "fresh=1";
     if (token) url += (url.indexOf("?") >= 0 ? "&" : "?") + "idtoken=" + encodeURIComponent(token);
     return fetch(url, { cache: "no-store" }).then(function (res) {
       if (!res.ok) throw new Error("HTTP " + res.status);
@@ -181,17 +184,17 @@
       });
     }
 
-    // 1) paint cache immediately
+    // 1) paint cache immediately (skipped when ?fresh=1 forces a live load)
     var cached = cacheGet(sheet);
-    if (cached) {
+    if (cached && !FORCE_FRESH) {
       lastFetched = cached.fetchedAt;
       hasData = true;
       try { onData(cached.payload); } catch (_) {}
       showLiveLabel();
       startTicker();
     }
-    // 2) revalidate if missing or stale
-    if (!cached || nowMs() - cached.fetchedAt > FRESH_MS) doFetch();
+    // 2) revalidate if forced, missing, or stale
+    if (FORCE_FRESH || !cached || nowMs() - cached.fetchedAt > FRESH_MS) doFetch();
   }
 
   window.FWGSLiveData = { init: init, timeAgo: timeAgo };
