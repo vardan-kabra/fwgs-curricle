@@ -140,6 +140,7 @@ function findHeader_(vals) {
       else if (/pick/.test(h)) cols.pick = c;
       else if (/drop/.test(h)) cols.drop = c;
       else if (/landmark|stop/.test(h)) cols.landmark = c;
+      else if (/map/.test(h)) cols.map = c;     // optional: a future map-link column
     }
     if ((cols.landmark != null && cols.pick != null) || (cols.email != null && cols.name != null)) {
       return { rowIndex: i, cols: cols };
@@ -197,10 +198,13 @@ function collectStops_(tab, busNo) {
     if (!inBus) continue;
     var name = cleanStop_(r[col.landmark]);
     if (!name) continue;
+    var lname = name.toLowerCase();
+    if (lname === 'landmark' || lname === 'stop') continue;   // skip the per-bus header row
     out.push({
       name: name,
       pickup: col.pick != null ? fmtTime_(r[col.pick], 'am') : '',
-      drop: col.drop != null ? fmtTime_(r[col.drop], 'pm') : ''
+      drop: col.drop != null ? fmtTime_(r[col.drop], 'pm') : '',
+      map: col.map != null ? String(r[col.map] || '').trim() : ''
     });
   }
   return out;
@@ -262,14 +266,18 @@ function pageShell_(heading, inner) {
 
 function renderMyBus_(child, route) {
   var hasStop = !!child.stop;
-  var rowsHtml = route.stops.map(function (s) {
+  var nodes = route.stops.map(function (s) {
     var isSchool = /global school/i.test(s.name);
     var mine = hasStop && s.name.toLowerCase() === child.stop.toLowerCase();
-    return '<tr class="' + (isSchool ? 'school' : '') + (mine ? ' mine' : '') + '">' +
-      '<td class="stop">' + (isSchool ? '◉ ' : (mine ? '★ ' : '○ ')) + esc_(s.name) + '</td>' +
-      '<td class="t">' + esc_(s.pickup) + '</td>' +
-      '<td class="t">' + esc_(s.drop) + '</td>' +
-    '</tr>';
+    var pin = (s.map && /^https?:/i.test(s.map))
+      ? ' <a class="pin" href="' + esc_(s.map) + '" target="_blank" rel="noopener" title="Open in Maps">📍</a>' : '';
+    var times = '';
+    if (s.pickup) times += '<span class="tt"><span class="ar">↓</span>' + esc_(s.pickup) + '</span>';
+    if (s.drop) times += '<span class="tt"><span class="ar">↑</span>' + esc_(s.drop) + '</span>';
+    return '<div class="node' + (isSchool ? ' school' : '') + (mine ? ' mine' : '') + '">' +
+      '<span class="dot"></span>' +
+      '<div class="nbody"><div class="nm">' + esc_(s.name) + pin + '</div>' +
+      (times ? '<div class="times">' + times + '</div>' : '') + '</div></div>';
   }).join('');
 
   var klass = child.klass ? ' <span class="klass">' + esc_(child.klass) + '</span>' : '';
@@ -289,9 +297,9 @@ function renderMyBus_(child, route) {
         '<p class="note">Bus allocation may change for operational reasons.</p>' +
         stopBlock +
         (route.stops.length
-          ? '<table class="route"><thead><tr><th>Stop</th><th>Pick-up</th><th>Drop</th></tr></thead><tbody>' + rowsHtml + '</tbody></table>'
+          ? '<div class="leg"><span><span class="ar">↓</span> morning · to school</span><span><span class="ar">↑</span> afternoon · home</span></div>' +
+            '<div class="route-tl">' + nodes + '</div>'
           : '<p>Route details for this bus aren’t available yet — please write to <a href="mailto:info@fwgs.in">info@fwgs.in</a>.</p>') +
-        '<p class="hint">Pick-up times are morning (to school); drop times are afternoon (home).</p>' +
       '</div>' +
       '<p class="back"><a href="https://fwgs-curricle.pages.dev/parent-hub/">← Back to the Parent Hub</a></p>' +
     '</div>';
@@ -299,27 +307,36 @@ function renderMyBus_(child, route) {
 
 var STYLE_ =
   '<style>' +
-  ':root{--bg:#FAF7F0;--card:#fff;--ink:#14201B;--soft:#4F5C56;--faint:#8A9189;--rule:#E2DCC9;--accent:#1A4D3E;--accentSoft:#DEEAE3;--gold:#A07A2C;--goldSoft:#EFE3C5;}' +
+  ':root{--bg:#FAF7F0;--card:#fff;--ink:#14201B;--soft:#4F5C56;--faint:#8A9189;--rule:#E2DCC9;--accent:#1A4D3E;--accentSoft:#DEEAE3;--gold:#A07A2C;--goldSoft:#EFE3C5;--orange:#C2613A;}' +
   '*{box-sizing:border-box}body{margin:0}' +
   '.wrap{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;background:var(--bg);color:var(--ink);' +
   'min-height:100vh;padding:28px 16px 60px;max-width:680px;margin:0 auto}' +
   '.hello{font-size:20px;margin:6px 0 18px}.hello .klass{color:var(--soft);font-size:15px}' +
-  '.card{background:var(--card);border:1px solid var(--rule);border-radius:16px;padding:22px 22px 18px;box-shadow:0 10px 30px -20px rgba(20,32,27,.4)}' +
+  '.card{background:var(--card);border:1px solid var(--rule);border-radius:16px;padding:22px 22px 20px;box-shadow:0 10px 30px -20px rgba(20,32,27,.4)}' +
   '.card h1{font-size:22px;margin:0 0 10px}' +
   '.bus{display:inline-block;font-weight:700;color:var(--accent);background:var(--accentSoft);border-radius:999px;padding:6px 16px;font-size:15px}' +
   '.note{color:var(--faint);font-size:13px;font-style:italic;margin:12px 0 4px}' +
   '.note2{color:var(--soft);font-size:14px;margin:14px 0 0}' +
-  '.mystop{margin:14px 0 4px;border:1px solid #d8c79a;background:var(--goldSoft);border-radius:12px;padding:14px 16px}' +
+  '.mystop{margin:14px 0 6px;border:1px solid #d8c79a;background:var(--goldSoft);border-radius:12px;padding:14px 16px}' +
   '.mystop .lbl{font-size:11px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--gold)}' +
   '.mystop .nm{font-size:18px;font-weight:700;margin:3px 0}' +
   '.mystop .tm{font-size:13.5px;color:var(--soft)}' +
-  '.route{width:100%;border-collapse:collapse;margin:16px 0 6px;font-size:14.5px}' +
-  '.route th{text-align:left;color:var(--soft);font-size:11.5px;text-transform:uppercase;letter-spacing:.05em;border-bottom:1px solid var(--rule);padding:8px 8px}' +
-  '.route td{padding:10px 8px;border-bottom:1px solid var(--rule);vertical-align:top}' +
-  '.route td.t{color:var(--soft);white-space:nowrap;width:88px}' +
-  '.route tr.school td{font-weight:700;color:var(--accent)}' +
-  '.route tr.mine td{background:var(--goldSoft);font-weight:700}' +
-  '.hint{color:var(--soft);font-size:13px;margin:12px 0 0}' +
+  '.leg{display:flex;gap:18px;flex-wrap:wrap;margin:18px 0 2px;font-size:12px;color:var(--soft)}' +
+  '.leg .ar{color:var(--accent);font-weight:700;margin-right:3px}' +
+  '.route-tl{margin:10px 0 0;padding:2px 0}' +
+  '.node{position:relative;padding:0 0 20px 30px;min-height:30px}' +
+  '.node:last-child{padding-bottom:0}' +
+  '.node::before{content:"";position:absolute;left:8px;top:6px;bottom:-2px;width:2px;background:var(--rule)}' +
+  '.node:last-child::before{display:none}' +
+  '.node .dot{position:absolute;left:2px;top:4px;width:14px;height:14px;border-radius:50%;background:#fff;border:2px solid var(--orange);z-index:1}' +
+  '.node.school .dot{background:var(--accent);border-color:var(--accent)}' +
+  '.node.mine .dot{background:var(--gold);border-color:var(--gold);box-shadow:0 0 0 4px var(--goldSoft)}' +
+  '.node .nm{font-weight:600;font-size:15px;line-height:1.25}' +
+  '.node.school .nm{color:var(--accent);font-weight:700}' +
+  '.node.mine .nm{font-weight:800}' +
+  '.node .times{display:flex;gap:16px;margin-top:2px;font-size:13px;color:var(--soft)}' +
+  '.node .times .ar{color:var(--faint);font-weight:700;margin-right:3px}' +
+  '.node .pin{text-decoration:none;font-size:13px;margin-left:4px}' +
   '.back{margin-top:20px}.back a{color:var(--accent);text-decoration:none;font-weight:600}' +
   'a{color:var(--accent)}code{background:rgba(26,77,62,.09);padding:1px 5px;border-radius:4px}' +
   '</style>';
