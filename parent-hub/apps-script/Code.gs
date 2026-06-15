@@ -155,16 +155,17 @@ function findHeader_(vals) {
 function lookupChild_(email) {
   var rosters = tabs_().rosters, fallback = null;
   for (var t = 0; t < rosters.length; t++) {
-    var col = rosters[t].cols, vals = rosters[t].vals, busNo = '';
+    var col = rosters[t].cols, vals = rosters[t].vals, busNo = '', busPlate = '';
     for (var i = 0; i < vals.length; i++) {
       var r = vals[i];
       var b = busBannerNo_(r);
-      if (b) { busNo = b; continue; }
+      if (b) { busNo = b; busPlate = busBannerPlate_(r); continue; }
       if (String(r[col.email] == null ? '' : r[col.email]).trim().toLowerCase() !== email) continue;
       var hit = {
         name: String(r[col.name] || '').trim() || 'your child',
         klass: col.klass != null ? String(r[col.klass] || '').trim() : '',
         busNo: busNo,
+        plate: busPlate,
         stop: col.landmark != null ? cleanStop_(r[col.landmark]) : '',
         pickup: col.pick != null ? fmtTime_(r[col.pick], 'am') : '',
         drop: col.drop != null ? fmtTime_(r[col.drop], 'pm') : ''
@@ -227,6 +228,14 @@ function busBannerNo_(r) {
   return m ? m[1] : '';
 }
 
+/** Registration plate trailing a "BUS NO n <PLATE>" banner (col 0), else ''.
+ *  Banner cells read e.g. "BUS NO 2 MH20 DD 0611" — we capture everything after
+ *  the bus number, faithfully (plate spacing varies in the sheet). */
+function busBannerPlate_(r) {
+  var m = String(r[0] || '').match(/bus\s*no\.?\s*\d+\s+(.+)$/i);
+  return m ? m[1].replace(/\s+/g, ' ').trim() : '';
+}
+
 function cleanStop_(s) {
   var t = String(s == null ? '' : s).replace(/\s+/g, ' ').trim();
   if (!t) return '';
@@ -280,6 +289,13 @@ function renderMyBus_(child, route) {
 
   var klass = child.klass ? ' <span class="klass">' + esc_(child.klass) + '</span>' : '';
   var busLabel = route.busNo ? 'Bus ' + esc_(route.busNo) : 'your bus';
+  var plate = (child.plate || '').trim();
+  var plateChip = plate
+    ? '<span class="plate"><span class="pllbl">Reg</span>' + esc_(plate) + '</span>'
+    : '';
+  var busNote = plate
+    ? 'Your child’s regular bus has the registration number above — it may occasionally change for operational reasons.'
+    : 'Bus allocation may change for operational reasons.';
 
   var stopBlock = hasStop
     ? '<div class="mystop"><div class="lbl">Your stop</div><div class="nm">' + esc_(child.stop) + '</div>' +
@@ -291,8 +307,8 @@ function renderMyBus_(child, route) {
     '<div class="wrap">' +
       '<div class="hello">Welcome, parent of <strong>' + esc_(child.name) + '</strong>' + klass + '</div>' +
       '<div class="card">' +
-        '<div class="bus">' + busLabel + '</div>' +
-        '<p class="note">Bus allocation may change for operational reasons.</p>' +
+        '<div class="bushead"><span class="bus">' + busLabel + '</span>' + plateChip + '</div>' +
+        '<p class="note">' + busNote + '</p>' +
         stopBlock +
         (route.stops.length
           ? '<table class="route"><thead><tr><th>Stop</th><th>Pick-up</th><th>Drop</th></tr></thead><tbody>' + rowsHtml + '</tbody></table>'
@@ -313,6 +329,9 @@ var STYLE_ =
   '.card{background:var(--card);border:1px solid var(--rule);border-radius:16px;padding:22px 22px 20px;box-shadow:0 10px 30px -20px rgba(20,32,27,.4)}' +
   '.card h1{font-size:22px;margin:0 0 10px}' +
   '.bus{display:inline-block;font-weight:700;color:var(--accent);background:var(--accentSoft);border-radius:999px;padding:6px 16px;font-size:15px}' +
+  '.bushead{display:flex;align-items:center;gap:10px;flex-wrap:wrap}' +
+  '.plate{display:inline-flex;align-items:center;gap:7px;font-family:"JetBrains Mono",ui-monospace,Consolas,monospace;font-weight:700;letter-spacing:.03em;color:var(--ink);background:#fff;border:1.5px solid var(--ink);border-radius:8px;padding:4px 11px 4px 5px;font-size:14px}' +
+  '.plate .pllbl{font-size:9.5px;font-weight:700;letter-spacing:.07em;text-transform:uppercase;color:#fff;background:var(--ink);border-radius:4px;padding:2px 5px}' +
   '.note{color:var(--faint);font-size:13px;font-style:italic;margin:12px 0 4px}' +
   '.note2{color:var(--soft);font-size:14px;margin:14px 0 0}' +
   '.mystop{margin:14px 0 6px;border:1px solid #d8c79a;background:var(--goldSoft);border-radius:12px;padding:14px 16px}' +
