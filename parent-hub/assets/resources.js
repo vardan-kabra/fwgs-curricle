@@ -20,7 +20,7 @@ window.FWGS_RESOURCES = {
   "uniform-policy": {
     title: "Uniform Policy",
     type: "drive-pdf",
-    driveId: "1T0QXx8AVNS7bZ5pgNxMPhFLHHGdV8iQA"
+    driveId: "133ZbMLSer8cU9Ax3SStnfDO5zjFhAu1y"
   },
 
   "where-to-buy-uniform": {
@@ -32,7 +32,7 @@ window.FWGS_RESOURCES = {
   "food-policy": {
     title: "Food Policy",
     type: "drive-pdf",
-    driveId: "1RUeblWu1XnSOso-I19xZMS2Hzt4UXRRn"
+    driveId: "14bDtpD3DpWAGG0m7LNM0N9nDo7EUEtlD"
   },
 
   // Monthly food menu. To update each month: swap driveId below and change the
@@ -50,7 +50,7 @@ window.FWGS_RESOURCES = {
   "bus-rules": {
     title: "Bus Rules",
     type: "drive-pdf",
-    driveId: "1KZDKqsfwTwuKzsJWiN-IIbP5yvtoFm_a"
+    driveId: "1KDdNxMA9USVvFMBMd9sTRDDc8QlYIhXj"
   },
 
   "bus-routes": {
