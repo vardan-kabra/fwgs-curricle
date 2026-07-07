@@ -42,9 +42,9 @@ window.FWGS_RESOURCES = {
   // domain aliases (fwgs.in, fsksurat.in, ...) — so parent fwgs.in logins can
   // view it; no "Anyone with the link" change is needed.
   "food-menu": {
-    title: "Menu of the Month — June 2026",
+    title: "Menu of the Month — July 2026",
     type: "drive-pdf",
-    driveId: "1AAeQVeF4uiHAdQCsXkZ1ELB3Tvm7KFSU"
+    driveId: "1Cwmca56jAsW9wDOk03St8VG9Aqt8gU9s"
   },
 
   "bus-rules": {

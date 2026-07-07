@@ -476,11 +476,11 @@
           <div class="tile-body">
             <p class="tile-note">Only <strong>vegetarian</strong> food is served from our kitchen. Lunchboxes should be free of junk, packaged, and processed foods.</p>
             <div class="link-list">
-              <a data-resource="food-menu">This Month's Menu (June 2026)</a>
+              <a data-resource="food-menu">This Month's Menu (July 2026)</a>
               <a data-resource="food-policy">Food Policy</a>
             </div>
             <div class="pdf-embed">
-              <iframe data-resource="food-menu" data-mode="embed" loading="lazy" title="Menu of the Month — June 2026 PDF"></iframe>
+              <iframe data-resource="food-menu" data-mode="embed" loading="lazy" title="Menu of the Month — July 2026 PDF"></iframe>
             </div>
             <div class="pdf-embed">
               <iframe data-resource="food-policy" data-mode="embed" loading="lazy" title="Food Policy PDF"></iframe>
@@ -1200,7 +1200,7 @@
   <footer class="foot">
     <div class="foot-inner">
       <span><strong>Fountainhead Wockhardt Global School</strong> · Parent Hub</span>
-      <span>Last updated: June 2026</span>
+      <span id="last-updated">Last updated: July 2026</span>
     </div>
   </footer>
 
@@ -1327,6 +1327,20 @@
   </script>
 
   <script src="assets/resources.js"></script>
+
+  <!-- "Last updated" footer: auto-derived from the current food-menu edition in
+       resources.js — bumping the monthly menu (the edit you already make) moves
+       this date too. Host-independent: Cloudflare Pages omits Last-Modified, so a
+       server date isn't reliable. Falls back to the static month above if unread. -->
+  <script>
+    (function () {
+      var el = document.getElementById("last-updated");
+      var R = window.FWGS_RESOURCES || {};
+      var t = (R["food-menu"] && R["food-menu"].title) || "";
+      var m = t.match(/([A-Za-z]+\s+\d{4})\s*$/);
+      if (el && m) el.textContent = "Last updated: " + m[1];
+    })();
+  </script>
 
   <!-- Optional hero greeting: best-effort JSONP to the "My Bus" web app.
        Self-disables until the my-bus /exec URL is set in resources.js, and
