@@ -36,18 +36,16 @@ window.FWGS_RESOURCES = {
     driveId: "14bDtpD3DpWAGG0m7LNM0N9nDo7EUEtlD"
   },
 
-  // Monthly food menu. NOT LINKED FROM THE PAGE since 24-Sep-2026 (no September PDF
-  // yet; the July one was still showing) — see the note in the Food tile.
-  // To update each month: swap driveId below and change the
+  // Monthly food menu. To update each month: swap driveId below and change the
   // visible month label in the Food tile (index.html). Source: "Menu of the Month"
   // Drive folder (owner khushbu.thakur@fountainheadschools.org).
   // Shared to the fountainheadschools.org Workspace org, which spans all its
   // domain aliases (fwgs.in, fsksurat.in, ...) — so parent fwgs.in logins can
   // view it; no "Anyone with the link" change is needed.
   "food-menu": {
-    title: "Menu of the Month — July 2026",
+    title: "Menu of the Month — September 2026",
     type: "drive-pdf",
-    driveId: "1Cwmca56jAsW9wDOk03St8VG9Aqt8gU9s"
+    driveId: "1_IyWGQwi5LMRWy9p8o2PS7NnA6oTng78"
   },
 
   "bus-rules": {
