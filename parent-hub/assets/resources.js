@@ -36,14 +36,14 @@ window.FWGS_RESOURCES = {
     driveId: "14bDtpD3DpWAGG0m7LNM0N9nDo7EUEtlD"
   },
 
-  // Monthly food menu. To update each month: swap driveId below and change the
-  // visible month label in the Food tile (index.html). Source: "Menu of the Month"
-  // Drive folder (owner khushbu.thakur@fountainheadschools.org).
-  // Shared to the fountainheadschools.org Workspace org, which spans all its
-  // domain aliases (fwgs.in, fsksurat.in, ...) — so parent fwgs.in logins can
-  // view it; no "Anyone with the link" change is needed.
+  // Monthly food menu — ONE standing file, "FWGS Menu.pdf" in Karan's FWGS Menu folder
+  // (agreed with JC 24-Sep-2026). Each month Karan uploads the new PDF with the SAME name
+  // into that folder and picks "Replace existing file" (or Manage versions -> Upload new
+  // version). That keeps this driveId, so nothing here ever changes. Deleting the file
+  // and uploading a fresh one would give it a NEW id and break the Hub's menu link.
+  // The file is shared "Anyone with the link can view"; a new version keeps that.
   "food-menu": {
-    title: "Menu of the Month — September 2026",
+    title: "Menu of the Month",
     type: "drive-pdf",
     driveId: "1_IyWGQwi5LMRWy9p8o2PS7NnA6oTng78"
   },
