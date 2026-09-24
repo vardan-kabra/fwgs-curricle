@@ -176,6 +176,14 @@
   }
   .pdf-embed + .pdf-embed{ margin-top:14px; }
 
+  /* ---- live Google Calendar (unlike PDFs, stays on mobile — agenda view there) ---- */
+  .cal-embed iframe{
+    width:100%; height:640px; border:1px solid var(--rule); border-radius:10px;
+    background:#fff; display:block;
+  }
+  .cal-links{ margin-top:14px; }
+  .soon-note{ font-size:15px; font-style:italic; color:var(--ink-soft); margin:0 0 14px; }
+
   /* ---- footer ---- */
   .foot{ border-top:1px solid var(--rule); background:var(--bg-soft); }
   .foot-inner{
@@ -321,6 +329,7 @@
   @media (max-width:768px){
     :root{ --nav-h:66px; }
     .pdf-embed{ display:none; }              /* link-outs remain accessible */
+    .cal-embed iframe{ height:520px; }
     .band > .inner{ padding:56px 20px; }
     .hero{ min-height:486px; }
     .hero-inner{ padding:0 20px 50px; }
@@ -432,8 +441,8 @@
           <div class="tile-body">
             <p class="tile-note"><strong>8:00 AM – 3:00 PM</strong>, Monday to Friday, for all students.</p>
             <ul class="t-list">
-              <li>Some Saturdays are working days — these are marked in <a class="lnk" href="#calendars">Key dates</a>.</li>
-              <li>The school is closed on public holidays (also listed in Key dates).</li>
+              <li>Some Saturdays are working days — these are marked in the <a class="lnk" href="#calendars">school calendar</a>.</li>
+              <li>The school is closed on public holidays (also shown in the school calendar).</li>
             </ul>
           </div>
         </details>
@@ -476,11 +485,11 @@
           <div class="tile-body">
             <p class="tile-note">Only <strong>vegetarian</strong> food is served from our kitchen. Lunchboxes should be free of junk, packaged, and processed foods.</p>
             <div class="link-list">
-              <a data-resource="food-menu">This Month's Menu (July 2026)</a>
+              <a data-resource="food-menu">This Month's Menu</a>
               <a data-resource="food-policy">Food Policy</a>
             </div>
             <div class="pdf-embed">
-              <iframe data-resource="food-menu" data-mode="embed" loading="lazy" title="Menu of the Month — July 2026 PDF"></iframe>
+              <iframe data-resource="food-menu" data-mode="embed" loading="lazy" title="Menu of the Month PDF"></iframe>
             </div>
             <div class="pdf-embed">
               <iframe data-resource="food-policy" data-mode="embed" loading="lazy" title="Food Policy PDF"></iframe>
@@ -696,79 +705,22 @@
     <div class="inner">
       <p class="sec-eyebrow">Dates &amp; terms</p>
       <h2 class="sec-title">Academic calendars</h2>
-      <p class="sec-intro">Term dates, holidays, and parent–teacher interactions for each programme. Open a calendar to view it inline, or download the PDF.</p>
+      <p class="sec-intro">Term dates, holidays, parent–teacher meetings and school events, straight from the school's live calendar, so what you see here is always current.</p>
       <figure class="sec-media">
         <img src="assets/images/2N0A7498.jpg" alt="An early-years classroom with the months of the year displayed on the wall" loading="lazy">
       </figure>
 
-      <!-- Key dates (rendered by the inline script before </body>) -->
-      <h3 style="font-family:var(--display);font-weight:600;font-size:24px;margin:0 0 6px;">Key dates</h3>
-      <p class="kd-legend">🎓 parent event · 📝 exam · 🏖️ vacation / re-open · 🎉 school event · 🚫 holiday (closed)</p>
-      <p class="kd-note">Saturdays are highlighted — many parent events fall on a Saturday. Full month-by-month detail is in the programme calendars below.</p>
-      <div id="kd-months"></div>
-      <button id="kd-more" class="pill-link plain" type="button">Show more dates →</button>
-
-      <h3 style="font-family:var(--display);font-weight:600;font-size:24px;margin:48px 0 18px;">Programme calendars</h3>
-      <div class="tiles">
-
-        <details class="tile" id="cal-pyp">
-          <summary>
-            <span class="tile-icon badge">PYP</span>
-            <span class="tile-head">
-              <span class="tile-title">PYP Academic Calendar</span>
-              <span class="tile-sum">Primary Years Programme — term dates, holidays &amp; PTIs.</span>
-            </span>
-            <span class="tile-chev" aria-hidden="true">+</span>
-          </summary>
-          <div class="tile-body">
-            <div class="link-list">
-              <a data-resource="pyp-academic-calendar">Open the PYP calendar (PDF)</a>
-            </div>
-            <div class="pdf-embed">
-              <iframe data-resource="pyp-academic-calendar" data-mode="embed" loading="lazy" title="PYP Academic Calendar PDF"></iframe>
-            </div>
-          </div>
-        </details>
-
-        <details class="tile" id="cal-myp">
-          <summary>
-            <span class="tile-icon badge">MYP</span>
-            <span class="tile-head">
-              <span class="tile-title">MYP Academic Calendar</span>
-              <span class="tile-sum">Middle Years Programme — term dates, holidays &amp; PTIs.</span>
-            </span>
-            <span class="tile-chev" aria-hidden="true">+</span>
-          </summary>
-          <div class="tile-body">
-            <div class="link-list">
-              <a data-resource="myp-academic-calendar">Open the MYP calendar (PDF)</a>
-            </div>
-            <div class="pdf-embed">
-              <iframe data-resource="myp-academic-calendar" data-mode="embed" loading="lazy" title="MYP Academic Calendar PDF"></iframe>
-            </div>
-          </div>
-        </details>
-
-        <details class="tile" id="cal-dp">
-          <summary>
-            <span class="tile-icon badge">DP</span>
-            <span class="tile-head">
-              <span class="tile-title">DP Academic Calendar</span>
-              <span class="tile-sum">Diploma Programme — term dates, holidays &amp; PTIs.</span>
-            </span>
-            <span class="tile-chev" aria-hidden="true">+</span>
-          </summary>
-          <div class="tile-body">
-            <div class="link-list">
-              <a data-resource="dp-academic-calendar">Open the DP calendar (PDF)</a>
-            </div>
-            <div class="pdf-embed">
-              <iframe data-resource="dp-academic-calendar" data-mode="embed" loading="lazy" title="DP Academic Calendar PDF"></iframe>
-            </div>
-          </div>
-        </details>
-
+      <!-- Live school calendar (Google Calendar, wired from resources.js "school-calendar").
+           Dates are kept in the calendar itself, so this section never needs editing when a
+           date moves. On 24-Sep-2026 it replaced the hard-coded Key dates list and the
+           PYP / MYP / DP PDF calendars, which had gone out of date. -->
+      <div class="cal-embed">
+        <iframe data-resource="school-calendar" data-mode="embed" loading="lazy" title="FWGS school calendar"></iframe>
       </div>
+      <div class="link-list cal-links">
+        <a data-resource="school-calendar">Open the school calendar</a>
+      </div>
+      <p class="kd-note" style="margin:12px 0 0;">Can't see any dates? Make sure you are signed in with your school (fwgs.in) Google account.</p>
     </div>
   </section>
 
@@ -974,11 +926,11 @@
             </div>
           </div>
           <div class="person">
-            <img class="ph" src="assets/images/Leadership Team Photos/PradeepSharma.jpg" alt="Pradeep Sharma" loading="lazy">
+            <img class="ph" src="assets/images/Leadership Team Photos/ChinkiChhapia.jpg" alt="Chinki Chhapia" loading="lazy">
             <div>
-              <div class="pn">Pradeep Sharma</div>
+              <div class="pn">Chinki Chhapia</div>
               <div class="pr">Head of School</div>
-              <div class="pe"><a class="lnk" href="mailto:pradeep.sharma@fwgs.in">pradeep.sharma@fwgs.in</a></div>
+              <div class="pe"><a class="lnk" href="mailto:hos@fwgs.in">hos@fwgs.in</a></div>
             </div>
           </div>
         </div>
@@ -990,7 +942,7 @@
           <details class="tile">
             <summary>
               <span class="tile-icon badge">PYP</span>
-              <span class="tile-head"><span class="tile-title">PYP · Early Years &amp; Single Subjects</span><span class="tile-sum">Anjali Bindra → Hetal Ahivasi → Pradeep Sharma</span></span>
+              <span class="tile-head"><span class="tile-title">PYP · Early Years &amp; Single Subjects</span><span class="tile-sum">Anjali Bindra → Hetal Ahivasi → Chinki Chhapia</span></span>
               <span class="tile-chev" aria-hidden="true">+</span>
             </summary>
             <div class="tile-body">
@@ -999,7 +951,7 @@
                 <span class="arr" aria-hidden="true">→</span>
                 <div class="person"><img class="ph" src="assets/images/Leadership Team Photos/HetalAhivasi.jpg" alt="Hetal Ahivasi" loading="lazy"><div><div class="pn">Hetal Ahivasi</div><div class="pr">PYP Coordinator</div><div class="pe"><a class="lnk" href="mailto:hetal.ahivasi@fwgs.in">hetal.ahivasi@fwgs.in</a></div></div></div>
                 <span class="arr" aria-hidden="true">→</span>
-                <div class="person"><img class="ph" src="assets/images/Leadership Team Photos/PradeepSharma.jpg" alt="Pradeep Sharma" loading="lazy"><div><div class="pn">Pradeep Sharma</div><div class="pr">Head of School</div><div class="pe"><a class="lnk" href="mailto:pradeep.sharma@fwgs.in">pradeep.sharma@fwgs.in</a></div></div></div>
+                <div class="person"><img class="ph" src="assets/images/Leadership Team Photos/ChinkiChhapia.jpg" alt="Chinki Chhapia" loading="lazy"><div><div class="pn">Chinki Chhapia</div><div class="pr">Head of School</div><div class="pe"><a class="lnk" href="mailto:hos@fwgs.in">hos@fwgs.in</a></div></div></div>
               </div>
             </div>
           </details>
@@ -1007,7 +959,7 @@
           <details class="tile">
             <summary>
               <span class="tile-icon badge">PYP</span>
-              <span class="tile-head"><span class="tile-title">PYP · Grade 1–3</span><span class="tile-sum">Anisha Law → Hetal Ahivasi → Pradeep Sharma</span></span>
+              <span class="tile-head"><span class="tile-title">PYP · Grade 1–3</span><span class="tile-sum">Anisha Law → Hetal Ahivasi → Chinki Chhapia</span></span>
               <span class="tile-chev" aria-hidden="true">+</span>
             </summary>
             <div class="tile-body">
@@ -1016,7 +968,7 @@
                 <span class="arr" aria-hidden="true">→</span>
                 <div class="person"><img class="ph" src="assets/images/Leadership Team Photos/HetalAhivasi.jpg" alt="Hetal Ahivasi" loading="lazy"><div><div class="pn">Hetal Ahivasi</div><div class="pr">PYP Coordinator</div><div class="pe"><a class="lnk" href="mailto:hetal.ahivasi@fwgs.in">hetal.ahivasi@fwgs.in</a></div></div></div>
                 <span class="arr" aria-hidden="true">→</span>
-                <div class="person"><img class="ph" src="assets/images/Leadership Team Photos/PradeepSharma.jpg" alt="Pradeep Sharma" loading="lazy"><div><div class="pn">Pradeep Sharma</div><div class="pr">Head of School</div><div class="pe"><a class="lnk" href="mailto:pradeep.sharma@fwgs.in">pradeep.sharma@fwgs.in</a></div></div></div>
+                <div class="person"><img class="ph" src="assets/images/Leadership Team Photos/ChinkiChhapia.jpg" alt="Chinki Chhapia" loading="lazy"><div><div class="pn">Chinki Chhapia</div><div class="pr">Head of School</div><div class="pe"><a class="lnk" href="mailto:hos@fwgs.in">hos@fwgs.in</a></div></div></div>
               </div>
             </div>
           </details>
@@ -1024,7 +976,7 @@
           <details class="tile">
             <summary>
               <span class="tile-icon badge">PYP</span>
-              <span class="tile-head"><span class="tile-title">PYP · Grade 4–5</span><span class="tile-sum">Zarina Khan → Hetal Ahivasi → Pradeep Sharma</span></span>
+              <span class="tile-head"><span class="tile-title">PYP · Grade 4–5</span><span class="tile-sum">Zarina Khan → Hetal Ahivasi → Chinki Chhapia</span></span>
               <span class="tile-chev" aria-hidden="true">+</span>
             </summary>
             <div class="tile-body">
@@ -1033,7 +985,7 @@
                 <span class="arr" aria-hidden="true">→</span>
                 <div class="person"><img class="ph" src="assets/images/Leadership Team Photos/HetalAhivasi.jpg" alt="Hetal Ahivasi" loading="lazy"><div><div class="pn">Hetal Ahivasi</div><div class="pr">PYP Coordinator</div><div class="pe"><a class="lnk" href="mailto:hetal.ahivasi@fwgs.in">hetal.ahivasi@fwgs.in</a></div></div></div>
                 <span class="arr" aria-hidden="true">→</span>
-                <div class="person"><img class="ph" src="assets/images/Leadership Team Photos/PradeepSharma.jpg" alt="Pradeep Sharma" loading="lazy"><div><div class="pn">Pradeep Sharma</div><div class="pr">Head of School</div><div class="pe"><a class="lnk" href="mailto:pradeep.sharma@fwgs.in">pradeep.sharma@fwgs.in</a></div></div></div>
+                <div class="person"><img class="ph" src="assets/images/Leadership Team Photos/ChinkiChhapia.jpg" alt="Chinki Chhapia" loading="lazy"><div><div class="pn">Chinki Chhapia</div><div class="pr">Head of School</div><div class="pe"><a class="lnk" href="mailto:hos@fwgs.in">hos@fwgs.in</a></div></div></div>
               </div>
             </div>
           </details>
@@ -1041,14 +993,14 @@
           <details class="tile">
             <summary>
               <span class="tile-icon badge">MYP</span>
-              <span class="tile-head"><span class="tile-title">MYP</span><span class="tile-sum">Vichitra Parmal → Pradeep Sharma</span></span>
+              <span class="tile-head"><span class="tile-title">MYP</span><span class="tile-sum">Vichitra Parmal → Chinki Chhapia</span></span>
               <span class="tile-chev" aria-hidden="true">+</span>
             </summary>
             <div class="tile-body">
               <div class="ladder">
                 <div class="person"><img class="ph" src="assets/images/Leadership Team Photos/VichitraParmal.jpg" alt="Vichitra Parmal" loading="lazy"><div><div class="pn">Vichitra Parmal</div><div class="pr">MYP Coordinator</div><div class="pe"><a class="lnk" href="mailto:vichitra.parmal@fwgs.in">vichitra.parmal@fwgs.in</a></div></div></div>
                 <span class="arr" aria-hidden="true">→</span>
-                <div class="person"><img class="ph" src="assets/images/Leadership Team Photos/PradeepSharma.jpg" alt="Pradeep Sharma" loading="lazy"><div><div class="pn">Pradeep Sharma</div><div class="pr">Head of School</div><div class="pe"><a class="lnk" href="mailto:pradeep.sharma@fwgs.in">pradeep.sharma@fwgs.in</a></div></div></div>
+                <div class="person"><img class="ph" src="assets/images/Leadership Team Photos/ChinkiChhapia.jpg" alt="Chinki Chhapia" loading="lazy"><div><div class="pn">Chinki Chhapia</div><div class="pr">Head of School</div><div class="pe"><a class="lnk" href="mailto:hos@fwgs.in">hos@fwgs.in</a></div></div></div>
               </div>
             </div>
           </details>
@@ -1056,14 +1008,14 @@
           <details class="tile">
             <summary>
               <span class="tile-icon badge">DP</span>
-              <span class="tile-head"><span class="tile-title">DP</span><span class="tile-sum">Bhavana Goraksha → Pradeep Sharma</span></span>
+              <span class="tile-head"><span class="tile-title">DP</span><span class="tile-sum">Bhavana Goraksha → Chinki Chhapia</span></span>
               <span class="tile-chev" aria-hidden="true">+</span>
             </summary>
             <div class="tile-body">
               <div class="ladder">
                 <div class="person"><img class="ph" src="assets/images/Leadership Team Photos/BhavanaGoraksha.jpg" alt="Bhavana Goraksha" loading="lazy"><div><div class="pn">Bhavana Goraksha</div><div class="pr">DP Coordinator</div><div class="pe"><a class="lnk" href="mailto:bhavana.goraksha@fwgs.in">bhavana.goraksha@fwgs.in</a></div></div></div>
                 <span class="arr" aria-hidden="true">→</span>
-                <div class="person"><img class="ph" src="assets/images/Leadership Team Photos/PradeepSharma.jpg" alt="Pradeep Sharma" loading="lazy"><div><div class="pn">Pradeep Sharma</div><div class="pr">Head of School</div><div class="pe"><a class="lnk" href="mailto:pradeep.sharma@fwgs.in">pradeep.sharma@fwgs.in</a></div></div></div>
+                <div class="person"><img class="ph" src="assets/images/Leadership Team Photos/ChinkiChhapia.jpg" alt="Chinki Chhapia" loading="lazy"><div><div class="pn">Chinki Chhapia</div><div class="pr">Head of School</div><div class="pe"><a class="lnk" href="mailto:hos@fwgs.in">hos@fwgs.in</a></div></div></div>
               </div>
             </div>
           </details>
@@ -1071,7 +1023,7 @@
           <details class="tile">
             <summary>
               <span class="tile-icon badge">CBSE</span>
-              <span class="tile-head"><span class="tile-title">CBSE</span><span class="tile-sum">Farhat Khan → Abhijit Dive → Pradeep Sharma</span></span>
+              <span class="tile-head"><span class="tile-title">CBSE</span><span class="tile-sum">Farhat Khan → Abhijit Dive → Chinki Chhapia</span></span>
               <span class="tile-chev" aria-hidden="true">+</span>
             </summary>
             <div class="tile-body">
@@ -1080,7 +1032,7 @@
                 <span class="arr" aria-hidden="true">→</span>
                 <div class="person"><img class="ph" src="assets/images/Leadership Team Photos/AbhijitDave.jpg" alt="Abhijit Dive" loading="lazy"><div><div class="pn">Abhijit Dive</div><div class="pr">CBSE Principal &amp; Head of Admin</div><div class="pe"><a class="lnk" href="mailto:abhijit.dive@fwgs.in">abhijit.dive@fwgs.in</a></div></div></div>
                 <span class="arr" aria-hidden="true">→</span>
-                <div class="person"><img class="ph" src="assets/images/Leadership Team Photos/PradeepSharma.jpg" alt="Pradeep Sharma" loading="lazy"><div><div class="pn">Pradeep Sharma</div><div class="pr">Head of School</div><div class="pe"><a class="lnk" href="mailto:pradeep.sharma@fwgs.in">pradeep.sharma@fwgs.in</a></div></div></div>
+                <div class="person"><img class="ph" src="assets/images/Leadership Team Photos/ChinkiChhapia.jpg" alt="Chinki Chhapia" loading="lazy"><div><div class="pn">Chinki Chhapia</div><div class="pr">Head of School</div><div class="pe"><a class="lnk" href="mailto:hos@fwgs.in">hos@fwgs.in</a></div></div></div>
               </div>
             </div>
           </details>
@@ -1088,14 +1040,14 @@
           <details class="tile">
             <summary>
               <span class="tile-icon badge">PE</span>
-              <span class="tile-head"><span class="tile-title">Sports &amp; PE (whole school)</span><span class="tile-sum">Shailendra Law → Pradeep Sharma</span></span>
+              <span class="tile-head"><span class="tile-title">Sports &amp; PE (whole school)</span><span class="tile-sum">Shailendra Law → Chinki Chhapia</span></span>
               <span class="tile-chev" aria-hidden="true">+</span>
             </summary>
             <div class="tile-body">
               <div class="ladder">
                 <div class="person"><img class="ph" src="assets/images/Leadership Team Photos/ShailendraLaw.jpg" alt="Shailendra Law" loading="lazy"><div><div class="pn">Shailendra Law</div><div class="pr">Whole-School Sports &amp; PE Team Leader</div><div class="pe"><a class="lnk" href="mailto:shailendra.law@fwgs.in">shailendra.law@fwgs.in</a></div></div></div>
                 <span class="arr" aria-hidden="true">→</span>
-                <div class="person"><img class="ph" src="assets/images/Leadership Team Photos/PradeepSharma.jpg" alt="Pradeep Sharma" loading="lazy"><div><div class="pn">Pradeep Sharma</div><div class="pr">Head of School</div><div class="pe"><a class="lnk" href="mailto:pradeep.sharma@fwgs.in">pradeep.sharma@fwgs.in</a></div></div></div>
+                <div class="person"><img class="ph" src="assets/images/Leadership Team Photos/ChinkiChhapia.jpg" alt="Chinki Chhapia" loading="lazy"><div><div class="pn">Chinki Chhapia</div><div class="pr">Head of School</div><div class="pe"><a class="lnk" href="mailto:hos@fwgs.in">hos@fwgs.in</a></div></div></div>
               </div>
             </div>
           </details>
@@ -1200,147 +1152,10 @@
   <footer class="foot">
     <div class="foot-inner">
       <span><strong>Fountainhead Wockhardt Global School</strong> · Parent Hub</span>
-      <span id="last-updated">Last updated: July 2026</span>
     </div>
   </footer>
 
-  <!-- Key dates: ISO date + label → grouped into collapsible months, 2 revealed at a time -->
-  <script>
-    window.KEYDATES = [
-      {d:"2026-06-16", t:"🏖️ School re-opens (EY–Gr 12) · Synergy Camp"},
-      {d:"2026-06-20", t:"🎓 Parents Orientation"},
-      {d:"2026-06-26", t:"🚫 Moharram · long weekend"},
-      {d:"2026-07-11", t:"Working Saturday"},
-      {d:"2026-07-18", t:"🎓 SLC & Goal Setting (EY/PYP/MYP) · DP Goal Setting"},
-      {d:"2026-08-08", t:"Working Saturday"},
-      {d:"2026-08-15", t:"🎉 Independence Day Celebration"},
-      {d:"2026-08-22", t:"🎓 DP PTM · 🎉 Culmination (EY/PYP/MYP)"},
-      {d:"2026-08-26", t:"🚫 Eid-e-Milad · long weekend"},
-      {d:"2026-08-27", t:"🚫 Student holiday"},
-      {d:"2026-08-28", t:"🚫 Rakshabandhan"},
-      {d:"2026-09-05", t:"🚫 Janmashtami"},
-      {d:"2026-09-12", t:"🎓 MYP & DP Check-ins"},
-      {d:"2026-09-14", t:"🚫 Ganesh Chaturthi"},
-      {d:"2026-09-17", t:"🚫 Marathwada Mukti Sangram Diwas · long weekend"},
-      {d:"2026-09-18", t:"🚫 Gauri Pooja"},
-      {d:"2026-09-25", t:"🚫 Ganesh Visarjan"},
-      {d:"2026-10-02", t:"🚫 Gandhi Jayanti"},
-      {d:"2026-10-10", t:"🎓 EY & PYP PTM"},
-      {d:"2026-10-17", t:"Working Saturday"},
-      {d:"2026-10-19", t:"📝 Term 1 Exams begin (Grade 6–12)"},
-      {d:"2026-10-20", t:"🚫 Dussehra"},
-      {d:"2026-10-31", t:"🎓 EY & PYP Report Card + Goal Setting · 🎉 Light Fest"},
-      {d:"2026-11-01", t:"🏖️ Diwali vacations begin"},
-      {d:"2026-11-08", t:"ℹ️ Diwali"},
-      {d:"2026-11-16", t:"🏖️ School re-opens"},
-      {d:"2026-11-24", t:"🚫 Gurunanak Jayanti"},
-      {d:"2026-11-28", t:"🎓 MYP & DP Report Card · EY & PYP PTM"},
-      {d:"2026-12-05", t:"Working Saturday"},
-      {d:"2026-12-12", t:"Working Saturday"},
-      {d:"2026-12-19", t:"🎉 Annual Day"},
-      {d:"2026-12-25", t:"🚫 Christmas · 🏖️ Winter Break begins"},
-      {d:"2027-01-04", t:"🏖️ School re-opens"},
-      {d:"2027-01-09", t:"🎉 MUN (Grade 3 – MYP 8)"},
-      {d:"2027-01-14", t:"🎉 Kite Fest"},
-      {d:"2027-01-15", t:"🚫 Makarsankranti · long weekend"},
-      {d:"2027-01-22", t:"🎉 Sports Day"},
-      {d:"2027-01-26", t:"🎉 Republic Day Celebration"},
-      {d:"2027-02-06", t:"🎓 EY & PYP SLC · MYP & DP Check-ins"},
-      {d:"2027-02-13", t:"🎓 Exhibition — Personal Project & TOK"},
-      {d:"2027-02-19", t:"📝 Study leave begins (MYP 5 & DP 2) · 🚫 Shivaji Jayanti · long weekend"},
-      {d:"2027-03-06", t:"🚫 Mahashivratri"},
-      {d:"2027-03-10", t:"🚫 Ramadan Eid"},
-      {d:"2027-03-13", t:"Working Saturday"},
-      {d:"2027-03-20", t:"long weekend for students"},
-      {d:"2027-03-22", t:"🚫 Dhuleti"},
-      {d:"2027-03-26", t:"🚫 Good Friday"},
-      {d:"2027-03-31", t:"📝 Term 2 Exams begin (Grade 6–9 & 11)"},
-      {d:"2027-04-03", t:"🎓 Graduation Day"},
-      {d:"2027-04-04", t:"🎉 Prom Night"},
-      {d:"2027-04-07", t:"🚫 Gudi Padwa"},
-      {d:"2027-04-13", t:"🎓 PYP Exhibition · last working day for students"},
-      {d:"2027-04-14", t:"🚫 Ambedkar Jayanti"},
-      {d:"2027-04-15", t:"🚫 Ramnavmi"},
-      {d:"2027-04-24", t:"📝 Result Day"},
-      {d:"2027-05-05", t:"📝 Senior School Result Day"},
-      {d:"2027-05-14", t:"📝 MYP Exams end"},
-      {d:"2027-05-19", t:"📝 DP Exams end"},
-      {d:"2027-05-20", t:"🚫 Buddh Purnima"}
-    ];
-    (function () {
-      var data = window.KEYDATES || [];
-      var box = document.getElementById("kd-months");
-      var btn = document.getElementById("kd-more");
-      if (!box) return;
-      var WD = ["Sun","Mon","Tue","Wed","Thu","Fri","Sat"];
-      var MO = ["January","February","March","April","May","June","July","August","September","October","November","December"];
-      var MOS = ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
-      var groups = [], byKey = {};
-      data.forEach(function (e) {
-        var p = e.d.split("-"), y = +p[0], mi = +p[1] - 1, day = +p[2];
-        var key = y + "-" + mi;
-        if (!byKey[key]) { byKey[key] = { y: y, mi: mi, items: [] }; groups.push(byKey[key]); }
-        byKey[key].items.push({ mi: mi, day: day, dow: new Date(y, mi, day).getDay(), t: e.t });
-      });
-      groups.forEach(function (g) {
-        var det = document.createElement("details");
-        det.className = "kd-month kd-hidden";
-        var sm = document.createElement("summary");
-        var label = document.createElement("span");
-        label.textContent = MO[g.mi] + " " + g.y;
-        var cnt = document.createElement("span");
-        cnt.className = "kd-count";
-        cnt.textContent = g.items.length + (g.items.length === 1 ? " date" : " dates");
-        sm.appendChild(label); sm.appendChild(cnt);
-        det.appendChild(sm);
-        var list = document.createElement("div");
-        list.className = "kd-list";
-        g.items.forEach(function (it) {
-          var row = document.createElement("div"); row.className = "kd-item";
-          var when = document.createElement("span"); when.className = "kd-when";
-          var dow = document.createElement("span"); dow.className = "dow" + (it.dow === 6 ? " sat" : "");
-          dow.textContent = WD[it.dow];
-          when.appendChild(dow);
-          when.appendChild(document.createTextNode(" " + it.day + " " + MOS[it.mi]));
-          var what = document.createElement("span"); what.className = "kd-what"; what.textContent = it.t;
-          row.appendChild(when); row.appendChild(what);
-          list.appendChild(row);
-        });
-        det.appendChild(list);
-        box.appendChild(det);
-      });
-      var months = box.querySelectorAll(".kd-month");
-      var STEP = 2, shown = 0;
-      function more() {
-        for (var i = 0; i < STEP && shown < months.length; i++) {
-          months[shown].classList.remove("kd-hidden");
-          months[shown].setAttribute("open", "");
-          shown++;
-        }
-        if (!btn) return;
-        if (shown >= months.length) { btn.style.display = "none"; }
-        else { btn.textContent = "Show more dates (" + (months.length - shown) + " more months) →"; }
-      }
-      if (btn) btn.addEventListener("click", more);
-      more();
-    })();
-  </script>
-
   <script src="assets/resources.js"></script>
-
-  <!-- "Last updated" footer: auto-derived from the current food-menu edition in
-       resources.js — bumping the monthly menu (the edit you already make) moves
-       this date too. Host-independent: Cloudflare Pages omits Last-Modified, so a
-       server date isn't reliable. Falls back to the static month above if unread. -->
-  <script>
-    (function () {
-      var el = document.getElementById("last-updated");
-      var R = window.FWGS_RESOURCES || {};
-      var t = (R["food-menu"] && R["food-menu"].title) || "";
-      var m = t.match(/([A-Za-z]+\s+\d{4})\s*$/);
-      if (el && m) el.textContent = "Last updated: " + m[1];
-    })();
-  </script>
 
   <!-- Optional hero greeting: best-effort JSONP to the "My Bus" web app.
        Self-disables until the my-bus /exec URL is set in resources.js, and

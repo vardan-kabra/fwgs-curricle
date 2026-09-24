@@ -15,6 +15,7 @@
  *   "slug": { title: "...", type: "drive-pdf",   driveId: "ABC..." }
  *   "slug": { title: "...", type: "drive-image", driveId: "ABC..." }
  *   "slug": { title: "...", type: "url",         url: "https://..." }
+ *   "slug": { title: "...", type: "gcal",        calendarId: "...@group.calendar.google.com" }
  */
 window.FWGS_RESOURCES = {
   "uniform-policy": {
@@ -35,16 +36,16 @@ window.FWGS_RESOURCES = {
     driveId: "14bDtpD3DpWAGG0m7LNM0N9nDo7EUEtlD"
   },
 
-  // Monthly food menu. To update each month: swap driveId below and change the
-  // visible month label in the Food tile (index.html). Source: "Menu of the Month"
-  // Drive folder (owner khushbu.thakur@fountainheadschools.org).
-  // Shared to the fountainheadschools.org Workspace org, which spans all its
-  // domain aliases (fwgs.in, fsksurat.in, ...) — so parent fwgs.in logins can
-  // view it; no "Anyone with the link" change is needed.
+  // Monthly food menu — ONE standing file, "FWGS Menu.pdf" in Karan's FWGS Menu folder
+  // (agreed with JC 24-Sep-2026). Each month Karan uploads the new PDF with the SAME name
+  // into that folder and picks "Replace existing file" (or Manage versions -> Upload new
+  // version). That keeps this driveId, so nothing here ever changes. Deleting the file
+  // and uploading a fresh one would give it a NEW id and break the Hub's menu link.
+  // The file is shared "Anyone with the link can view"; a new version keeps that.
   "food-menu": {
-    title: "Menu of the Month — July 2026",
+    title: "Menu of the Month",
     type: "drive-pdf",
-    driveId: "1Cwmca56jAsW9wDOk03St8VG9Aqt8gU9s"
+    driveId: "1_IyWGQwi5LMRWy9p8o2PS7NnA6oTng78"
   },
 
   "bus-rules": {
@@ -59,22 +60,14 @@ window.FWGS_RESOURCES = {
     url: "https://docs.google.com/spreadsheets/d/1hDdP67GUblLHpb9hHMH9i8vqFd6ZuNUhTJd4G2WZtpw/edit?gid=683768151#gid=683768151"
   },
 
-  "pyp-academic-calendar": {
-    title: "PYP Academic Calendar",
-    type: "drive-pdf",
-    driveId: "1w3BNKq-Mb5tzy3GCwb43irk01LdW68ON"
-  },
-
-  "myp-academic-calendar": {
-    title: "MYP Academic Calendar",
-    type: "drive-pdf",
-    driveId: "1B1AdgbR9EIfSU6ECsvwvHVcEEZDJkDCy"
-  },
-
-  "dp-academic-calendar": {
-    title: "DP Academic Calendar",
-    type: "drive-pdf",
-    driveId: "13bsdhY7v3J1OTsRQ4ZJhmseCqp9-hA1b"
+  // Live school calendar (Google Calendar). Replaced the PYP / MYP / DP PDF calendars
+  // on 24-Sep-2026 — they had gone out of date. Dates are edited in the calendar
+  // itself, never here. The calendar is NOT public: a parent sees events only if it
+  // is shared with their school account.
+  "school-calendar": {
+    title: "FWGS Student's Calendar",
+    type: "gcal",
+    calendarId: "c_820b78760e344b6102add1e9cd7651cd07acec2c8263f6bd077bfc97df450b91@group.calendar.google.com"
   },
 
   "pyp-brochure": {
@@ -145,12 +138,23 @@ window.FWGS_RESOURCES = {
   "use strict";
   var R = window.FWGS_RESOURCES || {};
 
+  // Google Calendar embed URL. Month grid on wide screens, agenda list on phones
+  // (a month grid is unreadable at 375px).
+  function gcal(r, mode) {
+    return "https://calendar.google.com/calendar/embed?src=" + encodeURIComponent(r.calendarId) +
+      "&ctz=Asia%2FKolkata&wkst=2&showTitle=0&showPrint=0&showCalendars=0&showTz=0&mode=" + mode;
+  }
+  function narrow() {
+    return !!(window.matchMedia && window.matchMedia("(max-width:768px)").matches);
+  }
+
   function url(key) {
     var r = R[key];
     if (!r) return null;
     if (r.type === "drive-pdf" || r.type === "drive-image") {
       return "https://drive.google.com/file/d/" + r.driveId + "/view";
     }
+    if (r.type === "gcal") return gcal(r, "AGENDA");
     if (r.type === "url") return r.url;
     return null;
   }
@@ -164,6 +168,7 @@ window.FWGS_RESOURCES = {
     if (r.type === "drive-image") {
       return "https://drive.google.com/uc?export=view&id=" + r.driveId;
     }
+    if (r.type === "gcal") return gcal(r, narrow() ? "AGENDA" : "MONTH");
     if (r.type === "url") return r.url;
     return null;
   }
