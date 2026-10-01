@@ -37,15 +37,16 @@ window.FWGS_RESOURCES = {
   },
 
   // Monthly food menu — ONE standing file, "FWGS Menu.pdf" in Karan's FWGS Menu folder
-  // (agreed with JC 24-Sep-2026). Each month Karan uploads the new PDF with the SAME name
-  // into that folder and picks "Replace existing file" (or Manage versions -> Upload new
-  // version). That keeps this driveId, so nothing here ever changes. Deleting the file
-  // and uploading a fresh one would give it a NEW id and break the Hub's menu link.
-  // The file is shared "Anyone with the link can view"; a new version keeps that.
+  // (agreed with JC 24-Sep-2026). Each month the new PDF goes in as a new VERSION of this
+  // file: open it -> File information -> Manage versions -> Upload new version. That keeps
+  // this driveId, so nothing here ever changes. Uploading a fresh file instead gives it a
+  // NEW id and the Hub keeps showing last month — exactly what happened on 01-Oct-2026,
+  // when October arrived as a new file and this id was moved to it (JC). The file is
+  // shared "Anyone with the link can view"; a new version keeps that.
   "food-menu": {
     title: "Menu of the Month",
     type: "drive-pdf",
-    driveId: "1_IyWGQwi5LMRWy9p8o2PS7NnA6oTng78"
+    driveId: "1bqrbk2kHQa6IUd5rrvgzLHseU3yJkr9n"
   },
 
   "bus-rules": {
